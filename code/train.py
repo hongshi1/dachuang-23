@@ -228,6 +228,7 @@ def transfer_classification(config):
     # 定义一个字典类型变量
     prep_dict = {}
     # Add kry-value pairs for 'prep_dict'
+    #数据预处理
     for prep_config in config["prep"]:
         prep_dict[prep_config["name"]] = {}
         if prep_config["type"] == "image":
@@ -236,6 +237,7 @@ def transfer_classification(config):
             prep_dict[prep_config["name"]]["train"] = prep.image_train(resize_size=prep_config["resize_size"],
                                                                        crop_size=prep_config["crop_size"])
             # call image_test()
+
             if prep_config["test_10crop"]:
                 prep_dict[prep_config["name"]]["test"] = prep.image_test_10crop(resize_size=prep_config["resize_size"],
                                                                                 crop_size=prep_config["crop_size"])
@@ -247,6 +249,9 @@ def transfer_classification(config):
     # class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
     class_criterion = nn.MSELoss()                   ##mse损失函数
     loss_config = config["loss"]
+    #如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
+    # DAN是一种常用的域适应方法，它通过对抗训练的方式来使得特征提取器对源域和目标域的特征表示具有相同的分布，从而提高模型的泛化性能。在具体实现中，DAN使用一个域分类器来判
+    # 别输入的特征属于源域还是目标域，同时通过最小化这个分类器的损失来训练特征提取器，使得提取到的特征能够欺骗域分类器，使得域分类器无法判断输入的特征是来自源域还是目标域。
     transfer_criterion = loss.loss_dict[loss_config["name"]]
     if "params" not in loss_config:
         loss_config["params"] = {}
@@ -548,6 +553,7 @@ if __name__ == "__main__":
     # 添加键值对
     config["num_iterations"] = 10
     config["test_interval"] = 1  # ?
+    #test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
     config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
                       {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
     config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
