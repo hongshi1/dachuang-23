@@ -246,8 +246,10 @@ def transfer_classification(config):
                                                                          crop_size=prep_config["crop_size"])
 
     ## set loss
-    # class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
-    class_criterion = nn.MSELoss()                   ##mse损失函数
+    class_criterion = nn.CrossEntropyLoss()  # 使用多元交叉熵损失函数
+
+    class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
+    # class_criterion = nn.MSELoss()                   ##mse损失函数
     loss_config = config["loss"]
     #如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
     # DAN是一种常用的域适应方法，它通过对抗训练的方式来使得特征提取器对源域和目标域的特征表示具有相同的分布，从而提高模型的泛化性能。在具体实现中，DAN使用一个域分类器来判
@@ -305,7 +307,7 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num = 4
+    class_num =4 #?
 
     ## set base network
     net_config = config["network"]
@@ -519,8 +521,9 @@ if __name__ == "__main__":
     #         a = img.convert('RGB')
 
     path = '../data/txt_png_path/'
+    # path = '../data/txt/'
 
-    # # Case1: 使用命令行
+    # Case1: 使用命令行
     # # 创建一个解析对象，对命令行参数进行解析 （这种方式不利于调试，可以对args进行赋值）
     # parser = argparse.ArgumentParser(description='Transfer Learning')
     # # 添加参数

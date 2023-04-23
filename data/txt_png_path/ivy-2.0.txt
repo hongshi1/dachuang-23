@@ -1,4 +1,4 @@
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_IvyPatternHelper.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_IvyPatternHelper.png	2
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_lock_AbstractLockStrategy.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_circular_ErrorCircularDependencyStrategy.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_settings_IvyVariableContainer.png	0
@@ -12,7 +12,7 @@
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_matcher_MatcherHelper.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_ant_IvyDeliver.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_url_AbstractURLHandler.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_resolve_IvyNodeUsage.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_resolve_IvyNodeUsage.png	2
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_ConfigurationUtils.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_tools_analyser_DependencyAnalyser.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_MessageLoggerEngine.png	0
@@ -28,14 +28,14 @@
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_report_DownloadReport.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_repository_vsftp_VsftpRepository.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_event_retrieve_EndRetrieveEvent.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_resolver_IBiblioResolver.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_resolver_IBiblioResolver.png	2
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_trigger_AbstractTrigger.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_conflict_RegexpConflictManager.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_event_resolve_ResolveEvent.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_deliver_DeliverOptions.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_circular_AbstractCircularDependencyStrategy.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_sort_ModuleDescriptorSorter.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_retrieve_RetrieveEngine.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_retrieve_RetrieveEngine.png	3
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_repository_vfs_VfsRepository.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_latest_LatestRevisionStrategy.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_ant_IvyCacheTask.png	0
@@ -59,7 +59,7 @@
 ../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_ant_IvyReport.png	1
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_repository_file_FileResource.png	0
 ../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_module_descriptor_DefaultModuleDescriptor.png	1
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_parser_xml_XmlModuleDescriptorParser.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_parser_xml_XmlModuleDescriptorParser.png	2
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_event_IvyEvent.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_latest_AbstractLatestStrategy.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_filter_FilterHelper.png	0
@@ -118,7 +118,7 @@
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_ant_IvyAntVariableContainer.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_MemoryUtil.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_event_IvyEventFilter.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_resolver_BasicResolver.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_resolver_BasicResolver.png	2
 ../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_parser_m2_DefaultPomDependencyMgt.png	1
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_module_status_StatusManager.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_latest_LatestLexicographicStrategy.png	0
@@ -137,7 +137,7 @@
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_version_ChainVersionMatcher.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_version_VersionRangeMatcher.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_CopyProgressListener.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_ant_IvyPostResolveTask.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_ant_IvyPostResolveTask.png	2
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_filter_Filter.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_event_download_NeedArtifactEvent.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_namespace_Namespace.png	0
@@ -213,7 +213,7 @@
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_event_publish_StartArtifactPublishEvent.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_settings_IvyVariableContainerImpl.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_repository_ArtifactResourceResolver.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_resolve_IvyNodeCallers.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_resolve_IvyNodeCallers.png	2
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_CredentialsUtil.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_matcher_PatternMatcher.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_url_URLHandlerDispatcher.png	0
@@ -287,11 +287,11 @@
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_report_XmlReportOutputter.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_repository_sftp_SFTPRepository.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_report_XmlReportWriter.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_cache_DefaultRepositoryCacheManager.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_cache_DefaultRepositoryCacheManager.png	3
 ../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_Main.png	1
 ../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_repository_ssh_SshCache.png	1
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_event_IvyListener.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_resolve_IvyNode.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_resolve_IvyNode.png	3
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_latest_ArtifactInfo.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_util_ContextualSAXHandler.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_IvyThread.png	0
@@ -300,7 +300,7 @@
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_resolver_util_MDResolvedResource.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_resolver_packager_PackagerResolver.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_event_retrieve_RetrieveEvent.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_parser_m2_PomModuleDescriptorBuilder.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_parser_m2_PomModuleDescriptorBuilder.png	3
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_module_id_ModuleRules.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_event_resolve_ResolveDependencyEvent.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_module_descriptor_MDArtifact.png	0
@@ -337,7 +337,7 @@
 ../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_core_report_ArtifactDownloadReport.png	1
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_namespace_NamespaceTransformer.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_core_report_ConfigurationResolveReport.png	0
-../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_resolver_AbstractResolver.png	1
+../data/img/grb_img/ivy-2.0//buggy/ivy-2.0_src_java_org_apache_ivy_plugins_resolver_AbstractResolver.png	2
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_version_LatestVersionMatcher.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_tools_analyser_JarModule.png	0
 ../data/img/grb_img/ivy-2.0/clean/ivy-2.0_src_java_org_apache_ivy_plugins_matcher_ExactPatternMatcher.png	0
