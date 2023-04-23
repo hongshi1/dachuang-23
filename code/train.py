@@ -539,6 +539,7 @@ if __name__ == "__main__":
     args.tradeoff = 1.0
     args.using_bottleneck = 0
     args.task = 'CPDP'  # 'WPDP' or 'CPDP'
+    #cpdp 表示跨项目缺陷预测
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
     
@@ -559,5 +560,12 @@ if __name__ == "__main__":
     config["optimizer"] = {"type": "SGD",
                            "optim_params": {"lr": 0.05, "momentum": 0.9, "weight_decay": 0.0005, "nesterov": True},
                            "lr_type": "inv", "lr_param": {"init_lr": 0.0003, "gamma": 0.0003, "power": 0.75}}
-    
+    #对代码的修改和理解  都吧注释写满  方便组员学习
+    # num_iterations表示训练的迭代次数；
+    # test_interval表示每多少个迭代进行一次测试；
+    # prep表示数据预处理的配置，包括source和target两个来源的数据，需要进行的操作包括图片的缩放和裁剪；
+    # loss表示损失函数的配置，包括使用的损失函数的名称和对各项损失的权重；
+    # data表示训练和测试数据的配置，包括source和target两个来源的数据，需要读取的文件路径和每个batch的大小；
+    # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
+    # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
     transfer_classification(config)
