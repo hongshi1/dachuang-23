@@ -23,9 +23,9 @@ import matplotlib.pyplot as plt
 import time
 import random
 
-
 import time
 from PIL import Image
+
 
 def get_fea_lab(what, loader, model, gpu):
     start_test = True
@@ -206,31 +206,38 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
 
     _, predict = torch.max(all_output, 1)
 
-    predict_list = predict.cpu().numpy()
-    all_label_list = all_label.cpu().numpy()
-    TP = 0
-    FP = 0
-    FN = 0
-    for number in range(len(all_label_list)):
-        if predict_list[number] == 1:
-            if all_label_list[number] == 1:
-                TP = TP + 1
-            else:
-                FP = FP + 1
-        elif all_label_list[number] == 1:
-            FN = FN + 1
 
-    P = float(TP) / (TP + FP) if (TP + FP != 0) else 0  # Precision
-    R = float(TP) / (TP + FN) if (TP + FN != 0) else 0  # Recall
-    F = float((2 * P * R) / (P + R)) if P + R != 0 else 0  # F1
-    return F
+    all_label_list = all_label.view(-1, 1).numpy()
+    predict_list = all_output.view(-1, 1).numpy()
+
+    MSE = ((predict_list - all_label_list) ** 2).mean()
+
+    # predict_list = predict.cpu().numpy()
+    # all_label_list = all_label.cpu().numpy()
+
+    # TP = 0
+    # FP = 0
+    # FN = 0
+    # for number in range(len(all_label_list)):
+    #     if predict_list[number] == 1:
+    #         if all_label_list[number] == 1:
+    #             TP = TP + 1
+    #         else:
+    #             FP = FP + 1
+    #     elif all_label_list[number] == 1:
+    #         FN = FN + 1
+    #
+    # P = float(TP) / (TP + FP) if (TP + FP != 0) else 0  # Precision
+    # R = float(TP) / (TP + FN) if (TP + FN != 0) else 0  # Recall
+    # F = float((2 * P * R) / (P + R)) if P + R != 0 else 0  # F1
+    return MSE
 
 
 def transfer_classification(config):
     # 定义一个字典类型变量
     prep_dict = {}
     # Add kry-value pairs for 'prep_dict'
-    #数据预处理
+    # 数据预处理
     for prep_config in config["prep"]:
         prep_dict[prep_config["name"]] = {}
         if prep_config["type"] == "image":
@@ -247,13 +254,12 @@ def transfer_classification(config):
                 prep_dict[prep_config["name"]]["test"] = prep.image_test(resize_size=prep_config["resize_size"],
                                                                          crop_size=prep_config["crop_size"])
 
-
     # class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
     # class_criterion = nn.CrossEntropyLoss(weight=torch.tensor([1, 1, 2]))
 
-    class_criterion = nn.MSELoss()                   ##mse损失函数
+    class_criterion = nn.MSELoss()  ##mse损失函数
     loss_config = config["loss"]
-    #如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
+    # 如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
     # DAN是一种常用的域适应方法，它通过对抗训练的方式来使得特征提取器对源域和目标域的特征表示具有相同的分布，从而提高模型的泛化性能。在具体实现中，DAN使用一个域分类器来判
     # 别输入的特征属于源域还是目标域，同时通过最小化这个分类器的损失来训练特征提取器，使得提取到的特征能够欺骗域分类器，使得域分类器无法判断输入的特征是来自源域还是目标域。
     transfer_criterion = loss.loss_dict[loss_config["name"]]
@@ -280,7 +286,7 @@ def transfer_classification(config):
                         dsets[data_config["name"]]["test" + str(i)] = ImageList(
                             open(data_config["list_path"]["test"]).readlines(),
                             transform=prep_dict[data_config["name"]]["test"]["val" + str(i)]
-                            )
+                        )
                         dset_loaders[data_config["name"]]["test" + str(i)] = util_data.DataLoader(
                             dsets[data_config["name"]]["test" + str(i)], batch_size=data_config["batch_size"]["test"],
                             shuffle=False, num_workers=4)
@@ -309,7 +315,7 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num =1 #??
+    class_num = 1  # ??
 
     ## set base network
     net_config = config["network"]
@@ -386,8 +392,6 @@ def transfer_classification(config):
                                               nn.Sequential(base_network, classifier_layer),
                                               test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
 
-
-
             print(args.source + '->' + args.target)
             print(F)
 
@@ -399,11 +403,11 @@ def transfer_classification(config):
                     bottleneck_layer.train(False)
                     best_model = nn.Sequential(base_network, bottleneck_layer, classifier_layer)
                     all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                      test_10crop=False, gpu=use_gpu)
+                                                                           test_10crop=False, gpu=use_gpu)
                 else:
                     best_model = nn.Sequential(base_network, classifier_layer)
                     all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                      test_10crop=False, gpu=use_gpu)
+                                                                           test_10crop=False, gpu=use_gpu)
 
         loss_test = nn.BCELoss()
         ## train one iter
@@ -454,21 +458,20 @@ def transfer_classification(config):
             features = bottleneck_layer(features)
         outputs = classifier_layer(features)
 
-
-
-        output_size = torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size()        ##判断outpus和labels_source的大小
+        output_size = torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size()  ##判断outpus和labels_source的大小
         size_s = labels_source.size()
-        output = len(torch.narrow(outputs,0,0,int(inputs.size(0)/2)).size())
+        output = len(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size())
         labels_source_size = labels_source.size()
 
-
-        classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)), labels_source.float())  # python3
+        classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
+                                          labels_source.float().view(-1, 1))  # python3
         # classifier_loss = class_criterion(outputs.narrow(0, 0, inputs.size(0) / 2), labels_source)  # python2
 
         ## switch between different transfer loss
         if loss_config["name"] == "DAN":
             transfer_loss = transfer_criterion(torch.narrow(features, 0, 0, int(features.size(0) / 2)),
-                                               torch.narrow(features, 0, int(features.size(0) / 2), int(features.size(0) / 2)),
+                                               torch.narrow(features, 0, int(features.size(0) / 2),
+                                                            int(features.size(0) / 2)),
                                                **loss_config["params"])
             # transfer_loss = transfer_criterion(features.narrow(0, 0, features.size(0) / 2),
             #                                    features.narrow(0, features.size(0) / 2, features.size(0) / 2),
@@ -479,9 +482,11 @@ def transfer_classification(config):
         elif loss_config["name"] == "JAN":
             softmax_out = softmax_layer(outputs)
             transfer_loss = transfer_criterion(
-                [torch.narrow(features, 0, 0, int(features.size(0) / 2)), torch.narrow(softmax_out, 0, 0, softmax_out.size(0) / 2)],
+                [torch.narrow(features, 0, 0, int(features.size(0) / 2)),
+                 torch.narrow(softmax_out, 0, 0, softmax_out.size(0) / 2)],
                 [torch.narrow(features, 0, int(features.size(0) / 2), int(features.size(0) / 2)),
-                 torch.narrow(softmax_out, 0, int(softmax_out.size(0) / 2), int(softmax_out.size(0) / 2))], **loss_config["params"])
+                 torch.narrow(softmax_out, 0, int(softmax_out.size(0) / 2), int(softmax_out.size(0) / 2))],
+                **loss_config["params"])
             # transfer_loss = transfer_criterion(
             #     [features.narrow(0, 0, features.size(0) / 2), softmax_out.narrow(0, 0, softmax_out.size(0) / 2)],
             #     [features.narrow(0, features.size(0) / 2, features.size(0) / 2),
@@ -498,7 +503,7 @@ def transfer_classification(config):
     print('训练结果：')
     print(F_best)
 
-    #二分类问题的性能评价指标
+    # 二分类问题的性能评价指标
     # Prediction
     # all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
     #                                           test_10crop=False, gpu=use_gpu)
@@ -507,38 +512,39 @@ def transfer_classification(config):
 
     # # all_label_list = all_label.cpu().numpy()
     # all_label_list = all_label.numpy()
-    all_label_list = all_label.numpy()
-    predict_list = prep_dict.numpy()
-    predict_list = predict_best.view(-1).float().cpu().numpy()
-    all_label_list = all_label.view(-1).float().cpu().numpy()
-
-    MAE = np.mean(np.abs(predict_list - all_label_list))
-    print("MAE"+MAE)
+    # all_label_list = all_label.numpy()
+    # predict_list = prep_dict.numpy()
+    # predict_list = predict_best.view(-1).float().cpu().numpy()
+    # all_label_list = all_label.view(-1).float().cpu().numpy()
+    #
+    # MAE = np.mean(np.abs(predict_list - all_label_list))
 
     # all_label_list = all_label.cpu().numpy()
-    all_label_list = all_label.numpy()
-    predict_list = predict_best.numpy()
-    TP = 0
-    FP = 0
-    FN = 0
-    for number in range(len(all_label_list)):
-        if predict_list[number] == 1:
-            if all_label_list[number] == 1:
-                TP = TP + 1
-            else:
-                FP = FP + 1
-        elif all_label_list[number] == 1:
-            FN = FN + 1
+    # all_label_list = all_label.numpy()
+    # predict_list = predict_best.numpy()
+    # TP = 0
+    # FP = 0
+    # FN = 0
+    # for number in range(len(all_label_list)):
+    #     if predict_list[number] == 1:
+    #         if all_label_list[number] == 1:
+    #             TP = TP + 1
+    #         else:
+    #             FP = FP + 1
+    #     elif all_label_list[number] == 1:
+    #         FN = FN + 1
+    #
+    # P = float(TP) / (TP + FP) if (TP + FP != 0) else 0  # Precision
+    # R = float(TP) / (TP + FN) if (TP + FN != 0) else 0  # Recall
+    # F = float((2 * P * R) / (P + R)) if P + R != 0 else 0  # F1
 
-    P = float(TP) / (TP + FP) if (TP + FP != 0) else 0  # Precision
-    R = float(TP) / (TP + FN) if (TP + FN != 0) else 0  # Recall
-    F = float((2 * P * R) / (P + R)) if P + R != 0 else 0  # F1
+    all_label_list = all_label.view(-1, 1).numpy()
+    predict_list =  predict_best.view(-1, 1).numpy()
 
-
-    
+    MSE = ((predict_list - all_label_list) ** 2).mean()
 
     print('预测结果：')
-    print(F)
+    print(MSE)
 
 
 if __name__ == "__main__":
@@ -577,16 +583,16 @@ if __name__ == "__main__":
     args.tradeoff = 1.0
     args.using_bottleneck = 0
     args.task = 'CPDP'  # 'WPDP' or 'CPDP'
-    #cpdp 表示跨项目缺陷预测
+    # cpdp 表示跨项目缺陷预测
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
-    
+
     # 定义一个字典类型变量
     config = {}
     # 添加键值对
     config["num_iterations"] = 10
     config["test_interval"] = 1  # ?
-    #test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
+    # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
     config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
                       {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
     config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
@@ -599,7 +605,7 @@ if __name__ == "__main__":
     config["optimizer"] = {"type": "SGD",
                            "optim_params": {"lr": 0.05, "momentum": 0.9, "weight_decay": 0.0005, "nesterov": True},
                            "lr_type": "inv", "lr_param": {"init_lr": 0.0003, "gamma": 0.0003, "power": 0.75}}
-    #对代码的修改和理解  都吧注释写满  方便组员学习
+    # 对代码的修改和理解  都吧注释写满  方便组员学习
     # num_iterations表示训练的迭代次数；
     # test_interval表示每多少个迭代进行一次测试；
     # prep表示数据预处理的配置，包括source和target两个来源的数据，需要进行的操作包括图片的缩放和裁剪；
