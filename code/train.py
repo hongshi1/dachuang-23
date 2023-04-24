@@ -210,7 +210,7 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
     all_label_list = all_label.view(-1, 1).numpy()
     predict_list = all_output.view(-1, 1).numpy()
 
-    MSE = ((predict_list - all_label_list) ** 2).mean()
+    MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
 
     # predict_list = predict.cpu().numpy()
     # all_label_list = all_label.cpu().numpy()
@@ -374,7 +374,7 @@ def transfer_classification(config):
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
     len_train_target = len(dset_loaders["target"]["train"]) - 1
-    F_best = 0  # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
+    F_best = 10000000  # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
 
     best_model = ''
     predict_best = ''
@@ -395,7 +395,7 @@ def transfer_classification(config):
             print(args.source + '->' + args.target)
             print(F)
 
-            if F_best < F:
+            if F_best > F:
                 F_best = F
                 base_network.train(False)
                 classifier_layer.train(False)
@@ -541,7 +541,7 @@ def transfer_classification(config):
     all_label_list = all_label.view(-1, 1).numpy()
     predict_list =  predict_best.view(-1, 1).numpy()
 
-    MSE = ((predict_list - all_label_list) ** 2).mean()
+    MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
 
     print('预测结果：')
     print(MSE)
@@ -613,4 +613,5 @@ if __name__ == "__main__":
     # data表示训练和测试数据的配置，包括source和target两个来源的数据，需要读取的文件路径和每个batch的大小；
     # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
     # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
+
     transfer_classification(config)
