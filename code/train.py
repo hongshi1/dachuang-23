@@ -20,6 +20,8 @@ optim_dict = {"SGD": optim.SGD}
 
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
+import time
+import random
 
 
 import time
@@ -245,11 +247,11 @@ def transfer_classification(config):
                 prep_dict[prep_config["name"]]["test"] = prep.image_test(resize_size=prep_config["resize_size"],
                                                                          crop_size=prep_config["crop_size"])
 
-    ## set loss
-    class_criterion = nn.CrossEntropyLoss()  # 使用多元交叉熵损失函数
 
-    class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
-    # class_criterion = nn.MSELoss()                   ##mse损失函数
+    # class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
+    # class_criterion = nn.CrossEntropyLoss(weight=torch.tensor([1, 1, 2]))
+
+    class_criterion = nn.MSELoss()                   ##mse损失函数
     loss_config = config["loss"]
     #如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
     # DAN是一种常用的域适应方法，它通过对抗训练的方式来使得特征提取器对源域和目标域的特征表示具有相同的分布，从而提高模型的泛化性能。在具体实现中，DAN使用一个域分类器来判
@@ -307,7 +309,7 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num =4 #?
+    class_num =1 #??
 
     ## set base network
     net_config = config["network"]
@@ -416,6 +418,7 @@ def transfer_classification(config):
             iter_target = iter(dset_loaders["target"]["train"])
         inputs_source, labels_source, _ = next(iter_source)  # python3
         inputs_target, labels_target, _ = next(iter_target)
+
         # inputs_source, labels_source, _ = iter_source.next()  # python2
         # inputs_target, labels_target, _ = iter_target.next()
 
@@ -425,6 +428,21 @@ def transfer_classification(config):
         else:
             inputs_source, inputs_target, labels_source = Variable(inputs_source), Variable(inputs_target), Variable(
                 labels_source)
+
+        # N = len(labels_source)
+        # new_labels = torch.zeros((N, 4))  # 新标签张量，长度为N，宽度为4
+        # for i in range(N):
+        #     if labels_source[i] == 0:
+        #         new_labels[i][0] = 1
+        #     elif labels_source[i] == 1:
+        #         new_labels[i][1] = 1
+        #     elif labels_source[i] == 2:
+        #         new_labels[i][2] = 1
+        #     elif labels_source[i] == 3:
+        #         new_labels[i][3] = 1
+
+        # 使用torch.nn.functional.one_hot()函数将标签转换为one-hot编码
+        # labels_source = F.one_hot(labels_source, num_classes=4)
 
         inputs = torch.cat((inputs_source, inputs_target), dim=0)
         # start_train = time.clock()
@@ -437,13 +455,14 @@ def transfer_classification(config):
         outputs = classifier_layer(features)
 
 
+
         output_size = torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size()        ##判断outpus和labels_source的大小
         size_s = labels_source.size()
         output = len(torch.narrow(outputs,0,0,int(inputs.size(0)/2)).size())
         labels_source_size = labels_source.size()
 
 
-        classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)), labels_source)  # python3
+        classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)), labels_source.float())  # python3
         # classifier_loss = class_criterion(outputs.narrow(0, 0, inputs.size(0) / 2), labels_source)  # python2
 
         ## switch between different transfer loss
@@ -484,8 +503,21 @@ def transfer_classification(config):
     # all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
     #                                           test_10crop=False, gpu=use_gpu)
 
-    predict_list = predict_best.cpu().numpy()
-    all_label_list = all_label.cpu().numpy()
+    #
+
+    # # all_label_list = all_label.cpu().numpy()
+    # all_label_list = all_label.numpy()
+    all_label_list = all_label.numpy()
+    predict_list = prep_dict.numpy()
+    predict_list = predict_best.view(-1).float().cpu().numpy()
+    all_label_list = all_label.view(-1).float().cpu().numpy()
+
+    MAE = np.mean(np.abs(predict_list - all_label_list))
+    print("MAE"+MAE)
+
+    # all_label_list = all_label.cpu().numpy()
+    all_label_list = all_label.numpy()
+    predict_list = predict_best.numpy()
     TP = 0
     FP = 0
     FN = 0
@@ -502,18 +534,16 @@ def transfer_classification(config):
     R = float(TP) / (TP + FN) if (TP + FN != 0) else 0  # Recall
     F = float((2 * P * R) / (P + R)) if P + R != 0 else 0  # F1
 
-    # predict_list = predict_best.cpu().numpy()
-    # all_label_list = all_label.cpu().numpy()
 
-    # mse = mean_squared_error(all_label_list, predict_list)
     
+
     print('预测结果：')
     print(F)
 
 
 if __name__ == "__main__":
-
-    setup_seed(20)
+    random.seed(time.time())
+    setup_seed(random.randint(1, 100))
     # path = '..\data\img\grb_img\ivy-2.0\\buggy\ivy-2.0_src_java_org_apache_ivy_core_IvyPatternHelper.png'
     # # path = 'F:\Document\GitHub\DTLDP_master\data\img\grb_img\ivy-2.0\clean\ivy-2.0_src_java_org_apache_ivy_ant_AddPathTask.png'
     # with open(path, 'rb') as f:  # 以二进制格式打开一个文件用于只读
