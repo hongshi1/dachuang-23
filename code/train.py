@@ -142,7 +142,8 @@ def image_classification_predict(loader, model, test_10crop=True, gpu=True):
             else:
                 all_output = torch.cat((all_output, outputs.data.cpu().float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
-    _, predict = torch.max(all_output, 1)
+    # _, predict = torch.max(all_output, 1)
+    _, predict = torch.min(all_output, 1)
     return all_label, predict
 
 
@@ -204,32 +205,10 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    _, predict = torch.max(all_output, 1)
-
-
-    all_label_list = all_label.view(-1, 1).numpy()
-    predict_list = all_output.view(-1, 1).numpy()
-
+    _, predict = torch.min(all_output, 1) #?
+    all_label_list = all_label.numpy()
+    predict_list = all_output.numpy()
     MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
-
-    # predict_list = predict.cpu().numpy()
-    # all_label_list = all_label.cpu().numpy()
-
-    # TP = 0
-    # FP = 0
-    # FN = 0
-    # for number in range(len(all_label_list)):
-    #     if predict_list[number] == 1:
-    #         if all_label_list[number] == 1:
-    #             TP = TP + 1
-    #         else:
-    #             FP = FP + 1
-    #     elif all_label_list[number] == 1:
-    #         FN = FN + 1
-    #
-    # P = float(TP) / (TP + FP) if (TP + FP != 0) else 0  # Precision
-    # R = float(TP) / (TP + FN) if (TP + FN != 0) else 0  # Recall
-    # F = float((2 * P * R) / (P + R)) if P + R != 0 else 0  # F1
     return MSE
 
 
@@ -503,40 +482,6 @@ def transfer_classification(config):
     print('训练结果：')
     print(F_best)
 
-    # 二分类问题的性能评价指标
-    # Prediction
-    # all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-    #                                           test_10crop=False, gpu=use_gpu)
-
-    #
-
-    # # all_label_list = all_label.cpu().numpy()
-    # all_label_list = all_label.numpy()
-    # all_label_list = all_label.numpy()
-    # predict_list = prep_dict.numpy()
-    # predict_list = predict_best.view(-1).float().cpu().numpy()
-    # all_label_list = all_label.view(-1).float().cpu().numpy()
-    #
-    # MAE = np.mean(np.abs(predict_list - all_label_list))
-
-    # all_label_list = all_label.cpu().numpy()
-    # all_label_list = all_label.numpy()
-    # predict_list = predict_best.numpy()
-    # TP = 0
-    # FP = 0
-    # FN = 0
-    # for number in range(len(all_label_list)):
-    #     if predict_list[number] == 1:
-    #         if all_label_list[number] == 1:
-    #             TP = TP + 1
-    #         else:
-    #             FP = FP + 1
-    #     elif all_label_list[number] == 1:
-    #         FN = FN + 1
-    #
-    # P = float(TP) / (TP + FP) if (TP + FP != 0) else 0  # Precision
-    # R = float(TP) / (TP + FN) if (TP + FN != 0) else 0  # Recall
-    # F = float((2 * P * R) / (P + R)) if P + R != 0 else 0  # F1
 
     all_label_list = all_label.view(-1, 1).numpy()
     predict_list =  predict_best.view(-1, 1).numpy()
@@ -548,8 +493,9 @@ def transfer_classification(config):
 
 
 if __name__ == "__main__":
-    random.seed(time.time())
-    setup_seed(random.randint(1, 100))
+    # random.seed(time.time())
+    # setup_seed(random.randint(1, 100))
+    setup_seed(9)
     # path = '..\data\img\grb_img\ivy-2.0\\buggy\ivy-2.0_src_java_org_apache_ivy_core_IvyPatternHelper.png'
     # # path = 'F:\Document\GitHub\DTLDP_master\data\img\grb_img\ivy-2.0\clean\ivy-2.0_src_java_org_apache_ivy_ant_AddPathTask.png'
     # with open(path, 'rb') as f:  # 以二进制格式打开一个文件用于只读
