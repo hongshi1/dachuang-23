@@ -143,7 +143,7 @@ def image_classification_predict(loader, model, test_10crop=True, gpu=True):
                 all_output = torch.cat((all_output, outputs.data.cpu().float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
     # _, predict = torch.max(all_output, 1)
-    _, predict = torch.min(all_output, 1)
+    _, predict = torch.max(all_output, 1)
     return all_label, predict
 
 
@@ -205,9 +205,9 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    _, predict = torch.min(all_output, 1) #?
+    _, predict = torch.max(all_output, 1) #?
     all_label_list = all_label.numpy()
-    predict_list = all_output.numpy()
+    predict_list = predict.numpy()
     MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
     return MSE
 
@@ -353,7 +353,7 @@ def transfer_classification(config):
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
     len_train_target = len(dset_loaders["target"]["train"]) - 1
-    F_best = 10000000  # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
+    F_best = 0 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
 
     best_model = ''
     predict_best = ''
@@ -374,7 +374,7 @@ def transfer_classification(config):
             print(args.source + '->' + args.target)
             print(F)
 
-            if F_best > F:
+            if F_best < F:
                 F_best = F
                 base_network.train(False)
                 classifier_layer.train(False)
