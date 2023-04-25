@@ -6,6 +6,7 @@ from sklearn.metrics import mean_squared_error
 
 import numpy as np
 import torch
+import openpyxl
 import torch.nn as nn
 import torch.optim as optim
 import network  # 引入自定义文件network.py
@@ -211,22 +212,19 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
     _, predict = torch.max(all_output, 1) #?
     predict_list = predict.numpy()
     all_label_list = all_label.numpy()
-    print(all_output)
-    print(predict)
-    print(predict_list)
-    sum = 0.0
-    for number in range(len(all_label_list)):
-        sum += (predict_list[number]-all_label_list[number])**2
-    MSE = sum/len(all_label_list)
+    # print(all_output)
+    # print(predict)
+    # print(predict_list)
+    MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
     # my_mse = math.exp(-MSE)
-    print(all_output)
-    print(predict)
-    print(predict_list)
+    # print(all_output)
+    # print(predict)
+    # print(predict_list)
 
     return MSE
 
 
-def transfer_classification(config):
+def transfer_classification(config,classnum):
     # 定义一个字典类型变量
     prep_dict = {}
     # Add kry-value pairs for 'prep_dict'
@@ -308,7 +306,7 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num = 4# ??
+    class_num = classnum# ??
 
     ## set base network
     net_config = config["network"]
@@ -499,17 +497,39 @@ def transfer_classification(config):
 
 
     all_label_list = all_label.view(-1,1).numpy()
-    predict_list =  predict_best.view(-1,1).numpy()
+    predict_list =predict_best.view(-1,1).numpy()
 
-    MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
+    MSE = ((predict_list - all_label_list)** 2).mean()
     print('预测结果：')
     print(MSE)
+    return F_best,MSE
+
+
+
+def get_faults_num(path):
+    # 打开文本文件，读取所有行
+    with open(path, 'r') as f:
+        lines = f.readlines()
+    # 定义一个集合，用于存储所有出现过的数字
+    nums_set = set()
+    # 遍历每一行文本，对每一行进行处理
+    for line in lines:
+        # 将一行文本按照空格分割为两个部分，取出右边的数字部分
+        num_str = line.split('\t')[-1].strip()
+
+        # 如果该数字部分不为空，则将其转换为整数，并加入集合
+        if num_str:
+            nums_set.add(int(num_str))
+
+    # 输出集合的长度，即为不同数字种类的数量
+    # print(len(nums_set))
+    return len(nums_set)
 
 
 if __name__ == "__main__":
     # random.seed(time.time())
     # setup_seed(random.randint(1, 100))
-    setup_seed(9)
+    setup_seed(20)
     # path = '..\data\img\grb_img\ivy-2.0\\buggy\ivy-2.0_src_java_org_apache_ivy_core_IvyPatternHelper.png'
     # # path = 'F:\Document\GitHub\DTLDP_master\data\img\grb_img\ivy-2.0\clean\ivy-2.0_src_java_org_apache_ivy_ant_AddPathTask.png'
     # with open(path, 'rb') as f:  # 以二进制格式打开一个文件用于只读
@@ -534,44 +554,85 @@ if __name__ == "__main__":
     # args = parser.parse_args()
 
     # Case2: 不使用命令行
+    strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
+               "xerces-1.2"]
+    new_arr = []
+    train_arr = []
+    test_arr = []
+
+    for i in range(len(strings)):
+        for j in range(i + 1, len(strings)):
+            new_arr.append(strings[i] + "->" + strings[j])
+            new_arr.append(strings[j] + "->" + strings[i])
+
+
     parser = argparse.ArgumentParser(description='Transfer Learning')
     args = parser.parse_args()
     args.gpu_id = '0'
-    args.source = 'ant-1.3'
-    args.target = 'ivy-2.0'
+    args.source = 'xalan-2.4'
+    args.target = 'xalan-2.4'
     args.loss_name = 'DAN'
     args.tradeoff = 1.0
     args.using_bottleneck = 0
     args.task = 'CPDP'  # 'WPDP' or 'CPDP'
     # cpdp 表示跨项目缺陷预测
 
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
+    for i in range(len(new_arr)):
+        args.source = new_arr[i].split("->")[0]
+        args.target = new_arr[i].split("->")[1]
+        mytarget_path = "../data/txt/" + args.target + ".txt"
+        classnum = get_faults_num(mytarget_path)
+        print(args.source+" "+args.target+" ", end='')
+        print(classnum)
 
-    # 定义一个字典类型变量
-    config = {}
-    # 添加键值对
-    config["num_iterations"] = 10
-    config["test_interval"] = 1  # ?
-    # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
-    config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
-                      {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
-    config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
-    #
-    config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                       "batch_size": {"train": 64, "test": 64}},
-                      {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                       "batch_size": {"train": 64, "test": 64}}]
-    config["network"] = {"name": "AlexNet", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
-    config["optimizer"] = {"type": "SGD",
-                           "optim_params": {"lr": 0.05, "momentum": 0.9, "weight_decay": 0.0005, "nesterov": True},
-                           "lr_type": "inv", "lr_param": {"init_lr": 0.0003, "gamma": 0.0003, "power": 0.75}}
-    # 对代码的修改和理解  都吧注释写满  方便组员学习
-    # num_iterations表示训练的迭代次数；
-    # test_interval表示每多少个迭代进行一次测试；
-    # prep表示数据预处理的配置，包括source和target两个来源的数据，需要进行的操作包括图片的缩放和裁剪；
-    # loss表示损失函数的配置，包括使用的损失函数的名称和对各项损失的权重；
-    # data表示训练和测试数据的配置，包括source和target两个来源的数据，需要读取的文件路径和每个batch的大小；
-    # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
-    # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
+        os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
 
-    transfer_classification(config)
+        # 定义一个字典类型变量
+        config = {}
+        # 添加键值对
+        config["num_iterations"] = 10
+        config["test_interval"] = 1  # ?
+        # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
+        config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
+                          {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
+        config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
+        #
+        config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
+                           "batch_size": {"train": 64, "test": 64}},
+                          {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
+                           "batch_size": {"train": 64, "test": 64}}]
+        config["network"] = {"name": "AlexNet", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
+        config["optimizer"] = {"type": "SGD",
+                               "optim_params": {"lr": 0.05, "momentum": 0.9, "weight_decay": 0.0005, "nesterov": True},
+                               "lr_type": "inv", "lr_param": {"init_lr": 0.0003, "gamma": 0.0003, "power": 0.75}}
+        # 对代码的修改和理解  都吧注释写满  方便组员学习
+        # num_iterations表示训练的迭代次数；
+        # test_interval表示每多少个迭代进行一次测试；
+        # prep表示数据预处理的配置，包括source和target两个来源的数据，需要进行的操作包括图片的缩放和裁剪；
+        # loss表示损失函数的配置，包括使用的损失函数的名称和对各项损失的权重；
+        # data表示训练和测试数据的配置，包括source和target两个来源的数据，需要读取的文件路径和每个batch的大小；
+        # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
+        # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
+        train_result,test_result = transfer_classification(config,classnum)
+        print(new_arr[i],end=' ')
+        print(" train", end=' ')
+        print(train_result, end=' ')
+        print(" test", end=' ')
+        print(test_result)
+
+        # print(new_arr[i]+" train "+ train_result+" test"+test_result)
+        train_arr.append(train_result)
+        test_arr.append(test_result)
+
+    workbook = openpyxl.Workbook()
+    # 选择默认的工作表
+    worksheet = workbook.active
+
+    for i in range(len(new_arr)):
+        worksheet.cell(row=i + 1, column=1, value=new_arr[i])
+        worksheet.cell(row=i + 1, column=2, value=train_arr[i])
+        worksheet.cell(row=i + 1, column=1, value=test_arr[i])
+
+
+    # 保存文件
+    workbook.save('output.xlsx')#运行失败 需要改一个别的文件名
