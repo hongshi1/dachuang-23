@@ -15,6 +15,7 @@ import torch.utils.data as util_data  # To use 'DataLoader()'
 import lr_schedule
 from data_list import ImageList
 from torch.autograd import Variable
+import math
 
 optim_dict = {"SGD": optim.SGD}
 
@@ -51,6 +52,8 @@ def get_fea_lab(what, loader, model, gpu):
             all_output = torch.cat((all_output, outputs.data.float()), 0)
             all_label = torch.cat((all_label, labels.data.float()), 0)
 
+    # all_label_list = all_label.view(-1.1).cpu().numpy()
+    # all_output_list = all_output.view(-1,1).cpu().numpy()
     all_label_list = all_label.cpu().numpy()
     all_output_list = all_output.cpu().numpy()
     return all_output_list, all_label_list
@@ -206,9 +209,20 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_label = torch.cat((all_label, labels.data.float()), 0)
 
     _, predict = torch.max(all_output, 1) #?
-    all_label_list = all_label.numpy()
     predict_list = predict.numpy()
-    MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
+    all_label_list = all_label.numpy()
+    print(all_output)
+    print(predict)
+    print(predict_list)
+    sum = 0.0
+    for number in range(len(all_label_list)):
+        sum += (predict_list[number]-all_label_list[number])**2
+    MSE = sum/len(all_label_list)
+    # my_mse = math.exp(-MSE)
+    print(all_output)
+    print(predict)
+    print(predict_list)
+
     return MSE
 
 
@@ -294,7 +308,7 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num = 1  # ??
+    class_num = 4# ??
 
     ## set base network
     net_config = config["network"]
@@ -335,7 +349,7 @@ def transfer_classification(config):
         parameter_list = [{"params": base_network.parameters(), "lr": 10},
                           {"params": classifier_layer.parameters(), "lr": 10}]
 
-    ## add additional network for some methods
+    ## add additional network for some methodsf
     if loss_config["name"] == "JAN":
         softmax_layer = nn.Softmax()
         if use_gpu:
@@ -353,7 +367,7 @@ def transfer_classification(config):
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
     len_train_target = len(dset_loaders["target"]["train"]) - 1
-    F_best = 0 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
+    F_best = 1000000 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
 
     best_model = ''
     predict_best = ''
@@ -372,9 +386,10 @@ def transfer_classification(config):
                                               test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
 
             print(args.source + '->' + args.target)
+            print("F")
             print(F)
 
-            if F_best < F:
+            if F_best > F:
                 F_best = F
                 base_network.train(False)
                 classifier_layer.train(False)
@@ -412,20 +427,20 @@ def transfer_classification(config):
             inputs_source, inputs_target, labels_source = Variable(inputs_source), Variable(inputs_target), Variable(
                 labels_source)
 
-        # N = len(labels_source)
-        # new_labels = torch.zeros((N, 4))  # 新标签张量，长度为N，宽度为4
-        # for i in range(N):
-        #     if labels_source[i] == 0:
-        #         new_labels[i][0] = 1
-        #     elif labels_source[i] == 1:
-        #         new_labels[i][1] = 1
-        #     elif labels_source[i] == 2:
-        #         new_labels[i][2] = 1
-        #     elif labels_source[i] == 3:
-        #         new_labels[i][3] = 1
 
-        # 使用torch.nn.functional.one_hot()函数将标签转换为one-hot编码
-        # labels_source = F.one_hot(labels_source, num_classes=4)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         inputs = torch.cat((inputs_source, inputs_target), dim=0)
         # start_train = time.clock()
@@ -437,10 +452,10 @@ def transfer_classification(config):
             features = bottleneck_layer(features)
         outputs = classifier_layer(features)
 
-        output_size = torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size()  ##判断outpus和labels_source的大小
-        size_s = labels_source.size()
-        output = len(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size())
-        labels_source_size = labels_source.size()
+        # output_size = torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size()  ##判断outpus和labels_source的大小
+        # size_s = labels_source.size()
+        # output = len(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size())
+        # labels_source_size = labels_source.size()
 
         classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
                                           labels_source.float().view(-1, 1))  # python3
@@ -483,11 +498,10 @@ def transfer_classification(config):
     print(F_best)
 
 
-    all_label_list = all_label.view(-1, 1).numpy()
-    predict_list =  predict_best.view(-1, 1).numpy()
+    all_label_list = all_label.view(-1,1).numpy()
+    predict_list =  predict_best.view(-1,1).numpy()
 
     MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
-
     print('预测结果：')
     print(MSE)
 
