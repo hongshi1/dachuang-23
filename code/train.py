@@ -373,7 +373,7 @@ def transfer_classification(config):
 
     best_model = ''
     predict_best = ''
-    for i in range(config["num_iterations"]):
+    for i in range(config["num_iterations"]):                               #网格法确定最佳参数组合
         if i % config["test_interval"] == 0:  # "test_interval"?
             base_network.train(False)
             classifier_layer.train(False)  # False -- ?
@@ -409,13 +409,13 @@ def transfer_classification(config):
         ## train one iter
         if net_config["use_bottleneck"]:
             bottleneck_layer.train(True)
-        classifier_layer.train(True)  #
-        optimizer = lr_scheduler(param_lr, optimizer, i, **schedule_param)
-        optimizer.zero_grad()
+        classifier_layer.train(True)  #将模型设置为训练模式
+        optimizer = lr_scheduler(param_lr, optimizer, i, **schedule_param)      #调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
+        optimizer.zero_grad() #用于将梯度缓存清零
         if i % len_train_source == 0:
-            iter_source = iter(dset_loaders["source"]["train"])
+            iter_source = iter(dset_loaders["source"]["train"])       #更新源域数据集迭代器
         if i % len_train_target == 0:
-            iter_target = iter(dset_loaders["target"]["train"])
+            iter_target = iter(dset_loaders["target"]["train"])         #更新目标域数据集迭代器
         inputs_source, labels_source, _ = next(iter_source)  # python3
         inputs_target, labels_target, _ = next(iter_target)
 
@@ -444,20 +444,15 @@ def transfer_classification(config):
 
 
 
-        inputs = torch.cat((inputs_source, inputs_target), dim=0)
+        inputs = torch.cat((inputs_source, inputs_target), dim=0) #第一维上进行拼接
         # start_train = time.clock()
         start_train = time.process_time()
 
-        features = base_network(inputs)
+        features = base_network(inputs) #进行特征提取
 
         if net_config["use_bottleneck"]:
-            features = bottleneck_layer(features)
-        outputs = classifier_layer(features)
-
-        # output_size = torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size()  ##判断outpus和labels_source的大小
-        # size_s = labels_source.size()
-        # output = len(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size())
-        # labels_source_size = labels_source.size()
+            features = bottleneck_layer(features)   #瓶颈层分类
+        outputs = classifier_layer(features)        #分类器分类
 
         classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
                                           labels_source.float().view(-1, 1))  # python3
