@@ -318,7 +318,7 @@ def transfer_classification(config):
 
     if net_config["use_bottleneck"]:
         bottleneck_layer = nn.Linear(base_network.output_num(), net_config["bottleneck_dim"])  # 创建瓶颈层
-        classifier_layer = nn.Linear(bottleneck_layer.out_features, class_num)  # 创建分类层
+        classifier_layer = nn.Linear(bottleneck_layer.out_features, class_num)  # 创建分类层  用于最后将卷积层和全连接层的特征进行分类
     else:
         classifier_layer = nn.Linear(base_network.output_num(), class_num)  # 创建分类层
     for param in base_network.parameters():
@@ -384,7 +384,7 @@ def transfer_classification(config):
                                               test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
             else:
                 F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                              nn.Sequential(base_network, classifier_layer),
+                                              nn.Sequential(base_network, classifier_layer),                    #nn.Sequential一个用于存放神经网络模块的序列容器，可以用来自定义模型，运行顺序按照输入顺序进行
                                               test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
 
             print(args.source + '->' + args.target)
