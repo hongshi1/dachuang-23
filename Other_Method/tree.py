@@ -1,5 +1,5 @@
 from matplotlib.font_manager import FontProperties
-import matplotlib.pyplot as plt #这个包貌似经常被用到
+import matplotlib.pyplot as plt #这个包貌似经常被用到   用来画图的
 from math import log # 干嘛的?
 import operator
 import pickle
