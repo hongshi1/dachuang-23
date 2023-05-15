@@ -112,6 +112,7 @@ def svr_test(loader):
         test_labels_all.append(data[1])
 
     X_train = torch.cat(test_data_all, dim=0)  #[116,3,224,224]
+    X_train = X_train.reshape(X_train.shape[0],-1)
     y_train = torch.cat(test_labels_all, dim=0) #[116]
 
     #维度转换
@@ -136,6 +137,7 @@ def svr_predict(grid,loader):
         test_labels_all.append(data[1])
 
     X = torch.cat(test_data_all, dim=0)
+    X = X.reshape(X.shape[0],-1)
     y = torch.cat(test_labels_all, dim=0)
 
 
@@ -143,14 +145,13 @@ def svr_predict(grid,loader):
 
 
     # 将数据集分为训练集和测试集
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)  # 将波士顿房价数据集中的奇数行和偶数行取出做横向堆叠，作为测试数据集[::2, :]：从第1行开始，每隔1行取一次数据，取出来的是第1、3、5、...行的所有列。
+    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)  # 将波士顿房价数据集中的奇数行和偶数行取出做横向堆叠，作为测试数据集[::2, :]：从第1行开始，每隔1行取一次数据，取出来的是第1、3、5、...行的所有列。
     # 使用最佳超参数来训练SVR模型
-    model = SVR(**grid.best_params_)
-    model.fit(X_train, y_train)
+
 
     # 使用测试集来评估模型的性能
-    y_pred = model.predict(X_test)
-    mse = mean_squared_error(y_test, y_pred)
+    y_pred = grid.predict(X)
+    mse = mean_squared_error(y, y_pred)
     print("MSE:", mse)
 
 def transfer_classification(config):
@@ -237,59 +238,7 @@ def transfer_classification(config):
 
     class_num = 4# ??
 
-    ## set base network
-    net_config = config["network"]
-    base_network = network.network_dict[net_config["name"]]()  # 'network_dict'是一个字典，包含各种类型的AlexNet
 
-    if net_config["use_bottleneck"]:
-        bottleneck_layer = nn.Linear(base_network.output_num(), net_config["bottleneck_dim"])  # 创建瓶颈层
-        classifier_layer = nn.Linear(bottleneck_layer.out_features, class_num)  # 创建分类层  用于最后将卷积层和全连接层的特征进行分类
-    else:
-        classifier_layer = nn.Linear(base_network.output_num(), class_num)  # 创建分类层
-    for param in base_network.parameters():
-        param.requires_grad = True
-
-    ## initialization
-    if net_config["use_bottleneck"]:
-        bottleneck_layer.weight.data.normal_(0, 0.005)
-        bottleneck_layer.bias.data.fill_(0.1)
-        bottleneck_layer = nn.Sequential(bottleneck_layer, nn.ReLU(), nn.Dropout(0.5))
-    # 设置分类层神经节点的权重和偏置
-    classifier_layer.weight.data.normal_(0, 0.01)
-    classifier_layer.bias.data.fill_(0.0)
-
-    use_gpu = torch.cuda.is_available()
-    print(use_gpu)
-    if use_gpu:  # 如果GPU可用则不使用CPU进行训练，默认使用CPU
-        if net_config["use_bottleneck"]:
-            bottleneck_layer = bottleneck_layer.cuda()
-        classifier_layer = classifier_layer.cuda()
-        base_network = base_network.cuda()
-
-    ## collect parameters
-    if net_config["use_bottleneck"]:
-        parameter_list = [{"params": base_network.parameters(), "lr": 10},
-                          {"params": bottleneck_layer.parameters(), "lr": 10},
-                          {"params": classifier_layer.parameters(), "lr": 10}]
-
-    else:
-        parameter_list = [{"params": base_network.parameters(), "lr": 10},
-                          {"params": classifier_layer.parameters(), "lr": 10}]
-
-    ## add additional network for some methodsf
-    if loss_config["name"] == "JAN":
-        softmax_layer = nn.Softmax()
-        if use_gpu:
-            softmax_layer = softmax_layer.cuda()
-
-    ## set optimizer
-    optimizer_config = config["optimizer"]
-    optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
-    param_lr = []
-    for param_group in optimizer.param_groups:
-        param_lr.append(param_group["lr"])
-    schedule_param = optimizer_config["lr_param"]
-    lr_scheduler = lr_schedule.schedule_dict[optimizer_config["lr_type"]]
 
     grid = svr_test(dset_loaders["source"])
     svr_predict(grid,dset_loaders["target"])

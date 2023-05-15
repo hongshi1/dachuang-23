@@ -33,6 +33,239 @@ import random
 
 import time
 from PIL import Image
+#
+#
+# def get_fea_lab(what, loader, model, gpu):
+#     start_test = True
+#     iter_what = iter(loader[what])
+#     for i in range(len(loader[what])):
+#         data = iter_what.next()
+#         inputs = data[0]
+#         labels = data[1]
+#         if gpu:
+#             inputs = Variable(inputs.cuda())
+#             labels = Variable(labels.cuda())
+#         else:
+#             inputs = Variable(inputs)
+#             labels = Variable(labels)
+#
+#         outputs = model(inputs)  # get features
+#
+#         if start_test:
+#             all_output = outputs.data.float()
+#             all_label = labels.data.float()
+#             start_test = False
+#         else:
+#             all_output = torch.cat((all_output, outputs.data.float()), 0)
+#             all_label = torch.cat((all_label, labels.data.float()), 0)
+#
+#     # all_label_list = all_label.view(-1.1).cpu().numpy()
+#     # all_output_list = all_output.view(-1,1).cpu().numpy()
+#     all_label_list = all_label.cpu().numpy()
+#     all_output_list = all_output.cpu().numpy()
+#     return all_output_list, all_label_list
+#
+#
+# def setup_seed(seed):
+#     torch.manual_seed(seed)
+#     torch.cuda.manual_seed_all(seed)
+#     np.random.seed(seed)
+#     # random.seed(seed)
+#     torch.backends.cudnn.deterministic = True
+#
+#
+# def tsne(df_fea, df_lab):
+#     # print(df_fea, df_lab)
+#     tsne = TSNE(2, 38, 20, 600)
+#     result = tsne.fit_transform(df_fea)
+#     colors = ['c', 'r']
+#     idx_1 = [i1 for i1 in range(len(df_lab)) if df_lab[i1] == 0]
+#     fig1 = plt.scatter(result[idx_1, 0], result[idx_1, 1], 20, color=colors[0], label='Clean')
+#
+#     idx_2 = [i2 for i2 in range(len(df_lab)) if df_lab[i2] == 1]
+#     fig2 = plt.scatter(result[idx_2, 0], result[idx_2, 1], 20, color=colors[1], label='Defective')
+#
+#
+# def get_tsne_img(what, loader, model, gpu=True):
+#     fea, lab = get_fea_lab(what, loader, model, gpu)
+#     tsne(fea, lab)
+#     plt.legend()
+#     plt.xticks([])
+#     plt.yticks([])
+#
+#     if what == 'train':
+#         plt.savefig(
+#             '../temp/tsne/' + args.source + '-' + args.target + '.pdf')
+#     else:
+#         plt.savefig(
+#             '../temp/tsne/' + args.target + '-' + args.source + '.pdf')
+#     plt.close()
+#
+#
+#
+#
+#
+# def image_classification_test(loader, loader1, test_10crop=True, gpu=True):
+#     start_test = True
+#     names = []
+#     if test_10crop:
+#         iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
+#         for i in range(len(loader['test0'])):
+#             data = [iter_test[j].next() for j in range(10)]
+#             inputs = [data[j][0] for j in range(10)]
+#             names.append(data[0][2])
+#             labels = data[0][1]
+#             if gpu:
+#                 for j in range(10):
+#                     inputs[j] = inputs[j].numpy().flatten()  # Convert input images to 1D arrays
+#                 labels = labels.numpy()
+#             else:
+#                 for j in range(10):
+#                     inputs[j] = inputs[j].numpy().flatten()
+#                 labels = labels.numpy()
+#
+#             inputs = np.concatenate(inputs, axis=1)  # Concatenate the 1D arrays
+#             inputs = inputs.reshape(data[0].shape[0], -1)
+#             rf_model = RandomForestRegressor()
+#             rf_model.fit(inputs, labels)
+#
+#             # Make predictions using the trained random forest classifier
+#             outputs = rf_model.predict(inputs)
+#
+#             if start_test:
+#                 all_output = outputs.astype(float)
+#                 all_label = labels.astype(float)
+#                 start_test = False
+#             else:
+#                 all_output = np.concatenate((all_output, outputs.astype(float)), axis=0)
+#                 all_label = np.concatenate((all_label, labels.astype(float)), axis=0)
+#     else:
+#         iter_test = iter(loader["test"])
+#         iter_test1 = iter(loader1["test"])
+#         data1 = next(iter_test1)
+#         inputs1 = data1[0]
+#         labels1 = data1[1]
+#         inputs1 = inputs1.numpy().flatten()
+#         labels1 = labels1.numpy()
+#         inputs1 = inputs1.reshape(data1[0].shape[0], -1)
+#         for _ in range(len(loader["test"])):
+#             data = next(iter_test)
+#             inputs = data[0]
+#             labels = data[1]
+#             names.append(data[2])
+#             if gpu:
+#                 inputs = inputs.numpy().flatten()
+#                 labels = labels.numpy()
+#             else:
+#                 inputs = inputs.numpy().flatten()
+#                 labels = labels.numpy()
+#
+#
+#             inputs = inputs.reshape(data[0].shape[0], -1)
+#             rf_model = RandomForestRegressor()
+#             rf_model.fit(inputs, labels)
+#             # Make predictions using the trained random forest classifier
+#
+#             outputs = rf_model.predict(inputs1)
+#
+#             if start_test:
+#                 all_output = outputs.astype(float)
+#                 all_label = labels1.astype(float)
+#                 start_test = False
+#             else:
+#                 all_output = np.concatenate((all_output, outputs.astype(float)), axis=0)
+#                 all_label = np.concatenate((all_label, labels1.astype(float)), axis=0)
+#
+#     mse = mean_squared_error(all_label, all_output)
+#     return mse
+#
+#
+# def transfer_classification(config):
+#     # 定义一个字典类型变量
+#     prep_dict = {}
+#     # Add kry-value pairs for 'prep_dict'
+#     # 数据预处理
+#     for prep_config in config["prep"]:
+#         prep_dict[prep_config["name"]] = {}
+#         if prep_config["type"] == "image":
+#             prep_dict[prep_config["name"]]["test_10crop"] = prep_config["test_10crop"]
+#             # Call image_train() in pre_process.py
+#             prep_dict[prep_config["name"]]["train"] = prep.image_train(resize_size=prep_config["resize_size"],
+#                                                                        crop_size=prep_config["crop_size"])
+#             #某个标准化操作
+#             # call image_test()
+#
+#             if prep_config["test_10crop"]:
+#                 prep_dict[prep_config["name"]]["test"] = prep.image_test_10crop(resize_size=prep_config["resize_size"],
+#                                                                                 crop_size=prep_config["crop_size"])
+#             else:
+#                 prep_dict[prep_config["name"]]["test"] = prep.image_test(resize_size=prep_config["resize_size"],
+#                                                                          crop_size=prep_config["crop_size"])
+#
+#     # class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
+#     # class_criterion = nn.CrossEntropyLoss(weight=torch.tensor([1, 1, 2]))
+#
+#     class_criterion = nn.MSELoss()  ##mse损失函数
+#     loss_config = config["loss"]
+#     # 如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
+#     # DAN是一种常用的域适应方法，它通过对抗训练的方式来使得特征提取器对源域和目标域的特征表示具有相同的分布，从而提高模型的泛化性能。在具体实现中，DAN使用一个域分类器来判
+#     # 别输入的特征属于源域还是目标域，同时通过最小化这个分类器的损失来训练特征提取器，使得提取到的特征能够欺骗域分类器，使得域分类器无法判断输入的特征是来自源域还是目标域。
+#     transfer_criterion = loss.loss_dict[loss_config["name"]]
+#     if "params" not in loss_config:
+#         loss_config["params"] = {}
+#
+#     ## prepare data
+#     dsets = {}
+#     dset_loaders = {}
+#     for data_config in config["data"]:
+#         dsets[data_config["name"]] = {}  # 创建字典元素
+#         dset_loaders[data_config["name"]] = {}  # 创建一个字典元素
+#         if data_config["type"] == "image":
+#             # Creat a 'ImageList' object，读取txt文件中的数据赋值给字典元素'train'
+#             dsets[data_config["name"]]["train"] = ImageList(open(data_config["list_path"]["train"]).readlines(),
+#                                                             transform=prep_dict[data_config["name"]]["train"])
+#             # 创建一个DataLoader对象，为字典'dset_loaders'中嵌套字典元素'train'赋值
+#             dset_loaders[data_config["name"]]["train"] = util_data.DataLoader(dsets[data_config["name"]]["train"],
+#                                                                               batch_size=data_config["batch_size"][
+#                                                                                   "train"], shuffle=True, num_workers=4)
+#             if "test" in data_config["list_path"]:
+#                 if prep_dict[data_config["name"]]["test_10crop"]:
+#                     for i in range(10):  # 10?
+#                         dsets[data_config["name"]]["test" + str(i)] = ImageList(
+#                             open(data_config["list_path"]["test"]).readlines(),
+#                             transform=prep_dict[data_config["name"]]["test"]["val" + str(i)]
+#                         )
+#                         dset_loaders[data_config["name"]]["test" + str(i)] = util_data.DataLoader(
+#                             dsets[data_config["name"]]["test" + str(i)], batch_size=data_config["batch_size"]["test"],
+#                             shuffle=False, num_workers=4)
+#                 else:
+#                     dsets[data_config["name"]]["test"] = ImageList(open(data_config["list_path"]["test"]).readlines(),
+#                                                                    transform=prep_dict[data_config["name"]]["test"])
+#
+#                     dset_loaders[data_config["name"]]["test"] = util_data.DataLoader(dsets[data_config["name"]]["test"],
+#                                                                                      batch_size=
+#                                                                                      data_config["batch_size"]["test"],
+#                                                                                      shuffle=False, num_workers=4)
+#             else:
+#                 if prep_dict[data_config["name"]]["test_10crop"]:
+#                     for i in range(10):
+#                         dsets[data_config["name"]]["test" + str(i)] = ImageList(
+#                             open(data_config["list_path"]["train"]).readlines(),
+#                             transform=prep_dict[data_config["name"]]["test"]["val" + str(i)])
+#                         dset_loaders[data_config["name"]]["test" + str(i)] = util_data.DataLoader(
+#                             dsets[data_config["name"]]["test" + str(i)], batch_size=data_config["batch_size"]["test"],
+#                             shuffle=False, num_workers=4)
+#                 else:
+#                     dsets[data_config["name"]]["test"] = ImageList(open(data_config["list_path"]["train"]).readlines(),
+#                                                                    transform=prep_dict[data_config["name"]]["test"])
+#                     dset_loaders[data_config["name"]]["test"] = util_data.DataLoader(dsets[data_config["name"]]["test"],
+#                                                                                      batch_size=
+#                                                                                      data_config["batch_size"]["test"],
+#                                                                                      shuffle=False, num_workers=4)
+#     # print(dsets[data_config["name"]]["train"])
+#     # print(dsets[data_config["name"]]["test"])
+#
+#
 
 
 def get_fea_lab(what, loader, model, gpu):
@@ -101,84 +334,43 @@ def get_tsne_img(what, loader, model, gpu=True):
             '../temp/tsne/' + args.target + '-' + args.source + '.pdf')
     plt.close()
 
+def svr_test(loader):
+    test_data_all = []
+    test_labels_all = []
+
+    for data in loader["test"]:
+        test_data_all.append(data[0])
+        test_labels_all.append(data[1])
+
+    X_train = torch.cat(test_data_all, dim=0)  #[116,3,224,224]
+    X_train = X_train.reshape(X_train.shape[0],-1)
+    y_train = torch.cat(test_labels_all, dim=0) #[116]
+
+    #维度转换
+    rf_model = RandomForestRegressor()
+    rf_model.fit(X_train, y_train)
+
+    return rf_model
+
+def svr_predict(model,loader):
+
+    test_data_all = []
+    test_labels_all = []
+
+    for data in loader["test"]:
+        test_data_all.append(data[0])
+        test_labels_all.append(data[1])
+
+    X = torch.cat(test_data_all, dim=0)
+    X = X.reshape(X.shape[0], -1)
+    y = torch.cat(test_labels_all, dim=0)
 
 
 
-
-def image_classification_test(loader, loader1, test_10crop=True, gpu=True):
-    start_test = True
-    names = []
-    if test_10crop:
-        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
-        for i in range(len(loader['test0'])):
-            data = [iter_test[j].next() for j in range(10)]
-            inputs = [data[j][0] for j in range(10)]
-            names.append(data[0][2])
-            labels = data[0][1]
-            if gpu:
-                for j in range(10):
-                    inputs[j] = inputs[j].numpy().flatten()  # Convert input images to 1D arrays
-                labels = labels.numpy()
-            else:
-                for j in range(10):
-                    inputs[j] = inputs[j].numpy().flatten()
-                labels = labels.numpy()
-
-            inputs = np.concatenate(inputs, axis=1)  # Concatenate the 1D arrays
-            inputs = inputs.reshape(data[0].shape[0], -1)
-            rf_model = RandomForestRegressor()
-            rf_model.fit(inputs, labels)
-
-            # Make predictions using the trained random forest classifier
-            outputs = rf_model.predict(inputs)
-
-            if start_test:
-                all_output = outputs.astype(float)
-                all_label = labels.astype(float)
-                start_test = False
-            else:
-                all_output = np.concatenate((all_output, outputs.astype(float)), axis=0)
-                all_label = np.concatenate((all_label, labels.astype(float)), axis=0)
-    else:
-        iter_test = iter(loader["test"])
-        iter_test1 = iter(loader1["test"])
-        data1 = next(iter_test1)
-        inputs1 = data1[0]
-        labels1 = data1[1]
-        inputs1 = inputs1.numpy().flatten()
-        labels1 = labels1.numpy()
-        inputs1 = inputs1.reshape(data1[0].shape[0], -1)
-        for _ in range(len(loader["test"])):
-            data = next(iter_test)
-            inputs = data[0]
-            labels = data[1]
-            names.append(data[2])
-            if gpu:
-                inputs = inputs.numpy().flatten()
-                labels = labels.numpy()
-            else:
-                inputs = inputs.numpy().flatten()
-                labels = labels.numpy()
-
-
-            inputs = inputs.reshape(data[0].shape[0], -1)
-            rf_model = RandomForestRegressor()
-            rf_model.fit(inputs, labels)
-            # Make predictions using the trained random forest classifier
-
-            outputs = rf_model.predict(inputs1)
-
-            if start_test:
-                all_output = outputs.astype(float)
-                all_label = labels1.astype(float)
-                start_test = False
-            else:
-                all_output = np.concatenate((all_output, outputs.astype(float)), axis=0)
-                all_label = np.concatenate((all_label, labels1.astype(float)), axis=0)
-
-    mse = mean_squared_error(all_label, all_output)
-    return mse
-
+    # 使用测试集来评估模型的性能
+    y_pred = model.predict(X)
+    mse = mean_squared_error(y, y_pred)
+    print("MSE:", mse)
 
 def transfer_classification(config):
     # 定义一个字典类型变量
@@ -192,7 +384,6 @@ def transfer_classification(config):
             # Call image_train() in pre_process.py
             prep_dict[prep_config["name"]]["train"] = prep.image_train(resize_size=prep_config["resize_size"],
                                                                        crop_size=prep_config["crop_size"])
-            #某个标准化操作
             # call image_test()
 
             if prep_config["test_10crop"]:
@@ -262,64 +453,13 @@ def transfer_classification(config):
                                                                                      batch_size=
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
-    # print(dsets[data_config["name"]]["train"])
-    # print(dsets[data_config["name"]]["test"])
 
     class_num = 4# ??
 
-    ## set base network
-    net_config = config["network"]
-    base_network = network.network_dict[net_config["name"]]()  # 'network_dict'是一个字典，包含各种类型的AlexNet
 
 
-
-    use_gpu = torch.cuda.is_available()
-
-
-
-
-    ## add additional network for some methodsf
-    if loss_config["name"] == "JAN":
-        softmax_layer = nn.Softmax()
-        if use_gpu:
-            softmax_layer = softmax_layer.cuda()
-
-
-
-    ## train
-    len_train_source = len(dset_loaders["source"]["train"]) - 1
-    len_train_target = len(dset_loaders["target"]["train"]) - 1
-    F_best = 1000000 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
-
-    best_model = ''
-    predict_best = ''
-    for i in range(config["num_iterations"]):
-        if i % config["test_interval"] == 0:  # "test_interval"?
-            for i in range(config["num_iterations"]):
-                if i % config["test_interval"] == 0:  # "test_interval"?
-                    F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                                 dset_loaders["target"],
-                                                  gpu=use_gpu,
-                                                  test_10crop=prep_dict["source"]["test_10crop"], )
-
-
-            print(args.source + '->' + args.target)
-            print("F")
-            print(F)
-
-        if F<F_best:
-            F_best = F
-
-
-    print("F_BEST")
-    print(F_best)
-
-
-
-
-
-
-
+    grid = svr_test(dset_loaders["source"])
+    svr_predict(grid,dset_loaders["target"])
 
 
 
