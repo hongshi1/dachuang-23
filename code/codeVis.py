@@ -1,5 +1,6 @@
 import numpy
 import os,shutil
+import re
 import binascii
 from random import *
 import colorMap
@@ -83,13 +84,21 @@ if __name__ == '__main__':
         # 遍历每行数据
         for line in f:
             idx_null = idx_null + 1
-            line = txtfile.split('.txt')[0] + '/src/java/' + line.replace('\t', '/').replace(' ', '/').replace('.', '/')
-            f_path = '../data/archives/'+line[:-3]  # 截取倒数第三个字符之前的所有字符，每行末尾都有一个换行符'\n'
+            filename = txtfile.split('.txt')[0] + '/src/java/'
+            f_path = ''
+            if line.rsplit('.', maxsplit=1)[0][-1] != '0':
+                line = filename + line.replace('\t', '/').replace(' ', '/').replace('.', '/')
+            else:
+                line = filename + line.replace('\t', '/').replace(' ', '/').replace('.','/')
+                line = ".".join(line.rsplit('/', maxsplit=1))
+
+            f_path = '../data/archives/'+line.rsplit('/', maxsplit=1)[0]  # 截取倒数第三个字符之前的所有字符，每行末尾都有一个换行符'\n'
             while f_path[-1] == '/':
                 f_path = f_path[:-1]
             # label = line[-2:-1]  # 倒数第二个字符(即缺陷标签，倒数第一个字符是换行符'\n')，其中1表示有缺陷，0表示无缺陷；如果缺陷数目为10/20...，这么处理是错误的
             label = line.split('/')[-1]  # 截取分割后最后一部分
             label = label.split('\n')[0]  # 截取分割后的第一部分
+
 
             # start = time.clock()
             if os.path.exists(f_path+'.class'):
@@ -98,7 +107,7 @@ if __name__ == '__main__':
                 if size == 0:  # 当前.class文件里的内容为空
                     break
                 im = colorMap.get_new_color_img(f_path+'.class')
-                if int(label) >= 1:  # 有缺陷样本,  label == '1' —— 无法正确处理缺陷数目大于1的样本
+                if float(label) > 0:  # 有缺陷样本,  label == '1' —— 无法正确处理缺陷数目大于1的样本
                     path_save = path_project +'/buggy/'+''.join(line[:-3]).replace('/','_')+'.png'
                     cv2.imwrite(path_save, im)
                     # im.save(path_save)  # python2
@@ -114,7 +123,15 @@ if __name__ == '__main__':
                 if size == 0:  # 当前.java文件里的内容为空
                     break
                 im = colorMap.get_new_color_img(f_path+'.java')
-                if int(label) >= 1:  # label == '1'
+
+                try:
+                    float_number = float(label)
+                except ValueError:
+                    print("无法将字符串转换为浮点数:", label)
+                    print(line)
+
+
+                if float(label) > 0:  # label == '1'
                     path_save = path_project + '//buggy/' + ''.join(line[:-3]).replace('/', '_') + '.png'
                     cv2.imwrite(path_save, im)
                     # im.save(path_save)
