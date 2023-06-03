@@ -7,6 +7,7 @@ from sklearn.metrics import mean_squared_error
 import numpy as np
 import torch
 import torch.nn as nn
+from Origin_PerformanceMeasure import Origin_PerformanceMeasure
 
 # 定义和训练神经网络的类和函数。它包括各种层、激活函数、损失函数和配置神经网络结构的实用工具。
 import torch.optim as optim
@@ -19,6 +20,7 @@ import torch.utils.data as util_data  # To use 'DataLoader()'
 import lr_schedule
 from data_list import ImageList
 from torch.autograd import Variable
+
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
@@ -31,6 +33,8 @@ import random
 
 import time
 from PIL import Image
+
+
 
 
 def get_fea_lab(what, loader, model, gpu):
@@ -52,6 +56,7 @@ def get_fea_lab(what, loader, model, gpu):
         if start_test:
             all_output = outputs.data.float()
             all_label = labels.data.float()
+            start_test = False
             start_test = False
         else:
             all_output = torch.cat((all_output, outputs.data.float()), 0)
@@ -218,15 +223,18 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
     # print(predict)
     # print(predict_list)
     sum = 0.0
-    for number in range(len(all_label_list)):
-        sum += (predict_list[number]-all_label_list[number])**2
-    MSE = sum/len(all_label_list)
+    # for number in range(len(all_label_list)):
+    #     sum += (predict_list[number]-all_label_list[number])**2
+    # MSE = sum/len(all_label_list)
+    performance = Origin_PerformanceMeasure(all_label_list, predict_list)
+    pofb = performance.getPofb()
+
     # my_mse = math.exp(-MSE)
     # print(all_output)
     # print(predict)
     # print(predict_list)
 
-    return MSE
+    return pofb
 
 
 def transfer_classification(config):
@@ -503,10 +511,13 @@ def transfer_classification(config):
 
     all_label_list = all_label.view(-1,1).numpy()
     predict_list =  predict_best.view(-1,1).numpy()
+    performance = Origin_PerformanceMeasure(all_label_list, predict_list)
+    performance = Origin_PerformanceMeasure(all_label_list, predict_list)
+    pofb = performance.getPofb()[0][0]
 
-    MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
     print('预测结果：')
-    print(MSE)
+    print(pofb)
+    return pofb
 
 
 if __name__ == "__main__":
