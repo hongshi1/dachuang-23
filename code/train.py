@@ -210,20 +210,13 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    _, predict = torch.max(all_output, 1) #?
-    predict_list = predict.numpy()
-    all_label_list = all_label.numpy()
-    # print(all_output)
-    # print(predict)
-    # print(predict_list)
+    _, predict = torch.max(all_output, 1) #返回每一个all_output样本中概率最大的那个类别作为预测值
+    predict_list = predict.cpu().numpy()
+    all_label_list = all_label.cpu().numpy()
     sum = 0.0
     for number in range(len(all_label_list)):
         sum += (predict_list[number]-all_label_list[number])**2
     MSE = sum/len(all_label_list)
-    # my_mse = math.exp(-MSE)
-    # print(all_output)
-    # print(predict)
-    # print(predict_list)
 
     return MSE
 
@@ -572,3 +565,4 @@ if __name__ == "__main__":
     # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
 
     transfer_classification(config)
+
