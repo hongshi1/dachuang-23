@@ -413,14 +413,13 @@ def transfer_classification(config):
                     best_model = nn.Sequential(base_network, classifier_layer)
                     all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
                                                                            test_10crop=False, gpu=use_gpu)
-
-        loss_test = nn.BCELoss()
         ## train one iter
         if net_config["use_bottleneck"]:
             bottleneck_layer.train(True)
-        classifier_layer.train(True)  #
+        classifier_layer.train(False)  #
         optimizer = lr_scheduler(param_lr, optimizer, i, **schedule_param)
         optimizer.zero_grad()
+
         if i % len_train_source == 0:
             iter_source = iter(dset_loaders["source"]["train"])
         if i % len_train_target == 0:
@@ -437,22 +436,6 @@ def transfer_classification(config):
         else:
             inputs_source, inputs_target, labels_source = Variable(inputs_source), Variable(inputs_target), Variable(
                 labels_source)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         inputs = torch.cat((inputs_source, inputs_target), dim=0)
         # start_train = time.clock()
         start_train = time.process_time()
@@ -469,7 +452,7 @@ def transfer_classification(config):
         # labels_source_size = labels_source.size()
 
         classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
-                                          labels_source.float().view(-1, 1))  # python3
+                                          labels_source.float())  # python3
         # classifier_loss = class_criterion(outputs.narrow(0, 0, inputs.size(0) / 2), labels_source)  # python2
 
         ## switch between different transfer loss
@@ -511,7 +494,6 @@ def transfer_classification(config):
 
     all_label_list = all_label.view(-1,1).numpy()
     predict_list =  predict_best.view(-1,1).numpy()
-    performance = Origin_PerformanceMeasure(all_label_list, predict_list)
     performance = Origin_PerformanceMeasure(all_label_list, predict_list)
     pofb = performance.getPofb()[0][0]
 

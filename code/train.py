@@ -7,6 +7,7 @@ from sklearn.metrics import mean_squared_error
 import numpy as np
 import torch
 import openpyxl
+from Origin_PerformanceMeasure import Origin_PerformanceMeasure
 import torch.nn as nn
 import torch.optim as optim
 import network  # 引入自定义文件network.py
@@ -212,16 +213,16 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
     _, predict = torch.max(all_output, 1) #?
     predict_list = predict.numpy()
     all_label_list = all_label.numpy()
-    # print(all_output)
-    # print(predict)
-    # print(predict_list)
-    MSE = ((abs(predict_list - all_label_list)) ** 2).mean()
+
+    performance = Origin_PerformanceMeasure(all_label_list, predict_list)
+    pofb = performance.getPofb()
+
     # my_mse = math.exp(-MSE)
     # print(all_output)
     # print(predict)
     # print(predict_list)
 
-    return MSE
+    return pofb
 
 
 def transfer_classification(config,classnum):
@@ -429,17 +430,6 @@ def transfer_classification(config,classnum):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
         inputs = torch.cat((inputs_source, inputs_target), dim=0)
         # start_train = time.clock()
         start_train = time.process_time()
@@ -499,10 +489,12 @@ def transfer_classification(config,classnum):
     all_label_list = all_label.view(-1,1).numpy()
     predict_list =predict_best.view(-1,1).numpy()
 
-    MSE = ((predict_list - all_label_list)** 2).mean()
+    performance = Origin_PerformanceMeasure(all_label_list, predict_list)
+    pofb = performance.getPofb()
+
     print('预测结果：')
-    print(MSE)
-    return F_best,MSE
+    print(pofb)
+    return pofb
 
 
 
@@ -581,7 +573,7 @@ if __name__ == "__main__":
         args.source = new_arr[i].split("->")[0]
         args.target = new_arr[i].split("->")[1]
         mytarget_path = "../data/txt/" + args.target + ".txt"
-        classnum = get_faults_num(mytarget_path)
+        classnum = 1
         print(args.source+" "+args.target+" ", end='')
         print(classnum)
 
