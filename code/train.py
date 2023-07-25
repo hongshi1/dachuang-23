@@ -186,6 +186,7 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_label = torch.cat((all_label, labels.data.float()), 0)
     else:
         iter_test = iter(loader["test"])  # iter() -- 迭代器，python内置函数
+        # print(iter_test)
         attention_time = 0
         for _ in range(len(loader["test"])):  # 'len(dataloader)' -- 返回batch数目
             data = next(iter_test)
@@ -200,7 +201,7 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 inputs = Variable(inputs)
                 labels = Variable(labels)
 
-            outputs = model(inputs)
+            outputs = model(inputs)     #每次的输出结果一致？
 
             if start_test:
                 all_output = outputs.data.float()
@@ -210,9 +211,9 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    _, predict = torch.max(all_output, 1) #?
-    predict_list = predict.numpy()
-    all_label_list = all_label.numpy()
+    # _, predict = torch.max(all_output, 1) #?
+    predict_list = all_output.cpu().numpy().flatten()
+    all_label_list = all_label.cpu().numpy()
 
     performance = Origin_PerformanceMeasure(all_label_list, predict_list)
     pofb = performance.getPofb()
@@ -486,8 +487,8 @@ def transfer_classification(config,classnum):
     print(F_best)
 
 
-    all_label_list = all_label.view(-1,1).numpy()
-    predict_list =predict_best.view(-1,1).numpy()
+    all_label_list = all_label.view(-1,1).cpu().numpy()
+    predict_list =predict_best.view(-1,1).cpu().numpy()
 
     performance = Origin_PerformanceMeasure(all_label_list, predict_list)
     pofb = performance.getPofb()
