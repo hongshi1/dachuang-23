@@ -6,20 +6,25 @@ from sklearn.metrics import mean_squared_error
 
 import numpy as np
 import torch
-import openpyxl
-from Origin_PerformanceMeasure import Origin_PerformanceMeasure
 import torch.nn as nn
+import openpyxl
+
+# 定义和训练神经网络的类和函数。它包括各种层、激活函数、损失函数和配置神经网络结构的实用工具。
 import torch.optim as optim
+# 这个模块提供了用于在训练过程中更新神经网络模型权重的优化算法。
 import network  # 引入自定义文件network.py
 import loss
 import pre_process as prep
+# 这三个是自己定义的
 import torch.utils.data as util_data  # To use 'DataLoader()'
 import lr_schedule
 from data_list import ImageList
 from torch.autograd import Variable
+from Origin_PerformanceMeasure import Origin_PerformanceMeasure
+# 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
-optim_dict = {"SGD": optim.SGD}
+optim_dict = {"SGD": optim.SGD}  #键值对设置
 
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
@@ -72,9 +77,7 @@ def setup_seed(seed):
 def tsne(df_fea, df_lab):
     # print(df_fea, df_lab)
     tsne = TSNE(2, 38, 20, 600)
-
     result = tsne.fit_transform(df_fea)
-
     colors = ['c', 'r']
     idx_1 = [i1 for i1 in range(len(df_lab)) if df_lab[i1] == 0]
     fig1 = plt.scatter(result[idx_1, 0], result[idx_1, 1], 20, color=colors[0], label='Clean')
@@ -148,7 +151,8 @@ def image_classification_predict(loader, model, test_10crop=True, gpu=True):
                 all_output = torch.cat((all_output, outputs.data.cpu().float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
     # _, predict = torch.max(all_output, 1)
-    _, predict = torch.max(all_output, 1)
+    # _, predict = torch.max(all_output, 1)
+    predict = all_output.flatten()
     return all_label, predict
 
 
@@ -186,7 +190,6 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_label = torch.cat((all_label, labels.data.float()), 0)
     else:
         iter_test = iter(loader["test"])  # iter() -- 迭代器，python内置函数
-        # print(iter_test)
         attention_time = 0
         for _ in range(len(loader["test"])):  # 'len(dataloader)' -- 返回batch数目
             data = next(iter_test)
@@ -201,7 +204,7 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 inputs = Variable(inputs)
                 labels = Variable(labels)
 
-            outputs = model(inputs)     #每次的输出结果一致？
+            outputs = model(inputs)
 
             if start_test:
                 all_output = outputs.data.float()
@@ -211,22 +214,18 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    # _, predict = torch.max(all_output, 1) #?
+    # _, predict = torch.max(all_output, 1) #返回每一个all_output样本中概率最大的那个类别作为预测值
     predict_list = all_output.cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
+    sum = 0.0
+    for number in range(len(all_label_list)):
+        sum += (predict_list[number]-all_label_list[number])**2
+    MSE = sum/len(all_label_list)
 
-    performance = Origin_PerformanceMeasure(all_label_list, predict_list)
-    pofb = performance.getPofb()
-
-    # my_mse = math.exp(-MSE)
-    # print(all_output)
-    # print(predict)
-    # print(predict_list)
-
-    return pofb
+    return MSE
 
 
-def transfer_classification(config,classnum):
+def transfer_classification(config):
     # 定义一个字典类型变量
     prep_dict = {}
     # Add kry-value pairs for 'prep_dict'
@@ -308,7 +307,7 @@ def transfer_classification(config,classnum):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num = classnum# ??
+    class_num = 1# ??
 
     ## set base network
     net_config = config["network"]
@@ -316,7 +315,7 @@ def transfer_classification(config,classnum):
 
     if net_config["use_bottleneck"]:
         bottleneck_layer = nn.Linear(base_network.output_num(), net_config["bottleneck_dim"])  # 创建瓶颈层
-        classifier_layer = nn.Linear(bottleneck_layer.out_features, class_num)  # 创建分类层
+        classifier_layer = nn.Linear(bottleneck_layer.out_features, class_num)  # 创建分类层  用于最后将卷积层和全连接层的特征进行分类
     else:
         classifier_layer = nn.Linear(base_network.output_num(), class_num)  # 创建分类层
     for param in base_network.parameters():
@@ -371,7 +370,7 @@ def transfer_classification(config,classnum):
 
     best_model = ''
     predict_best = ''
-    for i in range(config["num_iterations"]):
+    for i in range(config["num_iterations"]):                               #网格法确定最佳参数组合
         if i % config["test_interval"] == 0:  # "test_interval"?
             base_network.train(False)
             classifier_layer.train(False)  # False -- ?
@@ -382,7 +381,7 @@ def transfer_classification(config,classnum):
                                               test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
             else:
                 F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                              nn.Sequential(base_network, classifier_layer),
+                                              nn.Sequential(base_network, classifier_layer),                    #nn.Sequential一个用于存放神经网络模块的序列容器，可以用来自定义模型，运行顺序按照输入顺序进行
                                               test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
 
             print(args.source + '->' + args.target)
@@ -407,13 +406,13 @@ def transfer_classification(config,classnum):
         ## train one iter
         if net_config["use_bottleneck"]:
             bottleneck_layer.train(True)
-        classifier_layer.train(True)  #
-        optimizer = lr_scheduler(param_lr, optimizer, i, **schedule_param)
-        optimizer.zero_grad()
+        classifier_layer.train(True)  #将模型设置为训练模式
+        optimizer = lr_scheduler(param_lr, optimizer, i, **schedule_param)      #调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
+        optimizer.zero_grad() #用于将梯度缓存清零
         if i % len_train_source == 0:
-            iter_source = iter(dset_loaders["source"]["train"])
+            iter_source = iter(dset_loaders["source"]["train"])       #更新源域数据集迭代器
         if i % len_train_target == 0:
-            iter_target = iter(dset_loaders["target"]["train"])
+            iter_target = iter(dset_loaders["target"]["train"])         #更新目标域数据集迭代器
         inputs_source, labels_source, _ = next(iter_source)  # python3
         inputs_target, labels_target, _ = next(iter_target)
 
@@ -427,24 +426,15 @@ def transfer_classification(config,classnum):
             inputs_source, inputs_target, labels_source = Variable(inputs_source), Variable(inputs_target), Variable(
                 labels_source)
 
-
-
-
-
-        inputs = torch.cat((inputs_source, inputs_target), dim=0)
+        inputs = torch.cat((inputs_source, inputs_target), dim=0) #第一维上进行拼接
         # start_train = time.clock()
         start_train = time.process_time()
 
-        features = base_network(inputs)
+        features = base_network(inputs) #进行特征提取
 
         if net_config["use_bottleneck"]:
-            features = bottleneck_layer(features)
-        outputs = classifier_layer(features)
-
-        # output_size = torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size()  ##判断outpus和labels_source的大小
-        # size_s = labels_source.size()
-        # output = len(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)).size())
-        # labels_source_size = labels_source.size()
+            features = bottleneck_layer(features)   #瓶颈层分类
+        outputs = classifier_layer(features)        #分类器分类
 
         classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
                                           labels_source.float().view(-1, 1))  # python3
@@ -488,36 +478,13 @@ def transfer_classification(config,classnum):
 
 
     all_label_list = all_label.view(-1,1).cpu().numpy()
-    predict_list =predict_best.view(-1,1).cpu().numpy()
+    predict_list =  predict_best.view(-1,1).cpu().numpy().flatten()
 
-    performance = Origin_PerformanceMeasure(all_label_list, predict_list)
-    pofb = performance.getPofb()
-
+    p= Origin_PerformanceMeasure(all_label_list,predict_list)
+    pofb = p.getPofb()
     print('预测结果：')
     print(pofb)
     return pofb
-
-
-
-def get_faults_num(path):
-    # 打开文本文件，读取所有行
-    with open(path, 'r') as f:
-        lines = f.readlines()
-    # 定义一个集合，用于存储所有出现过的数字
-    nums_set = set()
-    # 遍历每一行文本，对每一行进行处理
-    for line in lines:
-        # 将一行文本按照空格分割为两个部分，取出右边的数字部分
-        num_str = line.split('\t')[-1].strip()
-
-        # 如果该数字部分不为空，则将其转换为整数，并加入集合
-        if num_str:
-            nums_set.add(int(num_str))
-
-    # 输出集合的长度，即为不同数字种类的数量
-    # print(len(nums_set))
-    return len(nums_set)
-
 
 if __name__ == "__main__":
     # random.seed(time.time())
@@ -550,7 +517,6 @@ if __name__ == "__main__":
     strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
                "xerces-1.2"]
     new_arr = []
-    train_arr = []
     test_arr = []
 
     for i in range(len(strings)):
@@ -597,7 +563,7 @@ if __name__ == "__main__":
         config["network"] = {"name": "AlexNet", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
         config["optimizer"] = {"type": "SGD",
                                "optim_params": {"lr": 0.05, "momentum": 0.9, "weight_decay": 0.0005, "nesterov": True},
-                               "lr_type": "inv", "lr_param": {"init_lr": 0.0003, "gamma": 0.0003, "power": 0.75}}
+                               "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0001, "power": 0.75}}
         # 对代码的修改和理解  都吧注释写满  方便组员学习
         # num_iterations表示训练的迭代次数；
         # test_interval表示每多少个迭代进行一次测试；
@@ -606,15 +572,10 @@ if __name__ == "__main__":
         # data表示训练和测试数据的配置，包括source和target两个来源的数据，需要读取的文件路径和每个batch的大小；
         # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
         # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
-        train_result,test_result = transfer_classification(config,classnum)
+        test_result = transfer_classification(config)
         print(new_arr[i],end=' ')
-        print(" train", end=' ')
-        print(train_result, end=' ')
-        print(" test", end=' ')
+        print(" pofb_final", end=' ')
         print(test_result)
-
-        # print(new_arr[i]+" train "+ train_result+" test"+test_result)
-        train_arr.append(train_result)
         test_arr.append(test_result)
 
     workbook = openpyxl.Workbook()
@@ -623,8 +584,7 @@ if __name__ == "__main__":
 
     for i in range(len(new_arr)):
         worksheet.cell(row=i + 1, column=1, value=new_arr[i])
-        worksheet.cell(row=i + 1, column=2, value=train_arr[i])
-        worksheet.cell(row=i + 1, column=1, value=test_arr[i])
+        worksheet.cell(row=i + 1, column=2, value=test_arr[i])
 
 
     # 保存文件

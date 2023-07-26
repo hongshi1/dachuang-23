@@ -2,6 +2,7 @@
 import argparse
 import os
 import openpyxl
+from Origin_PerformanceMeasure import Origin_PerformanceMeasure
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import GridSearchCV
@@ -147,10 +148,10 @@ def reg_tree_predict(reg_tree,loader):
 
     y_pred = reg_tree.predict(X)
 
-    # 计算均方误差（MSE）
-    mse = mean_squared_error(y, y_pred)
-    print("Mean Squared Error:", mse)
-    return mse
+    p = Origin_PerformanceMeasure(y, y_pred)
+    pofb = p.getPofb()
+    print("pofb:", pofb)
+    return pofb
 
 def transfer_classification(config,classnum,seed):
     # 定义一个字典类型变量
@@ -316,7 +317,7 @@ if __name__ == "__main__":
         args.source = new_arr[i].split("->")[0]
         args.target = new_arr[i].split("->")[1]
         mytarget_path = "../data/txt/" + args.target + ".txt"
-        classnum = get_faults_num(mytarget_path)
+        classnum = 1
         print(args.source+" "+args.target+" ", end='')
         print(classnum)
 
