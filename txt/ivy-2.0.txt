@@ -1,5 +1,4 @@
-..\data\img\grb_img\ivy-2.0\\buggy\ivy-2.0_src_java_org_apache_ivy_core_IvyPatternHelper.png	1
-org.apache.ivy.core.IvyPatternHelper	1
+org.apache.ivy.core.IvyPatternHelper	2
 org.apache.ivy.plugins.lock.AbstractLockStrategy	0
 org.apache.ivy.plugins.circular.ErrorCircularDependencyStrategy	0
 org.apache.ivy.core.settings.IvyVariableContainer	0
@@ -13,7 +12,7 @@ org.apache.ivy.core.NormalRelativeUrlResolver	0
 org.apache.ivy.plugins.matcher.MatcherHelper	0
 org.apache.ivy.ant.IvyDeliver	0
 org.apache.ivy.util.url.AbstractURLHandler	0
-org.apache.ivy.core.resolve.IvyNodeUsage	1
+org.apache.ivy.core.resolve.IvyNodeUsage	2
 org.apache.ivy.util.ConfigurationUtils	0
 org.apache.ivy.tools.analyser.DependencyAnalyser	0
 org.apache.ivy.util.MessageLoggerEngine	0
@@ -29,14 +28,14 @@ org.apache.ivy.plugins.resolver.VsftpResolver	0
 org.apache.ivy.core.report.DownloadReport	0
 org.apache.ivy.plugins.repository.vsftp.VsftpRepository	0
 org.apache.ivy.core.event.retrieve.EndRetrieveEvent	0
-org.apache.ivy.plugins.resolver.IBiblioResolver	1
+org.apache.ivy.plugins.resolver.IBiblioResolver	2
 org.apache.ivy.plugins.trigger.AbstractTrigger	0
 org.apache.ivy.plugins.conflict.RegexpConflictManager	0
 org.apache.ivy.core.event.resolve.ResolveEvent	0
 org.apache.ivy.core.deliver.DeliverOptions	0
 org.apache.ivy.plugins.circular.AbstractCircularDependencyStrategy	0
 org.apache.ivy.core.sort.ModuleDescriptorSorter	0
-org.apache.ivy.core.retrieve.RetrieveEngine	1
+org.apache.ivy.core.retrieve.RetrieveEngine	3
 org.apache.ivy.plugins.repository.vfs.VfsRepository	0
 org.apache.ivy.plugins.latest.LatestRevisionStrategy	0
 org.apache.ivy.ant.IvyCacheTask	0
@@ -60,7 +59,7 @@ org.apache.ivy.plugins.conflict.StrictConflictException	0
 org.apache.ivy.ant.IvyReport	1
 org.apache.ivy.plugins.repository.file.FileResource	0
 org.apache.ivy.core.module.descriptor.DefaultModuleDescriptor	1
-org.apache.ivy.plugins.parser.xml.XmlModuleDescriptorParser	1
+org.apache.ivy.plugins.parser.xml.XmlModuleDescriptorParser	2
 org.apache.ivy.core.event.IvyEvent	0
 org.apache.ivy.plugins.latest.AbstractLatestStrategy	0
 org.apache.ivy.util.filter.FilterHelper	0
@@ -119,7 +118,7 @@ org.apache.ivy.ant.IvyInstall	0
 org.apache.ivy.ant.IvyAntVariableContainer	0
 org.apache.ivy.util.MemoryUtil	0
 org.apache.ivy.core.event.IvyEventFilter	0
-org.apache.ivy.plugins.resolver.BasicResolver	1
+org.apache.ivy.plugins.resolver.BasicResolver	2
 org.apache.ivy.plugins.parser.m2.DefaultPomDependencyMgt	1
 org.apache.ivy.core.module.status.StatusManager	0
 org.apache.ivy.plugins.latest.LatestLexicographicStrategy	0
@@ -138,7 +137,7 @@ org.apache.ivy.plugins.repository.ssh.SshRepository	0
 org.apache.ivy.plugins.version.ChainVersionMatcher	0
 org.apache.ivy.plugins.version.VersionRangeMatcher	0
 org.apache.ivy.util.CopyProgressListener	0
-org.apache.ivy.ant.IvyPostResolveTask	1
+org.apache.ivy.ant.IvyPostResolveTask	2
 org.apache.ivy.util.filter.Filter	0
 org.apache.ivy.core.event.download.NeedArtifactEvent	0
 org.apache.ivy.plugins.namespace.Namespace	0
@@ -214,7 +213,7 @@ org.apache.ivy.plugins.parser.m2.PomDependencyMgt	1
 org.apache.ivy.core.event.publish.StartArtifactPublishEvent	0
 org.apache.ivy.core.settings.IvyVariableContainerImpl	0
 org.apache.ivy.plugins.repository.ArtifactResourceResolver	0
-org.apache.ivy.core.resolve.IvyNodeCallers	1
+org.apache.ivy.core.resolve.IvyNodeCallers	2
 org.apache.ivy.util.CredentialsUtil	0
 org.apache.ivy.plugins.matcher.PatternMatcher	0
 org.apache.ivy.util.url.URLHandlerDispatcher	0
@@ -288,11 +287,11 @@ org.apache.ivy.plugins.matcher.RegexpPatternMatcher	0
 org.apache.ivy.plugins.report.XmlReportOutputter	0
 org.apache.ivy.plugins.repository.sftp.SFTPRepository	0
 org.apache.ivy.plugins.report.XmlReportWriter	0
-org.apache.ivy.core.cache.DefaultRepositoryCacheManager	1
+org.apache.ivy.core.cache.DefaultRepositoryCacheManager	3
 org.apache.ivy.Main	1
 org.apache.ivy.plugins.repository.ssh.SshCache	1
 org.apache.ivy.core.event.IvyListener	0
-org.apache.ivy.core.resolve.IvyNode	1
+org.apache.ivy.core.resolve.IvyNode	3
 org.apache.ivy.plugins.latest.ArtifactInfo	0
 org.apache.ivy.util.ContextualSAXHandler	0
 org.apache.ivy.core.IvyThread	0
@@ -301,7 +300,7 @@ org.apache.ivy.plugins.conflict.ConflictManager	0
 org.apache.ivy.plugins.resolver.util.MDResolvedResource	0
 org.apache.ivy.plugins.resolver.packager.PackagerResolver	0
 org.apache.ivy.core.event.retrieve.RetrieveEvent	0
-org.apache.ivy.plugins.parser.m2.PomModuleDescriptorBuilder	1
+org.apache.ivy.plugins.parser.m2.PomModuleDescriptorBuilder	3
 org.apache.ivy.core.module.id.ModuleRules	0
 org.apache.ivy.core.event.resolve.ResolveDependencyEvent	0
 org.apache.ivy.core.module.descriptor.MDArtifact	0
@@ -338,7 +337,7 @@ org.apache.ivy.ant.AntMessageLogger	0
 org.apache.ivy.core.report.ArtifactDownloadReport	1
 org.apache.ivy.plugins.namespace.NamespaceTransformer	0
 org.apache.ivy.core.report.ConfigurationResolveReport	0
-org.apache.ivy.plugins.resolver.AbstractResolver	1
+org.apache.ivy.plugins.resolver.AbstractResolver	2
 org.apache.ivy.plugins.version.LatestVersionMatcher	0
 org.apache.ivy.tools.analyser.JarModule	0
 org.apache.ivy.plugins.matcher.ExactPatternMatcher	0

@@ -1,5 +1,5 @@
 org.apache.tools.ant.taskdefs.ExecuteOn	0
-org.apache.tools.ant.DefaultLogger	1
+org.apache.tools.ant.DefaultLogger	2
 org.apache.tools.ant.taskdefs.TaskOutputStream	0
 org.apache.tools.ant.taskdefs.Cvs	0
 org.apache.tools.ant.taskdefs.Copyfile	0
@@ -11,7 +11,7 @@ org.apache.tools.ant.types.PatternSet	1
 org.apache.tools.ant.taskdefs.Patch	0
 org.apache.tools.ant.taskdefs.Mkdir	1
 org.apache.tools.ant.taskdefs.Exec	0
-org.apache.tools.ant.AntClassLoader	1
+org.apache.tools.ant.AntClassLoader	2
 org.apache.tools.ant.types.EnumeratedAttribute	0
 org.apache.tools.ant.XmlLogger	0
 org.apache.tools.ant.taskdefs.Rmic	1
@@ -20,7 +20,7 @@ org.apache.tools.ant.util.FlatFileNameMapper	0
 org.apache.tools.ant.BuildLogger	0
 org.apache.tools.ant.types.DataType	0
 org.apache.tools.ant.taskdefs.Get	0
-org.apache.tools.ant.taskdefs.Zip	1
+org.apache.tools.ant.taskdefs.Zip	3
 org.apache.tools.ant.taskdefs.compilers.CompilerAdapter	0
 org.apache.tools.ant.taskdefs.LogOutputStream	0
 org.apache.tools.ant.taskdefs.StreamPumper	0
@@ -35,11 +35,11 @@ org.apache.tools.ant.taskdefs.Echo	0
 org.apache.tools.ant.types.FileSet	1
 org.apache.tools.ant.taskdefs.Available	0
 org.apache.tools.ant.Main	1
-org.apache.tools.ant.UnknownElement	1
+org.apache.tools.ant.UnknownElement	3
 org.apache.tools.ant.taskdefs.Transform	0
 org.apache.tools.ant.taskdefs.Rename	0
 org.apache.tools.ant.util.regexp.RegexpMatcherFactory	0
-org.apache.tools.ant.taskdefs.Property	1
+org.apache.tools.ant.taskdefs.Property	2
 org.apache.tools.ant.taskdefs.Ant	0
 org.apache.tools.ant.types.Path	0
 org.apache.tools.ant.types.ZipScanner	0
@@ -51,7 +51,7 @@ org.apache.tools.ant.taskdefs.ExecuteStreamHandler	0
 org.apache.tools.ant.util.regexp.JakartaOroMatcher	0
 org.apache.tools.ant.taskdefs.MatchingTask	0
 org.apache.tools.ant.taskdefs.compilers.Javac13	0
-org.apache.tools.ant.ProjectHelper	1
+org.apache.tools.ant.ProjectHelper	3
 org.apache.tools.ant.taskdefs.LogStreamHandler	0
 org.apache.tools.ant.taskdefs.Delete	0
 org.apache.tools.ant.taskdefs.SQLExec	0
@@ -63,7 +63,7 @@ org.apache.tools.ant.util.FileNameMapper	0
 org.apache.tools.ant.types.Mapper	0
 org.apache.tools.ant.Location	0
 org.apache.tools.ant.taskdefs.GUnzip	0
-org.apache.tools.ant.RuntimeConfigurable	1
+org.apache.tools.ant.RuntimeConfigurable	2
 org.apache.tools.ant.BuildEvent	0
 org.apache.tools.ant.taskdefs.JavacOutputStream	0
 org.apache.tools.ant.types.Reference	0
@@ -72,7 +72,7 @@ org.apache.tools.ant.taskdefs.XSLTProcess	0
 org.apache.tools.ant.taskdefs.KeySubst	0
 org.apache.tools.ant.taskdefs.ExecuteJava	0
 org.apache.tools.ant.util.regexp.RegexpMatcher	0
-org.apache.tools.ant.taskdefs.FixCRLF	1
+org.apache.tools.ant.taskdefs.FixCRLF	3
 org.apache.tools.ant.taskdefs.Execute	1
 org.apache.tools.ant.taskdefs.Jar	0
 org.apache.tools.ant.taskdefs.CallTarget	0
@@ -120,6 +120,6 @@ org.apache.tools.ant.TaskAdapter	0
 org.apache.tools.ant.taskdefs.Copydir	0
 org.apache.tools.ant.taskdefs.Javadoc	0
 org.apache.tools.ant.BuildException	0
-org.apache.tools.ant.IntrospectionHelper	1
+org.apache.tools.ant.IntrospectionHelper	2
 org.apache.tools.ant.NoBannerLogger	0
 org.apache.tools.mail.MailMessage	0

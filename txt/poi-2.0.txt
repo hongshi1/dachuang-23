@@ -135,9 +135,9 @@ org.apache.poi.hssf.util.AreaReference	0
 org.apache.poi.hssf.record.BarRecord	0
 org.apache.poi.hssf.record.BackupRecord	0
 org.apache.poi.hssf.eventmodel.EventRecordFactory	0
-org.apache.poi.hssf.model.FormulaParser	1
+org.apache.poi.hssf.model.FormulaParser	2
 org.apache.poi.hpsf.ClassID	0
-org.apache.poi.hpsf.Property	1
+org.apache.poi.hpsf.Property	2
 org.apache.poi.hssf.record.CategorySeriesAxisRecord	0
 org.apache.poi.hssf.dev.EFBiffViewer	1
 org.apache.poi.hssf.util.SheetReferences	0
