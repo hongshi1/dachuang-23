@@ -362,7 +362,7 @@ if __name__ == "__main__":
         print(new_arr[i],end=' ')
         print(" test", end=' ')
         print(test_result)
-
+        test_result = float(test_result)
         # print(new_arr[i]+" train "+ train_result+" test"+test_result)
         test_arr.append(test_result)
 
