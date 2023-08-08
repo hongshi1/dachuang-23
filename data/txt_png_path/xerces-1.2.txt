@@ -187,7 +187,7 @@
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLDeclRecognizer.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLBigElementImpl.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLMapElement.png	0
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.png	0.4
+../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_Attr.png	0.4
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_AttributeListImpl.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredElementDefinitionImpl.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTdElementImpl.png	0
@@ -275,7 +275,7 @@
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLOneventElementImpl.png	0
 ../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_traversal_NodeIterator.png	0.285714286
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_EntityImpl.png	0
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.png	0.2
+../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_events_EventException.png	0.2
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredEntityReferenceImpl.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLSelectElement.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableColElement.png	0
@@ -416,7 +416,7 @@
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLBrElement.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_NameNodeListImpl.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_NamespaceSupport.png	0
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.png	0.4
+../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_events_MutationEvent.png	0.4
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_SerializerFactory.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLElement.png	0
 ../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_ENTITYDatatypeValidator.png	0

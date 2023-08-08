@@ -183,7 +183,7 @@
 ../data/img/grb_img/jedit-4.1/clean/jedit-4.1_src_java_bsh_BSHPrimitiveType.png	0
 ../data/img/grb_img/jedit-4.1/buggy/jedit-4.1_src_java_org_gjt_sp_jedit_syntax_XModeHandler.png	0.000771605
 ../data/img/grb_img/jedit-4.1/buggy/jedit-4.1_src_java_org_gjt_sp_jedit_gui_FloatingWindowContainer.png	0.010989011
-../data/img/grb_img/jedit-4.1/buggy/jedit-4.png	0.5
+../data/img/grb_img/jedit-4.1/buggy/jedit-4.1_src_java_org_gjt_sp_jedit_buffer_BufferChangeListener.png	0.5
 ../data/img/grb_img/jedit-4.1/buggy/jedit-4.1_src_java_org_gjt_sp_jedit_syntax_TokenMarker.png	0.001311475
 ../data/img/grb_img/jedit-4.1/clean/jedit-4.1_src_java_org_gjt_sp_jedit_gui_FontSelector.png	0
 ../data/img/grb_img/jedit-4.1/buggy/jedit-4.1_src_java_org_gjt_sp_jedit_textarea_Selection.png	0.017094017

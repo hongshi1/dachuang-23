@@ -391,7 +391,7 @@ def transfer_classification(config):
             print(args.source + '->' + args.target)
             print("F")
             print(F)
-            if F_best > F:
+            if F_best > F and F != 0.0:
                 F_best = F
                 base_network.train(False)
                 classifier_layer.train(False)
@@ -517,9 +517,9 @@ if __name__ == "__main__":
     # args = parser.parse_args()
 
     # Case2: 不使用命令行
-    # strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
-    #            "xerces-1.2"]
-    strings = ["log4j-1.2","poi-2.0"]
+    strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
+               "xerces-1.2"]
+    # strings = ["log4j-1.2","poi-2.0"]
     new_arr = []
     test_arr = []
 
