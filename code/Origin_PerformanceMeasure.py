@@ -38,8 +38,7 @@ class Origin_PerformanceMeasure():
 
         PofB = sum([sorted_real[j] if sorted_real[j] > 0 else 0 for j in range(m)]) / Q
 
-
-        return PofB.numpy()
+        return PofB.item()
 
     def getSomePerformance(self):
 

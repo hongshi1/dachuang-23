@@ -653,7 +653,7 @@ org.apache.camel.builder.xml.StringResultHandler 0
 org.apache.camel.component.jhc.JhcConverter 0
 org.apache.camel.component.cxf.interceptors.RawMessageContentRedirectInterceptor 0
 org.apache.camel.converter.IOConverter 0.007444169
-org.apache.camel.package-info 0
+org.apache.camel.package-info 
 org.apache.camel.component.jpa.JpaConsumer 0
 org.apache.camel.model.language.PythonExpression 0
 org.apache.camel.management.ManagedService 0

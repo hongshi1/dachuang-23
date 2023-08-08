@@ -119,7 +119,7 @@ def reg_tree_test(loader,seed):
     y_train = torch.cat(test_labels_all, dim=0) #[116]
 
     # 创建模型，设置参数（限制树的最大深度为2）（max_features，min_samples_leaf，min_samples_split，）
-    reg_tree = DecisionTreeRegressor(random_state=seed,max_depth=2)
+    reg_tree = DecisionTreeRegressor(random_state=seed,max_depth=6)
 
     # 训练模型
     reg_tree.fit(X_train, y_train)
@@ -235,7 +235,7 @@ def transfer_classification(config,classnum,seed):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num = 4# ??
+    class_num = 1# ??
 
 
 
@@ -366,4 +366,4 @@ if __name__ == "__main__":
 
 
     # 保存文件
-    workbook.save('output_regtree.xlsx')#运行失败 需要改一个别的文件名
+    workbook.save('output_regtree1.xlsx')#运行失败 需要改一个别的文件名

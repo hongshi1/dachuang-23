@@ -120,15 +120,15 @@ def svr_test(loader,seed):
 
     #维度转换
 
-    param_grid = {'C': [0.1, 1, 10, 100], 'gamma': [0.1, 1, 10, 100], 'kernel': [
+    param_grid = {'C': [10,100], 'gamma': [10,100], 'kernel': [
         'rbf']}  # gamma用于决定模型在细节上的拟合程度，gamma的值越大，模型越倾向于在训练集上拟合每个样本的细节，这可能导致过拟合。而gamma的值越小，模型越倾向于拟合整个训练集的整体趋势，这可能导致欠拟合 C惩罚参数，越大对错误月放松，越小对错误的容忍度越小
 
     # 创建SVR模型
-    model = SVR()   #不用输入随机数种子，只要全局随机数种子确定，那么svr模型就会被确定
+    model = SVR(C=10,gamma=1,kernel='rbf')   #不用输入随机数种子，只要全局随机数种子确定，那么svr模型就会被确定
     # 使用网格搜索来确定最佳的超参数组合
-    grid = GridSearchCV(model, param_grid,cv=5)  # sklearn中的一个超参数调优工具，用于帮助用户通过交叉验证来选择模型的最佳超参数。cv=5表示将数据分成5份，用四分来训练，一份来测试
-    grid.fit(X_train, y_train)
-    return grid
+    # grid = GridSearchCV(model, param_grid,cv=5)  # sklearn中的一个超参数调优工具，用于帮助用户通过交叉验证来选择模型的最佳超参数。cv=5表示将数据分成5份，用四分来训练，一份来测试
+    model.fit(X_train, y_train)
+    return model
 
 def svr_predict(grid,loader):
 
@@ -275,7 +275,7 @@ def get_faults_num(path):
 if __name__ == "__main__":
     random.seed(time.time())
     seed = random.randint(1, 100)
-    # setup_seed(20)
+    setup_seed(10)
     # path = '..\data\img\grb_img\ivy-2.0\\buggy\ivy-2.0_src_java_org_apache_ivy_core_IvyPatternHelper.png'
     # # path = 'F:\Document\GitHub\DTLDP_master\data\img\grb_img\ivy-2.0\clean\ivy-2.0_src_java_org_apache_ivy_ant_AddPathTask.png'
     # with open(path, 'rb') as f:  # 以二进制格式打开一个文件用于只读
@@ -376,4 +376,4 @@ if __name__ == "__main__":
 
 
     # 保存文件
-    workbook.save('output_svr.xlsx')#运行失败 需要改一个别的文件名
+    workbook.save('output_svr1.xlsx')#运行失败 需要改一个别的文件名

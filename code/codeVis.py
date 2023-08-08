@@ -61,6 +61,9 @@ if __name__ == '__main__':
             continue
         if txtfile == 'null':
             continue
+        if txtfile == 'process.py':
+            continue
+
 
         path_project = save_path + color_path + txtfile.split('.txt')[0]
 

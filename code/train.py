@@ -68,10 +68,16 @@ def get_fea_lab(what, loader, model, gpu):
 
 def setup_seed(seed):
     torch.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
-    np.random.seed(seed)
-    # random.seed(seed)
     torch.backends.cudnn.deterministic = True
+    np.random.seed(seed)
+    random.seed(seed)
+    # 如果使用了 GPU，还可以设置 GPU 的随机数种子
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+
 
 
 def tsne(df_fea, df_lab):
@@ -155,7 +161,6 @@ def image_classification_predict(loader, model, test_10crop=True, gpu=True):
     predict = all_output.flatten()
     return all_label, predict
 
-
 def image_classification_test(loader, model, test_10crop=True, gpu=True):
     start_test = True
     names = []
@@ -220,10 +225,10 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
     sum = 0.0
     for number in range(len(all_label_list)):
         sum += (predict_list[number]-all_label_list[number])**2
-    MSE = sum/len(all_label_list)
+    p = Origin_PerformanceMeasure(all_label_list, predict_list)
+    pofb = p.getPofb()
 
-    return MSE
-
+    return pofb
 
 def transfer_classification(config):
     # 定义一个字典类型变量
@@ -343,7 +348,6 @@ def transfer_classification(config):
         parameter_list = [{"params": base_network.parameters(), "lr": 10},
                           {"params": bottleneck_layer.parameters(), "lr": 10},
                           {"params": classifier_layer.parameters(), "lr": 10}]
-
     else:
         parameter_list = [{"params": base_network.parameters(), "lr": 10},
                           {"params": classifier_layer.parameters(), "lr": 10}]
@@ -387,7 +391,6 @@ def transfer_classification(config):
             print(args.source + '->' + args.target)
             print("F")
             print(F)
-
             if F_best > F:
                 F_best = F
                 base_network.train(False)
@@ -514,8 +517,9 @@ if __name__ == "__main__":
     # args = parser.parse_args()
 
     # Case2: 不使用命令行
-    strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
-               "xerces-1.2"]
+    # strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
+    #            "xerces-1.2"]
+    strings = ["log4j-1.2","poi-2.0"]
     new_arr = []
     test_arr = []
 
@@ -537,6 +541,7 @@ if __name__ == "__main__":
     # cpdp 表示跨项目缺陷预测
 
     for i in range(len(new_arr)):
+        setup_seed(20)
         args.source = new_arr[i].split("->")[0]
         args.target = new_arr[i].split("->")[1]
         mytarget_path = "../data/txt/" + args.target + ".txt"
@@ -549,7 +554,7 @@ if __name__ == "__main__":
         # 定义一个字典类型变量
         config = {}
         # 添加键值对
-        config["num_iterations"] = 10
+        config["num_iterations"] = 15
         config["test_interval"] = 1  # ?
         # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
         config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
@@ -562,8 +567,8 @@ if __name__ == "__main__":
                            "batch_size": {"train": 64, "test": 64}}]
         config["network"] = {"name": "AlexNet", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
         config["optimizer"] = {"type": "SGD",
-                               "optim_params": {"lr": 0.05, "momentum": 0.9, "weight_decay": 0.0005, "nesterov": True},
-                               "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0001, "power": 0.75}}
+                               "optim_params": {"lr": 0.00201, "momentum": 0.6, "weight_decay": 0.0005, "nesterov": True},
+                               "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.07, "power": 0.6}}
         # 对代码的修改和理解  都吧注释写满  方便组员学习
         # num_iterations表示训练的迭代次数；
         # test_interval表示每多少个迭代进行一次测试；
@@ -585,7 +590,5 @@ if __name__ == "__main__":
     for i in range(len(new_arr)):
         worksheet.cell(row=i + 1, column=1, value=new_arr[i])
         worksheet.cell(row=i + 1, column=2, value=test_arr[i])
-
-
     # 保存文件
-    workbook.save('output.xlsx')#运行失败 需要改一个别的文件名
+    workbook.save('output6.xlsx')#运行失败 需要改一个别的文件名
