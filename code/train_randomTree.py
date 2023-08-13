@@ -530,8 +530,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     args.gpu_id = '0'
     args.source = 'xalan-2.4'
-    args.targ
-    et = 'xalan-2.4'
+    args.target = 'xalan-2.4'
     args.loss_name = 'DAN'
     args.tradeoff = 1.0
     args.using_bottleneck = 0

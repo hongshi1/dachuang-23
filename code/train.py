@@ -76,7 +76,7 @@ def setup_seed(seed):
         torch.cuda.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)
         torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False
+        torch.backends.cudnn.benchmark = True
 
 
 
@@ -566,9 +566,14 @@ if __name__ == "__main__":
                           {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                            "batch_size": {"train": 64, "test": 64}}]
         config["network"] = {"name": "AlexNet", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
-        config["optimizer"] = {"type": "SGD",
-                               "optim_params": {"lr": 0.00201, "momentum": 0.6, "weight_decay": 0.0005, "nesterov": True},
-                               "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.07, "power": 0.6}}
+        # config["optimizer"] = {"type": "SGD",
+        #                        "optim_params": {"lr": 0.00201, "momentum": 0.6, "weight_decay": 0.0005, "nesterov": True},
+        #                        "lr_type": "inv", "lr_param": {"init_lr": 0.00015, "gamma": 0.09, "power": 0.5}}
+        config["optimizer"] = {
+            "type": "ADAM",
+            "optim_params": {"lr": 0.00301, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
+            "lr_type": "inv", "lr_param": {"init_lr": 0.001 , "gamma": 0.05, "power": 0.6}
+        }
         # 对代码的修改和理解  都吧注释写满  方便组员学习
         # num_iterations表示训练的迭代次数；
         # test_interval表示每多少个迭代进行一次测试；
@@ -591,4 +596,4 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=1, value=new_arr[i])
         worksheet.cell(row=i + 1, column=2, value=test_arr[i])
     # 保存文件
-    workbook.save('output6.xlsx')#运行失败 需要改一个别的文件名
+    workbook.save('output7.xlsx')#运行失败 需要改一个别的文件名

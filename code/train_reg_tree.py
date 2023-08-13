@@ -4,12 +4,6 @@ import os
 import openpyxl
 from Origin_PerformanceMeasure import Origin_PerformanceMeasure
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import GridSearchCV
-from sklearn.svm import SVR
-from sklearn.metrics import mean_squared_error
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
 
 import numpy as np
 import torch
@@ -119,7 +113,7 @@ def reg_tree_test(loader,seed):
     y_train = torch.cat(test_labels_all, dim=0) #[116]
 
     # 创建模型，设置参数（限制树的最大深度为2）（max_features，min_samples_leaf，min_samples_split，）
-    reg_tree = DecisionTreeRegressor(random_state=seed,max_depth=6)
+    reg_tree = DecisionTreeRegressor(random_state=seed,max_depth=8)
 
     # 训练模型
     reg_tree.fit(X_train, y_train)
@@ -366,4 +360,4 @@ if __name__ == "__main__":
 
 
     # 保存文件
-    workbook.save('output_regtree1.xlsx')#运行失败 需要改一个别的文件名
+    workbook.save('output_regtree3.xlsx')#运行失败 需要改一个别的文件名
