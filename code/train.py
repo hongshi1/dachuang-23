@@ -25,6 +25,7 @@ from Origin_PerformanceMeasure import Origin_PerformanceMeasure
 import math
 
 optim_dict = {"SGD": optim.SGD}  #键值对设置
+optim_dict = {"ADAM":optim.Adam}
 
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
@@ -33,6 +34,19 @@ import random
 
 import time
 from PIL import Image
+
+
+class HuberLoss(nn.Module):
+    def __init__(self, delta):
+        super(HuberLoss, self).__init__()
+        self.delta = delta
+
+    def forward(self, y_true, y_pred):
+        error = torch.abs(y_true - y_pred)
+        quadratic = 0.5 * error ** 2
+        linear = self.delta * (error - 0.5 * self.delta)
+        loss = torch.where(error <= self.delta, quadratic, linear)
+        return loss.mean()
 
 
 def get_fea_lab(what, loader, model, gpu):
@@ -254,7 +268,7 @@ def transfer_classification(config):
     # class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
     # class_criterion = nn.CrossEntropyLoss(weight=torch.tensor([1, 1, 2]))
 
-    class_criterion = nn.MSELoss()  ##mse损失函数
+    class_criterion = HuberLoss(1.0)
     loss_config = config["loss"]
     # 如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
     # DAN是一种常用的域适应方法，它通过对抗训练的方式来使得特征提取器对源域和目标域的特征表示具有相同的分布，从而提高模型的泛化性能。在具体实现中，DAN使用一个域分类器来判
