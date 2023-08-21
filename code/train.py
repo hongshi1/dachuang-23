@@ -532,7 +532,7 @@ if __name__ == "__main__":
     # Case2: 不使用命令行
     strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
                "xerces-1.2"]
-    # strings = ["log4j-1.2","poi-2.0"]
+    # strings = ["ant-1.3","xerces-1.2"]
     new_arr = []
     test_arr = []
 
