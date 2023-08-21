@@ -25,8 +25,7 @@ from Origin_PerformanceMeasure import Origin_PerformanceMeasure
 import math
 
 optim_dict = {"SGD": optim.SGD}  #键值对设置
-optim_dict = {"ADAM":optim.Adam}
-
+# optim_dict = {"ADAM":optim.Adam}
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import time
@@ -344,7 +343,7 @@ def transfer_classification(config):
     if net_config["use_bottleneck"]:
         bottleneck_layer.weight.data.normal_(0, 0.005)
         bottleneck_layer.bias.data.fill_(0.1)
-        bottleneck_layer = nn.Sequential(bottleneck_layer, nn.ReLU(), nn.Dropout(0.5))
+        bottleneck_layer = nn.Sequential(bottleneck_layer, nn.ReLU(), nn.Dropout(0.6))
     # 设置分类层神经节点的权重和偏置
     classifier_layer.weight.data.normal_(0, 0.01)
     classifier_layer.bias.data.fill_(0.0)
@@ -576,7 +575,7 @@ if __name__ == "__main__":
         config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
         #
         config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                           "batch_size": {"train": 64, "test": 64}},
+                           "batch_size": {"train": 16, "test": 16}},
                           {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                            "batch_size": {"train": 64, "test": 64}}]
         config["network"] = {"name": "AlexNet", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
@@ -610,4 +609,4 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=1, value=new_arr[i])
         worksheet.cell(row=i + 1, column=2, value=test_arr[i])
     # 保存文件
-    workbook.save('output7.xlsx')#运行失败 需要改一个别的文件名
+    workbook.save('output12.xlsx')#运行失败 需要改一个别的文件名
