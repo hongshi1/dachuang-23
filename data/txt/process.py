@@ -15,7 +15,7 @@ def process_txt_file(file_path):
             if len(parts) == 2:
                 text = parts[0]
                 num = float(parts[1])
-                new_num = num * 1000
+                new_num = num / 1000
                 if new_num == 0:
                     new_line = f"{text} 0\n"
                 else:

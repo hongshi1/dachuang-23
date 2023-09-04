@@ -33,12 +33,11 @@ class Origin_PerformanceMeasure():
         elif (self.ranking == "complexitydensity" and self.cost == 'cc'):
             s = 1
 
-
-
-
-        PofB = sum([sorted_real[j] if sorted_real[j] > 0 else 0 for j in range(m)]) / Q
-
-        return PofB.item()
+        if Q == 0:
+            return 100000
+        else:
+            PofB = sum([sorted_real[j] if sorted_real[j] > 0 else 0 for j in range(m)]) / Q
+            return PofB.item()
 
     def getSomePerformance(self):
 

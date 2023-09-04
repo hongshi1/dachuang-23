@@ -2,6 +2,8 @@
 import argparse
 import os
 
+import ray
+from ray.tune.schedulers import ASHAScheduler
 from sklearn.metrics import mean_squared_error
 
 import numpy as np
@@ -33,6 +35,14 @@ import random
 
 import time
 from PIL import Image
+
+import argparse
+import os
+import openpyxl
+import torch
+from ray import tune, air
+from ray.air import session
+from ray.tune.search.optuna import OptunaSearch
 
 
 class HuberLoss(nn.Module):
@@ -244,6 +254,7 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
     return pofb
 
 def transfer_classification(config):
+    os.chdir("C:/Users/lenovo/Desktop/dachuang/dachuang-23/code/")
     # 定义一个字典类型变量
     prep_dict = {}
     # Add kry-value pairs for 'prep_dict'
@@ -275,7 +286,7 @@ def transfer_classification(config):
     transfer_criterion = loss.loss_dict[loss_config["name"]]
     if "params" not in loss_config:
         loss_config["params"] = {}
-
+    print("here:",os.getcwd())
     ## prepare data
     dsets = {}
     dset_loaders = {}
@@ -385,8 +396,10 @@ def transfer_classification(config):
     len_train_target = len(dset_loaders["target"]["train"]) - 1
     F_best = 1000000 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
 
+    all_label = torch.Tensor()
+    predict_best = torch.Tensor()
     best_model = ''
-    predict_best = ''
+    # predict_best = ''
     for i in range(config["num_iterations"]):                               #网格法确定最佳参数组合
         if i % config["test_interval"] == 0:  # "test_interval"?
             base_network.train(False)
@@ -480,7 +493,7 @@ def transfer_classification(config):
             #     [features.narrow(0, 0, features.size(0) / 2), softmax_out.narrow(0, 0, softmax_out.size(0) / 2)],
             #     [features.narrow(0, features.size(0) / 2, features.size(0) / 2),
             #      softmax_out.narrow(0, softmax_out.size(0) / 2, softmax_out.size(0) / 2)], **loss_config["params"])
-        total_loss = 1.0 * transfer_loss + classifier_loss
+        total_loss = 0.5 * transfer_loss + classifier_loss
         # end_train = time.clock()
         end_train = time.perf_counter()
 
@@ -491,16 +504,20 @@ def transfer_classification(config):
     print(args.source + '->' + args.target)
     print('训练结果：')
     print(F_best)
-
-
+    # tune.report(F_best)
     all_label_list = all_label.view(-1,1).cpu().numpy()
-    predict_list =  predict_best.view(-1,1).cpu().numpy().flatten()
+    print(type(all_label))
+    predict_list = predict_best.view(-1,1).cpu().numpy().flatten()
 
     p= Origin_PerformanceMeasure(all_label_list,predict_list)
     pofb = p.getPofb()
     print('预测结果：')
     print(pofb)
-    return pofb
+    # session.report({"pofb":pofb})
+    return {
+        "training" : F_best,
+        "predict" : pofb
+    }
 
 if __name__ == "__main__":
     # random.seed(time.time())
@@ -553,8 +570,17 @@ if __name__ == "__main__":
     args.task = 'CPDP'  # 'WPDP' or 'CPDP'
     # cpdp 表示跨项目缺陷预测
 
+    # 设置超参数调优的搜索空间
+    search_space = {
+        "init_lr": tune.loguniform(1e-5, 1e-3),
+        "momentum": tune.uniform(0.01, 1.0),
+        "weight_decay": tune.uniform(1e-5, 1e-3)
+    }
+
+
     for i in range(len(new_arr)):
         setup_seed(20)
+        ray.init()
         args.source = new_arr[i].split("->")[0]
         args.target = new_arr[i].split("->")[1]
         mytarget_path = "../data/txt/" + args.target + ".txt"
@@ -564,29 +590,91 @@ if __name__ == "__main__":
 
         os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
 
+        algo = OptunaSearch(metric="training", mode="min")  # 超参数搜索算法
+
         # 定义一个字典类型变量
-        config = {}
-        # 添加键值对
-        config["num_iterations"] = 15
-        config["test_interval"] = 1  # ?
-        # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
-        config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
-                          {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
-        config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
-        #
-        config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                           "batch_size": {"train": 16, "test": 16}},
-                          {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                           "batch_size": {"train": 64, "test": 64}}]
-        config["network"] = {"name": "AlexNet", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
+        # config = {}
+        # # 添加键值对
+        # config["num_iterations"] = 35
+        # config["test_interval"] = 1  # ?
+        # # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
+        # config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
+        #                   {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
+        # config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
+        # #
+        # config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
+        #                    "batch_size": {"train": 16, "test": 16}},
+        #                   {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
+        #                    "batch_size": {"train": 16, "test": 16}}]
+        # config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
         # config["optimizer"] = {"type": "SGD",
-        #                        "optim_params": {"lr": 0.00201, "momentum": 0.6, "weight_decay": 0.0005, "nesterov": True},
-        #                        "lr_type": "inv", "lr_param": {"init_lr": 0.00015, "gamma": 0.09, "power": 0.5}}
-        config["optimizer"] = {
-            "type": "ADAM",
-            "optim_params": {"lr": 0.00301, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
-            "lr_type": "inv", "lr_param": {"init_lr": 0.001 , "gamma": 0.05, "power": 0.6}
+        #                        "optim_params": {"lr": 0.002, "momentum": 0.6, "weight_decay": 0.005, "nesterov": True},
+        #                        "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.07, "power": 0.67}}
+
+        # config参数配置
+        config = {
+            "num_iterations": 1,
+            "test_interval": 2,
+            "prep": [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
+                     {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}],
+            "loss": {"name": args.loss_name, "trade_off": args.tradeoff},
+            "data": [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
+                      "batch_size": {"train": 4, "test": 4}},
+                     {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
+                      "batch_size": {"train": 4, "test": 4}}],
+            "network": {"name": "AlexNet", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256},
+            "optimizer": {"type": "SGD",
+                          "optim_params": {"lr": tune.loguniform(1e-5, 1e-2),  # 用 tune.loguniform 定义 lr 为一个对数分布的值,指示 Ray Tune 在指定的范围内以对数均匀分布的方式搜索学习率的值
+                                           "momentum": tune.uniform(0.1, 0.9),  # 用 tune.uniform 定义 momentum 为一个均匀分布的值
+                                           "weight_decay": tune.loguniform(1e-6, 1e-3),  # 定义 weight_decay 为对数分布的值
+                                           "nesterov": True},
+                          "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.07, "power": 0.67}}
         }
+
+        # 设置 Tune 配置
+        # tuner = tune.Tuner(
+        #    transfer_classification,
+        #    tune_config=tune.TuneConfig(
+        #        metric="pofb",
+        #        mode="min",
+        #        search_alg=algo,
+        #    ),
+        #     run_config=air.RunConfig(
+        #         stop={"training_iteration": 10},  #停止轮数设置
+        #     ),
+        #     param_space=config,
+        #     local_dir="../saveParameter"
+        # )
+
+        scheduler = ASHAScheduler(
+            metric="training",
+            mode="min",
+            max_t=10,
+            grace_period=1,
+            reduction_factor=2)
+
+        analysis = tune.run(
+            transfer_classification,
+            config=config,
+            stop={"training_iteration": 15},  # 停止轮数设置
+            # local_dir="C:/Users/lenovo/Desktop/dachuang/dachuang-23/saveParameter",  # 指定本地目录地址
+            search_alg=algo,
+            scheduler=scheduler,
+            # metric="pofb",
+            # mode="min",
+            num_samples=10,# 每组实验运行5次
+            log_to_file=True,  # 启用 TensorBoard 日志记录
+            resources_per_trial={
+                "cpu": 4,  # 每个试验使用 4 个 CPU 内核
+                "gpu": 1  # 每个试验使用 1个GPU
+            },
+        )
+
+        # config["optimizer"] = {
+        #     "type": "ADAM",
+        #     "optim_params": {"lr": 0.00201, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
+        #     "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
+        # }
         # 对代码的修改和理解  都吧注释写满  方便组员学习
         # num_iterations表示训练的迭代次数；
         # test_interval表示每多少个迭代进行一次测试；
@@ -595,11 +683,23 @@ if __name__ == "__main__":
         # data表示训练和测试数据的配置，包括source和target两个来源的数据，需要读取的文件路径和每个batch的大小；
         # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
         # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
-        test_result = transfer_classification(config)
+
+        # 获取所有试验的结果
+        trial_results = analysis.fetch_trial_dataframes()
+
+        # 选择最佳试验
+        best_trial = analysis.get_best_trial(metric="training", mode="min")
+
+        # 获取最佳试验的 "Pofb" 指标值
+        best_pofb = best_trial.last_result["predict"]
+
+
+        # test_result = transfer_classification(config)
         print(new_arr[i],end=' ')
         print(" pofb_final", end=' ')
-        print(test_result)
-        test_arr.append(test_result)
+        print(best_pofb)
+        test_arr.append(best_pofb)
+        ray.shutdown()
 
     workbook = openpyxl.Workbook()
     # 选择默认的工作表
@@ -609,4 +709,7 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=1, value=new_arr[i])
         worksheet.cell(row=i + 1, column=2, value=test_arr[i])
     # 保存文件
-    workbook.save('output12.xlsx')#运行失败 需要改一个别的文件名
+    workbook.save('output_AlexNet.xlsx')#运行失败 需要改一个别的文件名
+
+
+
