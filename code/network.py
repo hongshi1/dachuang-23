@@ -264,6 +264,175 @@ class ResNet152Fc(nn.Module):
         return self.__in_features
 
 
+import torch.nn as nn
+import torchvision.models as models
+
+
+class RCANBlock(nn.Module):
+    def __init__(self, channels, reduction=16):
+        super(RCANBlock, self).__init__()
+
+        # Residual Group
+        self.conv1 = nn.Conv2d(channels, channels, kernel_size=3, padding=1)
+        self.relu = nn.ReLU(inplace=True)
+        self.conv2 = nn.Conv2d(channels, channels, kernel_size=3, padding=1)
+
+        # Channel Attention
+        self.avg_pool = nn.AdaptiveAvgPool2d(1)
+        self.fc = nn.Sequential(
+            nn.Linear(channels, channels // reduction),
+            nn.ReLU(inplace=True),
+            nn.Linear(channels // reduction, channels),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        res = x
+        x = self.conv1(x)
+        x = self.relu(x)
+        x = self.conv2(x)
+
+        # Channel Attention
+        y = self.avg_pool(x).view(x.size(0), -1)
+        y = self.fc(y).view(x.size(0), x.size(1), 1, 1)
+        x = x * y.expand_as(x)
+
+        return res + x
+
+
+class RCAN(nn.Module):
+    def __init__(self):
+        super(RCAN, self).__init__()
+        model_resnet152 = models.resnet152(pretrained=True)
+
+        self.conv1 = model_resnet152.conv1
+        self.bn1 = model_resnet152.bn1
+        self.relu = model_resnet152.relu
+        self.maxpool = model_resnet152.maxpool
+        self.layer1 = model_resnet152.layer1
+        self.layer2 = model_resnet152.layer2
+        self.layer3 = model_resnet152.layer3
+        self.layer4 = model_resnet152.layer4
+        self.avgpool = model_resnet152.avgpool
+        self.fc = model_resnet152.fc
+
+        # Remove the fully connected layer of ResNet152
+        self.fc = nn.Identity()
+
+        # Add RCAN blocks
+        self.rcan_block1 = RCANBlock(256)  # Adjust the number of channels as needed
+        self.rcan_block2 = RCANBlock(512)
+        self.rcan_block3 = RCANBlock(1024)
+        self.rcan_block4 = RCANBlock(2048)
+
+        # Output dimension matches the in features of ResNet152
+        self.__in_features = 2048  # ResNet152's in features
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.bn1(x)
+        x = self.relu(x)
+        x = self.maxpool(x)
+        x1 = self.layer1(x)
+        x2 = self.layer2(x1)
+        x3 = self.layer3(x2)
+        x4 = self.layer4(x3)
+
+        x1 = self.rcan_block1(x1)
+        x2 = self.rcan_block2(x2)
+        x3 = self.rcan_block3(x3)
+        x4 = self.rcan_block4(x4)
+
+        x = self.avgpool(x4)
+        x = x.view(x.size(0), -1)
+
+        return x
+
+    def output_num(self):
+        return self.__in_features
+
+
+class RCANBlock(nn.Module):
+    def __init__(self, channels, reduction=16):
+        super(RCANBlock, self).__init__()
+
+        # Residual Group
+        self.conv1 = nn.Conv2d(channels, channels, kernel_size=3, padding=1)
+        self.relu = nn.ReLU(inplace=True)
+        self.conv2 = nn.Conv2d(channels, channels, kernel_size=3, padding=1)
+
+        # Channel Attention
+        self.avg_pool = nn.AdaptiveAvgPool2d(1)
+        self.fc = nn.Sequential(
+            nn.Linear(channels, channels // reduction),
+            nn.ReLU(inplace=True),
+            nn.Linear(channels // reduction, channels),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        res = x
+        x = self.conv1(x)
+        x = self.relu(x)
+        x = self.conv2(x)
+
+        # Channel Attention
+        y = self.avg_pool(x).view(x.size(0), -1)
+        y = self.fc(y).view(x.size(0), x.size(1), 1, 1)
+        x = x * y.expand_as(x)
+
+        return res + x
+
+
+class RCAN(nn.Module):
+    def __init__(self):
+        super(RCAN, self).__init__()
+        model_resnet152 = models.resnet152(pretrained=True)
+
+        self.conv1 = model_resnet152.conv1
+        self.bn1 = model_resnet152.bn1
+        self.relu = model_resnet152.relu
+        self.maxpool = model_resnet152.maxpool
+        self.layer1 = model_resnet152.layer1
+        self.layer2 = model_resnet152.layer2
+        self.layer3 = model_resnet152.layer3
+        self.layer4 = model_resnet152.layer4
+        self.avgpool = model_resnet152.avgpool
+        self.fc = model_resnet152.fc
+
+        # Remove the fully connected layer of ResNet152
+        self.fc = nn.Identity()
+
+        # Add RCAN blocks
+        self.rcan_block1 = RCANBlock(256)  # Adjust the number of channels as needed
+        self.rcan_block2 = RCANBlock(512)
+        self.rcan_block3 = RCANBlock(1024)
+        self.rcan_block4 = RCANBlock(2048)
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.bn1(x)
+        x = self.relu(x)
+        x = self.maxpool(x)
+        x1 = self.layer1(x)
+        x2 = self.layer2(x1)
+        x3 = self.layer3(x2)
+        x4 = self.layer4(x3)
+
+        x1 = self.rcan_block1(x1)
+        x2 = self.rcan_block2(x2)
+        x3 = self.rcan_block3(x3)
+        x4 = self.rcan_block4(x4)
+
+        x = self.avgpool(x4)
+        x = x.view(x.size(0), -1)
+
+        return x
+
+    def output_num(self):
+        return 2048  # Adjust based on your specific ResNet model
+
+
 class CNNModel(nn.Module):
 
     def __init__(self):
@@ -356,5 +525,5 @@ class My_ResNet152Fc(nn.Module):
 
 
 network_dict = {"AlexNet": AlexNetFc, "ResNet18": ResNet18Fc, "ResNet34": ResNet34Fc, "ResNet50": ResNet50Fc,
-                "ResNet101": ResNet101Fc, "ResNet152": ResNet152Fc,
+                "ResNet101": ResNet101Fc, "ResNet152": ResNet152Fc,"RCAN": RCAN,
                 "MyNet": My_ResNet152Fc}
