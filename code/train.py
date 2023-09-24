@@ -20,7 +20,7 @@ import torch.utils.data as util_data  # To use 'DataLoader()'
 import lr_schedule
 from data_list import ImageList
 from torch.autograd import Variable
-from Origin_PerformanceMeasure import Origin_PerformanceMeasure
+from PerformanceMeasure import  PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
@@ -235,11 +235,14 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
     # _, predict = torch.max(all_output, 1) #返回每一个all_output样本中概率最大的那个类别作为预测值
     predict_list = all_output.cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
-    sum = 0.0
-    for number in range(len(all_label_list)):
-        sum += (predict_list[number]-all_label_list[number])**2
-    p = Origin_PerformanceMeasure(all_label_list, predict_list)
-    pofb = p.getPofb()
+    pofb = -1.0
+    pred = all_label_list[:,0]
+    loc = all_label_list[:,1]
+
+
+    if(all_label_list.shape[1] > 1):
+        p = PerformanceMeasure(all_label_list[:,0], predict_list,all_label_list[:,1])
+        pofb = p.getPofb()
 
     return pofb
 
@@ -485,7 +488,7 @@ def transfer_classification(config):
                 #     [features.narrow(0, 0, features.size(0) / 2), softmax_out.narrow(0, 0, softmax_out.size(0) / 2)],
                 #     [features.narrow(0, features.size(0) / 2, features.size(0) / 2),
                 #      softmax_out.narrow(0, softmax_out.size(0) / 2, softmax_out.size(0) / 2)], **loss_config["params"])
-            total_loss = 0.5 * transfer_loss + classifier_loss
+            total_loss = 1.0 * transfer_loss + classifier_loss
             # end_train = time.clock()
             end_train = time.perf_counter()
 
@@ -496,16 +499,19 @@ def transfer_classification(config):
     print(args.source + '->' + args.target)
     print('训练结果：')
     print(F_best)
+    pofb = 0.0
 
 
-    all_label_list = all_label.view(-1,1).cpu().numpy()
+    all_label_list = all_label.cpu().numpy()
     predict_list =  predict_best.view(-1,1).cpu().numpy().flatten()
 
-    p= Origin_PerformanceMeasure(all_label_list,predict_list)
-    pofb = p.getPofb()
-    print('预测结果：')
+    if (all_label_list.shape[1] > 1):
+        p = PerformanceMeasure(all_label_list[:,0], predict_list, all_label_list[:,1])
+        pofb = p.getPofb()
     print(pofb)
+
     return pofb
+
 
 if __name__ == "__main__":
     # random.seed(time.time())
@@ -614,7 +620,7 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=1, value=new_arr[i])
         worksheet.cell(row=i + 1, column=2, value=test_arr[i])
     # 保存文件
-    workbook.save('output17.xlsx')#运行失败 需要改一个别的文件名
+    workbook.save('../output/output17.xlsx')#运行失败 需要改一个别的文件名
 
 
 

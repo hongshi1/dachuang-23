@@ -1,309 +1,309 @@
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTDeserializer.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BottomMarginRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_MergeCellsRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WindowProtectRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_HSSFRequest.png	0.00862069
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ConcatPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DataFormatRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFCell.png	0.00086881
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ExternSheetRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_RangeAddress.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_MulBlankRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_util_StringUtil.png	0.002024291
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PrintGridlinesRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_Parent.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LabelRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FooterRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_AreaPtg.png	0.001798561
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CustomField.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFErrorConstants.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SCLRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_NumberRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventmodel_ERFListener.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_MultiplyPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_MulRKRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ExtSSTRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BlankRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_AbstractFunctionPtg.png	0.00010153300000000002
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ExtSSTInfoSubRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_Child.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LeftMarginRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RecordFormatException.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ExpPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_aggregates_RowRecordsAggregate.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_util_POILogger.png	0.001443001
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_StringPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_IOUtils.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_RawDataBlock.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_IterationRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_PropertyBlock.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockWritable.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WSBoolRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LegendRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_IntegerField.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CountryRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSFileSystem.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_NameRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ChartFormatRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentNode.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hpsf_PropertySetFactory.png	0.035714286
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisParentRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_UnionPtg.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_poifs_storage_SmallBlockTableWriter.png	0.009009009
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_AttrPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_Thumbnail.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_UnicodeString.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LinkedDataRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_ShortField.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_common_POIFSConstants.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_DocumentSummaryInformation.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_GreaterThanPtg.png	0.014925373
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hpsf_Section.png	0.00310559
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_model_Model.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ExternSheetSubRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSWriterEvent.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisLineFormatRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_DocumentBlock.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_eventfilesystem_POIFSReader.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_PowerPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_dev_POIFSViewEngine.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RightMarginRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_dev_EFHSSF.png	0.004048583
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_DocumentProperty.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_SystemOutLogger.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BATBlock.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_LittleEndianConsts.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WindowTwoRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_HeaderRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_StringRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_OperationPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_LongField.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FontBasisRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SheetPropertiesRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_BOFRecord.png	0.003164557
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RecordProcessor.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_TickRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BigBlock.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WriteAccessRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PrecisionRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_util_CommonsLogger.png	0.007246377
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventmodel_ModelFactoryListener.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_ListManagedBlock.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_UnknownRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_NamePtg.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hpsf_SummaryInformation.png	0.0078125
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_eventfilesystem_POIFSReaderListener.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_VCenterRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_DirectoryProperty.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_Ref3DPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesIndexRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_BitField.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_BlockingInputStream.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AreaFormatRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_UseSelFSRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_model_Workbook.png	0.000311236
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_Util.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_LessThanPtg.png	0.014925373
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_util_NullLogger.png	0.020408163
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_NoPropertySetStreamException.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_HideObjRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DefaultRowHeightRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_EntryNode.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_IntPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_Variant.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RowRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CalcCountRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesChartGroupIndexRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hpsf_PropertySet.png	0.002645503
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PaneRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_BATManaged.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_aggregates_ValueRecordsAggregate.png	0.004444444
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_PaletteRecord.png	0.000822368
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFDataFormat.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_LittleEndian.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_UnknownPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_Margin.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FnGroupCountRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_TypeReader.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_AreaReference.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BarRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BackupRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventmodel_EventRecordFactory.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_model_FormulaParser.png	0.00110742
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_ClassID.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hpsf_Property.png	0.008695652
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CategorySeriesAxisRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_dev_EFBiffViewer.png	0.012195122
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_SheetReferences.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FormulaRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisOptionsRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_wellknown_PropertyIDMap.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_NumberFormatIndexRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTRecordHeader.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockList.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_PropertyFactory.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_NameXPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_FuncVarPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ParenthesisPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_SmallBlockTableReader.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_GutsRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_Region.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_Entry.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_HPSFRuntimeException.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_wellknown_SectionIDMap.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesLabelsRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_HSSFUserException.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_dev_BiffViewer.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_SmallDocumentBlock.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_RawDataBlockList.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventmodel_ModelFactory.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_util_HexDump.png	0.001618123
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockAllocationTableWriter.png	0.007462687
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_dev_POIFSViewer.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CalcModeRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BeginRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_eventfilesystem_POIFSReaderEvent.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesTextRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_MemFuncPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFPalette.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_PropertyTable.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BookBoolRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DirectoryEntry.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFCellStyle.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SupBookRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_TopMarginRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_BoolPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DSFRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_MissingArgPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LineFormatRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RKRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_NotEqualPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_HeaderBlockReader.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_InterfaceHdrRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_dev_HSSF.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_SubtractPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSDocument.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_InterfaceEndRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSDocumentPath.png	0.003401361
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_Property.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ContinueRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_HSSFColor.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RefModeRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FormatRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SaveRecalcRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_EOFRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_EqualPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DefaultDataLabelTextPropertiesRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesListRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_Ptg.png	0.002409639
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_AddPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DirectoryNode.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_dev_RecordGenerator.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PlotAreaRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CellValueRecordInterface.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DateWindow1904Record.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RefreshAllRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LinkedDataFormulaField.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_CellReference.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DeltaRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_NumberPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_MarkUnsupportedException.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTRecordSizeCalculator.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_UnitsRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_DividePtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_HPSFException.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BoundSheetRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_AbortableHSSFListener.png	0.142857143
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SelectionRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_POILogFactory.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BoolErrRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FrameRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_GridsetRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_HeaderBlockConstants.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_FuncPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_dev_FormulaViewer.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFName.png	0.011363636
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTSerializer.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFPrintSetup.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentOutputStream.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_IndexRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_MMSRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_UnexpectedPropertySetTypeException.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockAllocationTableReader.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_BinaryTree.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_eventfilesystem_POIFSReaderRegistry.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_HSSFEventFactory.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_EndRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_model_WorkbookRecordList.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PrintSetupRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesToChartGroupRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ProtectionRev4Record.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_StyleRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_Area3DPtg.png	0.001373626
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_LessEqualPtg.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_CodepageRecord.png	0.009345794
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_HexRead.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ValueRangeRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFRow.png	0.002237136
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ObjectLinkRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisUsedRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PasswordRev4Record.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ChartRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_RKUtil.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFHeader.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FontRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LabelSSTRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_TextRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DBCellRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DatRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_PropertyConstants.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_SpecialPropertySet.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DefaultColWidthRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFSheet.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_HSSFListener.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFWorkbook.png	0.000573723
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WindowOneRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ColumnInfoRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_HeaderBlockWriter.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_FixedField.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_record_ExtendedFormatRecord.png	0.00067659
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_GreaterEqualPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_NoSingleSectionException.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DimensionsRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_UnaryPlusPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RecordFactory.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_model_Sheet.png	0.000297177
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentEntry.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SharedFormulaRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ControlPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PlotGrowthRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_IllegalPropertySetDataException.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_RootProperty.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_UnaryMinusPtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_SmallDocumentBlockList.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_aggregates_FormulaRecordAggregate.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentInputStream.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_MemErrPtg.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFFont.png	0.007142857
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AreaRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_dev_POIFSViewable.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSWriterListener.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentDescriptor.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FontIndexRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ProtectRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_ByteField.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockListImpl.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PasswordRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ReferencePtg.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_TabIdRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_Record.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RecalcIdRecord.png	0
-../data/img/grb_img/poi-2.0/buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFDateUtil.png	0.004424779
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PrintHeadersRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_ShortList.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFFooter.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_HCenterRecord.png	0
-../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_IntList.png	0
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTDeserializer.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BottomMarginRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_MergeCellsRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WindowProtectRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_HSSFRequest.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ConcatPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DataFormatRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFCell.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ExternSheetRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_RangeAddress.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_MulBlankRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_util_StringUtil.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PrintGridlinesRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_Parent.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LabelRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FooterRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_AreaPtg.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CustomField.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFErrorConstants.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SCLRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_NumberRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventmodel_ERFListener.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_MultiplyPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_MulRKRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ExtSSTRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BlankRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_AbstractFunctionPtg.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ExtSSTInfoSubRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_Child.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LeftMarginRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RecordFormatException.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ExpPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_aggregates_RowRecordsAggregate.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_util_POILogger.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_StringPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_IOUtils.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_RawDataBlock.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_IterationRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_PropertyBlock.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockWritable.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WSBoolRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LegendRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_IntegerField.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CountryRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSFileSystem.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_NameRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ChartFormatRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentNode.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hpsf_PropertySetFactory.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisParentRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_UnionPtg.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_poifs_storage_SmallBlockTableWriter.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_AttrPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_Thumbnail.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_UnicodeString.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LinkedDataRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_ShortField.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_common_POIFSConstants.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_DocumentSummaryInformation.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_GreaterThanPtg.png	1    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hpsf_Section.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_model_Model.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ExternSheetSubRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSWriterEvent.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisLineFormatRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_DocumentBlock.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_eventfilesystem_POIFSReader.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_PowerPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_dev_POIFSViewEngine.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RightMarginRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_dev_EFHSSF.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_DocumentProperty.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_SystemOutLogger.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BATBlock.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_LittleEndianConsts.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WindowTwoRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_HeaderRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_StringRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_OperationPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_LongField.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FontBasisRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SheetPropertiesRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_BOFRecord.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RecordProcessor.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_TickRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BigBlock.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WriteAccessRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PrecisionRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_util_CommonsLogger.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventmodel_ModelFactoryListener.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_ListManagedBlock.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_UnknownRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_NamePtg.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hpsf_SummaryInformation.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_eventfilesystem_POIFSReaderListener.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_VCenterRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_DirectoryProperty.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_Ref3DPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesIndexRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_BitField.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_BlockingInputStream.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AreaFormatRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_UseSelFSRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_model_Workbook.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_Util.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_LessThanPtg.png	1    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_util_NullLogger.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_NoPropertySetStreamException.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_HideObjRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DefaultRowHeightRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_EntryNode.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_IntPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_Variant.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RowRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CalcCountRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesChartGroupIndexRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hpsf_PropertySet.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PaneRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_BATManaged.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_aggregates_ValueRecordsAggregate.png	1    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_PaletteRecord.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFDataFormat.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_LittleEndian.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_UnknownPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_Margin.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FnGroupCountRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_TypeReader.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_AreaReference.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BarRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BackupRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventmodel_EventRecordFactory.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_model_FormulaParser.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_ClassID.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hpsf_Property.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CategorySeriesAxisRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_dev_EFBiffViewer.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_SheetReferences.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FormulaRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisOptionsRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_wellknown_PropertyIDMap.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_NumberFormatIndexRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTRecordHeader.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockList.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_PropertyFactory.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_NameXPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_FuncVarPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ParenthesisPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_SmallBlockTableReader.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_GutsRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_Region.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_Entry.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_HPSFRuntimeException.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_wellknown_SectionIDMap.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesLabelsRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_HSSFUserException.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_dev_BiffViewer.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_SmallDocumentBlock.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_RawDataBlockList.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventmodel_ModelFactory.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_util_HexDump.png	1    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockAllocationTableWriter.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_dev_POIFSViewer.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CalcModeRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BeginRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_eventfilesystem_POIFSReaderEvent.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesTextRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_MemFuncPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFPalette.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_PropertyTable.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BookBoolRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DirectoryEntry.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFCellStyle.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SupBookRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_TopMarginRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_BoolPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DSFRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_MissingArgPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LineFormatRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RKRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_NotEqualPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_HeaderBlockReader.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_InterfaceHdrRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_dev_HSSF.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_SubtractPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSDocument.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_InterfaceEndRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSDocumentPath.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_Property.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ContinueRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_HSSFColor.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RefModeRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FormatRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SaveRecalcRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_EOFRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_EqualPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DefaultDataLabelTextPropertiesRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesListRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_Ptg.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_AddPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DirectoryNode.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_dev_RecordGenerator.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PlotAreaRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_CellValueRecordInterface.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DateWindow1904Record.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RefreshAllRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LinkedDataFormulaField.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_CellReference.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DeltaRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_NumberPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_MarkUnsupportedException.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTRecordSizeCalculator.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_UnitsRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_DividePtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_HPSFException.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BoundSheetRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_AbortableHSSFListener.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SelectionRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_POILogFactory.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_BoolErrRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FrameRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_GridsetRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_HeaderBlockConstants.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_FuncPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_dev_FormulaViewer.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFName.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SSTSerializer.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFPrintSetup.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentOutputStream.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_IndexRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_MMSRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_UnexpectedPropertySetTypeException.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockAllocationTableReader.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_BinaryTree.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_eventfilesystem_POIFSReaderRegistry.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_HSSFEventFactory.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_EndRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_model_WorkbookRecordList.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PrintSetupRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SeriesToChartGroupRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ProtectionRev4Record.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_StyleRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_formula_Area3DPtg.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_LessEqualPtg.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_CodepageRecord.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_HexRead.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ValueRangeRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFRow.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ObjectLinkRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AxisUsedRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PasswordRev4Record.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ChartRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_util_RKUtil.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFHeader.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FontRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_LabelSSTRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_TextRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DBCellRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DatRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_PropertyConstants.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_SpecialPropertySet.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DefaultColWidthRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFSheet.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_eventusermodel_HSSFListener.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFWorkbook.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_WindowOneRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ColumnInfoRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_HeaderBlockWriter.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_FixedField.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_record_ExtendedFormatRecord.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_GreaterEqualPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_NoSingleSectionException.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_DimensionsRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_UnaryPlusPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RecordFactory.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_model_Sheet.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentEntry.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_SharedFormulaRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ControlPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PlotGrowthRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hpsf_IllegalPropertySetDataException.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_property_RootProperty.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_UnaryMinusPtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_SmallDocumentBlockList.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_aggregates_FormulaRecordAggregate.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentInputStream.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_MemErrPtg.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFFont.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_AreaRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_dev_POIFSViewable.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_POIFSWriterListener.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_filesystem_DocumentDescriptor.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_FontIndexRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_ProtectRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_ByteField.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_poifs_storage_BlockListImpl.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PasswordRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_formula_ReferencePtg.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_TabIdRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_Record.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_RecalcIdRecord.png	0    1    1
+../data/img/grb_img/poi-2.0//buggy/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFDateUtil.png	1    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_PrintHeadersRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_ShortList.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_usermodel_HSSFFooter.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_hssf_record_HCenterRecord.png	0    1    1
+../data/img/grb_img/poi-2.0/clean/poi-2.0_src_java_org_apache_poi_util_IntList.png	0    1    1

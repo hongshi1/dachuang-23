@@ -1,188 +1,188 @@
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_XMLFileHandler.png	0.010989011
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_Configurator.png	1.0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_nt_test_NTMin.png	0.006944444
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_or_DefaultRenderer.png	0.25
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_varia_FallbackErrorHandler.png	0.01910828
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_EventDetails.png	0.021276596
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_nt_NTEventLogAppender.png	0.02
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_or_jms_MessageRenderer.png	0.015625
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_performance_NullAppender.png	0.058823529
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_performance_NewVsSetLen.png	0.007462687
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_LogMonitorAdapter.png	0.01010101
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_PatternConverter.png	0.011494253
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_xml_examples_ReportParserError.png	0.034482759
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_varia_ReloadingPropertyConfigurator.png	0.166666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_DailyRollingFileAppender.png	0.009195402
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_JMSSink.png	0.01986755
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5InputDialog.png	0.016
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_BoundedFIFO.png	0.008032129
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_LoggingEvent.png	0.012658228
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTableRowRenderer.png	0.050847458
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_RootCategory.png	0.066666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5ErrorDialog.png	0.035714286
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryImmediateEditor.png	0.016528926
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_Transform.png	0.050847458
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_CyclicBuffer.png	0.008130081
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_WriterAppender.png	0.010135135
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_SyslogQuietWriter.png	0.048780488
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_performance_SystemTime.png	0.0375
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_SyslogWriter.png	0.079545455
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_LoggingReceiver.png	0.031914894
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_ErrorCode.png	0.285714286
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_CategoryWrapper.png	0.009345794
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_AppenderFinalizer.png	0.105263158
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_AppenderAttachableImpl.png	0.009615385
-../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_test_Base64.png	0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_Resource.png	0.040816327
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LogRecord.png	0.008474576
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_AbsoluteTimeDateFormat.png	0.02027027
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_ThreadLocalMap.png	0.133333333
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_configure_MRUFileManager.png	0.005813953
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_or_ObjectRenderer.png	2.0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_SocketNode.png	0.015873016
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_performance_ListVsVector.png	0.012269939
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_TriggeringEventEvaluator.png	2.0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_MultipleAppenders.png	0.011764706
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTable.png	0.009646302
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_AppenderSkeleton.png	0.022857143
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_Level.png	0.034246575
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_QuietWriter.png	0.035087719
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_DefaultRepositorySelector.png	0.166666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_DateFormatManager.png	0.009230769
-../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_performance_NotLogging.png	0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_ROFile.png	0.011111111
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_test_SMTPMin.png	0.012903226
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_varia_StringMatchFilter.png	0.034482759
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_Logger.png	0.106382979
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_configure_ConfigurationManager.png	0.003118503
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_PrintProperties.png	0.066666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_Priority.png	0.02
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_ErrorHandler.png	0.333333333
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_varia_ExternallyRolledFileAppender.png	0.0625
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_ControlPanel.png	0.007371007
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_LogFileParser.png	0.005167959
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryExplorerLogRecordFilter.png	0.044444444
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_OptionConverter.png	0.005263158
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_ThrowableInformation.png	0.12195122
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_xml_XMLLayout.png	0.025104603
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_or_RendererMap.png	0.010152284
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_Main.png	0.007168459
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_jmx_Agent.png	0.029411765
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_LoggerRepository.png	0.2
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_StressAsyncAppender.png	0.003322259
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryAbstractCellEditor.png	0.009389671
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_AsyncAppender.png	0.017921147
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_DateTimeDateFormat.png	0.05
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryNode.png	0.015706806
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_varia_Roller.png	0.011904762
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_AdapterLogRecord.png	0.017699115
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_SyslogAppender.png	0.02173913
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_SimpleLayout.png	0.041666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_or_sax_AttributesRenderer.png	0.034482759
-../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_performance_ConcatVsArray.png	0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LogRecordFilter.png	2.0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_OnlyOnceErrorHandler.png	0.037735849
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_TTCCLayout.png	0.011627907
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_Hello.png	0.026315789
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_BasicConfigurator.png	0.074074074
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_CountingQuietWriter.png	0.052631579
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_ResourceUtils.png	0.043478261
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_RepositorySelector.png	2.0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_PatternParser.png	0.004237288
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_config_PropertySetter.png	0.005063291
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_jmx_AbstractDynamicMBean.png	0.011976048
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_Log4JLogRecord.png	0.035087719
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_Layout.png	0.076923077
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_xml_DOMConfigurator.png	0.005034613
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_LoadXMLAction.png	0.01
-../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_lf5_util_ProductProperties.png	0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_ExitAction.png	0.048780488
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_PatternLayout.png	0.048543689
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTableColumn.png	0.014492754
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_Hierarchy.png	0.003412969
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_SMTPAppender.png	0.020642202
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_PassingLogRecordFilter.png	0.222222222
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_ProvisionNode.png	0.428571429
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_xml_examples_XMLSample.png	0.030534351
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_varia_DenyAllFilter.png	0.166666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_AppenderAttachable.png	0.285714286
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_SocketHubAppender.png	0.009756098
-../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5AboutDialog.png	0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_jmx_AppenderDynamicMBean.png	0.004405286
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryPath.png	0.012987013
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_DefaultLF5Configurator.png	0.037037037
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_StartLogFactor5.png	0.1
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_ShortSocketServer.png	0.006756757
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryNodeEditorRenderer.png	0.142857143
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_MDC.png	0.024390244
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_TreeModelAdapter.png	0.166666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_ConsoleAppender.png	0.060344828
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_FilteredLogTableModel.png	0.005540166
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_StreamUtils.png	0.035087719
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_test_Loop.png	0.014925373
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_or_ThreadGroupRenderer.png	0.02
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_performance_NOPWriter.png	0.095238095
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_RelativeTimeDateFormat.png	0.2
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_ISO8601DateFormat.png	0.018604651
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5Dialog.png	0.00990099
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryNodeRenderer.png	0.017045455
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_DefaultInit.png	0.022727273
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTableColumnFormatException.png	0.6
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_varia_LevelMatchFilter.png	0.032258065
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryElement.png	0.095238095
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_MyTableModel.png	0.003125
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_OptionHandler.png	2.0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryExplorerModel.png	0.007042254
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_HierarchyEventListener.png	1.0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_jdbc_JDBCAppender.png	0.014336918
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LogLevelFormatException.png	0.4
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_config_PropertySetterException.png	0.107142857
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_RollingFileAppender.png	0.013745704
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LogLevel.png	0.004524887
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LF5SwingUtils.png	0.02247191
-../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_test_StressNDC.png	0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_CategoryKey.png	0.049180328
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_FileWatchdog.png	0.025
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_jmx_HierarchyDynamicMBean.png	0.008445946
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_DetailPanel.png	0.007968127
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_TrackingAdjustmentListener.png	0.047619048
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_Shallow.png	0.003021148
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_jmx_MethodUnion.png	0.166666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_LoggerFactory.png	2.0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_ConfigurationFileParsing.png	0.014492754
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_config_PropertyGetter.png	0.012987013
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_LocationInfo.png	0.020979021
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_LogLog.png	0.01369863
-../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_performance_Logging.png	0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryExplorerTree.png	0.025
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_Loader.png	0.021126761
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_config_PropertyPrinter.png	0.012195122
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_SpacePad.png	0.00877193
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_jmx_LayoutDynamicMBean.png	0.004255319
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_TelnetAppender.png	0.024691358
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_SysoutConfigurator.png	0.066666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_FileAppender.png	0.014705882
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_DefaultCategoryFactory.png	0.2
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_HTMLLayout.png	0.003957784
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogBrokerMonitor.png	0.000818666
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5LoadingDialog.png	0.048780488
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_LogManager.png	0.012578616
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_test_SyslogMin.png	0.012987013
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_varia_test_Loop.png	0.017094017
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LF5Appender.png	0.010695187
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_Appender.png	0.166666667
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_RendererSupport.png	1.5
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_spi_Filter.png	0.363636364
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTableModel.png	0.333333333
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_FormattingInfo.png	0.040816327
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_SocketAppender.png	0.020958084
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_DelayedLoop.png	0.00952381
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_SimpleSocketServer.png	0.020833333
-../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_test_L7D.png	0
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_JMSAppender.png	0.011583012
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_NullEnumeration.png	0.090909091
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_SocketServer.png	0.008379888
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_test_MDCStress.png	0.003058104
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_helpers_DateLayout.png	0.01010101
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_net_test_SocketMin.png	0.006493506
-../data/img/grb_img/log4j-1.2/buggy/log4j-1.2_src_java_org_apache_log4j_xml_SAXErrorHandler.png	0.056603774
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_XMLFileHandler.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_Configurator.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_nt_test_NTMin.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_or_DefaultRenderer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_varia_FallbackErrorHandler.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_EventDetails.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_nt_NTEventLogAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_or_jms_MessageRenderer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_performance_NullAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_performance_NewVsSetLen.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_LogMonitorAdapter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_PatternConverter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_xml_examples_ReportParserError.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_varia_ReloadingPropertyConfigurator.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_DailyRollingFileAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_JMSSink.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5InputDialog.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_BoundedFIFO.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_LoggingEvent.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTableRowRenderer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_RootCategory.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5ErrorDialog.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryImmediateEditor.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_Transform.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_CyclicBuffer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_WriterAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_SyslogQuietWriter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_performance_SystemTime.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_SyslogWriter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_LoggingReceiver.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_ErrorCode.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_CategoryWrapper.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_AppenderFinalizer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_AppenderAttachableImpl.png	1    1    1
+../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_test_Base64.png	0    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_Resource.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LogRecord.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_AbsoluteTimeDateFormat.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_ThreadLocalMap.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_configure_MRUFileManager.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_or_ObjectRenderer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_SocketNode.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_performance_ListVsVector.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_TriggeringEventEvaluator.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_MultipleAppenders.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTable.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_AppenderSkeleton.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_Level.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_QuietWriter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_DefaultRepositorySelector.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_DateFormatManager.png	1    1    1
+../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_performance_NotLogging.png	0    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_ROFile.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_test_SMTPMin.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_varia_StringMatchFilter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_Logger.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_configure_ConfigurationManager.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_PrintProperties.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_Priority.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_ErrorHandler.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_varia_ExternallyRolledFileAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_ControlPanel.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_LogFileParser.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryExplorerLogRecordFilter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_OptionConverter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_ThrowableInformation.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_xml_XMLLayout.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_or_RendererMap.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_Main.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_jmx_Agent.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_LoggerRepository.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_StressAsyncAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryAbstractCellEditor.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_AsyncAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_DateTimeDateFormat.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryNode.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_varia_Roller.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_AdapterLogRecord.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_SyslogAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_SimpleLayout.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_or_sax_AttributesRenderer.png	1    1    1
+../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_performance_ConcatVsArray.png	0    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LogRecordFilter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_OnlyOnceErrorHandler.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_TTCCLayout.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_Hello.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_BasicConfigurator.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_CountingQuietWriter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_ResourceUtils.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_RepositorySelector.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_PatternParser.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_config_PropertySetter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_jmx_AbstractDynamicMBean.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_Log4JLogRecord.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_Layout.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_xml_DOMConfigurator.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_LoadXMLAction.png	1    1    1
+../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_lf5_util_ProductProperties.png	0    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_ExitAction.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_PatternLayout.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTableColumn.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_Hierarchy.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_SMTPAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_PassingLogRecordFilter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_ProvisionNode.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_xml_examples_XMLSample.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_varia_DenyAllFilter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_AppenderAttachable.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_SocketHubAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5AboutDialog.png	0    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_jmx_AppenderDynamicMBean.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryPath.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_DefaultLF5Configurator.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_StartLogFactor5.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_ShortSocketServer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryNodeEditorRenderer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_MDC.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_TreeModelAdapter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_ConsoleAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_FilteredLogTableModel.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_util_StreamUtils.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_test_Loop.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_or_ThreadGroupRenderer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_performance_NOPWriter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_RelativeTimeDateFormat.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_ISO8601DateFormat.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5Dialog.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryNodeRenderer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_DefaultInit.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTableColumnFormatException.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_varia_LevelMatchFilter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryElement.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_MyTableModel.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_OptionHandler.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryExplorerModel.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_HierarchyEventListener.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_jdbc_JDBCAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LogLevelFormatException.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_config_PropertySetterException.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_RollingFileAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LogLevel.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LF5SwingUtils.png	1    1    1
+../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_test_StressNDC.png	0    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_CategoryKey.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_FileWatchdog.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_jmx_HierarchyDynamicMBean.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_chainsaw_DetailPanel.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_TrackingAdjustmentListener.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_Shallow.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_jmx_MethodUnion.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_LoggerFactory.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_ConfigurationFileParsing.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_config_PropertyGetter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_LocationInfo.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_LogLog.png	1    1    1
+../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_performance_Logging.png	0    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_categoryexplorer_CategoryExplorerTree.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_Loader.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_config_PropertyPrinter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_SpacePad.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_jmx_LayoutDynamicMBean.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_TelnetAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_SysoutConfigurator.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_FileAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_DefaultCategoryFactory.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_HTMLLayout.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogBrokerMonitor.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogFactor5LoadingDialog.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_LogManager.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_test_SyslogMin.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_varia_test_Loop.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_LF5Appender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_Appender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_RendererSupport.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_spi_Filter.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_lf5_viewer_LogTableModel.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_FormattingInfo.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_SocketAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_DelayedLoop.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_SimpleSocketServer.png	1    1    1
+../data/img/grb_img/log4j-1.2/clean/log4j-1.2_src_java_org_apache_log4j_test_L7D.png	0    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_JMSAppender.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_NullEnumeration.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_SocketServer.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_test_MDCStress.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_helpers_DateLayout.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_net_test_SocketMin.png	1    1    1
+../data/img/grb_img/log4j-1.2//buggy/log4j-1.2_src_java_org_apache_log4j_xml_SAXErrorHandler.png	1    1    1
