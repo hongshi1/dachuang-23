@@ -591,8 +591,8 @@ if __name__ == "__main__":
                            "batch_size": {"train": 16, "test": 16}}]
         config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
         config["optimizer"] = {"type": "SGD",
-                               "optim_params": {"lr": 0.0002, "momentum": 0.9, "weight_decay": 0.05, "nesterov": True},
-                               "lr_type": "inv", "lr_param": {"init_lr": 0.001, "gamma": 0.07, "power": 0.67}}
+                               "optim_params": {"lr": 0.05, "momentum": 0.9, "weight_decay": 0.005, "nesterov": True},
+                               "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
         # config["optimizer"] = {
         #     "type": "ADAM",
         #     "optim_params": {"lr": 0.00201, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
