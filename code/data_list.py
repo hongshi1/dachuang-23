@@ -13,13 +13,15 @@ import os.path
 class TextData():
     def __init__(self, text_file, label_file, source_batch_size=64, target_batch_size=64, val_batch_size=4):
         all_text = np.load(text_file)
+
         self.source_text = all_text[0:92664, :]
         self.target_text = all_text[92664:, :]
-        self.val_text = all_text[78765:92664, :]
+        self.val_text = all_text[0:92664, :]
         all_label = np.load(label_file)
         self.label_source = all_label[0:92664, :]
         self.label_target = all_label[92664:, :]
-        self.label_val = all_label[78765:92664, :]
+        self.label_val = all_label[0:92664, :]
+
         self.scaler = StandardScaler().fit(all_text)
         self.source_id = 0
         self.target_id = 0
