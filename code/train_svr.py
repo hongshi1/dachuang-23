@@ -2,7 +2,9 @@
 
 import openpyxl
 from PerformanceMeasure import PerformanceMeasure
+import numpy as np
 from sklearn.utils import shuffle
+from sklearn.preprocessing import MinMaxScaler
 import torch.optim as optim
 
 import random
@@ -25,8 +27,7 @@ def train(source, target):
     source_labels = label_data.iloc[:].values  # The last column
 
     # Train an SVR Model using Source Data
-    model = SVR()  # 这里修改为SVR
-    model.fit(source_features, source_labels.ravel(),epochs=50)  # 因为SVR期望y是一维的，所以这里使用ravel()
+     # 因为SVR期望y是一维的，所以这里使用ravel()
 
     # Load Target Data
     target_file_path = f'../data/promise_csv/{target}.csv'
@@ -36,6 +37,19 @@ def train(source, target):
     loc_data = pd.read_csv(target_file_path, usecols=['loc'])
     loc_labels = loc_data.iloc[:].values.flatten()
     target_labels = label_data.iloc[:].values.flatten()  # The last column
+
+    source_features = np.log(source_features + 1e-6)
+    target_features = np.log(target_features + 1e-6)
+
+    # 2. Feature Scaling (Normalization) using source data's parameters
+    scaler = MinMaxScaler().fit(source_features)  # Only fit on source_features
+    source_features = scaler.transform(source_features)
+    target_features = scaler.transform(
+        target_features)  # Transform target_features using source's normalization parameters
+
+    # Train an SVR Model using Source Data
+    model = SVR()
+    model.fit(source_features, source_labels.ravel())
 
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)

@@ -3,15 +3,14 @@
 import openpyxl
 from PerformanceMeasure import PerformanceMeasure
 import torch.optim as optim
-
 import random
-
 import time
-
 import pandas as pd
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
 
 
 def train(source, target):
@@ -23,9 +22,7 @@ def train(source, target):
     label_data = pd.read_csv(source_file_path, usecols=['bug'])
     source_labels = label_data.iloc[:].values  # The last column
 
-    # Train a Decision Tree Model using Source Data
-    model = DecisionTreeRegressor()
-    model.fit(source_features, source_labels,epochs=50)
+
 
     # Load Target Data
     target_file_path = f'../data/promise_csv/{target}.csv'
@@ -35,6 +32,19 @@ def train(source, target):
     loc_data = pd.read_csv(target_file_path, usecols=['loc'])
     loc_labels = loc_data.iloc[:].values.flatten()
     target_labels = label_data.iloc[:].values.flatten()  # The last column
+
+    # 1. Log Transformation
+    source_features = np.log(source_features + 1e-6)
+    target_features = np.log(target_features + 1e-6)
+
+    # 2. Feature Scaling (Normalization)
+    scaler = MinMaxScaler().fit(source_features)  # Only fit on source_features
+    source_features = scaler.transform(source_features)
+    target_features = scaler.transform(target_features)
+
+    # Train a Decision Tree Model using Source Data
+    model = DecisionTreeRegressor()
+    model.fit(source_features, source_labels)
 
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)

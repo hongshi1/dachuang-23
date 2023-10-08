@@ -1,6 +1,7 @@
 import openpyxl
 from keras.models import Sequential
 from keras.layers import Dense, Activation
+from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 from PerformanceMeasure import PerformanceMeasure
 import random
@@ -49,9 +50,7 @@ def train(source, target, seed):
     # 分离打乱后的数据
     source_features, source_labels = zip(*combined_data)
 
-    model = DPNN(19).get_model()
-    model.compile(optimizer='adam', loss='mean_squared_error')
-    model.fit(np.array(source_features), np.array(source_labels),epochs=50)
+
 
     # Load Target Data
     target_file_path = f'../data/promise_csv/{target}.csv'
@@ -61,6 +60,19 @@ def train(source, target, seed):
     loc_data = pd.read_csv(target_file_path, usecols=['loc'])
     loc_labels = loc_data.iloc[:].values.flatten()
     target_labels = label_data.iloc[:].values.flatten()  # The last column
+
+    source_features = np.log(np.array(source_features) + 1e-6)
+    target_features = np.log(target_features + 1e-6)
+
+    # 2. Feature Scaling (Normalization) using source data's parameters
+    scaler = MinMaxScaler().fit(source_features)  # Only fit on source_features
+    source_features = scaler.transform(source_features)
+    target_features = scaler.transform(
+        target_features)  # Transform target_features using source's normalization parameters
+
+    model = DPNN(19).get_model()
+    model.compile(optimizer='adam', loss='mean_squared_error')
+    model.fit(source_features, np.array(source_labels), epochs=50)
 
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)

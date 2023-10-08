@@ -4,6 +4,14 @@ import openpyxl
 from PerformanceMeasure import PerformanceMeasure
 import random
 import time
+import openpyxl
+from PerformanceMeasure import PerformanceMeasure
+import random
+import time
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
 
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor  # 新增引用RandomForestRegressor
@@ -14,23 +22,40 @@ def train(source, target):
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',
             'cbm', 'amc', 'max_cc', 'avg_cc']
     source_file_path = f'../data/promise_csv/{source}.csv'
-    source_data = pd.read_csv(source_file_path, usecols=cols)  # Columns D to W are 3 to 22
-    source_features = source_data.iloc[:, :].values  # All columns except the last one
+    source_data = pd.read_csv(source_file_path, usecols=cols)
+    source_features = source_data.iloc[:, :].values
     label_data = pd.read_csv(source_file_path, usecols=['bug'])
-    source_labels = label_data.iloc[:].values  # The last column
+    source_labels = label_data.iloc[:].values
+
+    # Data Preprocessing
+
+    # 1. Log Transformation
+    source_features = np.log(source_features + 1e-6)
+
+    # 2. Feature Scaling (Normalization)
+    scaler = MinMaxScaler()
+    source_features = scaler.fit_transform(source_features)
 
     # Train a RandomForest Model using Source Data
-    model = RandomForestRegressor()  # 这里修改为RandomForestRegressor
-    model.fit(source_features, source_labels.ravel(),epochs=50)  # 因为RandomForestRegressor期望y是一维的，所以这里使用ravel()
+    model = RandomForestRegressor()
+    model.fit(source_features, source_labels.ravel())
 
-    # Load Target Datag
+    # Load Target Data
     target_file_path = f'../data/promise_csv/{target}.csv'
-    target_data = pd.read_csv(target_file_path, usecols=cols)  # Columns D to W are 3 to 22
-    target_features = target_data.iloc[:, :].values  # All columns except the last one
+    target_data = pd.read_csv(target_file_path, usecols=cols)
+    target_features = target_data.iloc[:, :].values
     label_data = pd.read_csv(target_file_path, usecols=['bug'])
     loc_data = pd.read_csv(target_file_path, usecols=['loc'])
     loc_labels = loc_data.iloc[:].values.flatten()
-    target_labels = label_data.iloc[:].values.flatten()  # The last column
+    target_labels = label_data.iloc[:].values.flatten()
+
+    # Data Preprocessing for Target Data
+
+    # 1. Log Transformation
+    target_features = np.log(target_features + 1e-6)
+
+    # 2. Feature Scaling (Normalization)
+    target_features = scaler.transform(target_features)
 
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)
@@ -39,6 +64,12 @@ def train(source, target):
 
     # Return the MSE
     return pofb
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
