@@ -25,7 +25,7 @@ def train(source, target):
 
     # Train a Decision Tree Model using Source Data
     model = DecisionTreeRegressor()
-    model.fit(source_features, source_labels)
+    model.fit(source_features, source_labels,epochs=50)
 
     # Load Target Data
     target_file_path = f'../data/promise_csv/{target}.csv'

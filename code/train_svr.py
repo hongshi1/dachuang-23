@@ -26,7 +26,7 @@ def train(source, target):
 
     # Train an SVR Model using Source Data
     model = SVR()  # 这里修改为SVR
-    model.fit(source_features, source_labels.ravel())  # 因为SVR期望y是一维的，所以这里使用ravel()
+    model.fit(source_features, source_labels.ravel(),epochs=50)  # 因为SVR期望y是一维的，所以这里使用ravel()
 
     # Load Target Data
     target_file_path = f'../data/promise_csv/{target}.csv'

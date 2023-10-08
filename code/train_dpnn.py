@@ -51,7 +51,7 @@ def train(source, target, seed):
 
     model = DPNN(19).get_model()
     model.compile(optimizer='adam', loss='mean_squared_error')
-    model.fit(np.array(source_features), np.array(source_labels))
+    model.fit(np.array(source_features), np.array(source_labels),epochs=50)
 
     # Load Target Data
     target_file_path = f'../data/promise_csv/{target}.csv'

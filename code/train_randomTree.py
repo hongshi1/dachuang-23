@@ -21,7 +21,7 @@ def train(source, target):
 
     # Train a RandomForest Model using Source Data
     model = RandomForestRegressor()  # 这里修改为RandomForestRegressor
-    model.fit(source_features, source_labels.ravel())  # 因为RandomForestRegressor期望y是一维的，所以这里使用ravel()
+    model.fit(source_features, source_labels.ravel(),epochs=50)  # 因为RandomForestRegressor期望y是一维的，所以这里使用ravel()
 
     # Load Target Datag
     target_file_path = f'../data/promise_csv/{target}.csv'
