@@ -7,6 +7,7 @@ from PerformanceMeasure import PerformanceMeasure
 import random
 import time
 import numpy as np
+from keras import optimizers
 
 class DPNN():
     def __init__(self, ch_in):
