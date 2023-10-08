@@ -523,6 +523,7 @@ class My_ResNet152Fc(nn.Module):
 
         return class_output, domain_output
 
+
 network_dict = {"AlexNet": AlexNetFc, "ResNet18": ResNet18Fc, "ResNet34": ResNet34Fc, "ResNet50": ResNet50Fc,
                 "ResNet101": ResNet101Fc, "ResNet152": ResNet152Fc,"RCAN": RCAN,
                 "MyNet": My_ResNet152Fc}
