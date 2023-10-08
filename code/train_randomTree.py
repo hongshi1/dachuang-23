@@ -2,10 +2,7 @@
 
 import openpyxl
 from PerformanceMeasure import PerformanceMeasure
-import torch.optim as optim
-
 import random
-
 import time
 
 import pandas as pd
@@ -26,7 +23,7 @@ def train(source, target):
     model = RandomForestRegressor()  # 这里修改为RandomForestRegressor
     model.fit(source_features, source_labels.ravel())  # 因为RandomForestRegressor期望y是一维的，所以这里使用ravel()
 
-    # Load Target Data
+    # Load Target Datag
     target_file_path = f'../data/promise_csv/{target}.csv'
     target_data = pd.read_csv(target_file_path, usecols=cols)  # Columns D to W are 3 to 22
     target_features = target_data.iloc[:, :].values  # All columns except the last one

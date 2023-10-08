@@ -5,6 +5,7 @@ import pandas as pd
 from PerformanceMeasure import PerformanceMeasure
 import random
 import time
+import numpy as np
 
 class DPNN():
     def __init__(self, ch_in):
@@ -30,7 +31,7 @@ class DPNN():
         model.add(Dense(units=1, kernel_initializer='normal'))
         return model
 
-def train(source, target):
+def train(source, target, seed):
     # Load Source Data
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',
             'cbm', 'amc', 'max_cc', 'avg_cc']
@@ -40,9 +41,17 @@ def train(source, target):
     label_data = pd.read_csv(source_file_path, usecols=['bug'])
     source_labels = label_data.iloc[:].values  # The last column
 
+    np.random.seed(seed)
+    # 打乱数据
+    combined_data = list(zip(source_features, source_labels))
+    np.random.shuffle(combined_data)
+
+    # 分离打乱后的数据
+    source_features, source_labels = zip(*combined_data)
+
     model = DPNN(19).get_model()
     model.compile(optimizer='adam', loss='mean_squared_error')
-    model.fit(source_features, source_labels)
+    model.fit(np.array(source_features), np.array(source_labels))
 
     # Load Target Data
     target_file_path = f'../data/promise_csv/{target}.csv'
@@ -82,7 +91,7 @@ if __name__ == '__main__':
         for i in range(len(new_arr)):
             source = new_arr[i].split("->")[0]
             target = new_arr[i].split("->")[1]
-            test_result = train(source, target)
+            test_result = train(source, target, seed)
             print(new_arr[i], end=' ')
             print(" test", end=' ')
             print(test_result)
@@ -98,4 +107,4 @@ if __name__ == '__main__':
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
 
         # 保存文件
-        workbook.save('C:/Users/lenovo/Desktop/dp_data/output_DPNN_pofb_'+str(round+1)+'.xlsx')  # 保存的文件名也修改为对应SVR模型的名字
+        workbook.save('C:/Users/lenovo/Desktop/dp_data/output_DPNN_pofb_'+str(round+1)+'.xlsx')  # 保存的文件名也修改为对应模型的名字
