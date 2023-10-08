@@ -2,6 +2,7 @@
 
 import openpyxl
 from PerformanceMeasure import PerformanceMeasure
+from sklearn.utils import shuffle
 import torch.optim as optim
 
 import random
@@ -18,6 +19,7 @@ def train(source, target):
             'cbm', 'amc', 'max_cc', 'avg_cc']
     source_file_path = f'../data/promise_csv/{source}.csv'
     source_data = pd.read_csv(source_file_path, usecols=cols)  # Columns D to W are 3 to 22
+    source_data = shuffle(source_data, random_state=seed)
     source_features = source_data.iloc[:, :].values  # All columns except the last one
     label_data = pd.read_csv(source_file_path, usecols=['bug'])
     source_labels = label_data.iloc[:].values  # The last column
@@ -45,39 +47,40 @@ def train(source, target):
 
 
 if __name__ == "__main__":
-    random.seed(time.time())
-    seed = random.randint(1, 100)
-
     path = '../data/txt_png_path/'
-
-    # Case2: 不使用命令行
     strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
                "xerces-1.2"]
     new_arr = []
-    test_arr = []
 
+    # 构建所有可能的source和target组合
     for i in range(len(strings)):
         for j in range(i + 1, len(strings)):
             new_arr.append(strings[i] + "->" + strings[j])
             new_arr.append(strings[j] + "->" + strings[i])
 
-    for i in range(len(new_arr)):
-        source = new_arr[i].split("->")[0]
-        target = new_arr[i].split("->")[1]
-        test_result = train(source, target)
-        print(new_arr[i], end=' ')
-        print(" test", end=' ')
-        print(test_result)
-        test_result = float(test_result)
-        test_arr.append(test_result)
+    all_test_results = []  # 存储每次循环的所有测试结果
 
+    # 执行30次循环
+    for _ in range(30):
+        random.seed(time.time())
+        seed = random.randint(1, 100)
+        test_arr = []
+        for str_combination in new_arr:
+            source, target = str_combination.split("->")
+            test_result = train(source, target)
+            print(f"{str_combination} test {test_result}")
+            test_arr.append(float(test_result))
+        all_test_results.append(test_arr)  # 添加当前循环的测试结果到总列表
+
+    # 计算平均值
+    avg_test_results = [sum(x) / 30 for x in zip(*all_test_results)]  # 对每个测试结果计算平均值
+
+    # 创建Excel工作簿并写入结果
     workbook = openpyxl.Workbook()
-    # 选择默认的工作表
     worksheet = workbook.active
 
-    for i in range(len(new_arr)):
-        worksheet.cell(row=i + 1, column=1, value=new_arr[i])
-        worksheet.cell(row=i + 1, column=2, value=test_arr[i])
+    for i, (combination, avg_result) in enumerate(zip(new_arr, avg_test_results)):
+        worksheet.cell(row=i + 1, column=1, value=combination)
+        worksheet.cell(row=i + 1, column=2, value=avg_result)
 
-    # 保存文件
-    workbook.save('../output/output_svr_pofb.xlsx')  # 保存的文件名也修改为对应SVR模型的名字
+    workbook.save('../output/average_output_svr_pofb_30.xlsx') # 保存的文件名也修改为对应SVR模型的名字
