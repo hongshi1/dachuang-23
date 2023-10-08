@@ -271,6 +271,7 @@ def transfer_classification(config):
     # class_criterion = nn.CrossEntropyLoss(weight=torch.tensor([1, 1, 2]))
 
     class_criterion = HuberLoss(1.0)
+
     loss_config = config["loss"]
     # 如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
     # DAN是一种常用的域适应方法，它通过对抗训练的方式来使得特征提取器对源域和目标域的特征表示具有相同的分布，从而提高模型的泛化性能。在具体实现中，DAN使用一个域分类器来判
@@ -328,7 +329,7 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num = 1# ??
+    class_num = 1#
 
     ## set base network
     net_config = config["network"]
@@ -386,7 +387,7 @@ def transfer_classification(config):
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
     len_train_target = len(dset_loaders["target"]["train"]) - 1
-    F_best = 1000000 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
+    F_best = 1000000 #
 
     best_model = ''
     predict_best = ''
