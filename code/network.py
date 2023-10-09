@@ -52,6 +52,26 @@ class Self_Attn(nn.Module):
         out = self.gamma * out + x
         return out
 
+class NormalAlex(nn.Module):
+    def __init__(self):
+        super(AlexNetFc, self).__init__()
+        model_alexnet = models.alexnet(pretrained=True)
+        self.features = model_alexnet.features
+        self.classifier = nn.Sequential()
+        for i in range(6):
+            self.classifier.add_module("classifier" + str(i), model_alexnet.classifier[i])
+        self.__in_features = model_alexnet.classifier[6].in_features
+
+    def forward(self, x):
+        x = self.features(x)
+        x = x.view(x.size(0), 256 * 6 * 6)
+        x = self.classifier(x)
+        # end = time.perf_counter()
+        return x
+
+    def output_num(self):
+        return self.__in_features
+
 
 class ReverseLayerF(Function):
 
@@ -526,4 +546,4 @@ class My_ResNet152Fc(nn.Module):
 
 network_dict = {"AlexNet": AlexNetFc, "ResNet18": ResNet18Fc, "ResNet34": ResNet34Fc, "ResNet50": ResNet50Fc,
                 "ResNet101": ResNet101Fc, "ResNet152": ResNet152Fc,"RCAN": RCAN,
-                "MyNet": My_ResNet152Fc}
+                "MyNet": My_ResNet152Fc,"NormalAlex":NormalAlex}
