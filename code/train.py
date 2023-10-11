@@ -2,7 +2,7 @@
 import argparse
 import os
 
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error as mse
 
 import numpy as np
 import torch
@@ -28,9 +28,7 @@ optim_dict = {"SGD": optim.SGD}  #键值对设置
 # optim_dict = {"ADAM":optim.Adam}
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
-import time
 import random
-
 import time
 from PIL import Image
 
@@ -270,7 +268,8 @@ def transfer_classification(config):
     # class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
     # class_criterion = nn.CrossEntropyLoss(weight=torch.tensor([1, 1, 2]))
 
-    class_criterion = HuberLoss(1.0)
+    # class_criterion = HuberLoss(1.0)
+    class_criterion = nn.MSELoss()
     loss_config = config["loss"]
     # 如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
     # DAN是一种常用的域适应方法，它通过对抗训练的方式来使得特征提取器对源域和目标域的特征表示具有相同的分布，从而提高模型的泛化性能。在具体实现中，DAN使用一个域分类器来判
@@ -564,63 +563,73 @@ if __name__ == "__main__":
     args.task = 'CPDP'  # 'WPDP' or 'CPDP'
     # cpdp 表示跨项目缺陷预测
 
-    for i in range(len(new_arr)):
-        setup_seed(20)
-        args.source = new_arr[i].split("->")[0]
-        args.target = new_arr[i].split("->")[1]
-        mytarget_path = "../data/txt/" + args.target + ".txt"
-        classnum = 1
-        print(args.source+" "+args.target+" ", end='')
-        print(classnum)
+    for round_cir in range(30):
+        new_arr = []
+        test_arr = []
 
-        os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
+        for i in range(len(strings)):
+            for j in range(i + 1, len(strings)):
+                new_arr.append(strings[i] + "->" + strings[j])
+                new_arr.append(strings[j] + "->" + strings[i])
 
-        # 定义一个字典类型变量
-        config = {}
-        # 添加键值对
-        config["num_iterations"] = 10
-        config["test_interval"] = 1  # ?
-        # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
-        config["prep"] = [{"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
-                          {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
-        config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
-        #
-        config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                           "batch_size": {"train": 16, "test": 16}},
-                          {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                           "batch_size": {"train": 16, "test": 16}}]
-        config["network"] = {"name": "RCAN", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
-        config["optimizer"] = {"type": "SGD",
-                               "optim_params": {"lr": 0.05, "momentum": 0.9, "weight_decay": 0.005, "nesterov": True},
-                               "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
-        # config["optimizer"] = {
-        #     "type": "ADAM",
-        #     "optim_params": {"lr": 0.00201, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
-        #     "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
-        # }
-        # 对代码的修改和理解  都吧注释写满  方便组员学习
-        # num_iterations表示训练的迭代次数；
-        # test_interval表示每多少个迭代进行一次测试；
-        # prep表示数据预处理的配置，包括source和target两个来源的数据，需要进行的操作包括图片的缩放和裁剪；
-        # loss表示损失函数的配置，包括使用的损失函数的名称和对各项损失的权重；
-        # data表示训练和测试数据的配置，包括source和target两个来源的数据，需要读取的文件路径和每个batch的大小；
-        # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
-        # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
-        test_result = transfer_classification(config)
-        print(new_arr[i],end=' ')
-        print(" pofb_final", end=' ')
-        print(test_result)
-        test_arr.append(test_result)
+        for i in range(len(new_arr)):
+            setup_seed(round_cir + 1)
+            args.source = new_arr[i].split("->")[0]
+            args.target = new_arr[i].split("->")[1]
+            mytarget_path = "../data/txt/" + args.target + ".txt"
+            classnum = 1
+            print(args.source + " " + args.target + " ", end='')
+            print(classnum)
 
-    workbook = openpyxl.Workbook()
-    # 选择默认的工作表
-    worksheet = workbook.active
+            os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
 
-    for i in range(len(new_arr)):
-        worksheet.cell(row=i + 1, column=1, value=new_arr[i])
-        worksheet.cell(row=i + 1, column=2, value=test_arr[i])
-    # 保存文件
-    workbook.save('../output/output17.xlsx')#运行失败 需要改一个别的文件名
+            # 定义一个字典类型变量
+            config = {}
+            # 添加键值对
+            config["num_iterations"] = 15
+            config["test_interval"] = 1  # ?
+            # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
+            config["prep"] = [
+                {"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
+                {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
+            config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
+            #
+            config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
+                               "batch_size": {"train": 48, "test": 48}},
+                              {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
+                               "batch_size": {"train": 48, "test": 48}}]
+            config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
+            config["optimizer"] = {"type": "ADAM",
+                                   "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.005,
+                                                    "nesterov": True},
+                                   "lr_type": "inv", "lr_param": {"init_lr": 0.001, "gamma": 0.003, "power": 0.75}}
+            # config["optimizer"] = {
+            #     "type": "ADAM",
+            #     "optim_params": {"lr": 0.00201, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
+            #     "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
+            # }
+            # 对代码的修改和理解  都吧注释写满  方便组员学习
+            # num_iterations表示训练的迭代次数；
+            # test_interval表示每多少个迭代进行一次测试；
+            # prep表示数据预处理的配置，包括source和target两个来源的数据，需要进行的操作包括图片的缩放和裁剪；
+            # loss表示损失函数的配置，包括使用的损失函数的名称和对各项损失的权重；
+            # data表示训练和测试数据的配置，包括source和target两个来源的数据，需要读取的文件路径和每个batch的大小；
+            # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
+            # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
+            test_result = transfer_classification(config)
+            print(new_arr[i], end=' ')
+            print(" pofb_final", end=' ')
+            print(test_result)
+            test_arr.append(test_result)
 
+        workbook = openpyxl.Workbook()
+        # 选择默认的工作表
+        worksheet = workbook.active
+
+        for i in range(len(new_arr)):
+            worksheet.cell(row=i + 1, column=1, value=new_arr[i])
+            worksheet.cell(row=i + 1, column=2, value=test_arr[i])
+        # 保存文件
+        workbook.save('../output/average/' + str(round_cir + 1) + '_round.xlsx')  # 运行失败 需要改一个别的文件名
 
 
