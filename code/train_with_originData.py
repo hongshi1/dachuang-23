@@ -68,18 +68,36 @@ def expand_features_to_3_channels(features):
     return features
 
 
-def integrated_train(network_dict, model_name, source_features, source_labels, target_features, lr=0.001,
-                     weight_decay=0.0001, num_epochs=10):
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+class SimpleDataset(data.Dataset):
+    def __init__(self, features, labels=None):
+        self.features = features
+        self.labels = labels
 
-    # Convert numpy arrays to PyTorch tensors
+    def __len__(self):
+        return len(self.features)
+
+    def __getitem__(self, idx):
+        if self.labels is None:
+            return self.features[idx]
+        else:
+            return self.features[idx], self.labels[idx]
+
+
+def integrated_train(network_dict, model_name, source_features, source_labels, target_features, lr=0.001,
+                     weight_decay=0.0001, num_epochs=10, batch_size=32):
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     source_features = expand_features_to_3_channels(source_features)
     target_features = expand_features_to_3_channels(target_features)
     source_labels = torch.tensor(source_labels, dtype=torch.float32).unsqueeze(1).to(device)
     source_features = torch.tensor(source_features, dtype=torch.float32)
     target_features = torch.tensor(target_features, dtype=torch.float32)
-    inputs = torch.cat((source_features, target_features), dim=0)
+
+    # 使用 DataLoader
+    source_dataset = SimpleDataset(source_features, source_labels)
+    target_dataset = SimpleDataset(target_features)
+    source_loader = data.DataLoader(source_dataset, batch_size=batch_size, shuffle=True)
+    target_loader = data.DataLoader(target_dataset, batch_size=batch_size, shuffle=True)
 
     # Build Model
     base_model = network_dict[model_name]()
@@ -92,25 +110,24 @@ def integrated_train(network_dict, model_name, source_features, source_labels, t
 
     for epoch in range(num_epochs):
         model.train()
+        for batch_source_features, batch_source_labels in source_loader:
+            batch_target_features = next(iter(target_loader))
+            optimizer.zero_grad()
 
-        optimizer.zero_grad()
+            # Concatenate source and target features
+            inputs = torch.cat((batch_source_features, batch_target_features), dim=0).to(device)
+            outputs = model(inputs)
 
-        # Concatenate source and target features
-        inputs = torch.cat((source_features, target_features), dim=0)
+            classifier_loss = class_criterion(outputs[:len(batch_source_labels)], batch_source_labels.view(-1, 1))
+            features = model.base_model(inputs)
+            transfer_loss = transfer_criterion(features[:len(batch_source_labels)], features[len(batch_source_labels):])
 
-        outputs = model(inputs)
+            # Combine classification and transfer loss
+            loss = classifier_loss + transfer_loss
 
-        classifier_loss = class_criterion(outputs[:len(source_labels)], source_labels.view(-1, 1))
-
-        features = model.base_model(inputs)
-        transfer_loss = transfer_criterion(features[:len(source_labels)], features[len(source_labels):])
-
-        # Combine classification and transfer loss
-        loss = classifier_loss + transfer_loss
-
-        # Backward pass and optimization
-        loss.backward()
-        optimizer.step()
+            # Backward pass and optimization
+            loss.backward()
+            optimizer.step()
 
         # Print training progress
         if (epoch + 1) % 10 == 0:
