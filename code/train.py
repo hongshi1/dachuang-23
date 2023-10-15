@@ -1,9 +1,8 @@
 # encoding: utf-8
 import argparse
 import os
-
 from sklearn.metrics import mean_squared_error as mse
-
+import cluster
 import numpy as np
 import torch
 import torch.nn as nn
@@ -268,8 +267,8 @@ def transfer_classification(config):
     # class_criterion = nn.CrossEntropyLoss()         ##交叉熵损失函数
     # class_criterion = nn.CrossEntropyLoss(weight=torch.tensor([1, 1, 2]))
 
-    # class_criterion = HuberLoss(1.0)
-    class_criterion = nn.MSELoss()
+    class_criterion = HuberLoss(1.0)
+    # class_criterion = nn.MSELoss()
     loss_config = config["loss"]
     # 如果在配置文件的loss部分中，name属性指定为DAN，那么表示使用DAN（Domain Adversarial Neural Networks）方法来进行域适应（domain adaptation）学习。
     # DAN是一种常用的域适应方法，它通过对抗训练的方式来使得特征提取器对源域和目标域的特征表示具有相同的分布，从而提高模型的泛化性能。在具体实现中，DAN使用一个域分类器来判
@@ -487,7 +486,11 @@ def transfer_classification(config):
                 #     [features.narrow(0, 0, features.size(0) / 2), softmax_out.narrow(0, 0, softmax_out.size(0) / 2)],
                 #     [features.narrow(0, features.size(0) / 2, features.size(0) / 2),
                 #      softmax_out.narrow(0, softmax_out.size(0) / 2, softmax_out.size(0) / 2)], **loss_config["params"])
-            total_loss = 1.0 * transfer_loss + classifier_loss
+
+            rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
+            total_loss = rate * transfer_loss + classifier_loss
+            print("transfer_loss: ", transfer_loss)
+            print("classifier_loss:", classifier_loss)
             # end_train = time.clock()
             end_train = time.perf_counter()
 
@@ -563,7 +566,10 @@ if __name__ == "__main__":
     args.task = 'CPDP'  # 'WPDP' or 'CPDP'
     # cpdp 表示跨项目缺陷预测
 
-    for round_cir in range(30):
+    #样本聚类
+    clusters, distances = cluster.project_cluster(4)
+
+    for round_cir in range(20):
         new_arr = []
         test_arr = []
 
@@ -595,14 +601,17 @@ if __name__ == "__main__":
             config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
             #
             config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                               "batch_size": {"train": 48, "test": 48}},
+                               "batch_size": {"train": 4, "test": 4}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                               "batch_size": {"train": 48, "test": 48}}]
+                               "batch_size": {"train": 4, "test": 4}}]
             config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
-            config["optimizer"] = {"type": "ADAM",
-                                   "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.005,
+            config["optimizer"] = {"type": "SGD",
+                                   "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
                                                     "nesterov": True},
-                                   "lr_type": "inv", "lr_param": {"init_lr": 0.001, "gamma": 0.003, "power": 0.75}}
+                                   "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
+
+            config["clusters"] = clusters
+            config["distances"] = distances
             # config["optimizer"] = {
             #     "type": "ADAM",
             #     "optim_params": {"lr": 0.00201, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
