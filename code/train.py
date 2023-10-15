@@ -1,6 +1,7 @@
 # encoding: utf-8
 import argparse
 import os
+import torch.utils.data as data
 from sklearn.metrics import mean_squared_error as mse
 import cluster
 import numpy as np
