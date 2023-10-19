@@ -26,6 +26,19 @@ class HuberLoss(nn.Module):
         loss = torch.where(error <= self.delta, quadratic, linear)
         return loss.mean()
 
+def setup_seed(seed):
+    torch.manual_seed(seed)
+    torch.backends.cudnn.deterministic = True
+    np.random.seed(seed)
+    random.seed(seed)
+    # 如果使用了 GPU，还可以设置 GPU 的随机数种子
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = True
+
+
 class Classifier(nn.Module):
     def __init__(self, base_model, num_classes):
         super(Classifier, self).__init__()
@@ -194,29 +207,28 @@ if __name__ == "__main__":
             new_arr.append(strings[i] + "->" + strings[j])
             new_arr.append(strings[j] + "->" + strings[i])
 
-    all_test_results = []  # 存储每次循环的所有测试结果
+
 
     # 执行30次循环
-    for _ in range(1):
-        random.seed(time.time())
-        seed = random.randint(1, 100)
+    for round_cir in range(30):
+        setup_seed(round_cir + 1)
         test_arr = []
         for str_combination in new_arr:
             source, target = str_combination.split("->")
             test_result = train(source, target)
             print(f"{str_combination} test {test_result}")
             test_arr.append(float(test_result))
-        all_test_results.append(test_arr)  # 添加当前循环的测试结果到总列表
+
+            workbook = openpyxl.Workbook()
+            worksheet = workbook.active
+
+            for i, (combination, avg_result) in enumerate(zip(new_arr, avg_test_results)):
+                worksheet.cell(row=i + 1, column=1, value=combination)
+                worksheet.cell(row=i + 1, column=2, value=test_arr)
+
+            workbook.save('../output/average_originData_res152/' + str(round_cir+1) + '_round.xlsx')  # 保存的文件名也修改为对
+
 
     # 计算平均值
-    avg_test_results = [sum(x) / 30 for x in zip(*all_test_results)]  # 对每个测试结果计算平均值
 
-    # 创建Excel工作簿并写入结果
-    workbook = openpyxl.Workbook()
-    worksheet = workbook.active
 
-    for i, (combination, avg_result) in enumerate(zip(new_arr, avg_test_results)):
-        worksheet.cell(row=i + 1, column=1, value=combination)
-        worksheet.cell(row=i + 1, column=2, value=avg_result)
-
-    workbook.save('../output/average_output_originData_pofb_30_log.xlsx') # 保存的文件名也修改为对应SVR模型的名字
