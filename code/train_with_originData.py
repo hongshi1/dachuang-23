@@ -8,13 +8,12 @@ from sklearn.utils import shuffle
 from sklearn.preprocessing import MinMaxScaler
 import torch
 from loss import DAN
-
+import torch.utils.data as data
 import random
 
 import time
 
 import pandas as pd
-from sklearn.svm import SVR  # 新增引用SVR
 class HuberLoss(nn.Module):
     def __init__(self, delta):
         super(HuberLoss, self).__init__()
@@ -136,6 +135,7 @@ def integrated_train(network_dict, model_name, source_features, source_labels, t
     return model
 
 
+
 def train(source, target):
     # Load Source Data
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',
@@ -171,9 +171,11 @@ def train(source, target):
     model = integrated_train(network_dict, "ResNet152", source_features, source_labels, target_features)
 
     # Predict using the model and calculate MSE
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    target_features = expand_features_to_3_channels(target_features)
     with torch.no_grad():
         model.eval()
-        predictions = model(torch.tensor(target_features, dtype=torch.float32)).cpu().numpy()
+        predictions = model(torch.tensor(target_features, dtype=torch.float32).to(device)).cpu().numpy()
     per = PerformanceMeasure(target_labels, predictions.flatten(), loc_labels)
     pofb = per.getPofb()
 
@@ -195,7 +197,7 @@ if __name__ == "__main__":
     all_test_results = []  # 存储每次循环的所有测试结果
 
     # 执行30次循环
-    for _ in range(30):
+    for _ in range(1):
         random.seed(time.time())
         seed = random.randint(1, 100)
         test_arr = []
@@ -217,4 +219,4 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=1, value=combination)
         worksheet.cell(row=i + 1, column=2, value=avg_result)
 
-    workbook.save('../output/average_output_svr_pofb_30_log.xlsx') # 保存的文件名也修改为对应SVR模型的名字
+    workbook.save('../output/average_output_originData_pofb_30_log.xlsx') # 保存的文件名也修改为对应SVR模型的名字

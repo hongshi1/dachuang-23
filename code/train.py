@@ -490,8 +490,9 @@ def transfer_classification(config):
 
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
             total_loss = rate * transfer_loss + classifier_loss
-            print("transfer_loss: ", transfer_loss)
-            print("classifier_loss:", classifier_loss)
+            # print("rate:", rate)
+            # print("transfer_loss: ", transfer_loss)
+            # print("classifier_loss:", classifier_loss)
             # end_train = time.clock()
             end_train = time.perf_counter()
 
@@ -512,7 +513,6 @@ def transfer_classification(config):
         p = PerformanceMeasure(all_label_list[:,0], predict_list, all_label_list[:,1])
         pofb = p.getPofb()
     print(pofb)
-
     return pofb
 
 
@@ -546,7 +546,7 @@ if __name__ == "__main__":
     # Case2: 不使用命令行
     strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
                "xerces-1.2"]
-    # strings = ["ant-1.3","xerces-1.2"]
+    # strings = ["ant-1.3", "velocity-1.4"]
     new_arr = []
     test_arr = []
 
@@ -568,9 +568,9 @@ if __name__ == "__main__":
     # cpdp 表示跨项目缺陷预测
 
     #样本聚类
-    clusters, distances = cluster.project_cluster(4)
+    clusters, distances = cluster.project_cluster(3)
 
-    for round_cir in range(20):
+    for round_cir in range(30):
         new_arr = []
         test_arr = []
 
@@ -580,7 +580,7 @@ if __name__ == "__main__":
                 new_arr.append(strings[j] + "->" + strings[i])
 
         for i in range(len(new_arr)):
-            setup_seed(round_cir + 1)
+            setup_seed(round_cir+1)
             args.source = new_arr[i].split("->")[0]
             args.target = new_arr[i].split("->")[1]
             mytarget_path = "../data/txt/" + args.target + ".txt"
@@ -602,9 +602,9 @@ if __name__ == "__main__":
             config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
             #
             config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                               "batch_size": {"train": 4, "test": 4}},
+                               "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                               "batch_size": {"train": 4, "test": 4}}]
+                               "batch_size": {"train": 32, "test": 32}}]
             config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
             config["optimizer"] = {"type": "SGD",
                                    "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
@@ -613,6 +613,7 @@ if __name__ == "__main__":
 
             config["clusters"] = clusters
             config["distances"] = distances
+            # config["rate"] = [5, 10, 100]
             # config["optimizer"] = {
             #     "type": "ADAM",
             #     "optim_params": {"lr": 0.00201, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
@@ -640,6 +641,6 @@ if __name__ == "__main__":
             worksheet.cell(row=i + 1, column=1, value=new_arr[i])
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
         # 保存文件
-        workbook.save('../output/average/' + str(round_cir + 1) + '_round.xlsx')  # 运行失败 需要改一个别的文件名
+        workbook.save('../output/average/' + str(round_cir+1) + '_round.xlsx')  # 运行失败 需要改一个别的文件名
 
 

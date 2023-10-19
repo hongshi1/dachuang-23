@@ -6,7 +6,7 @@ def inv_lr_scheduler(param_lr, optimizer, iter_num, gamma, power, init_lr=0.001)
     for param_group in optimizer.param_groups:
         param_group['lr'] = lr * param_lr[i]
         i+=1
-        print("lr:",param_group['lr'])
+        # print("lr:",param_group['lr'])
 
     return optimizer
 
