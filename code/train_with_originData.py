@@ -222,9 +222,9 @@ if __name__ == "__main__":
             workbook = openpyxl.Workbook()
             worksheet = workbook.active
 
-            for i, (combination, avg_result) in enumerate(zip(new_arr, avg_test_results)):
-                worksheet.cell(row=i + 1, column=1, value=combination)
-                worksheet.cell(row=i + 1, column=2, value=test_arr)
+            for i in range(len(new_arr)):
+                worksheet.cell(row=i + 1, column=1, value=new_arr[i])
+                worksheet.cell(row=i + 1, column=2, value=test_arr[i])
 
             workbook.save('../output/average_originData_res152/' + str(round_cir+1) + '_round.xlsx')  # 保存的文件名也修改为对
 
