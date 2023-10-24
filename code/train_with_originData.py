@@ -149,7 +149,7 @@ def integrated_train(network_dict, model_name, source_features, source_labels, t
 
 
 
-def train(source, target):
+def train(source, target, seed):
     # Load Source Data
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',
             'cbm', 'amc', 'max_cc', 'avg_cc']
@@ -200,7 +200,7 @@ if __name__ == "__main__":
     strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
                "xerces-1.2"]
     new_arr = []
-
+    test_arr = []
     # 构建所有可能的source和target组合
     for i in range(len(strings)):
         for j in range(i + 1, len(strings)):
@@ -210,24 +210,23 @@ if __name__ == "__main__":
 
 
     # 执行30次循环
-    for round_cir in range(30):
+    for round_cir in range(20):
         setup_seed(round_cir + 1)
         test_arr = []
         for str_combination in new_arr:
             source, target = str_combination.split("->")
-            test_result = train(source, target)
+            test_result = train(source, target, round_cir+1)
             print(f"{str_combination} test {test_result}")
             test_arr.append(float(test_result))
 
-            workbook = openpyxl.Workbook()
-            worksheet = workbook.active
+        workbook = openpyxl.Workbook()
+        worksheet = workbook.active
 
-            for i in range(len(new_arr)):
-                worksheet.cell(row=i + 1, column=1, value=new_arr[i])
-                worksheet.cell(row=i + 1, column=2, value=test_arr[i])
+        for i in range(len(new_arr)):
+            worksheet.cell(row=i + 1, column=1, value=new_arr[i])
+            worksheet.cell(row=i + 1, column=2, value=test_arr[i])
 
-            workbook.save('../output/average_originData_res152/' + str(round_cir+1) + '_round.xlsx')  # 保存的文件名也修改为对
-
+        workbook.save('../output/average_originData_res152/' + str(round_cir + 1) + '_round.xlsx')  # 保存的文件名也修改为对
 
     # 计算平均值
 

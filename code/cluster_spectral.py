@@ -1,11 +1,12 @@
 import os.path
 from sklearn.preprocessing import StandardScaler
 from itertools import combinations
-from sklearn.manifold import TSNE
+from sklearn.manifold import TSNE, SpectralEmbedding
 from matplotlib import pyplot as plt
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, SpectralClustering
 import numpy as np
 import pandas as pd
+from scipy.spatial.distance import euclidean
 
 def replace_with_rank(matrix):
     flattened_matrix = matrix.flatten()
@@ -18,30 +19,54 @@ def replace_with_rank(matrix):
 
 def project_cluster(n_clusters = 3):
     # Load Source Data
-    strings = ["ant-1.3", "ant-1.4", "ant-1.5", "ant-1.6", "ant-1.7", "camel-1.0", "camel-1.2", "camel-1.4", "camel-1.6", "ivy-1.0", "ivy-1.1", "ivy-1.2", "jedit-3.2", "jedit-4.0","jedit-4.1", "jedit-4.2", "jedit-4.3", "log4j-1.0", "log4j-1.1", "log4j-1.2", "poi-1.5", "poi-2.0", "poi-2.5", "poi-3.0", "velocity-1.4", "velocity-1.5","velocity-1.6", "xalan-2.4",
-               "xalan-2.5", "xalan-2.6", "xalan-2.7", "xerces-1.1", "xerces-1.2", "xerces-1.3", "xerces-1.4"]
+    strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
+               "xerces-1.2"]
     data = {}
-    filenames = ["ant", "camel", "ivy", "jedit", "log4j", "poi", "velocity", "xalan", "xerces"]
     data["feature"] = {}
     data["labels"] = {}
-    for filename in filenames:
-        for source in strings:
-            cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam',
-                    'ic',
-                    'cbm', 'amc', 'max_cc', 'avg_cc', 'bug']
-            source_file_path = f'../data/bug-data/{filename}/{source}.csv'
-            if os.path.exists(source_file_path):
-                source_data = pd.read_csv(source_file_path, usecols=cols)  # Columns D to W are 3 to 2
-                data["feature"][source] = source_data.iloc[:, :-1].mean()
-                data["labels"][source] = source_data.iloc[:, -1].mean()
+    for source in strings:
+        cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam',
+                'ic',
+                'cbm', 'amc', 'max_cc', 'avg_cc', 'bug']
+        source_file_path = f'../data/promise_csv/{source}.csv'
+        if os.path.exists(source_file_path):
+            source_data = pd.read_csv(source_file_path, usecols=cols)  # Columns D to W are 3 to 2
+            data["feature"][source] = source_data.iloc[:, :-1].mean()
+            data["labels"][source] = source_data.iloc[:, -1].mean()
 
     scaler = StandardScaler()
     data_array = scaler.fit_transform(np.array(list(data["feature"].values())))
-    kmeans = KMeans(n_clusters=n_clusters,init='k-means++')
-    data['cluster'] = kmeans.fit_predict(data_array)
 
-    # 计算每个簇的中心
-    cluster_centers = kmeans.cluster_centers_
+    #基于欧氏距离计算相似度矩阵
+    similarity_matrix = np.zeros((len(strings), len(strings)))
+    # 计算相似度矩阵
+    for i in range(len(strings)):
+        for j in range(i + 1, len(strings)):
+            similarity_matrix[i, j] = euclidean(data_array[i], data_array[j])
+            similarity_matrix[j, i] = similarity_matrix[i, j]  # 对称矩阵
+
+    #构建加权图
+    threshold = 0.5  ## 定义相似度阈值
+    adj_matrix = np.zeros((len(strings), len(strings)))
+    for i in range(len(strings)):
+        for j in range(i + 1, len(strings)):
+            if similarity_matrix[i, j] > threshold:
+                adj_matrix[i, j] = similarity_matrix[i, j]
+                adj_matrix[j, i] = similarity_matrix[i, j]  # 邻接矩阵是对称的
+
+    # 4. 谱嵌入
+    embedding = SpectralEmbedding(n_components=2)           #将数据降维到2维
+    low_dimensional_data = embedding.fit_transform(adj_matrix)
+
+    spectral_clustering = SpectralClustering(n_clusters=n_clusters)
+    data['cluster'] = spectral_clustering.fit_predict(low_dimensional_data)
+
+    # 计算每个簇的估计中心
+    cluster_centers = []
+    for cluster_id in range(n_clusters):
+        cluster_data = low_dimensional_data[data["cluster"] == cluster_id]  # 提取属于当前簇的数据点
+        cluster_center = np.mean(cluster_data, axis=0)  # 计算均值作为估计的中心
+        cluster_centers.append(cluster_center)
 
     # 计算不同簇中心之间的距离
     n_clusters = len(cluster_centers)
@@ -66,7 +91,7 @@ def project_cluster(n_clusters = 3):
         project_clusters[project] = cluster_labels[i]
 
     # 使用项目名称作为键，将 'cluster' 数组中的值关联起来
-    tsne_result = TSNE(n_components=2, learning_rate="auto").fit_transform(data_array)
+    tsne_result = TSNE(n_components=2, perplexity=5).fit_transform(low_dimensional_data)
     # 创建颜色映射
     colors = ['r', 'b', 'g', 'y']  # 可以根据需要添加更多颜色
 
