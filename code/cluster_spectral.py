@@ -90,22 +90,23 @@ def project_cluster(n_clusters = 3):
     for i, project in enumerate(strings):
         project_clusters[project] = cluster_labels[i]
 
-    # 使用项目名称作为键，将 'cluster' 数组中的值关联起来
-    tsne_result = TSNE(n_components=2, perplexity=5).fit_transform(low_dimensional_data)
-    # 创建颜色映射
-    colors = ['r', 'b', 'g', 'y']  # 可以根据需要添加更多颜色
+    # # 使用项目名称作为键，将 'cluster' 数组中的值关联起来
+    # tsne_result = TSNE(n_components=2, perplexity=5).fit_transform(low_dimensional_data)
+    # # 创建颜色映射
+    # colors = ['r', 'b', 'g', 'y']  # 可以根据需要添加更多颜色
+    #
+    # # 绘制散点图，为每个数据点分配相应的颜色
+    # for i in range(len(cluster_labels)):
+    #     plt.scatter(tsne_result[i, 0], tsne_result[i, 1], c=colors[cluster_labels[i]])
+    #
+    # # 显示图例
+    # for i in range(n_clusters):
+    #     plt.scatter([], [], c=colors[i], label=f'Cluster {i}')
+    #
+    # plt.legend()
+    # plt.title('t-SNE Visualization with K-Means Clusters')
+    # plt.show()
 
-    # 绘制散点图，为每个数据点分配相应的颜色
-    for i in range(len(cluster_labels)):
-        plt.scatter(tsne_result[i, 0], tsne_result[i, 1], c=colors[cluster_labels[i]])
-
-    # 显示图例
-    for i in range(n_clusters):
-        plt.scatter([], [], c=colors[i], label=f'Cluster {i}')
-
-    plt.legend()
-    plt.title('t-SNE Visualization with K-Means Clusters')
-    plt.show()
     return project_clusters, distances
 
 if __name__=="__main__":

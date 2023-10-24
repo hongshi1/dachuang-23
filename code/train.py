@@ -8,7 +8,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import openpyxl
-
+import cluster_spectral
 # 定义和训练神经网络的类和函数。它包括各种层、激活函数、损失函数和配置神经网络结构的实用工具。
 import torch.optim as optim
 # 这个模块提供了用于在训练过程中更新神经网络模型权重的优化算法。
@@ -567,8 +567,10 @@ if __name__ == "__main__":
     args.task = 'CPDP'  # 'WPDP' or 'CPDP'
     # cpdp 表示跨项目缺陷预测
 
-    #样本聚类
-    clusters, distances = cluster.project_cluster(3)
+    #kmeans++聚类
+    # clusters, distances = cluster.project_cluster(3)
+    #谱聚类
+    clusters, distances = cluster_spectral.project_cluster(3)
 
     for round_cir in range(30):
         new_arr = []
@@ -602,9 +604,9 @@ if __name__ == "__main__":
             config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
             #
             config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                               "batch_size": {"train": 32, "test": 32}},
+                               "batch_size": {"train": 4, "test": 4}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                               "batch_size": {"train": 32, "test": 32}}]
+                               "batch_size": {"train": 4, "test": 4}}]
             config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
             config["optimizer"] = {"type": "SGD",
                                    "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
