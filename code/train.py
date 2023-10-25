@@ -240,7 +240,7 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
 
     if(all_label_list.shape[1] > 1):
         p = PerformanceMeasure(all_label_list[:,0], predict_list,all_label_list[:,1])
-        popt = p.perceng
+        popt = p.PercentPOPT()
 
     return popt
 
@@ -511,7 +511,7 @@ def transfer_classification(config):
 
     if (all_label_list.shape[1] > 1):
         p = PerformanceMeasure(all_label_list[:,0], predict_list, all_label_list[:,1])
-        popt = p.POPT()
+        popt = p.PercentPOPT()
     print(popt)
     return popt
 
