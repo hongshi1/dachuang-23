@@ -608,19 +608,19 @@ if __name__ == "__main__":
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                                "batch_size": {"train": 32, "test": 32}}]
             config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
-            config["optimizer"] = {"type": "SGD",
-                                   "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
-                                                    "nesterov": True},
-                                   "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
+            # config["optimizer"] = {"type": "SGD",
+            #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
+            #                                         "nesterov": True},
+            #                        "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
 
             config["clusters"] = clusters
             config["distances"] = distances
             # config["rate"] = [5, 10, 100]
-            # config["optimizer"] = {
-            #     "type": "ADAM",
-            #     "optim_params": {"lr": 0.00201, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
-            #     "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
-            # }
+            config["optimizer"] = {
+                "type": "ADAM",
+                "optim_params": {"lr": 0.001, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
+                "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
+            }
             # 对代码的修改和理解  都吧注释写满  方便组员学习
             # num_iterations表示训练的迭代次数；
             # test_interval表示每多少个迭代进行一次测试；

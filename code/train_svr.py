@@ -54,7 +54,7 @@ def train(source, target):
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)
     per = PerformanceMeasure(target_labels, predictions, loc_labels)
-    pofb = per.getPofb()
+    pofb = per.POPT()
 
     # Return the MSE
     return pofb
