@@ -617,7 +617,103 @@ class My_ResNet152Fc(nn.Module):
 
         return class_output, domain_output
 
+# First, let's define these new models
+
+# 1. New ResNet model (My_ResNet)
+class My_ResNet(nn.Module):
+    def __init__(self, in_features=200):
+        super(My_ResNet, self).__init__()
+        self.feature = nn.Sequential(
+            nn.Linear(in_features, 256),
+            nn.ReLU(),
+            nn.Linear(256, 512),
+            nn.ReLU(),
+            nn.Linear(512, 1024),
+            nn.ReLU(),
+            nn.Linear(1024, 2048),
+            nn.ReLU()
+        )
+        self.class_classifier = nn.Sequential(
+            nn.Linear(2048, 100),
+            nn.ReLU(),
+            nn.Linear(100, 2),
+            nn.LogSoftmax(dim=1)
+        )
+        self.domain_classifier = nn.Sequential(
+            nn.Linear(2048, 100),
+            nn.ReLU(),
+            nn.Linear(100, 2),
+            nn.LogSoftmax(dim=1)
+        )
+
+    def forward(self, x, alpha):
+        feature = self.feature(x)
+        reverse_feature = ReverseLayerF.apply(feature, alpha)
+        class_output = self.class_classifier(feature)
+        domain_output = self.domain_classifier(reverse_feature)
+        return class_output, domain_output
+
+# 2. New LSTM model (My_LSTM)
+class My_LSTM(nn.Module):
+    def __init__(self, in_features=200):
+        super(My_LSTM, self).__init__()
+        self.lstm = nn.LSTM(in_features, 1024, batch_first=True)
+        self.class_classifier = nn.Sequential(
+            nn.Linear(1024, 100),
+            nn.ReLU(),
+            nn.Linear(100, 2),
+            nn.LogSoftmax(dim=1)
+        )
+        self.domain_classifier = nn.Sequential(
+            nn.Linear(1024, 100),
+            nn.ReLU(),
+            nn.Linear(100, 2),
+            nn.LogSoftmax(dim=1)
+        )
+
+    def forward(self, x, alpha):
+        h0 = torch.zeros(1, x.size(0), 1024).to(x.device)  # initial hidden state
+        c0 = torch.zeros(1, x.size(0), 1024).to(x.device)  # initial cell state
+        out, _ = self.lstm(x.view(x.size(0), 1, -1), (h0, c0))  # LSTM output
+        feature = out[:, -1, :]
+        reverse_feature = ReverseLayerF.apply(feature, alpha)
+        class_output = self.class_classifier(feature)
+        domain_output = self.domain_classifier(reverse_feature)
+        return class_output, domain_output
+
+# 3. New Transformer model (My_Transformer)
+class My_Transformer(nn.Module):
+    def __init__(self, in_features=200):
+        super(My_Transformer, self).__init__()
+        self.transformer = nn.TransformerEncoder(nn.TransformerEncoderLayer(d_model=in_features, nhead=10), num_layers=2)
+        self.class_classifier = nn.Sequential(
+            nn.Linear(in_features, 100),
+            nn.ReLU(),
+            nn.Linear(100, 2),
+            nn.LogSoftmax(dim=1)
+        )
+        self.domain_classifier = nn.Sequential(
+            nn.Linear(in_features, 100),
+            nn.ReLU(),
+            nn.Linear(100, 2),
+            nn.LogSoftmax(dim=1)
+        )
+
+    def forward(self, x, alpha):
+        feature = self.transformer(x.view(x.size(0), 1, -1))
+        feature = feature.view(feature.size(0), -1)
+        reverse_feature = ReverseLayerF.apply(feature, alpha)
+        class_output = self.class_classifier(feature)
+        domain_output = self.domain_classifier(reverse_feature)
+        return class_output, domain_output
+
+# Add these models to the existing network_dict
+
+
 
 network_dict = {"AlexNet": AlexNetFc, "ResNet18": ResNet18Fc, "ResNet34": ResNet34Fc, "ResNet50": ResNet50Fc,
                 "ResNet101": ResNet101Fc, "ResNet152": ResNet152Fc,"RCAN": RCAN,
                 "MyNet": My_ResNet152Fc,"NormalAlex":NormalAlex,"AttentionModel": AttentionModel}
+network_dict["My_ResNet"] = My_ResNet
+network_dict["My_LSTM"] = My_LSTM
+network_dict["My_Transformer"] = My_Transformer
