@@ -36,7 +36,7 @@ if __name__ == "__main__":
     folder_path = "./"  # 请将这里替换为你的文件夹路径
 
     # 指定文件夹路径
-    ori_folder_path = 'C:/Users/lenovo/Desktop/PROMISE-02'
+    ori_folder_path = "C:/Users/gxccc/Desktop/PROMISE-02"
 
     process_files_in_folder(folder_path,ori_folder_path)
     print("处理完成")

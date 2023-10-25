@@ -18,7 +18,7 @@ from sklearn.svm import SVR  # 新增引用SVR
 def train(source, target):
     # Load Source Data
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',
-            'cbm', 'amc', 'max_cc', 'avg_cc']
+            'cbm', 'amc', 'max_cc', 'avg_cc','loc']
     source_file_path = f'../data/promise_csv/{source}.csv'
     source_data = pd.read_csv(source_file_path, usecols=cols)  # Columns D to W are 3 to 22
     source_data = shuffle(source_data, random_state=seed)
@@ -57,10 +57,10 @@ def train(source, target):
     predictions = model.predict(target_features)
     # print(loc_labels)
     per = PerformanceMeasure(target_labels, predictions, loc_labels)
-    pofb = per.PercentPOPT()
+    popt = per.PercentPOPT()
 
     # Return the MSE
-    return pofb
+    return popt
 
 
 if __name__ == "__main__":
