@@ -1,523 +1,522 @@
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_DefaultExchangeFormatter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_language_simple_SimpleLanguage.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_ServiceHelper.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_FileProcessStrategy.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultLifecycleStrategy.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_RecipientList.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_language_simple_FileExpressionBuilder.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXEndpoint.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_StickyLoadBalanceStrategy.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_DefaultAnnotationExpressionFactory.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_StickyLoadBalancer.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_view_XmlGraphGenerator.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_AsyncProcessorTypeConverter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_ResequencerEngine.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_RuntimeCamelException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_Element.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_ArrayTypeConverter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_direct_DirectEndpoint.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_JsonDataFormat.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_NoErrorHandlerBuilder.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_ProducerTemplate.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_TryProcessor.png	8
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_FileProducer.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_RandomLoadBalancer.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_bean_DefaultParameterMappingStrategy.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ExpressionNode.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ChoiceType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_CamelExchangeException.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_idempotent_MessageIdRepository.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ConvertBodyProcessor.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_RegistryBean.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_Constant.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_TryType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_RouteBuilder.png	8
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_NamespaceAwareExpression.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_spi_InterceptStrategy.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ExpressionListComparator.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_PhpExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_LanguageResolver.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_IntrospectionSupport.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_FailedToCreateProducerException.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_TypeConverter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_StaticMethodTypeConverter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_dataset_DataSet.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ReflectionInjector.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_dataset_DataSetComponent.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_DomResultHandlerFactory.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_MethodInfoCache.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_simple_AbstractSimpleLanguage.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_Simple.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_DefaultComponentResolver.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_ZipDataFormat.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_FactoryFinder.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_JmxSystemPropertyKeys.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_aggregate_AggregationStrategy.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ResequencerType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_JavaScriptExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_MarshalType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultPollingEndpoint.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_log_LogComponent.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_XMLBeansDataFormat.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_aggregate_AggregationCollection.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_FileMessage.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_timer_TimerEndpoint.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_ArtixDSContentType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_ExchangePattern.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultProducerTemplate.png	5
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_LoadBalancerSupport.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXComponent.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_BinaryPredicateSupport.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_ExpectedBodyTypeException.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_aggregate_UseLatestAggregationStrategy.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_mock_AssertionClause.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_TopicLoadBalanceStrategy.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_LoopProcessor.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_ResultHandler.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_Interceptor.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_ConstantBeanHolder.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_DefaultProducer.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_ProcessorBuilder.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_MessageSupport.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_FileExpressionRenamer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RouteType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_Logger.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_jaxp_DomConverter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_TraceInterceptor.png	8
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_ValueBuilder.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_MarshalProcessor.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_PackageHelper.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_LoadBalancerType.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_spi_HeaderFilterStrategy.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ProcessorPollingConsumer.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_bean_BeanProcessor.png	4
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_seda_CollectionProducer.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_Message.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_ConstantProcessorBuilder.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_InstanceMethodTypeConverter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_DelayPolicy.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_bean_CamelInvocationHandler.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_EnumTypeConverter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_direct_DirectComponent.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_NoPolicy.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_InterceptorType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanInvocation.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_mock_MockComponent.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_ErrorHandlerSupport.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultUnitOfWork.png	7
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_CatchType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_NodeFactory.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_DelayProcessorSupport.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ThreadProcessor.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_MulticastProcessor.png	8
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_dataset_SimpleDataSet.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultCamelContext_.png	18
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanExchange.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_Splitter.png	5
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_RuntimeTransformException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ProxyInstantiationException.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_SendProcessor.png	5
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_TimeoutMap.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_LoggingErrorHandler.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_DeadLetterChannelBuilder_.png	11
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_RoutingSlip.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_timer_TimerComponent.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_seda_SedaEndpoint.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_SqlExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Consume.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ZipDataFormat.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RoutesType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_PropertyEditorTypeConverter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_TopicLoadBalancer.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetHeaderType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Property.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_RubyExpression.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_validation_ValidatingProcessor.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ProcessorRef.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_LoadBalancerConsumer.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_bean_RuntimeBeanExpressionException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_Policy.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_file_FileConsumer_.png	11
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_NamespaceAware.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_OutHeaders.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_NoTypeConversionAvailableException.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_OutputType.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_ref_RefComponent.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_Breakpoint.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_PerformanceCounter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_CamelConverter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_Throttler.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_ErrorHandlerWrappingStrategy.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_InvalidHeaderTypeException.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_Exchange_.png	28
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RedeliveryPolicyType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanHolder.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_NoSuchHeaderException.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_StreamCaching.png	3
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_file_FileEndpoint.png	9
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_management_InstrumentationInterceptStrategy.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_InOnlyType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_IdempotentConsumerType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_Debugger.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_TimeoutMapEntry.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_ChoiceProcessor.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_validation_NoXmlBodyValidationException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_LRUCache.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_EndpointInject.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_SequenceElementComparator.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ProcessorEndpoint.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_ExpressionResultComparator.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_ScheduledPollConsumer.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_TypeConverterLoader.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_bean_MethodInfo.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_ExchangePatternProcessor.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_BeanRef.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_DelegateProcessor.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_exceptionpolicy_ExceptionPolicyStrategy.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_loadbalancer_package-info.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_UnitOfWorkProcessor.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_SerializationDataFormat.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_ExceptionHandler.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultRouteContext.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_DelayerType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ToType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_NoFactoryAvailableException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_RenameFileProcessStrategy.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_dataset_DataSetSupport.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_seda_SedaConsumer.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_concurrent_AtomicExchange.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_spi_Registry.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_LoopType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_EventDrivenPollingConsumer.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_ErrorHandlerBuilder.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_package-info.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_seda_ListPollingConsumer.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DelegateLifecycleStrategy.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_ExpressionType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Predicate.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_LoggingExceptionHandler.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_UnmarshalType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_ErrorHandlerBuilderRef.png	3
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_BuilderSupport.png	6
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_bean_BeanExpression.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_spi_UnitOfWork.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ReportingTypeConverterRegistry.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_ServiceSupport.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_DomResultHandler.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_validation_SchemaValidationException.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_ReportingTypeConverterLoader.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_RuntimeExpressionException.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_ExpressionBuilder.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_ExchangeConverter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_AsyncProcessorHelper.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_CachingInjector.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_language_simple_FileLanguage.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_FilterType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_PredicateSupport.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_list_ListEndpoint.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_ExpressionEvaluationException.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_bean_XPathAnnotationExpressionFactory.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_header_HeaderLanguage.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_EndpointHelper.png	3
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_BatchProcessor.png	8
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_seda_QueueComponent.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_RandomLoadBalanceStrategy.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_DataFormat.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultLanguageResolver.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_ConstantExpression.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_mock_MockEndpoint.png	4
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_converter_DefaultTypeConverter.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_TransformType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_AsyncProcessor.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_LanguageExpression.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_Tracer.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ThreadType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Intercept.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_StringDataFormat.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultExchange_.png	17
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_idempotent_NoMessageIdException.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_CollectionHelper.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_FlatpackDataFormat.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_RoundRobinLoadBalanceStrategy.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_AlreadyStoppedException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Header.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_dataset_DataSetEndpoint.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_exceptionpolicy_DefaultExceptionPolicyStrategy.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_HeaderExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_CamelException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_PredicateFactory.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_management_InstrumentationErrorHandlerWrappingStrategy.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_converter_jaxp_XmlConverter.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_ValidationException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RecipientListType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_jaxp_StreamSourceConverter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ConvertBodyType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_CamelContextHelper.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_TidyMarkupDataFormat.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_language_MethodCallExpression.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_PollingConsumerSupport.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_aggregate_DefaultAggregationCollection.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_PolicyRef.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_XsltBuilder.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ThrottlerType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_FileRenamer.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_management_CamelNamingStrategy.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_xpath_XPathLanguage.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Produce.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_HandleFaultProcessor.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_NoSuchBeanException.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_DelegateAsyncProcessor.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_ProcessorType.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultScheduledPollConsumer.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ThroughputLogger.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_FilterProcessor.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_exceptionpolicy_ExceptionPolicyKey.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_DelayInterceptor.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_JndiRegistry.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanEndpoint.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_TypeConverterAware.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_Namespaces.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_DefaultFileRenamer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_bean_BeanLanguage.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_Timeout.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_HasAnnotation.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_Aggregator.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_TransformProcessor.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_Language.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ScheduledPollEndpoint.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_management_InstrumentationLifecycleStrategy.png	7
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_NamespacePrefix.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_management_DefaultInstrumentationAgent.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_NoOpFileProcessStrategy.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_LifecycleStrategy.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_IllegalSyntaxException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_GroovyExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_LoggingLevel.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_TypeConverterRegistry.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_CsvDataFormat.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_package-info.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_list_ListComponent.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_Resequencer.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_DebugInterceptor.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Producer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RoutingSlipType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_PredicateSupport.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_view_NodeData.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_HandleFaultType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXMessage.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_ParameterMappingStrategy.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_LanguageExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_ManagedEndpoint.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_MulticastType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_Block.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_converter_ObjectConverter.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_AsyncCallback.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_Builder.png	3
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_StreamCachingInterceptor.png	5
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_InvalidPayloadException.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_ArtixDSDataFormat.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_IdentifiedType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_ElementComparator.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_LoadBalancer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_HeaderFilterStrategyAware.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_ELExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_InOut.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_NoBeanAvailableException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_XQueryExpression.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_Delayer.png	3
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_ProceedType.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_jaxp_StringSource.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SendType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_CamelContext_.png	10
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_DeadLetterChannel_.png	11
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_RuntimeExchangeException.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_config_BatchResequencerConfig.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_SequenceSender.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_Bean.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_ResolveEndpointFailedException.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_InvalidTypeException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ThrowFaultType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_HL7DataFormat.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ExceptionType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_ExpressionClause.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_file_strategy_FileProcessStrategyFactory.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_QueueLoadBalancer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_Counter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RouteBuilderRef.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_converter_stream_StreamCacheConverter.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_AmbiguousMethodCallException.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultConsumer.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_Provider.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanComponent.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ExpressionSubElementType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_view_ModelFileGenerator.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_DefaultExchangeComparator.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_MessageHelper.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_TraceFormatter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_InterceptorRef.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_constant_ConstantLanguage.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_CamelTemplate.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_StringResultHandler.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_converter_IOConverter.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_package-info.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_PythonExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_ManagedService.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_DeleteFileProcessStrategy.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_SimpleExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Consumer.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_spi_RouteContext.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_view_RouteDotGenerator.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_InvalidXPathExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_jndi_JndiContext.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_jaxp_StaxConverter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_validation_DefaultValidationErrorHandler.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ExpressionSupport.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SplitterType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultMessage.png	5
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_RedeliveryPolicy.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_RecipientList.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_DataFormatClause.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RemovePropertyType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_InterceptType.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_DefaultExchangeConverter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_CollectionConverter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_Sequence.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_EventDrivenConsumerRoute.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_ExchangeHelper_.png	13
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_DefaultTimeoutMap.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_IOHelper.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ProducerTemplateProcessor.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_NoSuchEndpointException.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_direct_DirectProducer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_UnsafeUriCharactersEncoder.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Pattern.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_InvalidPayloadRuntimeException.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_StreamResequencer.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_config_package-info.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_vm_VmComponent.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_CamelContextAware.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_ErrorHandlerBuilderSupport.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_seda_SedaComponent.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_UnmarshalProcessor.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ValueHolder.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetPropertyType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultEndpoint.png	5
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Converter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_ProducerCache.png	7
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_MainSupport.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Properties.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ExpressionComparator.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_XStreamDataFormat.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_Description.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Headers.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_DataFormatsType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_ParameterInfo.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_SystemHelper.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_LanguageAnnotation.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_JaxbDataFormat.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_FileExchange.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_MessageVariableResolver.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_InstrumentationAgent.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_log_LogFormatter.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ErrorHandler.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_WhenType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_Routes.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_StreamResultHandler.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_FromType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_PredicateBuilder.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_xml_XPathBuilder.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_ManagedRoute.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_ObjectHelper.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_BeanShellExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_CamelPostProcessorHelper.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultHeaderFilterStrategy.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_OtherwiseType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_InOutType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_validation_ValidatorErrorHandler.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_ProcessorFactory.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_ComponentResolver.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_ExchangeFormatter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_idempotent_IdempotentConsumer.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_NoRouteBuilder.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultComponent.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_ToStringTypeConverter.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_PipelineType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RouteContainer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetExchangePatternType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_BrowsableEndpoint.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_MethodBean.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_FileProcessStrategySupport.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_builder_LoggingErrorHandlerBuilder.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_view_GraphGeneratorSupport.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetOutHeaderType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_StringDataFormat.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_TimeoutHandler.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_InOnly.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_StreamResultHandlerFactory.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_JXPathExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_ResultHandlerFactory.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_management_InstrumentationProcessor.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ThrowFaultProcessor.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_impl_converter_AnnotationTypeConverterLoader.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_timer_TimerConsumer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_OptionalIdentifiedType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_XPathExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_XPath.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_MethodInvocation.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_BinaryPredicateSupport.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_config_StreamResequencerConfig.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_spi_Synchronization.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_UuidGenerator.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_ResolverUtil.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Component.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_file_FileComponent.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_ExchangeTimedOutException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Route.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ExpressionHelper.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_MessageDriven.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_stream_StreamCache.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_FinallyType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ServiceActivationType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_jndi_CamelInitialContextFactory.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_DefaultNamespaceContext.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_aggregate_PredicateAggregationCollection.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_WebSphereResolverUtil.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_bean_BeanInfo.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_idempotent_MemoryMessageIdRepository.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RemoveHeaderType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_NoSuchLanguageException.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_AggregatorType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_Time.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_NoSuchPropertyException.png	2
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_AnnotationExpressionFactory.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_component_dataset_DataSetConsumer.png	3
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_SerializationDataFormat.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_Endpoint.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_Pipeline.png	6
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_StringResultHandlerFactory.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_ExchangeProperty.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_CatchProcessor.png	4
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_CompositeProcessor.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_CollectionStringBuffer.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_DataFormatType.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_converter_jaxp_BytesSource.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_package-info.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_ProxyHelper.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXConsumer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_LoadBalanceType.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_PollingConsumer.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Processor.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetBodyType.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_Delayer.png	2
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_URISupport.png	1
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_RoundRobinLoadBalancer.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_OgnlExpression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Service.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Body.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Expression.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_NIOConverter.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_processor_ProceedProcessor.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXExchange.png	0
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_Injector.png	0
-../data/img/grb_img/camel-1.6//buggy/camel-1.6_src_java_org_apache_camel_util_concurrent_CountingLatch.png	1
-../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_ExceptionEvent.png	0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_DefaultExchangeFormatter.png 0 17
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_language_simple_SimpleLanguage.png 1 165
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_ServiceHelper.png 1 176
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_FileProcessStrategy.png 0 3
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultLifecycleStrategy.png 2 46
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_RecipientList.png 0 0
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_language_simple_FileExpressionBuilder.png 3 52
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXEndpoint.png 0 266
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_StickyLoadBalanceStrategy.png 1 82
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_DefaultAnnotationExpressionFactory.png 0 96
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_StickyLoadBalancer.png 1 168
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_view_XmlGraphGenerator.png 0 415
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_AsyncProcessorTypeConverter.png 0 53
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_ResequencerEngine.png 0 184
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_RuntimeCamelException.png 0 21
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_Element.png 0 50
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_ArrayTypeConverter.png 0 127
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_direct_DirectEndpoint.png 2 73
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_JsonDataFormat.png 1 15
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_NoErrorHandlerBuilder.png 1 10
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_ProducerTemplate.png 2 33
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_TryProcessor.png 8 294
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_FileProducer.png 0 416
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_RandomLoadBalancer.png 1 24
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_bean_DefaultParameterMappingStrategy.png 2 39
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ExpressionNode.png 0 114
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ChoiceType.png 0 208
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_CamelExchangeException.png 1 39
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_idempotent_MessageIdRepository.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ConvertBodyProcessor.png 0 61
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_RegistryBean.png 0 171
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_Constant.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_TryType.png 0 236
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_RouteBuilder.png 8 265
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_NamespaceAwareExpression.png 0 44
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_spi_InterceptStrategy.png 2 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ExpressionListComparator.png 0 47
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_PhpExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_LanguageResolver.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_IntrospectionSupport.png 0 880
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_FailedToCreateProducerException.png 1 25
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_TypeConverter.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_StaticMethodTypeConverter.png 0 67
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_dataset_DataSet.png 0 5
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ReflectionInjector.png 0 8
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_dataset_DataSetComponent.png 0 19
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_DomResultHandlerFactory.png 0 9
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_MethodInfoCache.png 0 100
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_simple_AbstractSimpleLanguage.png 0 133
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_Simple.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_DefaultComponentResolver.png 0 141
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_ZipDataFormat.png 1 34
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_FactoryFinder.png 1 275
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_JmxSystemPropertyKeys.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_aggregate_AggregationStrategy.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ResequencerType.png 0 303
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_JavaScriptExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_MarshalType.png 0 82
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultPollingEndpoint.png 1 33
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_log_LogComponent.png 0 67
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_XMLBeansDataFormat.png 0 15
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_aggregate_AggregationCollection.png 0 9
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_FileMessage.png 0 62
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_timer_TimerEndpoint.png 0 148
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_ArtixDSContentType.png 0 111
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_ExchangePattern.png 0 259
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultProducerTemplate.png 5 614
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_LoadBalancerSupport.png 0 38
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXComponent.png 0 36
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_BinaryPredicateSupport.png 0 125
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_ExpectedBodyTypeException.png 1 34
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_aggregate_UseLatestAggregationStrategy.png 0 23
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_mock_AssertionClause.png 0 118
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_TopicLoadBalanceStrategy.png 1 9
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_LoopProcessor.png 1 106
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_ResultHandler.png 0 2
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_Interceptor.png 2 41
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_ConstantBeanHolder.png 0 66
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_DefaultProducer.png 0 47
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_ProcessorBuilder.png 1 74
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_MessageSupport.png 2 150
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_FileExpressionRenamer.png 0 68
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RouteType.png 0 345
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_Logger.png 1 474
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_jaxp_DomConverter.png 0 79
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_TraceInterceptor.png 8 217
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_ValueBuilder.png 1 236
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_MarshalProcessor.png 1 39
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_PackageHelper.png 1 88
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_LoadBalancerType.png 1 187
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_spi_HeaderFilterStrategy.png 1 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ProcessorPollingConsumer.png 0 46
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_bean_BeanProcessor.png 4 305
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_seda_CollectionProducer.png 1 29
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_Message.png 2 22
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_ConstantProcessorBuilder.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_InstanceMethodTypeConverter.png 0 90
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_DelayPolicy.png 1 55
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_bean_CamelInvocationHandler.png 1 70
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_EnumTypeConverter.png 0 58
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_direct_DirectComponent.png 0 17
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_NoPolicy.png 0 7
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_InterceptorType.png 0 5
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanInvocation.png 0 136
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_mock_MockComponent.png 0 39
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_ErrorHandlerSupport.png 1 96
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultUnitOfWork.png 7 110
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_CatchType.png 0 168
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_NodeFactory.png 0 19
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_DelayProcessorSupport.png 1 127
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ThreadProcessor.png 0 248
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_MulticastProcessor.png 8 377
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_dataset_SimpleDataSet.png 0 39
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultCamelContext.png 18 1510
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanExchange.png 0 30
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_Splitter.png 5 156
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_RuntimeTransformException.png 0 17
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ProxyInstantiationException.png 0 34
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_SendProcessor.png 5 181
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_TimeoutMap.png 0 6
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_LoggingErrorHandler.png 2 226
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_DeadLetterChannelBuilder.png 11 326
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_RoutingSlip.png 3 222
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_timer_TimerComponent.png 0 86
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_seda_SedaEndpoint.png 0 60
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_SqlExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Consume.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ZipDataFormat.png 0 74
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RoutesType.png 0 279
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_PropertyEditorTypeConverter.png 0 60
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_TopicLoadBalancer.png 1 62
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetHeaderType.png 0 75
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Property.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_RubyExpression.png 0 12
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_validation_ValidatingProcessor.png 2 184
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ProcessorRef.png 0 89
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_LoadBalancerConsumer.png 1 24
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_bean_RuntimeBeanExpressionException.png 0 45
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_Policy.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_file_FileConsumer.png 11 793
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_NamespaceAware.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_OutHeaders.png 0 0
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_NoTypeConversionAvailableException.png 1 52
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_OutputType.png 1 53
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_ref_RefComponent.png 0 33
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_Breakpoint.png 0 6
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_PerformanceCounter.png 0 173
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_CamelConverter.png 0 18
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_Throttler.png 1 108
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_ErrorHandlerWrappingStrategy.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_InvalidHeaderTypeException.png 0 47
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_Exchange.png 28 29
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RedeliveryPolicyType.png 0 277
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanHolder.png 0 3
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_NoSuchHeaderException.png 2 67
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_StreamCaching.png 3 33
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_file_FileEndpoint.png 9 617
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_management_InstrumentationInterceptStrategy.png 3 31
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_InOnlyType.png 0 37
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_IdempotentConsumerType.png 0 87
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_Debugger.png 1 213
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_TimeoutMapEntry.png 0 105
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_ChoiceProcessor.png 1 152
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_validation_NoXmlBodyValidationException.png 0 13
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_LRUCache.png 0 37
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_EndpointInject.png 1 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_SequenceElementComparator.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ProcessorEndpoint.png 0 83
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_ExpressionResultComparator.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_ScheduledPollConsumer.png 1 179
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_TypeConverterLoader.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_bean_MethodInfo.png 1 410
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_ExchangePatternProcessor.png 2 39
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_BeanRef.png 0 167
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_DelegateProcessor.png 2 81
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_exceptionpolicy_ExceptionPolicyStrategy.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_loadbalancer_package-info.png 0 0
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_UnitOfWorkProcessor.png 1 54
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_SerializationDataFormat.png 0 48
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_ExceptionHandler.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultRouteContext.png 4 302
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_DelayerType.png 0 107
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ToType.png 0 60
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_NoFactoryAvailableException.png 0 20
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_RenameFileProcessStrategy.png 0 201
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_dataset_DataSetSupport.png 1 139
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_seda_SedaConsumer.png 1 152
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_concurrent_AtomicExchange.png 0 4
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_spi_Registry.png 1 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_LoopType.png 0 57
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_EventDrivenPollingConsumer.png 1 124
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_ErrorHandlerBuilder.png 1 4
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_package-info.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_seda_ListPollingConsumer.png 0 34
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DelegateLifecycleStrategy.png 1 39
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_ExpressionType.png 0 366
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Predicate.png 0 2
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_LoggingExceptionHandler.png 1 26
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_UnmarshalType.png 0 82
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_ErrorHandlerBuilderRef.png 3 78
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_BuilderSupport.png 6 251
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_bean_BeanExpression.png 0 125
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_spi_UnitOfWork.png 3 4
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ReportingTypeConverterRegistry.png 0 34
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_ServiceSupport.png 4 239
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_DomResultHandler.png 0 21
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_validation_SchemaValidationException.png 0 80
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_ReportingTypeConverterLoader.png 1 59
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_RuntimeExpressionException.png 0 17
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_ExpressionBuilder.png 4 342
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_ExchangeConverter.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_AsyncProcessorHelper.png 0 23
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_CachingInjector.png 0 33
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_language_simple_FileLanguage.png 4 106
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_FilterType.png 0 45
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_PredicateSupport.png 0 37
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_list_ListEndpoint.png 0 120
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_ExpressionEvaluationException.png 0 21
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_bean_XPathAnnotationExpressionFactory.png 1 48
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_header_HeaderLanguage.png 0 18
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_EndpointHelper.png 3 68
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_BatchProcessor.png 8 180
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_seda_QueueComponent.png 0 13
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_RandomLoadBalanceStrategy.png 1 9
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_DataFormat.png 0 2
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultLanguageResolver.png 1 131
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_ConstantExpression.png 0 12
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_mock_MockEndpoint.png 4 1285
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_converter_DefaultTypeConverter.png 3 519
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_TransformType.png 0 41
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_AsyncProcessor.png 1 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_LanguageExpression.png 0 24
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_Tracer.png 3 135
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ThreadType.png 0 349
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Intercept.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_StringDataFormat.png 0 21
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultExchange.png 17 498
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_idempotent_NoMessageIdException.png 0 32
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_CollectionHelper.png 1 133
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_FlatpackDataFormat.png 1 5
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_loadbalancer_RoundRobinLoadBalanceStrategy.png 1 9
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_AlreadyStoppedException.png 0 5
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Header.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_dataset_DataSetEndpoint.png 2 312
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_exceptionpolicy_DefaultExceptionPolicyStrategy.png 2 194
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_HeaderExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_CamelException.png 0 20
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_PredicateFactory.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_management_InstrumentationErrorHandlerWrappingStrategy.png 2 22
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_converter_jaxp_XmlConverter.png 3 731
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_ValidationException.png 0 13
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RecipientListType.png 0 59
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_jaxp_StreamSourceConverter.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ConvertBodyType.png 0 100
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_CamelContextHelper.png 1 289
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_TidyMarkupDataFormat.png 0 50
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_language_MethodCallExpression.png 2 59
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_PollingConsumerSupport.png 1 49
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_aggregate_DefaultAggregationCollection.png 4 185
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_PolicyRef.png 0 121
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_XsltBuilder.png 0 380
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ThrottlerType.png 0 129
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_FileRenamer.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_management_CamelNamingStrategy.png 2 400
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_xpath_XPathLanguage.png 0 41
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Produce.png 0 2
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_HandleFaultProcessor.png 2 105
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_NoSuchBeanException.png 1 21
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_DelegateAsyncProcessor.png 1 66
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_ProcessorType.png 1 2077
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultScheduledPollConsumer.png 1 63
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ThroughputLogger.png 0 317
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_FilterProcessor.png 2 41
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_exceptionpolicy_ExceptionPolicyKey.png 0 125
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_DelayInterceptor.png 0 49
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_JndiRegistry.png 1 79
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanEndpoint.png 0 160
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_TypeConverterAware.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_Namespaces.png 0 163
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_DefaultFileRenamer.png 0 100
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_bean_BeanLanguage.png 0 78
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_Timeout.png 0 36
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_HasAnnotation.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_Aggregator.png 1 44
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_TransformProcessor.png 2 61
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_Language.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ScheduledPollEndpoint.png 0 89
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_management_InstrumentationLifecycleStrategy.png 7 395
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_NamespacePrefix.png 0 2
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_management_DefaultInstrumentationAgent.png 3 597
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_NoOpFileProcessStrategy.png 0 10
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_LifecycleStrategy.png 0 5
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_IllegalSyntaxException.png 0 40
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_GroovyExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_LoggingLevel.png 0 100
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_TypeConverterRegistry.png 0 2
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_CsvDataFormat.png 1 5
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_package-info.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_list_ListComponent.png 0 11
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_Resequencer.png 2 63
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_DebugInterceptor.png 0 203
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Producer.png 0 4
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RoutingSlipType.png 0 77
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_PredicateSupport.png 0 37
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_view_NodeData.png 0 491
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_HandleFaultType.png 0 23
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXMessage.png 0 50
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_ParameterMappingStrategy.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_LanguageExpression.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_ManagedEndpoint.png 0 22
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_MulticastType.png 0 142
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_Block.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_converter_ObjectConverter.png 1 214
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_AsyncCallback.png 1 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_Builder.png 3 86
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_StreamCachingInterceptor.png 5 105
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_InvalidPayloadException.png 1 38
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_ArtixDSDataFormat.png 0 131
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_IdentifiedType.png 0 14
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_ElementComparator.png 0 59
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_LoadBalancer.png 0 3
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_HeaderFilterStrategyAware.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_ELExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_InOut.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_NoBeanAvailableException.png 0 20
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_XQueryExpression.png 0 98
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_Delayer.png 3 85
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_ProceedType.png 1 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_jaxp_StringSource.png 0 201
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SendType.png 0 95
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_CamelContext.png 10 35
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_DeadLetterChannel.png 11 713
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_RuntimeExchangeException.png 1 33
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_config_BatchResequencerConfig.png 0 47
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_SequenceSender.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_Bean.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_ResolveEndpointFailedException.png 1 44
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_InvalidTypeException.png 0 37
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ThrowFaultType.png 0 94
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_HL7DataFormat.png 1 5
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ExceptionType.png 0 427
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_ExpressionClause.png 1 351
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_file_strategy_FileProcessStrategyFactory.png 4 152
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_QueueLoadBalancer.png 0 116
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_Counter.png 0 27
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RouteBuilderRef.png 0 58
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_converter_stream_StreamCacheConverter.png 4 61
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_AmbiguousMethodCallException.png 0 21
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultConsumer.png 1 99
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_Provider.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_BeanComponent.png 0 95
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ExpressionSubElementType.png 0 82
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_view_ModelFileGenerator.png 1 185
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_DefaultExchangeComparator.png 0 124
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_MessageHelper.png 4 77
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_TraceFormatter.png 0 537
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_InterceptorRef.png 0 117
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_constant_ConstantLanguage.png 0 18
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_CamelTemplate.png 0 11
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_StringResultHandler.png 0 29
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_converter_IOConverter.png 3 403
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_PythonExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_ManagedService.png 0 43
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_DeleteFileProcessStrategy.png 0 52
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_SimpleExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Consumer.png 0 0
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_spi_RouteContext.png 1 20
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_view_RouteDotGenerator.png 0 440
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_InvalidXPathExpression.png 0 25
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_jndi_JndiContext.png 0 792
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_jaxp_StaxConverter.png 0 114
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_validation_DefaultValidationErrorHandler.png 1 149
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ExpressionSupport.png 0 52
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SplitterType.png 0 199
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultMessage.png 5 206
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_RedeliveryPolicy.png 2 406
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_RecipientList.png 0 101
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_DataFormatClause.png 1 184
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RemovePropertyType.png 0 46
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_InterceptType.png 1 264
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_DefaultExchangeConverter.png 0 10
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_CollectionConverter.png 0 109
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_Sequence.png 0 108
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_EventDrivenConsumerRoute.png 0 63
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_ExchangeHelper.png 13 371
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_DefaultTimeoutMap.png 0 317
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_IOHelper.png 1 22
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_ProducerTemplateProcessor.png 0 31
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_NoSuchEndpointException.png 1 23
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_direct_DirectProducer.png 0 126
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_UnsafeUriCharactersEncoder.png 0 226
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Pattern.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_InvalidPayloadRuntimeException.png 1 27
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_StreamResequencer.png 2 145
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_config_package-info.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_vm_VmComponent.png 0 102
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_CamelContextAware.png 1 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_ErrorHandlerBuilderSupport.png 1 48
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_seda_SedaComponent.png 0 28
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_UnmarshalProcessor.png 1 44
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ValueHolder.png 0 21
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetPropertyType.png 0 75
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultEndpoint.png 5 281
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Converter.png 0 0
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_ProducerCache.png 7 231
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_MainSupport.png 0 669
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Properties.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ExpressionComparator.png 0 31
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_XStreamDataFormat.png 1 15
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_Description.png 0 24
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Headers.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_DataFormatsType.png 0 39
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_ParameterInfo.png 0 41
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_SystemHelper.png 0 39
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_LanguageAnnotation.png 0 2
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_JaxbDataFormat.png 1 91
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_FileExchange.png 0 108
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_MessageVariableResolver.png 0 167
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_InstrumentationAgent.png 0 5
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_log_LogFormatter.png 1 363
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ErrorHandler.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_WhenType.png 0 45
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_Routes.png 1 3
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_StreamResultHandler.png 0 29
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_FromType.png 0 129
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_PredicateBuilder.png 0 138
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_xml_XPathBuilder.png 1 620
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_management_ManagedRoute.png 0 46
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_ObjectHelper.png 4 1163
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_BeanShellExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_CamelPostProcessorHelper.png 0 285
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultHeaderFilterStrategy.png 2 195
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_OtherwiseType.png 0 28
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_InOutType.png 0 37
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_validation_ValidatorErrorHandler.png 1 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_ProcessorFactory.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_ComponentResolver.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_ExchangeFormatter.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_idempotent_IdempotentConsumer.png 2 126
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_NoRouteBuilder.png 0 16
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_DefaultComponent.png 3 308
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_converter_ToStringTypeConverter.png 0 22
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_PipelineType.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RouteContainer.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetExchangePatternType.png 0 69
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_BrowsableEndpoint.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_MethodBean.png 0 59
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_file_strategy_FileProcessStrategySupport.png 0 223
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_builder_LoggingErrorHandlerBuilder.png 1 104
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_view_GraphGeneratorSupport.png 0 306
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetOutHeaderType.png 0 66
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_StringDataFormat.png 0 53
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_resequencer_TimeoutHandler.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_InOnly.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_StreamResultHandlerFactory.png 0 9
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_JXPathExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_ResultHandlerFactory.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_management_InstrumentationProcessor.png 2 132
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_ThrowFaultProcessor.png 0 17
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_impl_converter_AnnotationTypeConverterLoader.png 1 415
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_timer_TimerConsumer.png 0 174
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_OptionalIdentifiedType.png 0 148
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_XPathExpression.png 0 52
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_language_XPath.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_MethodInvocation.png 0 5
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_impl_BinaryPredicateSupport.png 0 125
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_config_StreamResequencerConfig.png 0 69
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_spi_Synchronization.png 2 2
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_UuidGenerator.png 1 166
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_ResolverUtil.png 2 765
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Component.png 0 3
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_file_FileComponent.png 4 30
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_ExchangeTimedOutException.png 0 23
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Route.png 0 94
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_ExpressionHelper.png 0 24
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_MessageDriven.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_stream_StreamCache.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_FinallyType.png 0 28
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_ServiceActivationType.png 0 32
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_jndi_CamelInitialContextFactory.png 1 26
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_DefaultNamespaceContext.png 0 146
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_aggregate_PredicateAggregationCollection.png 0 50
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_WebSphereResolverUtil.png 2 34
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_bean_BeanInfo.png 4 930
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_idempotent_MemoryMessageIdRepository.png 0 57
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_RemoveHeaderType.png 0 46
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_NoSuchLanguageException.png 0 21
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_AggregatorType.png 0 352
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_util_Time.png 0 106
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_NoSuchPropertyException.png 2 67
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_AnnotationExpressionFactory.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_component_dataset_DataSetConsumer.png 3 119
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_SerializationDataFormat.png 0 9
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_Endpoint.png 1 14
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_Pipeline.png 6 239
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_builder_xml_StringResultHandlerFactory.png 0 9
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_ExchangeProperty.png 1 210
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_CatchProcessor.png 4 52
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_CompositeProcessor.png 0 80
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_CollectionStringBuffer.png 1 57
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_model_dataformat_DataFormatType.png 1 162
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_converter_jaxp_BytesSource.png 1 58
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_dataformat_package-info.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_bean_ProxyHelper.png 0 75
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXConsumer.png 0 24
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_LoadBalanceType.png 0 251
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_PollingConsumer.png 0 3
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Processor.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_SetBodyType.png 0 34
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_interceptor_Delayer.png 2 76
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_URISupport.png 1 519
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_loadbalancer_RoundRobinLoadBalancer.png 1 30
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_model_language_OgnlExpression.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Service.png 0 2
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Body.png 0 0
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_Expression.png 0 1
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_converter_NIOConverter.png 0 212
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_processor_ProceedProcessor.png 1 27
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_component_jmx_JMXExchange.png 0 12
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_spi_Injector.png 0 1
+../data/img/grb_img/camel-1.6/buggy/camel-1.6_src_java_org_apache_camel_util_concurrent_CountingLatch.png 1 46
+../data/img/grb_img/camel-1.6/clean/camel-1.6_src_java_org_apache_camel_processor_interceptor_ExceptionEvent.png 0 28
