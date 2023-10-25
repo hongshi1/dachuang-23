@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 import openpyxl
-from PerformanceMeasure import PerformanceMeasure
+from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
 import numpy as np
 from sklearn.utils import shuffle
 from sklearn.preprocessing import MinMaxScaler
@@ -38,8 +38,6 @@ def train(source, target):
     loc_labels = loc_data.iloc[:].values.flatten()
     target_labels = label_data.iloc[:].values.flatten()  # The last column
 
-    source_features = np.log(source_features + 1e-6)
-    target_features = np.log(target_features + 1e-6)
 
     # 2. Feature Scaling (Normalization) using source data's parameters
     scaler = MinMaxScaler().fit(source_features)  # Only fit on source_features
@@ -54,7 +52,7 @@ def train(source, target):
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)
     per = PerformanceMeasure(target_labels, predictions, loc_labels)
-    pofb = per.POPT()
+    pofb = per.PercentPOPT()
 
     # Return the MSE
     return pofb

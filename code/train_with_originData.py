@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 import openpyxl
-from PerformanceMeasure import PerformanceMeasure
+from PerformanceMeasure import  Origin_PerformanceMeasure as PerformanceMeasure
 import numpy as np
 from network import *
 from sklearn.utils import shuffle
@@ -190,7 +190,7 @@ def train(source, target, seed):
         model.eval()
         predictions = model(torch.tensor(target_features, dtype=torch.float32).to(device)).cpu().numpy()
     per = PerformanceMeasure(target_labels, predictions.flatten(), loc_labels)
-    pofb = per.getPofb()
+    pofb = per.POPT()
 
     # Return the MSE
     return pofb

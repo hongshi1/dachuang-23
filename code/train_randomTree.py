@@ -1,11 +1,10 @@
 # encoding: utf-8
 
 import openpyxl
-from PerformanceMeasure import PerformanceMeasure
 import random
 import time
 import openpyxl
-from PerformanceMeasure import PerformanceMeasure
+from PerformanceMeasure import  Origin_PerformanceMeasure as PerformanceMeasure
 import random
 import time
 import pandas as pd

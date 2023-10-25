@@ -20,7 +20,7 @@ import torch.utils.data as util_data  # To use 'DataLoader()'
 import lr_schedule
 from data_list import ImageList
 from torch.autograd import Variable
-from PerformanceMeasure import  PerformanceMeasure
+from PerformanceMeasure import  Origin_PerformanceMeasure as PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
@@ -240,7 +240,7 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
 
     if(all_label_list.shape[1] > 1):
         p = PerformanceMeasure(all_label_list[:,0], predict_list,all_label_list[:,1])
-        popt = p.POPT()
+        popt = p.perceng
 
     return popt
 
