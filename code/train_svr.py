@@ -26,6 +26,7 @@ def train(source, target):
     label_data = pd.read_csv(source_file_path, usecols=['bug'])
     source_labels = label_data.iloc[:].values  # The last column
 
+
     # Train an SVR Model using Source Data
      # 因为SVR期望y是一维的，所以这里使用ravel()
 
@@ -37,6 +38,9 @@ def train(source, target):
     loc_data = pd.read_csv(target_file_path, usecols=['loc'])
     loc_labels = loc_data.iloc[:].values.flatten()
     target_labels = label_data.iloc[:].values.flatten()  # The last column
+
+    source_features = np.log(source_features + 1e-6)
+    target_features = np.log(target_features + 1e-6)
 
 
     # 2. Feature Scaling (Normalization) using source data's parameters
@@ -51,6 +55,7 @@ def train(source, target):
 
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)
+    # print(loc_labels)
     per = PerformanceMeasure(target_labels, predictions, loc_labels)
     pofb = per.PercentPOPT()
 
@@ -95,4 +100,4 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=1, value=combination)
         worksheet.cell(row=i + 1, column=2, value=avg_result)
 
-    workbook.save('../output/average_output_svr_popt_30_log_perpopt.xlsx') # 保存的文件名也修改为对应SVR模型的名字
+    workbook.save('../output/average_output_svr_popt_30_log_perpopt_density.xlsx') # 保存的文件名也修改为对应SVR模型的名字
