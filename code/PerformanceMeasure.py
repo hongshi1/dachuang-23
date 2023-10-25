@@ -266,44 +266,44 @@ class Origin_PerformanceMeasure():
 
             sort_axis = np.argsort(complexitydensity)[::-1]
             sorted_cc = np.array(self.cc)[sort_axis]
-            ccOfPercentage = self.percentage * C
+            # ccOfPercentage = self.percentage * C
             sum_ = 0
-            for i in range(len(sorted_cc)):
-                sum_ += sorted_cc[i]
-                if (sum_ > ccOfPercentage):
-                    m = i
-                    break
-                elif (sum_ == ccOfPercentage):
-                    m = i + 1
-                    break
+            # for i in range(len(sorted_cc)):
+            #     sum_ += sorted_cc[i]
+            #     if (sum_ > ccOfPercentage):
+            #         m = i
+            #         break
+            #     elif (sum_ == ccOfPercentage):
+            #         m = i + 1
+            #         break
 
             realdensity=[self.real[i] / self.cc[i] for i in range(len(self.real))]
             sort_axis = np.argsort(realdensity)[::-1]
             sorted_cc = np.array(self.cc)[sort_axis]
-            ccOfPercentage = self.percentage * C
+            # ccOfPercentage = self.percentage * C
             sum_ = 0
-            for i in range(len(sorted_cc)):
-                sum_ += sorted_cc[i]
-                if (sum_ > ccOfPercentage):
-                    optimalm = i
-                    break
-                elif (sum_ == ccOfPercentage):
-                    optimalm = i + 1
-                    break
+            # for i in range(len(sorted_cc)):
+            #     sum_ += sorted_cc[i]
+            #     if (sum_ > ccOfPercentage):
+            #         optimalm = i
+            #         break
+            #     elif (sum_ == ccOfPercentage):
+            #         optimalm = i + 1
+            #         break
 
             realdensity = [self.real[i] / self.cc[i] for i in range(len(self.real))]
             sort_axis = np.argsort(realdensity)
             sorted_cc = np.array(self.cc)[sort_axis]
-            ccOfPercentage = self.percentage * C
+            # ccOfPercentage = self.percentage * C
             sum_ = 0
-            for i in range(len(sorted_cc)):
-                sum_ += sorted_cc[i]
-                if (sum_ > ccOfPercentage):
-                    worstm = i
-                    break
-                elif (sum_ == ccOfPercentage):
-                    worstm = i + 1
-                    break
+            # for i in range(len(sorted_cc)):
+            #     sum_ += sorted_cc[i]
+            #     if (sum_ > ccOfPercentage):
+            #         worstm = i
+            #         break
+            #     elif (sum_ == ccOfPercentage):
+            #         worstm = i + 1
+            #         break
 
             pred_index = [j / i if j != 0 and i != 0 else 0 for i, j in zip(self.cc, self.pred)]
             pred_index = list(np.argsort(pred_index))
