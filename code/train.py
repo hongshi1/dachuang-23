@@ -24,8 +24,7 @@ from PerformanceMeasure import  Origin_PerformanceMeasure as PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
-# optim_dict = {"SGD": optim.SGD}  #键值对设置
-optim_dict = {"ADAM":optim.Adam}
+optim_dict = {"ADAM":optim.Adam,"SGD":optim.SGD}
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import random
@@ -379,8 +378,7 @@ def transfer_classification(config):
     param_lr = []
     for param_group in optimizer.param_groups:
         param_lr.append(param_group["lr"])
-    schedule_param = optimizer_config["lr_param"]
-    lr_scheduler = lr_schedule.schedule_dict[optimizer_config["lr_type"]]
+
 
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
@@ -429,8 +427,9 @@ def transfer_classification(config):
             if net_config["use_bottleneck"]:
                 bottleneck_layer.train(True)
             classifier_layer.train(True)  # 将模型设置为训练模式
-            optimizer = lr_scheduler(param_lr, optimizer, i,
-                                     **schedule_param)  # 调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
+            # optimizer_config = config["optimizer"]
+            # optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
+            # 调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
             optimizer.zero_grad()  # 用于将梯度缓存清零
             if i % len_train_source == 0:
                 iter_source = iter(dset_loaders["source"]["train"])  # 更新源域数据集迭代器

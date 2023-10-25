@@ -108,4 +108,4 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=1, value=combination)
         worksheet.cell(row=i + 1, column=2, value=avg_result)
 
-    workbook.save('../output/average_output_randomtree_popt_30_log.xlsx')# 保存的文件名也修改为对应RandomForest模型的名字
+    workbook.save('../output/average_output_randomtree_popt_30_log_perpopt.xlsx')# 保存的文件名也修改为对应RandomForest模型的名字
