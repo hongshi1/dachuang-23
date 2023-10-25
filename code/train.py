@@ -24,8 +24,8 @@ from PerformanceMeasure import  PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
-optim_dict = {"SGD": optim.SGD}  #键值对设置
-# optim_dict = {"ADAM":optim.Adam}
+# optim_dict = {"SGD": optim.SGD}  #键值对设置
+optim_dict = {"ADAM":optim.Adam}
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import random
@@ -385,12 +385,12 @@ def transfer_classification(config):
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
     len_train_target = len(dset_loaders["target"]["train"]) - 1
-    F_best = 1000000 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
+    F_best = 0 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
 
     best_model = ''
     predict_best = ''
     for i in range(config["num_iterations"]):                               #网格法确定最佳参数组合
-        if F_best < 0.01:
+        if F_best >= 1:
             break
         else:
             if i % config["test_interval"] == 0:  # "test_interval"?
@@ -410,7 +410,7 @@ def transfer_classification(config):
                 print(args.source + '->' + args.target)
                 print("F")
                 print(F)
-                if F_best > F:
+                if F_best <  F:
                     F_best = F
                     base_network.train(False)
                     classifier_layer.train(False)
@@ -607,7 +607,7 @@ if __name__ == "__main__":
                                "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                                "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
+            config["network"] = {"name": "RCAN", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
             #                                         "nesterov": True},
@@ -643,6 +643,6 @@ if __name__ == "__main__":
             worksheet.cell(row=i + 1, column=1, value=new_arr[i])
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
         # 保存文件
-        workbook.save('../output/average/' + str(round_cir+1) + '_round.xlsx')  # 运行失败 需要改一个别的文件名
+        workbook.save('../output/average/' + str(round_cir+1) + '_RCAN_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
 
 
