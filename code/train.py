@@ -20,7 +20,7 @@ import torch.utils.data as util_data  # To use 'DataLoader()'
 import lr_schedule
 from data_list import ImageList
 from torch.autograd import Variable
-from PerformanceMeasure import  Origin_PerformanceMeasure as PerformanceMeasure
+from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
@@ -620,6 +620,7 @@ if __name__ == "__main__":
                 "optim_params": {"lr": 0.001, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
                 "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
             }
+
             # 对代码的修改和理解  都吧注释写满  方便组员学习
             # num_iterations表示训练的迭代次数；
             # test_interval表示每多少个迭代进行一次测试；
