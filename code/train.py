@@ -24,8 +24,8 @@ from PerformanceMeasure import  PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
-optim_dict = {"SGD": optim.SGD}  #键值对设置
-# optim_dict = {"ADAM":optim.Adam}
+# optim_dict = {"SGD": optim.SGD}  #键值对设置
+optim_dict = {"ADAM":optim.Adam}
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import random
@@ -390,7 +390,7 @@ def transfer_classification(config):
     best_model = ''
     predict_best = ''
     for i in range(config["num_iterations"]):                               #网格法确定最佳参数组合
-        if F_best < 0.01:
+        if F_best  >1000000000:
             break
         else:
             if i % config["test_interval"] == 0:  # "test_interval"?
@@ -607,7 +607,7 @@ if __name__ == "__main__":
                                "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                                "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
+            config["network"] = {"name": "AlexNet", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
             #                                         "nesterov": True},
@@ -618,8 +618,8 @@ if __name__ == "__main__":
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
                 "type": "ADAM",
-                "optim_params": {"lr": 0.001, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
-                "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
+                "optim_params": {"lr": 0.0005, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
+                "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.001, "power": 0.7}
             }
             # 对代码的修改和理解  都吧注释写满  方便组员学习
             # num_iterations表示训练的迭代次数；
