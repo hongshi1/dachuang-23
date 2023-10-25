@@ -4,7 +4,7 @@ import javalang
 from gensim.models import Word2Vec
 
 base_path = '/home/'
-save_path = '../data/embeddings/'
+save_path = '../data/embedding/'
 
 
 # This function extracts tokens from the AST of a Java file.
@@ -70,6 +70,12 @@ if __name__ == '__main__':
                         if not os.path.exists(vector_directory):
                             os.makedirs(vector_directory)
 
-                        save_vector_path = os.path.join(vector_directory,
-                                                        java_path_parts.split('/')[-1] + '_' + parts[1] + '.npy')
+                        name = (txtfile.split('.txt')[0] + '_src_java_' + java_path_parts).replace('/', '_')
+                        subdirectory = 'clean' if parts[1] == '0' else 'bug'
+
+                        # Construct the save path with the decided subdirectory
+                        save_vector_path = os.path.join(vector_directory, subdirectory, name + '.npy')
+                        directory_name = os.path.dirname(save_vector_path)
+                        if not os.path.exists(directory_name):
+                            os.makedirs(directory_name)
                         np.save(save_vector_path, vector)
