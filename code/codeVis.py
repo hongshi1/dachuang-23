@@ -61,9 +61,6 @@ if __name__ == '__main__':
             continue
         if txtfile == 'null':
             continue
-        if txtfile == 'process.py':
-            continue
-
 
         path_project = save_path + color_path + txtfile.split('.txt')[0]
 
@@ -89,28 +86,18 @@ if __name__ == '__main__':
             idx_null = idx_null + 1
             filename = txtfile.split('.txt')[0] + '/src/java/'
             f_path = ''
-            a = line.rsplit(' ', maxsplit=1)[1]
-            f_path = ''
-            label = ''
-            if a != '0\n':
-                b = line.rsplit(' ', maxsplit=1)[0]
-                b = filename +b.replace('\t', '/').replace(' ', '/').replace('.', '/')
-                line = b+'.'+a
-                f_path = '../data/archives/' + line.rsplit('.', maxsplit=2)[0]
-                label = a.split('\n')[0]
+            if line.rsplit('.', maxsplit=1)[0][-1] != '0':
+                line = filename + line.replace('\t', '/').replace(' ', '/').replace('.', '/')
             else:
                 line = filename + line.replace('\t', '/').replace(' ', '/').replace('.','/')
                 line = ".".join(line.rsplit('/', maxsplit=1))
-                f_path = '../data/archives/' + line.rsplit('.', maxsplit=1)[0]
-                label = line.split('/')[-1]  # 截取分割后最后一部分
-                label = label.split('.')[1]
-                label = label.split('\n')[0]
 
-                # 截取倒数第三个字符之前的所有字符，每行末尾都有一个换行符'\n'
+            f_path = '../data/archives/'+line.rsplit('/', maxsplit=1)[0]  # 截取倒数第三个字符之前的所有字符，每行末尾都有一个换行符'\n'
             while f_path[-1] == '/':
                 f_path = f_path[:-1]
             # label = line[-2:-1]  # 倒数第二个字符(即缺陷标签，倒数第一个字符是换行符'\n')，其中1表示有缺陷，0表示无缺陷；如果缺陷数目为10/20...，这么处理是错误的
-             # 截取分割后的第一部分
+            label = line.split('/')[-1]  # 截取分割后最后一部分
+            label = label.split('\n')[0]  # 截取分割后的第一部分
 
 
             # start = time.clock()
@@ -120,15 +107,13 @@ if __name__ == '__main__':
                 if size == 0:  # 当前.class文件里的内容为空
                     break
                 im = colorMap.get_new_color_img(f_path+'.class')
-                if float(label) > 0:  # 有缺陷样本,
-                    c = line.rsplit('.', maxsplit=1)[0]# label == '1' —— 无法正确处理缺陷数目大于1的样本
-                    path_save = path_project +'/buggy/'+''.join(line[:-3]).replace('/','_').rsplit('.', maxsplit=1)[0]+'.png'
+                if float(label) > 0:  # 有缺陷样本,  label == '1' —— 无法正确处理缺陷数目大于1的样本
+                    path_save = path_project +'/buggy/'+''.join(line[:-3]).replace('/','_')+'.png'
                     cv2.imwrite(path_save, im)
                     # im.save(path_save)  # python2
                     numpy.save(path_save, im)  # python3
                 else:
-                    c = line.rsplit('.', maxsplit=1)[0]
-                    path_save = path_project +'/clean/'+''.join(line[:-3]).replace('/','_').rsplit('.', maxsplit=2)[0]+'.png'
+                    path_save = path_project +'/clean/'+''.join(line[:-3]).replace('/','_')+'.png'
                     cv2.imwrite(path_save, im)
                     # im.save(path_save)  # python2
                     numpy.save(path_save, im)  # python3
@@ -144,15 +129,15 @@ if __name__ == '__main__':
                 except ValueError:
                     print("无法将字符串转换为浮点数:", label)
                     print(line)
+
+
                 if float(label) > 0:  # label == '1'
-                    c = ''.join(line[:-2]).replace('/', '_').rsplit('.', maxsplit=2)[0]
-                    path_save = path_project + '/buggy/' + c + '.png'
+                    path_save = path_project + '//buggy/' + ''.join(line[:-3]).replace('/', '_') + '.png'
                     cv2.imwrite(path_save, im)
                     # im.save(path_save)
                     numpy.save(path_save, im)
                 else:
-                    c = ''.join(line[:-3]).replace('/', '_')
-                    path_save = path_project + '/clean/' + c + '.png'
+                    path_save = path_project + '/clean/' + ''.join(line[:-3]).replace('/', '_') + '.png'
                     cv2.imwrite(path_save, im)
                     # im.save(path_save)  # python2
                     numpy.save(path_save, im)  # python3
