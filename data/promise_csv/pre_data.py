@@ -12,12 +12,14 @@ def pre_data():
             # 打开.csv文件
             data = pd.read_csv(file_path, usecols=cols)
             for index, row in data.iterrows():
-                another_path = '../../data/txt/'+row['name']+'-'+str(row['version']).strip()+'.txt'
+                another_path = '../../data/txt_png_path/'+row['name']+'-'+str(row['version']).strip()+'.txt'
                 with open(another_path, 'r') as f:
                     flag = 0
                     for line in f:
-                        parts = line.strip().split(' ')
-                        module_name = parts[0]
+                        parts = line.split()
+                        file_name, _ = os.path.splitext(parts[0])
+                        module_name = file_name.split(row['name']+'-'+str(row['version'])+'_src_java_')[-1]
+                        module_name = module_name.replace('_', '.')
                         if module_name == row['Name']:
                             flag = 1
                             break
