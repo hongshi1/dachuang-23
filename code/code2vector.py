@@ -71,7 +71,7 @@ if __name__ == '__main__':
                             os.makedirs(vector_directory)
 
                         name = (txtfile.split('.txt')[0] + '_src_java_' + java_path_parts).replace('/', '_')
-                        subdirectory = 'clean' if parts[1] == '0' else 'bug'
+                        subdirectory = 'clean' if parts[1] == '0' else 'buggy'
 
                         # Construct the save path with the decided subdirectory
                         save_vector_path = os.path.join(vector_directory, subdirectory, name + '.npy')

@@ -1,6 +1,7 @@
 # encoding: utf-8
 import argparse
 import os
+from encoder import ImageEncoder
 import torch.utils.data as data
 from sklearn.metrics import mean_squared_error as mse
 import cluster
@@ -118,83 +119,106 @@ def get_tsne_img(what, loader, model, gpu=True):
     plt.close()
 
 
-def image_classification_predict(loader, model, test_10crop=True, gpu=True):
+def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=True):
     start_test = True
     if test_10crop:
-        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]  # xrange in python2 -> range in python3
+        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
         for i in range(len(loader['test0'])):
             data = [next(iter_test[j]) for j in range(10)]
-            # data = [iter_test[j].next() for j in range(10)]  # .next() in python2
             inputs = [data[j][0] for j in range(10)]
-            labels = data[0][1]
+
+            # Use the encoder to extract features from the image
+            image_features = [encoder(input_img) for input_img in inputs]
+
+            # Concatenate the image features with data[3]
+            concatenated_features = [torch.cat((feat, data[0][3]), dim=1) for feat in image_features]
+
             if gpu:
-                for j in range(10):
-                    inputs[j] = Variable(inputs[j].cuda())
-                labels = Variable(labels.cuda())
+                concatenated_features = [Variable(feat.cuda()) for feat in concatenated_features]
+                labels = Variable(data[0][1].cuda())
             else:
-                for j in range(10):
-                    inputs[j] = Variable(inputs[j])
-                labels = Variable(labels)
+                concatenated_features = [Variable(feat) for feat in concatenated_features]
+                labels = Variable(data[0][1])
+
             outputs = []
-            for j in range(10):
-                outputs.append(model(inputs[j]))
+            for j, feat in enumerate(concatenated_features):
+                outputs.append(model(feat))
             outputs = sum(outputs)
+
             if start_test:
                 all_output = outputs.data.float()
                 all_label = labels.data.float()
-                start_test = False  # 重置
+                start_test = False
             else:
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
     else:
-        iter_val = iter(loader["test"])
-        for i in range(len(loader['test'])):
-            data = next(iter_val)
+        iter_test = iter(loader["test"])
+        for _ in range(len(loader["test"])):
+            data = next(iter_test)
             inputs = data[0]
             labels = data[1]
+
+            # Use the encoder to extract features from the image
+            image_features = encoder(inputs)
+
+            # Concatenate the image features with data[3]
+            concatenated_features = torch.cat((image_features, data[3]), dim=1)
+
             if gpu:
-                inputs = Variable(inputs.cuda())
+                concatenated_features = Variable(concatenated_features.cuda())
                 labels = Variable(labels.cuda())
             else:
-                inputs = Variable(inputs)
+                concatenated_features = Variable(concatenated_features)
                 labels = Variable(labels)
-            outputs = model(inputs)
+
+            outputs = model(concatenated_features)
+
             if start_test:
-                all_output = outputs.data.cpu().float()
+                all_output = outputs.data.float()
                 all_label = labels.data.float()
                 start_test = False
             else:
-                all_output = torch.cat((all_output, outputs.data.cpu().float()), 0)
+                all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
-    # _, predict = torch.max(all_output, 1)
-    # _, predict = torch.max(all_output, 1)
+
     predict = all_output.flatten()
     return all_label, predict
 
-def image_classification_test(loader, model, test_10crop=True, gpu=True):
+
+def image_classification_test(loader, model, encoder, test_10crop=False, gpu=True):
     start_test = True
     names = []
+
+    # Initialize the encoder
+    if gpu:
+        encoder = encoder.cuda()
+
     if test_10crop:
         iter_test = [iter(loader['test' + str(i)]) for i in range(10)]  # xrange->range
         for i in range(len(loader['test0'])):
-            data = [iter_test[j].next() for j in range(10)]
+            data = [next(iter_test[j]) for j in range(10)]
             inputs = [data[j][0] for j in range(10)]
             names.append(data[0][2])
             labels = data[0][1]
+
+            # Use the encoder to extract features from the image
+            image_features = [encoder(input_img) for input_img in inputs]
+
+            # Concatenate the image features with data[3]
+            concatenated_features = [torch.cat((feat, data[0][3]), dim=1) for feat in image_features]
+
             if gpu:
-                for j in range(10):
-                    inputs[j] = Variable(inputs[j].cuda())
+                concatenated_features = [Variable(feat.cuda()) for feat in concatenated_features]
                 labels = Variable(labels.cuda())
             else:
-                for j in range(10):
-                    inputs[j] = Variable(inputs[j])
+                concatenated_features = [Variable(feat) for feat in concatenated_features]
                 labels = Variable(labels)
-            outputs = []
-            for j in range(10):
-                outputs.append(model(inputs[j]))  # Call model() to make prediction
-            outputs = sum(outputs)
 
-            # print(outputs)
+            outputs = []
+            for j, feat in enumerate(concatenated_features):
+                outputs.append(model(feat))  # Call model() to make prediction using concatenated features
+            outputs = sum(outputs)
 
             if start_test:
                 all_output = outputs.data.float()
@@ -204,22 +228,27 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
     else:
-        iter_test = iter(loader["test"])  # iter() -- 迭代器，python内置函数
-        attention_time = 0
-        for _ in range(len(loader["test"])):  # 'len(dataloader)' -- 返回batch数目
+        iter_test = iter(loader["test"])
+        for _ in range(len(loader["test"])):
             data = next(iter_test)
-            # data = iter_test.next()  # .next() in python2 -> next() in python3
             inputs = data[0]
             labels = data[1]
             names.append(data[2])
+
+            # Use the encoder to extract features from the image
+            image_features = encoder(inputs)
+
+            # Concatenate the image features with data[3]
+            concatenated_features = torch.cat((image_features, data[3]), dim=1)
+
             if gpu:
-                inputs = Variable(inputs.cuda())
+                concatenated_features = Variable(concatenated_features.cuda())
                 labels = Variable(labels.cuda())
             else:
-                inputs = Variable(inputs)
+                concatenated_features = Variable(concatenated_features)
                 labels = Variable(labels)
 
-            outputs = model(inputs)
+            outputs = model(concatenated_features)
 
             if start_test:
                 all_output = outputs.data.float()
@@ -229,13 +258,11 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    # _, predict = torch.max(all_output, 1) #返回每一个all_output样本中概率最大的那个类别作为预测值
     predict_list = all_output.cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
     pred = all_label_list[:,0]
     loc = all_label_list[:,1]
-
 
     if(all_label_list.shape[1] > 1):
         p = PerformanceMeasure(all_label_list[:,0], predict_list,all_label_list[:,1])
@@ -243,7 +270,9 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
 
     return popt
 
+
 def transfer_classification(config):
+    encoder = ImageEncoder()
     # 定义一个字典类型变量
     prep_dict = {}
     # Add kry-value pairs for 'prep_dict'
@@ -397,11 +426,11 @@ def transfer_classification(config):
                 if net_config["use_bottleneck"]:
                     bottleneck_layer.train(False)
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                                  nn.Sequential(base_network, bottleneck_layer, classifier_layer),
+                                                  nn.Sequential(base_network, bottleneck_layer, classifier_layer),encoder,
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
                 else:
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                                  nn.Sequential(base_network, classifier_layer),
+                                                  nn.Sequential(base_network, classifier_layer),encoder,
                                                   # nn.Sequential一个用于存放神经网络模块的序列容器，可以用来自定义模型，运行顺序按照输入顺序进行
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
 
@@ -415,11 +444,11 @@ def transfer_classification(config):
                     if net_config["use_bottleneck"]:
                         bottleneck_layer.train(False)
                         best_model = nn.Sequential(base_network, bottleneck_layer, classifier_layer)
-                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
+                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,ImageEncoder(),
                                                                                test_10crop=False, gpu=use_gpu)
                     else:
                         best_model = nn.Sequential(base_network, classifier_layer)
-                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
+                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,ImageEncoder(),
                                                                                test_10crop=False, gpu=use_gpu)
 
             loss_test = nn.BCELoss()
@@ -435,29 +464,31 @@ def transfer_classification(config):
                 iter_source = iter(dset_loaders["source"]["train"])  # 更新源域数据集迭代器
             if i % len_train_target == 0:
                 iter_target = iter(dset_loaders["target"]["train"])  # 更新目标域数据集迭代器
-            inputs_source, labels_source, _ = next(iter_source)  # python3
-            inputs_target, labels_target, _ = next(iter_target)
+            inputs_tupian, labels_source, _,meta_source = next(iter_source)  # python3
+            inputs_tupian2, labels_source2,_, meta_target2= next(iter_target)
 
-            # inputs_source, labels_source, _ = iter_source.next()  # python2
-            # inputs_target, labels_target, _ = iter_target.next()
+            # ... [some more code in between]
 
-            if use_gpu:
-                inputs_source, inputs_target, labels_source = Variable(inputs_source).cuda(), Variable(
-                    inputs_target).cuda(), Variable(labels_source).cuda()
-            else:
-                inputs_source, inputs_target, labels_source = Variable(inputs_source), Variable(inputs_target), Variable(
-                    labels_source)
+            # Step 1: Extract features from the images using the encoder
+            image_features_source = encoder(inputs_tupian)
+            image_features_target = encoder(inputs_tupian2)
 
-            inputs = torch.cat((inputs_source, inputs_target), dim=0)  # 第一维上进行拼接
-            # start_train = time.clock()
-            start_train = time.process_time()
+            # Step 2: Concatenate the image features with meta_source and meta_target
+            combined_features_source = torch.cat((image_features_source, meta_source), dim=1)
+            combined_features_target = torch.cat((image_features_target, meta_target2), dim=1)
 
-            features = base_network(inputs)  # 进行特征提取
+            # Step 3: Pass the combined features through base_network (without its final layer)
+            features_source = base_network(combined_features_source)  # Process features for source
+            features_target = base_network(combined_features_target)  # Process features for target
+
+            features = torch.cat((features_source, features_target), dim=0)  # Combine the features
+
+            # ... [rest of the code remains mostly the same]
 
             if net_config["use_bottleneck"]:
-                features = bottleneck_layer(features)  # 瓶颈层分类
-            outputs = classifier_layer(features)  # 分类器分类
-
+                features = bottleneck_layer(features)  # Process through bottleneck layer if needed
+            outputs = classifier_layer(features)  #
+            inputs = torch.cat((inputs_tupian, inputs_tupian2), dim=0)
             classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
                                               labels_source[:,0].float().view(-1, 1))  # python3
             # classifier_loss = class_criterion(outputs.narrow(0, 0, inputs.size(0) / 2), labels_source)  # python2
@@ -569,7 +600,7 @@ if __name__ == "__main__":
     #kmeans++聚类
     # clusters, distances = cluster.project_cluster(3)
     #谱聚类
-    clusters, distances = cluster_spectral.project_cluster(3)
+    # clusters, distances = cluster_spectral.project_cluster(3)
 
     for round_cir in range(30):
         new_arr = []
@@ -606,14 +637,14 @@ if __name__ == "__main__":
                                "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                                "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "RCAN", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
+            config["network"] = {"name": "AttentionModel", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
             #                                         "nesterov": True},
             #                        "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
 
-            config["clusters"] = clusters
-            config["distances"] = distances
+            # config["clusters"] = clusters
+            # config["distances"] = distances
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
                 "type": "ADAM",

@@ -124,6 +124,80 @@ class AlexNetFc(nn.Module):
     def output_num(self):
         return self.__in_features
 
+
+class SelfAttention(nn.Module):
+    def __init__(self, embed_size, heads):
+        super(SelfAttention, self).__init__()
+        self.embed_size = embed_size
+        self.heads = heads
+        self.head_dim = embed_size // heads
+
+        assert (
+                self.head_dim * heads == embed_size
+        ), "Embedding size needs to be divisible by heads"
+
+        self.values = nn.Linear(self.head_dim, self.head_dim, bias=False)
+        self.keys = nn.Linear(self.head_dim, self.head_dim, bias=False)
+        self.queries = nn.Linear(self.head_dim, self.head_dim, bias=False)
+        self.fc_out = nn.Linear(heads * self.head_dim, embed_size)
+
+    def forward(self, values, keys, queries):
+        N = queries.shape[0]
+        value_len, key_len, query_len = values.shape[1], keys.shape[1], queries.shape[1]
+
+        # Split the embedding into self.heads different pieces
+        values = values.reshape(N, value_len, self.heads, self.head_dim)
+        keys = keys.reshape(N, key_len, self.heads, self.head_dim)
+        queries = queries.reshape(N, query_len, self.heads, self.head_dim)
+
+        values = self.values(values)
+        keys = self.keys(keys)
+        queries = self.queries(queries)
+
+        # Scaled dot-product attention
+        attention = torch.einsum("nqhd,nkhd->nhqk", [queries, keys])
+        attention = attention / (self.embed_size ** (1 / 2))
+        attention = torch.nn.functional.softmax(attention, dim=3)
+
+        out = torch.einsum("nhql,nlhd->nqhd", [attention, values]).reshape(
+            N, query_len, self.heads * self.head_dim
+        )
+
+        out = self.fc_out(out)
+        return out
+
+
+class AttentionModel(nn.Module):
+    def __init__(self, input_dim=200, embed_size=20, heads=2):
+        super(AttentionModel, self).__init__()
+
+        self.attention = SelfAttention(embed_size=embed_size, heads=heads)
+
+        self.fc1 = nn.Linear(input_dim, 256)
+        self.relu = nn.ReLU()
+        self.fc2 = nn.Linear(256, embed_size)
+
+        self.__in_features = embed_size
+
+    def forward(self, x):
+        # Transform input to "sequence" form
+        x = x.view(x.size(0), 10, -1)
+
+        # Apply self attention
+        x = self.attention(x, x, x)
+
+        # Flatten the output for fully connected layer
+        x = x.view(x.size(0), -1)
+
+        x = self.fc1(x)
+        x = self.relu(x)
+        x = self.fc2(x)
+
+        return x
+
+    def output_num(self):
+        return self.__in_features
+
 class ResNet18Fc(nn.Module):
     def __init__(self):
         super(ResNet18Fc, self).__init__()
@@ -546,4 +620,4 @@ class My_ResNet152Fc(nn.Module):
 
 network_dict = {"AlexNet": AlexNetFc, "ResNet18": ResNet18Fc, "ResNet34": ResNet34Fc, "ResNet50": ResNet50Fc,
                 "ResNet101": ResNet101Fc, "ResNet152": ResNet152Fc,"RCAN": RCAN,
-                "MyNet": My_ResNet152Fc,"NormalAlex":NormalAlex}
+                "MyNet": My_ResNet152Fc,"NormalAlex":NormalAlex,"AttentionModel": AttentionModel}
