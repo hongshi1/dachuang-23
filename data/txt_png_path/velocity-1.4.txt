@@ -1,192 +1,192 @@
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_Context.png 1 5
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_exception_NodeException.png 0 27
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_VelocityAppTestCase.png 0 75
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_UberspectImpl.png 3 360
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTIncludeStatement.png 1 17
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_IntrospectorBase.png 1 101
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTIfStatement.png 1 62
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_event_EventCartridge.png 2 140
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_exception_MethodInvocationException.png 2 40
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_EventHandlingTestCase.png 0 284
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_ClassMap.png 2 510
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_StringUtils.png 1 681
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_ClasspathResourceLoader.png 1 51
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeConstants.png 3 51
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_Escape.png 1 75
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_VelocimacroFactory.png 2 688
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTAddNode.png 1 131
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Macro.png 2 239
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ParserVisitor.png 0 35
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_AvalonLogSystem.png 1 178
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTFalse.png 1 28
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeInstance.png 3 844
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_JarResourceLoader.png 1 262
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_InlineScopeVMTestCase.png 0 119
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_texen_util_FileUtil.png 1 50
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_VMContext.png 3 227
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_SimpleLog4JLogSystem.png 1 160
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_SimpleNode.png 2 318
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_ParserTokenManager.png 0 10760
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTLENode.png 1 153
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_CommonsExtPropTestCase.png 0 304
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTMethod.png 7 292
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_VelocityContext.png 1 85
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_Template.png 2 214
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_exception_ParseErrorException.png 3 5
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_FileResourceLoader.png 2 279
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceCache.png 1 5
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTObjectArray.png 1 42
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ContentResource.png 1 87
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_servlet_VelocityServlet.png 1 417
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_tools_VelocityFormatter.png 1 302
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTStringLiteral.png 2 180
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_MultipleFileResourcePathTest.png 0 124
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ParserTestCase.png 0 160
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_ResourceLoader.png 1 68
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_texen_ant_TexenTask.png 1 534
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_PrimordialLogSystem.png 1 92
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_UberspectLoggable.png 1 1
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTGTNode.png 1 153
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Foreach.png 4 154
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTNENode.png 1 140
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTSetDirective.png 3 149
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_provider_TestProvider.png 0 537
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTAndNode.png 1 84
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TemplateTestCase.png 0 359
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_IntrospectorTestCase.png 0 642
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeLogger.png 1 4
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_JarHolder.png 1 195
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_VelocimacroManager.png 1 309
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_Introspector.png 1 88
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_ArrayIterator.png 1 77
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalHousekeepingContext.png 1 8
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_misc_Test.png 0 437
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_context_InternalContextAdapter.png 1 0
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_MultiLoaderTestCase.png 0 188
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTSubtractNode.png 1 131
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_directive_ParseDirectiveException.png 0 86
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceManager.png 1 5
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalContextBase.png 2 92
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_visitor_BaseVisitor.png 1 296
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ConfigurationTestCase.png 0 304
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_MacroParseException.png 1 5
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_XPathCache.png 1 45
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_PropertyExecutor.png 2 122
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_MethodInvocationExceptionTest.png 0 342
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_BooleanPropertyExecutor.png 1 72
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_visitor_VMReferenceMungeVisitor.png 1 33
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_exception_ResourceNotFoundException.png 1 5
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalContextAdapterImpl.png 2 144
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_DirectiveConstants.png 1 2
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_VelocimacroTestCase.png 0 61
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_VMProxyArg.png 2 580
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_AbstractExecutor.png 1 25
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_VelMethod.png 1 4
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTParameters.png 1 17
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_Velocity.png 2 332
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_convert_WebMacro.png 1 460
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalWrapperContext.png 2 2
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTEscape.png 2 34
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ClasspathResourceTest.png 0 130
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_InputBase.png 1 19
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTElseStatement.png 1 20
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_VelocityFormatter.png 1 11
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_VelPropertySet.png 1 3
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_OutputWrapper.png 1 21
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTNumberLiteral.png 0 44
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTIdentifier.png 3 245
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_provider_BoolObj.png 0 10
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_exception_VelocityException.png 2 5
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_MethodMap.png 2 680
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_VelocityEngine.png 3 392
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_VelocimacroProxy.png 4 445
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTAssignment.png 1 17
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TexenTestCase.png 0 62
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Include.png 2 258
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_event_NullSetEventHandler.png 2 1
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_Resource.png 1 120
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_AnakiaElement.png 1 86
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTBlock.png 1 37
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTElseIfStatement.png 1 32
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_NodeUtils.png 1 222
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Parse.png 1 238
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_MiscTestCase.png 0 67
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_LogManager.png 1 158
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_ParserConstants.png 0 321
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_FieldMethodizer.png 1 137
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_LogSystem.png 1 7
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_provider_Child.png 0 7
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_provider_Person.png 0 7
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_view_TemplateNodeView.png 0 67
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTModNode.png 1 161
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTLTNode.png 1 153
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_texen_util_PropertiesUtil.png 1 102
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_ParserTreeConstants.png 0 196
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTEscapedDirective.png 1 25
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTExpression.png 1 31
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTDivNode.png 1 161
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalEventContext.png 1 2
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_VelocityServletTest.png 0 50
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_io_VelocityWriter.png 1 378
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_ResourceLoaderFactory.png 1 55
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTprocess.png 1 17
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_event_ReferenceInsertionEventHandler.png 2 1
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_visitor_NodeViewMode.png 1 304
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTMulNode.png 1 131
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_AnakiaJDOMFactory.png 1 32
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_SimplePool.png 1 97
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_TreeWalker.png 1 41
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTWord.png 1 17
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_configuration_Configuration.png 0 1625
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_exception_ReferenceException.png 2 27
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTDirective.png 3 136
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_compiler_Compiler.png 0 332
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_AbstractContext.png 1 95
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_TokenMgrError.png 0 184
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_NodeList.png 1 438
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTGENode.png 1 153
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_Runtime.png 1 133
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_Token.png 0 23
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_app_event_EventHandler.png 1 0
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_JJTParserState.png 0 218
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_VelocityCharStream.png 1 991
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TemplateTestSuite.png 0 82
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTVariable.png 1 17
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceCacheImpl.png 1 61
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ContextSafetyTestCase.png 0 155
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeServices.png 1 28
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Directive.png 2 40
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_NullLogSystem.png 1 8
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Literal.png 2 31
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_AnakiaTask.png 1 683
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_XPathTool.png 1 34
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTText.png 2 38
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_Node.png 2 24
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_Info.png 1 32
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_IntrospectorTestCase2.png 0 110
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_IntrospectorTestCase3.png 0 308
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTReference.png 4 782
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTNotNode.png 1 39
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_event_MethodExceptionEventHandler.png 2 1
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_GetExecutor.png 2 86
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TemplateTestBase.png 0 7
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTOrNode.png 1 52
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ExternalLoggerTest.png 0 105
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_BaseTestCase.png 0 111
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_Log4JLogSystem.png 1 353
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTIntegerRange.png 1 156
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceManagerImpl.png 2 593
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_ParseException.png 0 387
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_AnakiaTestCase.png 0 33
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceFactory.png 1 20
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTEQNode.png 1 140
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_EncodingTestCase.png 0 207
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeSingleton.png 1 192
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_IntrospectionCacheData.png 1 6
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTComment.png 2 70
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_VelPropertyGet.png 1 3
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_Uberspect.png 1 5
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TexenClasspathTestCase.png 0 62
-../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTTrue.png 1 28
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ClassloaderChangeTest.png 0 159
-../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_CharStream.png 0 12
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_Context.png	0.2
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_exception_NodeException.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_VelocityAppTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_UberspectImpl.png	0.008333333
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTIncludeStatement.png	0.058823529
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_IntrospectorBase.png	0.00990099
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTIfStatement.png	0.016129032
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_event_EventCartridge.png	0.014285714
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_exception_MethodInvocationException.png	0.05
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_EventHandlingTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_ClassMap.png	0.003921569
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_StringUtils.png	0.001468429
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_ClasspathResourceLoader.png	0.019607843
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeConstants.png	0.058823529
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_Escape.png	0.013333333
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_VelocimacroFactory.png	0.002906977
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTAddNode.png	0.007633588
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Macro.png	0.008368201
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ParserVisitor.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_AvalonLogSystem.png	0.005617978
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTFalse.png	0.035714286
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeInstance.png	0.003554502
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_JarResourceLoader.png	0.003816794
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_InlineScopeVMTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_texen_util_FileUtil.png	0.02
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_VMContext.png	0.013215859
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_SimpleLog4JLogSystem.png	0.00625
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_SimpleNode.png	0.006289308
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_ParserTokenManager.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTLENode.png	0.006535948
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_CommonsExtPropTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTMethod.png	0.023972603
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_VelocityContext.png	0.011764706
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_Template.png	0.009345794
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_exception_ParseErrorException.png	0.6
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_FileResourceLoader.png	0.007168459
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceCache.png	0.2
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTObjectArray.png	0.023809524
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ContentResource.png	0.011494253
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_servlet_VelocityServlet.png	0.002398082
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_tools_VelocityFormatter.png	0.003311258
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTStringLiteral.png	0.011111111
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_MultipleFileResourcePathTest.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ParserTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_ResourceLoader.png	0.014705882
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_texen_ant_TexenTask.png	0.001872659
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_PrimordialLogSystem.png	0.010869565
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_UberspectLoggable.png	1.0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTGTNode.png	0.006535948
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Foreach.png	0.025974026
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTNENode.png	0.007142857
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTSetDirective.png	0.020134228
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_provider_TestProvider.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTAndNode.png	0.011904762
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TemplateTestCase.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_IntrospectorTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeLogger.png	0.25
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_JarHolder.png	0.005128205
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_VelocimacroManager.png	0.003236246
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_Introspector.png	0.011363636
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_ArrayIterator.png	0.012987013
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalHousekeepingContext.png	0.125
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_misc_Test.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_context_InternalContextAdapter.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_MultiLoaderTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTSubtractNode.png	0.007633588
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_directive_ParseDirectiveException.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceManager.png	0.2
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalContextBase.png	0.02173913
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_visitor_BaseVisitor.png	0.003378378
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ConfigurationTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_MacroParseException.png	0.2
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_XPathCache.png	0.022222222
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_PropertyExecutor.png	0.016393443
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_MethodInvocationExceptionTest.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_BooleanPropertyExecutor.png	0.013888889
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_visitor_VMReferenceMungeVisitor.png	0.03030303
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_exception_ResourceNotFoundException.png	0.2
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalContextAdapterImpl.png	0.013888889
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_DirectiveConstants.png	0.5
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_VelocimacroTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_VMProxyArg.png	0.0034482759999999997
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_AbstractExecutor.png	0.04
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_VelMethod.png	0.25
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTParameters.png	0.058823529
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_Velocity.png	0.006024096
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_convert_WebMacro.png	0.002173913
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalWrapperContext.png	1.0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTEscape.png	0.058823529
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ClasspathResourceTest.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_InputBase.png	0.052631579
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTElseStatement.png	0.05
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_VelocityFormatter.png	0.090909091
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_VelPropertySet.png	0.333333333
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_OutputWrapper.png	0.047619048
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTNumberLiteral.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTIdentifier.png	0.012244898
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_provider_BoolObj.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_exception_VelocityException.png	0.4
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_MethodMap.png	0.002941176
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_VelocityEngine.png	0.007653061
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_VelocimacroProxy.png	0.008988764
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTAssignment.png	0.058823529
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TexenTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Include.png	0.007751938
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_event_NullSetEventHandler.png	2.0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_Resource.png	0.008333333
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_AnakiaElement.png	0.011627907
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTBlock.png	0.027027027000000002
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTElseIfStatement.png	0.03125
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_NodeUtils.png	0.004504505
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Parse.png	0.004201681
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_MiscTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_LogManager.png	0.006329114
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_ParserConstants.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_FieldMethodizer.png	0.00729927
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_LogSystem.png	0.142857143
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_provider_Child.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_provider_Person.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_view_TemplateNodeView.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTModNode.png	0.00621118
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTLTNode.png	0.006535948
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_texen_util_PropertiesUtil.png	0.009803922
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_ParserTreeConstants.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTEscapedDirective.png	0.04
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTExpression.png	0.032258065
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTDivNode.png	0.00621118
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_InternalEventContext.png	0.5
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_VelocityServletTest.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_io_VelocityWriter.png	0.002645503
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_loader_ResourceLoaderFactory.png	0.018181818
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTprocess.png	0.058823529
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_event_ReferenceInsertionEventHandler.png	2.0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_visitor_NodeViewMode.png	0.003289474
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTMulNode.png	0.007633588
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_AnakiaJDOMFactory.png	0.03125
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_SimplePool.png	0.010309278
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_TreeWalker.png	0.024390244
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTWord.png	0.058823529
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_configuration_Configuration.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_exception_ReferenceException.png	0.074074074
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTDirective.png	0.022058824
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_compiler_Compiler.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_context_AbstractContext.png	0.010526316
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_TokenMgrError.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_NodeList.png	0.002283105
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTGENode.png	0.006535948
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_Runtime.png	0.007518797
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_Token.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_app_event_EventHandler.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_JJTParserState.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_VelocityCharStream.png	0.001009082
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TemplateTestSuite.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTVariable.png	0.058823529
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceCacheImpl.png	0.016393443
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ContextSafetyTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeServices.png	0.035714286
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Directive.png	0.05
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_NullLogSystem.png	0.125
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_directive_Literal.png	0.064516129
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_AnakiaTask.png	0.001464129
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_anakia_XPathTool.png	0.029411765
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTText.png	0.052631579
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_Node.png	0.083333333
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_Info.png	0.03125
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_IntrospectorTestCase2.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_IntrospectorTestCase3.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTReference.png	0.00511509
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTNotNode.png	0.025641026
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_app_event_MethodExceptionEventHandler.png	2.0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_GetExecutor.png	0.023255814
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TemplateTestBase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTOrNode.png	0.019230769
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ExternalLoggerTest.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_BaseTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_log_Log4JLogSystem.png	0.002832861
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTIntegerRange.png	0.006410256
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceManagerImpl.png	0.003372681
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_ParseException.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_AnakiaTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_resource_ResourceFactory.png	0.05
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTEQNode.png	0.007142857
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_EncodingTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_RuntimeSingleton.png	0.005208333
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_IntrospectionCacheData.png	0.166666667
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTComment.png	0.028571429
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_VelPropertyGet.png	0.333333333
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_util_introspection_Uberspect.png	0.2
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_TexenClasspathTestCase.png	0
+../data/img/grb_img/velocity-1.4/buggy/velocity-1.4_src_java_org_apache_velocity_runtime_parser_node_ASTTrue.png	0.035714286
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_test_ClassloaderChangeTest.png	0
+../data/img/grb_img/velocity-1.4/clean/velocity-1.4_src_java_org_apache_velocity_runtime_parser_CharStream.png	0
