@@ -233,16 +233,16 @@ def image_classification_test(loader, model, test_10crop=True, gpu=True):
     # _, predict = torch.max(all_output, 1) #返回每一个all_output样本中概率最大的那个类别作为预测值
     predict_list = all_output.cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
-    pofb = -1.0
+    popt = -1.0
     pred = all_label_list[:,0]
     loc = all_label_list[:,1]
 
 
     if(all_label_list.shape[1] > 1):
         p = PerformanceMeasure(all_label_list[:,0], predict_list,all_label_list[:,1])
-        pofb = p.getPofb()
+        popt = p.POPT()
 
-    return pofb
+    return popt
 
 def transfer_classification(config):
     # 定义一个字典类型变量
@@ -489,7 +489,7 @@ def transfer_classification(config):
                 #      softmax_out.narrow(0, softmax_out.size(0) / 2, softmax_out.size(0) / 2)], **loss_config["params"])
 
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
-            total_loss = rate * transfer_loss + classifier_loss
+            total_loss = 1 * transfer_loss + classifier_loss
             # print("rate:", rate)
             # print("transfer_loss: ", transfer_loss)
             # print("classifier_loss:", classifier_loss)
@@ -503,7 +503,7 @@ def transfer_classification(config):
     print(args.source + '->' + args.target)
     print('训练结果：')
     print(F_best)
-    pofb = 0.0
+    popt = 0.0
 
 
     all_label_list = all_label.cpu().numpy()
@@ -511,9 +511,9 @@ def transfer_classification(config):
 
     if (all_label_list.shape[1] > 1):
         p = PerformanceMeasure(all_label_list[:,0], predict_list, all_label_list[:,1])
-        pofb = p.getPofb()
-    print(pofb)
-    return pofb
+        popt = p.POPT()
+    print(popt)
+    return popt
 
 
 if __name__ == "__main__":
@@ -604,9 +604,9 @@ if __name__ == "__main__":
             config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
             #
             config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                               "batch_size": {"train": 4, "test": 4}},
+                               "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                               "batch_size": {"train": 4, "test": 4}}]
+                               "batch_size": {"train": 32, "test": 32}}]
             config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
             config["optimizer"] = {"type": "SGD",
                                    "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
@@ -631,7 +631,7 @@ if __name__ == "__main__":
             # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
             test_result = transfer_classification(config)
             print(new_arr[i], end=' ')
-            print(" pofb_final", end=' ')
+            print(" popt_final", end=' ')
             print(test_result)
             test_arr.append(test_result)
 
