@@ -119,4 +119,4 @@ if __name__ == '__main__':
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
 
         # 保存文件
-        workbook.save('C:/Users/lenovo/Desktop/dp_data/output_DPNN_pofb_'+str(round+1)+'.xlsx')  # 保存的文件名也修改为对应模型的名字
+        workbook.save('C:/Users/lenovo/Desktop/dp_data/output_DPNN_popt_'+str(round+1)+'.xlsx')  # 保存的文件名也修改为对应模型的名字
