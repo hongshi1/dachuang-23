@@ -652,9 +652,9 @@ if __name__ == "__main__":
             config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
             #
             config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                               "batch_size": {"train": 4, "test": 4}},
+                               "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                               "batch_size": {"train": 4, "test": 4}}]
+                               "batch_size": {"train": 32, "test": 32}}]
             config["network"] = {"name": "AttentionModel", "use_bottleneck": args.using_bottleneck,
                                  "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
@@ -695,5 +695,3 @@ if __name__ == "__main__":
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
         # 保存文件
         workbook.save('../output/average/' + str(round_cir + 1) + '_RCAN_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
-
-
