@@ -25,7 +25,7 @@ from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
-optim_dict = {"ADAM":optim.Adam,"SGD":optim.SGD}
+optim_dict = {"ADAM": optim.Adam, "SGD": optim.SGD}
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import random
@@ -90,7 +90,6 @@ def setup_seed(seed):
         torch.backends.cudnn.benchmark = True
 
 
-
 def tsne(df_fea, df_lab):
     # print(df_fea, df_lab)
     tsne = TSNE(2, 38, 20, 600)
@@ -121,6 +120,10 @@ def get_tsne_img(what, loader, model, gpu=True):
 
 def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=True):
     start_test = True
+    print(gpu)
+    if gpu:
+        model = model.cuda()
+
     if test_10crop:
         iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
         for i in range(len(loader['test0'])):
@@ -189,10 +192,8 @@ def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=
 def image_classification_test(loader, model, encoder, test_10crop=False, gpu=True):
     start_test = True
     names = []
-
-    # Initialize the encoder
     if gpu:
-        encoder = encoder.cuda()
+        model = model.cuda()
 
     if test_10crop:
         iter_test = [iter(loader['test' + str(i)]) for i in range(10)]  # xrange->range
@@ -211,6 +212,7 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
             if gpu:
                 concatenated_features = [Variable(feat.cuda()) for feat in concatenated_features]
                 labels = Variable(labels.cuda())
+
             else:
                 concatenated_features = [Variable(feat) for feat in concatenated_features]
                 labels = Variable(labels)
@@ -236,6 +238,7 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
             names.append(data[2])
 
             # Use the encoder to extract features from the image
+
             image_features = encoder(inputs)
 
             # Concatenate the image features with data[3]
@@ -261,11 +264,11 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
     predict_list = all_output.cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
-    pred = all_label_list[:,0]
-    loc = all_label_list[:,1]
+    pred = all_label_list[:, 0]
+    loc = all_label_list[:, 1]
 
-    if(all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:,0], predict_list,all_label_list[:,1])
+    if (all_label_list.shape[1] > 1):
+        p = PerformanceMeasure(all_label_list[:, 0], predict_list, all_label_list[:, 1])
         popt = p.PercentPOPT()
 
     return popt
@@ -355,7 +358,7 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num = 1# ??
+    class_num = 1  # ??
 
     ## set base network
     net_config = config["network"]
@@ -408,15 +411,14 @@ def transfer_classification(config):
     for param_group in optimizer.param_groups:
         param_lr.append(param_group["lr"])
 
-
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
     len_train_target = len(dset_loaders["target"]["train"]) - 1
-    F_best = 0 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
+    F_best = 0  # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
 
     best_model = ''
     predict_best = ''
-    for i in range(config["num_iterations"]):                               #网格法确定最佳参数组合
+    for i in range(config["num_iterations"]):  # 网格法确定最佳参数组合
         if F_best >= 1:
             break
         else:
@@ -426,29 +428,32 @@ def transfer_classification(config):
                 if net_config["use_bottleneck"]:
                     bottleneck_layer.train(False)
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                                  nn.Sequential(base_network, bottleneck_layer, classifier_layer),encoder,
+                                                  nn.Sequential(base_network, bottleneck_layer, classifier_layer),
+                                                  encoder,
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
                 else:
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                                  nn.Sequential(base_network, classifier_layer),encoder,
+                                                  nn.Sequential(base_network, classifier_layer), encoder,
                                                   # nn.Sequential一个用于存放神经网络模块的序列容器，可以用来自定义模型，运行顺序按照输入顺序进行
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
 
                 print(args.source + '->' + args.target)
                 print("F")
                 print(F)
-                if F_best <  F:
+                if F_best < F:
                     F_best = F
                     base_network.train(False)
                     classifier_layer.train(False)
                     if net_config["use_bottleneck"]:
                         bottleneck_layer.train(False)
                         best_model = nn.Sequential(base_network, bottleneck_layer, classifier_layer)
-                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,ImageEncoder(),
+                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
+                                                                               encoder,
                                                                                test_10crop=False, gpu=use_gpu)
                     else:
                         best_model = nn.Sequential(base_network, classifier_layer)
-                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,ImageEncoder(),
+                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
+                                                                               encoder,
                                                                                test_10crop=False, gpu=use_gpu)
 
             loss_test = nn.BCELoss()
@@ -464,10 +469,25 @@ def transfer_classification(config):
                 iter_source = iter(dset_loaders["source"]["train"])  # 更新源域数据集迭代器
             if i % len_train_target == 0:
                 iter_target = iter(dset_loaders["target"]["train"])  # 更新目标域数据集迭代器
-            inputs_tupian, labels_source, _,meta_source = next(iter_source)  # python3
-            inputs_tupian2, labels_source2,_, meta_target2= next(iter_target)
+            device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-            # ... [some more code in between]
+            # Moving models to the device
+            encoder = encoder.to(device)
+            # base_network = base_network.to(device)
+            # bottleneck_layer = bottleneck_layer.to(device)
+            classifier_layer = classifier_layer.to(device)
+
+            # Get data
+            inputs_tupian, labels_source, _, meta_source = next(iter_source)  # python3
+            inputs_tupian2, labels_source2, _, meta_target2 = next(iter_target)
+
+            # Move data to the device
+            inputs_tupian = inputs_tupian.to(device)
+            labels_source = labels_source.to(device)
+            meta_source = meta_source.to(device)
+            inputs_tupian2 = inputs_tupian2.to(device)
+            labels_source2 = labels_source2.to(device)
+            meta_target2 = meta_target2.to(device)
 
             # Step 1: Extract features from the images using the encoder
             image_features_source = encoder(inputs_tupian)
@@ -487,11 +507,11 @@ def transfer_classification(config):
 
             if net_config["use_bottleneck"]:
                 features = bottleneck_layer(features)  # Process through bottleneck layer if needed
+
             outputs = classifier_layer(features)  #
             inputs = torch.cat((inputs_tupian, inputs_tupian2), dim=0)
             classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
-                                              labels_source[:,0].float().view(-1, 1))  # python3
-            # classifier_loss = class_criterion(outputs.narrow(0, 0, inputs.size(0) / 2), labels_source)  # python2
+                                              labels_source[:, 0].float().view(-1, 1))  # python3
 
             ## switch between different transfer loss
             if loss_config["name"] == "DAN":
@@ -535,12 +555,11 @@ def transfer_classification(config):
     print(F_best)
     popt = 0.0
 
-
     all_label_list = all_label.cpu().numpy()
-    predict_list =  predict_best.view(-1,1).cpu().numpy().flatten()
+    predict_list = predict_best.view(-1, 1).cpu().numpy().flatten()
 
     if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:,0], predict_list, all_label_list[:,1])
+        p = PerformanceMeasure(all_label_list[:, 0], predict_list, all_label_list[:, 1])
         popt = p.PercentPOPT()
     print(popt)
     return popt
@@ -585,7 +604,6 @@ if __name__ == "__main__":
             new_arr.append(strings[i] + "->" + strings[j])
             new_arr.append(strings[j] + "->" + strings[i])
 
-
     parser = argparse.ArgumentParser(description='Transfer Learning')
     args = parser.parse_args()
     args.gpu_id = '0'
@@ -597,9 +615,9 @@ if __name__ == "__main__":
     args.task = 'CPDP'  # 'WPDP' or 'CPDP'
     # cpdp 表示跨项目缺陷预测
 
-    #kmeans++聚类
+    # kmeans++聚类
     # clusters, distances = cluster.project_cluster(3)
-    #谱聚类
+    # 谱聚类
     # clusters, distances = cluster_spectral.project_cluster(3)
 
     for round_cir in range(30):
@@ -612,7 +630,7 @@ if __name__ == "__main__":
                 new_arr.append(strings[j] + "->" + strings[i])
 
         for i in range(len(new_arr)):
-            setup_seed(round_cir+1)
+            setup_seed(round_cir + 1)
             args.source = new_arr[i].split("->")[0]
             args.target = new_arr[i].split("->")[1]
             mytarget_path = "../data/txt/" + args.target + ".txt"
@@ -637,7 +655,8 @@ if __name__ == "__main__":
                                "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                                "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "AttentionModel", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
+            config["network"] = {"name": "AttentionModel", "use_bottleneck": args.using_bottleneck,
+                                 "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
             #                                         "nesterov": True},
@@ -648,7 +667,8 @@ if __name__ == "__main__":
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
                 "type": "ADAM",
-                "optim_params": {"lr": 0.001, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
+                "optim_params": {"lr": 0.001, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005,
+                                 "amsgrad": False},
                 "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
             }
 
@@ -674,6 +694,6 @@ if __name__ == "__main__":
             worksheet.cell(row=i + 1, column=1, value=new_arr[i])
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
         # 保存文件
-        workbook.save('../output/average/' + str(round_cir+1) + '_RCAN_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
+        workbook.save('../output/average/' + str(round_cir + 1) + '_RCAN_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
 
 
