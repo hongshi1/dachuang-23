@@ -652,9 +652,9 @@ if __name__ == "__main__":
             config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
             #
             config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                               "batch_size": {"train": 32, "test": 32}},
+                               "batch_size": {"train": 4, "test": 4}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                               "batch_size": {"train": 32, "test": 32}}]
+                               "batch_size": {"train": 4, "test": 4}}]
             config["network"] = {"name": "AttentionModel", "use_bottleneck": args.using_bottleneck,
                                  "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
@@ -662,8 +662,8 @@ if __name__ == "__main__":
             #                                         "nesterov": True},
             #                        "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
 
-            # config["clusters"] = clusters
-            # config["distances"] = distances
+            config["clusters"] = clusters
+            config["distances"] = distances
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
                 "type": "ADAM",
