@@ -646,12 +646,16 @@ class My_ResNet(nn.Module):
             nn.LogSoftmax(dim=1)
         )
 
+
     def forward(self, x, alpha):
         feature = self.feature(x)
         reverse_feature = ReverseLayerF.apply(feature, alpha)
         class_output = self.class_classifier(feature)
         domain_output = self.domain_classifier(reverse_feature)
         return class_output, domain_output
+
+    def output_num(self):
+        return 2048
 
 # 2. New LSTM model (My_LSTM)
 class My_LSTM(nn.Module):
@@ -681,6 +685,9 @@ class My_LSTM(nn.Module):
         domain_output = self.domain_classifier(reverse_feature)
         return class_output, domain_output
 
+    def output_num(self):
+        return 1024
+
 # 3. New Transformer model (My_Transformer)
 class My_Transformer(nn.Module):
     def __init__(self, in_features=200):
@@ -706,6 +713,9 @@ class My_Transformer(nn.Module):
         class_output = self.class_classifier(feature)
         domain_output = self.domain_classifier(reverse_feature)
         return class_output, domain_output
+
+    def output_num(self):
+        return self.transformer.d_model
 
 # Add these models to the existing network_dict
 
