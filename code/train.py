@@ -472,7 +472,7 @@ def transfer_classification(config):
             device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
             # Moving models to the device
-            encoder = encoder.to(device)
+            tencoder = ImageEncoder().to(device)
             # base_network = base_network.to(device)
             # bottleneck_layer = bottleneck_layer.to(device)
             classifier_layer = classifier_layer.to(device)
@@ -490,8 +490,8 @@ def transfer_classification(config):
             meta_target2 = meta_target2.to(device)
 
             # Step 1: Extract features from the images using the encoder
-            image_features_source = encoder(inputs_tupian)
-            image_features_target = encoder(inputs_tupian2)
+            image_features_source = tencoder(inputs_tupian)
+            image_features_target = tencoder(inputs_tupian2)
 
             # Step 2: Concatenate the image features with meta_source and meta_target
             combined_features_source = torch.cat((image_features_source, meta_source), dim=1)
