@@ -618,7 +618,7 @@ if __name__ == "__main__":
     # kmeans++聚类
     # clusters, distances = cluster.project_cluster(3)
     # 谱聚类
-    # clusters, distances = cluster_spectral.project_cluster(3)
+    clusters, distances = cluster_spectral.project_cluster(3)
 
     for round_cir in range(30):
         new_arr = []
