@@ -668,5 +668,3 @@ if __name__ == "__main__":
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
         # 保存文件
         workbook.save('../output/average/' + str(round_cir + 1) + '_RCAN_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
-
-
