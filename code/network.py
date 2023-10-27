@@ -647,7 +647,7 @@ class My_ResNet(nn.Module):
         )
 
 
-    def forward(self, x, alpha):
+    def forward(self, x, alpha=0.5):
         feature = self.feature(x)
         reverse_feature = ReverseLayerF.apply(feature, alpha)
         class_output = self.class_classifier(feature)
@@ -675,7 +675,7 @@ class My_LSTM(nn.Module):
             nn.LogSoftmax(dim=1)
         )
 
-    def forward(self, x, alpha):
+    def forward(self, x, alpha=0.5):
         h0 = torch.zeros(1, x.size(0), 1024).to(x.device)  # initial hidden state
         c0 = torch.zeros(1, x.size(0), 1024).to(x.device)  # initial cell state
         out, _ = self.lstm(x.view(x.size(0), 1, -1), (h0, c0))  # LSTM output
@@ -692,7 +692,8 @@ class My_LSTM(nn.Module):
 class My_Transformer(nn.Module):
     def __init__(self, in_features=200):
         super(My_Transformer, self).__init__()
-        self.transformer = nn.TransformerEncoder(nn.TransformerEncoderLayer(d_model=in_features, nhead=10), num_layers=2)
+        self.d_model = in_features  # Store the d_model value
+        self.transformer = nn.TransformerEncoder(nn.TransformerEncoderLayer(d_model=self.d_model, nhead=10), num_layers=2)
         self.class_classifier = nn.Sequential(
             nn.Linear(in_features, 100),
             nn.ReLU(),
@@ -706,7 +707,7 @@ class My_Transformer(nn.Module):
             nn.LogSoftmax(dim=1)
         )
 
-    def forward(self, x, alpha):
+    def forward(self, x, alpha=0.5):
         feature = self.transformer(x.view(x.size(0), 1, -1))
         feature = feature.view(feature.size(0), -1)
         reverse_feature = ReverseLayerF.apply(feature, alpha)
@@ -715,7 +716,8 @@ class My_Transformer(nn.Module):
         return class_output, domain_output
 
     def output_num(self):
-        return self.transformer.d_model
+        return self.d_model  # Return the stored d_model value
+
 
 # Add these models to the existing network_dict
 
