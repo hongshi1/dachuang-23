@@ -120,28 +120,22 @@ def get_tsne_img(what, loader, model, gpu=True):
 
 def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=True):
     start_test = True
-    print(gpu)
-    if gpu:
-        model = model.cuda()
+    device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
+
+    model = model.to(device)
+    encoder = encoder.to(device)
 
     if test_10crop:
         iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
         for i in range(len(loader['test0'])):
             data = [next(iter_test[j]) for j in range(10)]
-            inputs = [data[j][0] for j in range(10)]
+            inputs = [data[j][0].to(device) for j in range(10)]
+            labels = data[0][1].to(device)
 
-            # Use the encoder to extract features from the image
             image_features = [encoder(input_img) for input_img in inputs]
-
-            # Concatenate the image features with data[3]
-            concatenated_features = [torch.cat((feat, data[0][3]), dim=1) for feat in image_features]
-
-            if gpu:
-                concatenated_features = [Variable(feat.cuda()) for feat in concatenated_features]
-                labels = Variable(data[0][1].cuda())
-            else:
-                concatenated_features = [Variable(feat) for feat in concatenated_features]
-                labels = Variable(data[0][1])
+            concatenated_features = [torch.cat((feat, data[0][3].to(device)), dim=1) for feat in image_features]
+            concatenated_features = [Variable(feat) for feat in concatenated_features]
+            labels = Variable(labels)
 
             outputs = []
             for j, feat in enumerate(concatenated_features):
@@ -159,21 +153,13 @@ def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=
         iter_test = iter(loader["test"])
         for _ in range(len(loader["test"])):
             data = next(iter_test)
-            inputs = data[0]
-            labels = data[1]
+            inputs = data[0].to(device)
+            labels = data[1].to(device)
 
-            # Use the encoder to extract features from the image
             image_features = encoder(inputs)
-
-            # Concatenate the image features with data[3]
-            concatenated_features = torch.cat((image_features, data[3]), dim=1)
-
-            if gpu:
-                concatenated_features = Variable(concatenated_features.cuda())
-                labels = Variable(labels.cuda())
-            else:
-                concatenated_features = Variable(concatenated_features)
-                labels = Variable(labels)
+            concatenated_features = torch.cat((image_features, data[3].to(device)), dim=1)
+            concatenated_features = Variable(concatenated_features)
+            labels = Variable(labels)
 
             outputs = model(concatenated_features)
 
@@ -188,38 +174,32 @@ def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=
     predict = all_output.flatten()
     return all_label, predict
 
+# I'll continue the modifications for the second function here:
 
 def image_classification_test(loader, model, encoder, test_10crop=False, gpu=True):
     start_test = True
     names = []
-    if gpu:
-        model = model.cuda()
+    device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
+
+    model = model.to(device)
+    encoder = encoder.to(device)
 
     if test_10crop:
-        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]  # xrange->range
+        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
         for i in range(len(loader['test0'])):
             data = [next(iter_test[j]) for j in range(10)]
-            inputs = [data[j][0] for j in range(10)]
+            inputs = [data[j][0].to(device) for j in range(10)]
             names.append(data[0][2])
-            labels = data[0][1]
+            labels = data[0][1].to(device)
 
-            # Use the encoder to extract features from the image
             image_features = [encoder(input_img) for input_img in inputs]
-
-            # Concatenate the image features with data[3]
-            concatenated_features = [torch.cat((feat, data[0][3]), dim=1) for feat in image_features]
-
-            if gpu:
-                concatenated_features = [Variable(feat.cuda()) for feat in concatenated_features]
-                labels = Variable(labels.cuda())
-
-            else:
-                concatenated_features = [Variable(feat) for feat in concatenated_features]
-                labels = Variable(labels)
+            concatenated_features = [torch.cat((feat, data[0][3].to(device)), dim=1) for feat in image_features]
+            concatenated_features = [Variable(feat) for feat in concatenated_features]
+            labels = Variable(labels)
 
             outputs = []
             for j, feat in enumerate(concatenated_features):
-                outputs.append(model(feat))  # Call model() to make prediction using concatenated features
+                outputs.append(model(feat))
             outputs = sum(outputs)
 
             if start_test:
@@ -233,23 +213,14 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
         iter_test = iter(loader["test"])
         for _ in range(len(loader["test"])):
             data = next(iter_test)
-            inputs = data[0]
-            labels = data[1]
+            inputs = data[0].to(device)
+            labels = data[1].to(device)
             names.append(data[2])
 
-            # Use the encoder to extract features from the image
-
             image_features = encoder(inputs)
-
-            # Concatenate the image features with data[3]
-            concatenated_features = torch.cat((image_features, data[3]), dim=1)
-
-            if gpu:
-                concatenated_features = Variable(concatenated_features.cuda())
-                labels = Variable(labels.cuda())
-            else:
-                concatenated_features = Variable(concatenated_features)
-                labels = Variable(labels)
+            concatenated_features = torch.cat((image_features, data[3].to(device)), dim=1)
+            concatenated_features = Variable(concatenated_features)
+            labels = Variable(labels)
 
             outputs = model(concatenated_features)
 
@@ -274,8 +245,13 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
     return popt
 
 
+
 def transfer_classification(config):
     encoder = ImageEncoder()
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    encoder =encoder.to(device)
+    # Moving models to the device
+    tencoder = ImageEncoder().to(device)
     # 定义一个字典类型变量
     prep_dict = {}
     # Add kry-value pairs for 'prep_dict'
@@ -469,10 +445,7 @@ def transfer_classification(config):
                 iter_source = iter(dset_loaders["source"]["train"])  # 更新源域数据集迭代器
             if i % len_train_target == 0:
                 iter_target = iter(dset_loaders["target"]["train"])  # 更新目标域数据集迭代器
-            device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-            # Moving models to the device
-            tencoder = ImageEncoder().to(device)
             # base_network = base_network.to(device)
             # bottleneck_layer = bottleneck_layer.to(device)
             classifier_layer = classifier_layer.to(device)
@@ -490,8 +463,8 @@ def transfer_classification(config):
             meta_target2 = meta_target2.to(device)
 
             # Step 1: Extract features from the images using the encoder
-            image_features_source = tencoder(inputs_tupian)
-            image_features_target = tencoder(inputs_tupian2)
+            image_features_source = encoder(inputs_tupian)
+            image_features_target = encoder(inputs_tupian2)
 
             # Step 2: Concatenate the image features with meta_source and meta_target
             combined_features_source = torch.cat((image_features_source, meta_source), dim=1)
