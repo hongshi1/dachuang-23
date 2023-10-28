@@ -6,7 +6,6 @@ import numpy as np
 import pandas as pd
 from sklearn.cluster import AffinityPropagation
 from numpy import unique
-from scipy.spatial.distance import euclidean
 
 def replace_with_rank(matrix):
     flattened_matrix = matrix.flatten()
@@ -27,7 +26,7 @@ def project_cluster():
     for source in strings:
         cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam',
                 'ic',
-                'cbm', 'amc', 'max_cc', 'avg_cc']
+                'cbm', 'amc', 'max_cc', 'avg_cc', 'loc']
         source_file_path = f'../data/promise_csv/{source}.csv'
         if os.path.exists(source_file_path):
             source_data = pd.read_csv(source_file_path, usecols=cols)  # Columns D to W are 3 to 2
@@ -42,17 +41,17 @@ def project_cluster():
     clusters = unique(train)
 
     # 计算每个簇的估计中心
-    cluster_centers = []
-    for cluster_id in range(clusters.size):
-        cluster_data = data_array[train == cluster_id]  # 提取属于当前簇的数据点
-        cluster_center = np.mean(cluster_data, axis=0)  # 计算均值作为估计的中心
-        cluster_centers.append(cluster_center)
-
-    distances = np.zeros((clusters.size, clusters.size))
-    for i in range(clusters.size):
-        for j in range(i+1, clusters.size):
-            distances[i][j] = euclidean(cluster_centers[i], cluster_centers[j])
-            distances[j][i] = distances[i][j]
+    cluster_center_indices = AP.cluster_centers_indices_
+    cluster_centers = data_array[cluster_center_indices]  # 获取簇中心的数据点
+    # 计算距离矩阵
+    num_clusters = len(cluster_center_indices)
+    distances = np.zeros((num_clusters, num_clusters))
+    # 使用欧氏距离计算簇中心之间的距离
+    for i in range(num_clusters):
+        for j in range(i + 1, num_clusters):
+            dist = np.linalg.norm(cluster_centers[i] - cluster_centers[j])  # 使用numpy的欧氏距离计算
+            distances[i][j] = dist
+            distances[j][i] = dist
 
     #做归一化
     min_val = np.min(distances)
@@ -65,7 +64,7 @@ def project_cluster():
     for i, project in enumerate(strings):
         project_clusters[project] = train[i]
 
-        # 使用项目名称作为键，将 'cluster' 数组中的值关联起来
+    # 使用项目名称作为键，将 'cluster' 数组中的值关联起来
     tsne_result = TSNE(n_components=2, learning_rate="auto", perplexity=5).fit_transform(data_set)
     # 创建颜色映射
     colors = ['r', 'b', 'g', 'y', 'c', 'm', 'k', 'orange', 'purple', 'pink',

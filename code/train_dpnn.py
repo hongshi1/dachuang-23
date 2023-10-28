@@ -3,7 +3,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation
 from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
-from PerformanceMeasure import PerformanceMeasure
+from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
 import random
 import time
 import numpy as np
@@ -119,4 +119,4 @@ if __name__ == '__main__':
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
 
         # 保存文件
-        workbook.save('C:/Users/lenovo/Desktop/dp_data/output_DPNN_popt_'+str(round+1)+'.xlsx')  # 保存的文件名也修改为对应模型的名字
+        workbook.save('../output/dp_data/output_DPNN_popt_newData'+str(round+1)+'.xlsx')  # 保存的文件名也修改为对应模型的名字

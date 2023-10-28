@@ -1,436 +1,436 @@
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_SAXException.png 0 54
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_parsers_DOMParser.png 0 5680
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_RangeExceptionImpl.png 1 6
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLIFrameElementImpl.png 0 120
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_ChildAndParentNode.png 2 1120
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DatatypeValidator.png 0 17
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_events_DocumentEvent.png 2 1
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTitleElementImpl.png 0 60
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLSmallElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLButtonElementImpl.png 0 97
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_REUtil.png 0 867
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_ParentNode.png 2 1120
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_javax_xml_parsers_DocumentBuilderFactory.png 1 117
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_RangeToken.png 0 2128
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMException.png 0 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLEntityHandler.png 0 51
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_NamedNodeMapImpl.png 1 579
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLStrongElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_Base64.png 0 720
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_Attributes.png 0 12
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_CharReader.png 0 583
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLDocumentHandler.png 0 18
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLObjectElementImpl.png 0 200
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLCardElement.png 0 14
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_DefaultReaderFactory.png 0 191
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_NamedNodeMap.png 2 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_XMLElementDecl.png 0 90
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLOListElementImpl.png 0 42
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_XUtil.png 0 486
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_UTF8Recognizer.png 0 239
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLIsIndexElementImpl.png 0 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLParser.png 0 1192
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLBodyElement.png 0 12
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFormControl.png 0 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_BooleanDatatypeValidator.png 0 240
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_StreamingCharReader.png 0 2890
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xml_serialize_OutputFormat.png 1 498
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFrameSetElement.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLLIElement.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_dtd_DTDGrammar.png 0 1231
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_javax_xml_parsers_SAXParser.png 1 128
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLOneventElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_IDREFDatatypeValidator.png 0 327
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_Element.png 2 16
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_NotationImpl.png 1 80
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_TextSerializer.png 0 263
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_ContentLeafNameTypeVector.png 0 73
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLBrElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLStyleElement.png 0 6
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLBRElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLLabelElementImpl.png 0 52
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLUListElementImpl.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_TimeDurationDatatypeValidator.png 0 1937
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_URI.png 0 1992
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLOptGroupElementImpl.png 0 30
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTitleElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DatatypeValidatorFactoryImpl.png 0 849
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_events_EventListener.png 2 1
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLBigElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_StringHasher.png 0 107
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLHtmlElementImpl.png 0 19
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_xml_sax_ext_LexicalHandler.png 1 7
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_LineSeparator.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_AttributesImpl.png 0 723
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_ParserAdapter.png 0 887
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLParagraphElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLMetaElement.png 0 10
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_AttrImpl.png 1 288
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_CharacterData.png 2 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLStrongElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_Grammar.png 0 2197
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_events_Event.png 2 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_XMLException.png 0 20
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_SerializerFactoryImpl.png 0 136
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLOptionElementImpl.png 0 72
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_InvalidDatatypeValueException.png 0 64
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLPrevElement.png 0 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLUListElement.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDListElementImpl.png 0 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DocumentTypeImpl.png 0 200
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLCollection.png 0 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_TreeWalkerImpl.png 0 547
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLOptgroupElementImpl.png 0 50
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_Method.png 0 9
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLSetvarElement.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFieldSetElementImpl.png 0 6
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_EntityReferenceImpl.png 0 115
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_ElementImpl.png 1 598
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLAnchorElement.png 0 26
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_TextImpl.png 1 90
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_SchemaGrammar.png 0 962
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_XMLFilterImpl.png 0 436
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_XMLMessages.png 0 1114
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTimerElementImpl.png 0 50
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_DefaultHandler.png 0 40
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableSectionElement.png 0 11
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_ChildNode.png 0 69
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLAnchorElementImpl.png 0 171
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLDocumentImpl.png 0 580
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_UTF8DataChunk.png 0 1528
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLDocument.png 0 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDirectoryElementImpl.png 0 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_range_RangeException.png 0 11
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLHeadElement.png 0 2
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_DOMException.png 2 24
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDocumentImpl.png 0 1017
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLErrorReporter.png 0 5
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_SchemaSymbols.png 0 121
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFontElement.png 0 6
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTemplateElement.png 0 6
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_events_EventTarget.png 2 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableRowElement.png 0 15
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_SchemaMessageProvider.png 0 236
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_NodeList.png 2 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_Printer.png 0 357
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_DatatypeMessages.png 0 247
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_MIME2Java.png 0 395
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_LocatorImpl.png 0 64
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLMetaElement.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLIElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLParagraphElementImpl.png 0 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_range_DocumentRange.png 0 1
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_javax_xml_parsers_ParserConfigurationException.png 1 9
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_XMLReader.png 0 14
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_XMLReaderFactory.png 0 102
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_QName.png 0 191
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_RegularExpression.png 0 6637
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_domx_DOMException.png 1 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DatatypeValidatorFactory.png 0 1
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLSmallElement.png 0 2
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_AttrNSImpl.png 1 192
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLAreaElementImpl.png 0 123
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMAny.png 0 120
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLRefreshElementImpl.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLAttrList.png 0 1200
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredElementNSImpl.png 0 103
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_jaxp_SAXParserFactoryImpl.png 1 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDivElementImpl.png 0 19
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_AttributeMap.png 2 592
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_javax_xml_parsers_DocumentBuilder.png 1 53
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFrameElement.png 0 16
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_Match.png 0 332
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLQuoteElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLLinkElement.png 0 18
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_events_MutationEventImpl.png 2 62
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLBElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMStateSet.png 0 471
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_RecurringDurationDatatypeValidator.png 0 1405
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_SAXNotSupportedException.png 0 5
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLObjectElement.png 0 35
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDocument.png 0 19
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLDoElementImpl.png 0 83
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_readers_UTF8Reader.png 1 7413
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLAppletElementImpl.png 0 127
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_QNameDatatypeValidator.png 0 967
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_events_EventImpl.png 1 87
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLModElement.png 0 4
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_DOMImplementationImpl.png 1 127
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_AbstractDatatypeValidator.png 0 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_Op.png 0 268
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_traversal_DocumentTraversal.png 2 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_InputSource.png 0 75
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_readers_DefaultEntityHandler.png 1 2272
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_DOMImplementation.png 2 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLFieldsetElementImpl.png 0 50
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_GrammarResolverImpl.png 0 93
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_HandlerBase.png 0 34
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeepNodeListImpl.png 0 264
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDOMImplementationImpl.png 0 31
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLBaseFontElement.png 0 6
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_utils_HexBin.png 1 208
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XCatalog.png 0 223
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTrElement.png 0 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDivElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLCollectionImpl.png 0 366
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLDocumentScanner.png 0 2550
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredNode.png 0 1
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBaseElementImpl.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_EntityReference.png 2 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTableElement.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLAccessElementImpl.png 0 50
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredDocumentImpl.png 0 2553
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBRElementImpl.png 0 19
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLSelectElement.png 0 22
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLIElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLPElementImpl.png 0 61
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_XHTMLSerializer.png 0 76
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_Hash2intTable.png 0 224
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLDTDScanner.png 0 7218
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLIFrameElement.png 0 20
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLDeclRecognizer.png 0 191
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLBigElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLMapElement.png 0 3
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_Attr.png 2 5
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_AttributeListImpl.png 0 178
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredElementDefinitionImpl.png 0 84
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTdElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_Encodings.png 0 185
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_NamespacesScope.png 0 233
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_StringDatatypeValidator.png 0 1265
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFormElement.png 0 16
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLNoopElement.png 0 0
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_RangeImpl.png 2 2564
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_SAXNotRecognizedException.png 0 5
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredAttrNSImpl.png 0 117
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLContentSpec.png 0 855
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_ImplementationMessages.png 0 247
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLHeadingElement.png 0 2
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_jaxp_SAXParserImpl.png 1 81
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_javax_xml_parsers_SAXParserFactory.png 1 115
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_ParseException.png 0 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_ElementState.png 0 14
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DatatypeMessageProvider.png 0 201
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLImageElement.png 0 26
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLSetvarElementImpl.png 0 50
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLAnchorElement.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_SimpleContentModel.png 0 1019
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLWmlElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredEntityImpl.png 0 85
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFieldSetElement.png 0 1
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLFieldsetElement.png 0 4
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_framework_Version.png 4 14
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DocumentFragmentImpl.png 0 16
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMNode.png 0 77
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLScriptElementImpl.png 0 126
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDListElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_XMLContentModel.png 0 5
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFontElementImpl.png 0 43
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_CDATASection.png 2 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_IDDatatypeValidator.png 0 181
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableCaptionElementImpl.png 0 17
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_validators_common_DFAContentModel.png 2 1444
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLLIElementImpl.png 0 31
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLOptionElement.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_ChunkyCharArray.png 0 184
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLHRElementImpl.png 0 52
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLAnchorElementImpl.png 0 50
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLImgElement.png 0 18
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLHRElement.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableRowElementImpl.png 0 284
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLButtonElement.png 0 12
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLEntityReaderFactory.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTextAreaElementImpl.png 0 149
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_EBCDICRecognizer.png 0 140
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLDoElement.png 0 10
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredDocumentTypeImpl.png 0 176
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableElement.png 0 34
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableCellElement.png 0 29
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLRefreshElement.png 0 0
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_validators_common_XMLValidator.png 2 6176
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLPreElementImpl.png 0 20
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_MixedContentModel.png 0 464
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLBElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_BaseMarkupSerializer.png 0 1901
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_HTMLdtd.png 0 703
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableSectionElementImpl.png 0 172
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLEmElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLUElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_ProcessingInstructionImpl.png 0 46
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLHtmlElement.png 0 2
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_ElementNSImpl.png 1 165
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLScriptElement.png 0 14
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLEntityReader.png 0 183
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTemplateElementImpl.png 0 61
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_Document.png 2 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLElementImpl.png 0 249
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLPreElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBodyElementImpl.png 0 72
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_CharDataChunk.png 0 601
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_SymbolCache.png 0 608
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_UCSRecognizer.png 0 145
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_AttributeList.png 0 6
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLPElement.png 0 6
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLLegendElement.png 0 5
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DoubleDatatypeValidator.png 0 686
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLModElementImpl.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTrElementImpl.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_XMLCharacterProperties.png 0 7825
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLOneventElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_traversal_NodeIterator.png 2 7
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_EntityImpl.png 0 93
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_events_EventException.png 2 10
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredEntityReferenceImpl.png 0 118
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLSelectElement.png 0 16
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableColElement.png 0 12
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_XMLMessages.png 0 2145
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_InsertableElementsInfo.png 0 12
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLNoopElementImpl.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_XMLFilter.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLAElementImpl.png 0 61
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_xml_sax_ext_DeclHandler.png 1 4
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_validators_schema_TraverseSchema.png 4 8696
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_ContentHandler.png 0 11
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTextAreaElement.png 0 23
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMBinOp.png 0 154
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLPostfieldElement.png 0 4
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_Node.png 2 37
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredCommentImpl.png 0 33
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLMetaElementImpl.png 0 50
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_Entity.png 2 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLInputElementImpl.png 0 229
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLInputElementImpl.png 0 142
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLHeadElementImpl.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLSelectElementImpl.png 0 179
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLInputElement.png 0 20
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_jaxp_DocumentBuilderImpl.png 0 109
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_ElementDefinitionImpl.png 0 52
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_ImplementationMessages.png 0 205
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableCaptionElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_ExceptionMessages.png 0 923
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTdElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFrameSetElementImpl.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLCardElementImpl.png 0 107
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_Text.png 2 1
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_SAXParseException.png 0 106
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLUElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLBaseElement.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLOptionElement.png 0 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBaseFontElementImpl.png 0 43
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMLeaf.png 0 147
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLLinkElementImpl.png 0 105
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_domx_XGrammarWriter.png 0 2103
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_traversal_NodeFilter.png 2 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLOptionElementImpl.png 0 195
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLOptgroupElement.png 0 4
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_Notation.png 2 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLGoElement.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_ChunkyByteArray.png 0 284
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLPrevElementImpl.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_ExceptionMessagesLocalizer.png 0 103
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLParamElementImpl.png 0 52
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLLabelElement.png 0 5
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_CharacterDataImpl.png 2 333
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLInputElement.png 0 38
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_StringPool.png 0 2121
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_jaxp_DocumentBuilderFactoryImpl.png 1 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLCatalogHandler.png 0 102
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_SchemaMessages.png 0 325
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_Token.png 0 2172
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_parsers_SAXParser.png 1 1384
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMUniOp.png 0 60
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_DocumentType.png 2 6
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableElementImpl.png 0 471
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_range_Range.png 0 28
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLAccessElement.png 0 4
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_DOMExceptionImpl.png 1 6
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_ISO8601Format.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_BinaryDatatypeValidator.png 0 393
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBuilder.png 0 332
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLSelectElementImpl.png 0 118
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLLegendElementImpl.png 0 52
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_GrammarResolver.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLMenuElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableColElementImpl.png 0 103
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_NOTATIONDatatypeValidator.png 0 56
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_Comment.png 2 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLMenuElementImpl.png 0 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_StateMessageDatatype.png 0 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFormElementImpl.png 0 98
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_IndentPrinter.png 0 403
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredCDATASectionImpl.png 0 44
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_DOMSerializer.png 0 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLPostfieldElementImpl.png 0 50
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLQuoteElementImpl.png 0 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_XMLAttributeDecl.png 0 112
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_URIReferenceDatatypeValidator.png 0 608
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLElement.png 0 10
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_Parser.png 0 7
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLDOMImplementationImpl.png 0 31
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_traversal_TreeWalker.png 2 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDirectoryElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_RegexParser.png 0 3171
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLDOMImplementation.png 0 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_EntityResolver.png 0 1
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLHeadingElementImpl.png 0 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_StringReader.png 0 2599
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDOMImplementation.png 0 1
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTimerElement.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLHeadElement.png 0 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFrameElementImpl.png 0 96
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredAttrImpl.png 0 60
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLStyleElementImpl.png 0 39
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_UCSReader.png 0 2556
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_ParserFactory.png 0 25
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLAppletElement.png 0 22
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLMapElementImpl.png 0 32
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_Locator.png 0 4
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_ProcessingInstruction.png 2 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_InvalidDatatypeFacetException.png 0 64
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLAreaElement.png 0 16
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_NodeImpl.png 2 1123
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredElementImpl.png 0 75
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_CDATASectionImpl.png 0 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLHeadElementImpl.png 0 17
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_DocumentHandler.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredNotationImpl.png 0 59
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_DTDHandler.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLEmElement.png 0 2
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DecimalDatatypeValidator.png 1 1337
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLOptGroupElement.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_CommentImpl.png 0 13
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredTextImpl.png 0 44
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLImgElementImpl.png 0 127
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTableElementImpl.png 0 73
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_javax_xml_parsers_FactoryConfigurationError.png 1 34
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLParamElement.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLImageElementImpl.png 0 151
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_XMLReaderAdapter.png 0 161
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_LCount.png 0 42
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_DocumentFragment.png 2 0
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_UTF8CharReader.png 0 1583
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableCellElementImpl.png 0 259
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLWmlElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_Serializer.png 0 6
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_XMLMessageProvider.png 0 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_ParserForXMLSchema.png 0 804
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_ErrorHandler.png 0 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_BMPattern.png 0 574
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLAElement.png 0 8
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLElementImpl.png 0 93
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_FloatDatatypeValidator.png 0 728
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLBrElement.png 0 2
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_NameNodeListImpl.png 0 76
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_NamespaceSupport.png 0 238
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_w3c_dom_events_MutationEvent.png 2 5
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_SerializerFactory.png 0 108
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLElement.png 0 4
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_ENTITYDatatypeValidator.png 0 207
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_EquivClassComparator.png 0 167
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLOListElement.png 0 6
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_dom_NodeIteratorImpl.png 1 374
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLGoElementImpl.png 0 72
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredProcessingInstructionImpl.png 0 40
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLIsIndexElement.png 0 3
-../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLMetaElementImpl.png 0 84
-../data/img/grb_img/xerces-1.2/buggy/xerces-1.2_src_java_org_apache_xerces_readers_AbstractCharReader.png 1 3041
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_SAXException.png 0 54 6 3 3 0 10 0 0 0 6 0.0 1.0 0 0.85 0.555555556 1 2 7.833333333 3 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_parsers_DOMParser.png 0 5680 63 2 3 27 225 793 7 20 42 0.872080089 0.896551724 6 0.678947368 0.152073733 2 11 88.6984127 6 1.6984
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_RangeExceptionImpl.png 1 6 1 5 0 1 2 0 1 0 1 2.0 0.0 0 1.0 1.0 0 0 5.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLIFrameElementImpl.png 0 120 21 4 0 2 25 210 0 2 21 2.0 0.0 0 0.824561404 0.523809524 0 0 4.714285714 1 0.9524
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_ChildAndParentNode.png 2 1120 25 3 3 13 67 34 3 11 14 0.638888889 0.833333333 3 0.684931507 0.205 2 22 43.56 11 2.28
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DatatypeValidator.png 0 17 3 1 0 26 3 3 25 1 3 1.5 0.0 0 0.0 0.666666667 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_events_DocumentEvent.png 2 1 1 1 0 0 1 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTitleElementImpl.png 0 60 3 4 0 2 14 3 1 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 19.0 3 1.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLSmallElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLButtonElementImpl.png 0 97 12 4 0 3 22 66 0 3 12 2.0 0.0 0 0.895238095 0.316666667 1 1 7.083333333 3 1.25
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_REUtil.png 0 867 17 1 0 8 54 134 7 3 5 0.9375 0.0 1 0.0 0.2125 0 0 49.88235294 19 4.7059
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_ParentNode.png 2 1120 25 2 5 14 68 34 5 11 14 0.638888889 0.833333333 3 0.656716418 0.205 1 17 43.56 11 2.28
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_javax_xml_parsers_DocumentBuilderFactory.png 1 117 8 1 1 0 16 14 0 0 6 0.785714286 1.0 0 0.0 0.571428571 0 0 13.125 1 0.75
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_RangeToken.png 0 2128 18 2 0 6 35 0 6 1 1 0.680672269 0.142857143 1 0.734375 0.361111111 1 7 116.8333333 17 8.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMException.png 0 13 2 3 0 11 3 0 11 0 2 1.0 0.5 0 0.944444444 0.75 0 0 4.5 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLEntityHandler.png 0 51 10 1 0 22 10 45 20 2 10 1.111111111 0.0 0 0.0 0.3 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_NamedNodeMapImpl.png 1 579 22 1 1 9 48 41 6 3 9 0.843537415 0.857142857 1 0.0 0.227272727 0 0 25.0 7 2.2727
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLStrongElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_Base64.png 0 720 7 1 0 1 9 13 1 0 6 1.083333333 1.0 0 0.0 0.25 0 0 100.1428571 11 3.5714
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_Attributes.png 0 12 12 1 0 0 12 66 0 0 12 2.0 0.0 0 0.0 0.638888889 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_CharReader.png 0 583 4 3 0 6 9 0 1 5 0 0.380952381 1.0 0 0.926829268 0.40625 1 3 143.0 1 0.75
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLDocumentHandler.png 0 18 18 1 0 6 18 153 4 2 18 2.0 0.0 0 0.0 0.4 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLObjectElementImpl.png 0 200 35 4 0 3 43 595 0 3 35 2.0 0.0 0 0.734375 0.308571429 0 0 4.714285714 1 0.9714
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLCardElement.png 0 14 14 1 0 2 14 91 1 1 14 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_DefaultReaderFactory.png 0 191 9 1 0 11 26 16 1 10 9 0.875 1.0 0 0.0 0.333333333 0 0 19.66666667 2 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_NamedNodeMap.png 2 8 8 1 0 0 8 28 0 0 8 2.0 0.0 0 0.0 0.46875 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_XMLElementDecl.png 0 90 6 1 0 8 12 3 6 2 6 0.763636364 0.0 2 0.0 0.5 1 1 12.16666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLOListElementImpl.png 0 42 7 4 0 2 14 21 0 2 7 2.0 0.0 0 0.94 0.342857143 0 0 5.0 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_XUtil.png 0 486 14 1 0 5 50 91 3 2 13 2.0 0.0 0 0.0 0.410714286 0 0 33.71428571 5 3.7143
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_UTF8Recognizer.png 0 239 2 2 0 9 18 0 2 9 1 0.0 1.0 0 0.75 0.571428571 2 2 118.0 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLIsIndexElementImpl.png 0 17 3 4 0 2 6 3 0 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 4.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLParser.png 0 1192 49 1 2 22 121 622 2 20 22 0.915719697 1.0 11 0.0 0.113888889 0 0 22.87755102 3 1.0408
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLBodyElement.png 0 12 12 1 0 0 12 66 0 0 12 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFormControl.png 0 0 0 1 0 8 0 0 8 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_BooleanDatatypeValidator.png 0 240 10 2 0 7 29 35 1 6 6 0.708333333 1.0 3 0.363636364 0.263888889 0 0 22.2 1 0.7
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_StreamingCharReader.png 0 2890 34 2 0 14 74 0 1 14 21 0.672727273 1.0 2 0.179487179 0.160839161 1 3 83.55882353 2 1.0588
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xml_serialize_OutputFormat.png 1 498 42 1 0 11 52 695 11 0 42 0.899186992 1.0 0 0.0 0.257936508 0 0 10.5 12 1.6429
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFrameSetElement.png 0 4 4 1 0 0 4 6 0 0 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLLIElement.png 0 4 4 1 0 0 4 6 0 0 4 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_dtd_DTDGrammar.png 0 1231 41 2 0 13 77 280 2 11 35 0.903947368 1.0 10 0.487179487 0.306620209 1 7 28.56097561 3 1.1951
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_javax_xml_parsers_SAXParser.png 1 128 8 1 1 0 27 28 0 0 7 2.0 0.0 0 0.0 0.333333333 0 0 15.0 1 0.875
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLOneventElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_IDREFDatatypeValidator.png 0 327 11 2 0 8 42 33 1 7 7 0.82 0.7 2 0.307692308 0.232323232 0 0 27.81818182 6 1.2727
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_Element.png 2 16 16 1 0 0 16 120 0 0 16 2.0 0.0 0 0.0 0.645833333 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_NotationImpl.png 1 80 7 2 1 5 12 15 3 3 7 0.916666667 0.75 0 0.88 0.523809524 1 4 9.857142857 3 1.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_TextSerializer.png 0 263 17 2 0 5 36 128 1 4 11 2.0 0.0 0 0.777777778 0.192513369 1 10 14.47058824 6 1.8824
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_ContentLeafNameTypeVector.png 0 73 4 1 0 6 6 0 5 1 4 0.0 0.0 1 0.0 0.55 0 0 16.5 2 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLBrElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLStyleElement.png 0 6 6 1 0 0 6 15 0 0 6 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLBRElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLLabelElementImpl.png 0 52 5 4 0 3 10 10 0 3 5 2.0 0.0 0 0.959183673 0.6 0 0 9.4 3 1.6
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLUListElementImpl.png 0 28 5 4 0 2 10 10 0 2 5 2.0 0.0 0 0.959183673 0.45 0 0 4.6 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_TimeDurationDatatypeValidator.png 0 1937 18 2 0 7 58 141 1 6 10 0.847750865 1.0 2 0.2 0.189814815 0 0 105.6666667 4 1.1667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_URI.png 0 1992 42 1 0 3 66 375 2 1 29 0.780487805 1.0 0 0.0 0.226480836 0 0 46.14285714 33 3.1429
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLOptGroupElementImpl.png 0 30 5 4 0 2 11 10 0 2 5 2.0 0.0 0 0.959183673 0.45 0 0 5.0 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTitleElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DatatypeValidatorFactoryImpl.png 0 849 11 1 0 23 48 33 5 18 5 0.76 0.6 1 0.0 0.2125 0 0 75.72727273 4 1.0909
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_events_EventListener.png 2 1 1 1 0 0 1 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLBigElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_StringHasher.png 0 107 5 1 0 6 7 10 6 0 5 2.0 0.0 0 0.0 0.35 0 0 20.4 3 1.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLHtmlElementImpl.png 0 19 3 4 0 2 7 3 1 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 5.333333333 1 0.6667
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_xml_sax_ext_LexicalHandler.png 1 7 7 1 0 0 7 21 0 0 7 2.0 0.0 0 0.0 0.428571429 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_LineSeparator.png 0 8 1 1 0 0 2 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_AttributesImpl.png 0 723 26 1 0 0 40 0 0 0 24 0.08 0.0 0 0.0 0.528846154 0 0 26.73076923 5 2.6538
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_ParserAdapter.png 0 887 30 1 0 0 88 177 0 0 24 0.882032668 0.736842105 9 0.0 0.126666667 0 0 27.93333333 4 1.2333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLParagraphElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLMetaElement.png 0 10 10 1 0 2 10 45 1 1 10 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_AttrImpl.png 1 288 16 4 2 13 46 102 10 6 14 0.933333333 0.5 0 0.849462366 0.34375 3 18 16.875 11 2.375
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_CharacterData.png 2 8 8 1 0 0 8 28 0 0 8 2.0 0.0 0 0.0 0.666666667 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLStrongElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_Grammar.png 0 2197 38 1 2 28 77 569 9 19 13 0.900900901 1.0 9 0.0 0.152631579 0 0 55.94736842 6 1.9737
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_events_Event.png 2 13 10 1 0 0 10 45 0 0 10 1.111111111 0.0 0 0.0 0.4 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_XMLException.png 0 20 5 3 2 2 7 10 2 0 5 2.0 0.0 0 0.944444444 0.6 0 0 3.0 1 0.2
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_SerializerFactoryImpl.png 0 136 6 2 0 7 20 9 1 7 3 0.0 1.0 0 0.545454545 0.433333333 1 2 21.5 5 1.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLOptionElementImpl.png 0 72 13 4 0 3 16 78 0 3 13 2.0 0.0 0 0.872340426 0.538461538 1 7 4.538461538 1 0.9231
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_InvalidDatatypeValueException.png 0 64 8 4 0 19 12 0 18 1 8 0.285714286 1.0 0 0.818181818 0.4375 0 0 6.75 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLPrevElement.png 0 0 0 1 0 2 0 0 1 1 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLUListElement.png 0 4 4 1 0 0 4 6 0 0 4 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDListElementImpl.png 0 17 3 4 0 2 6 3 0 2 3 2.0 0.0 0 0.979166667 0.5 0 0 4.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DocumentTypeImpl.png 0 200 15 4 1 9 26 57 6 4 14 0.821428571 0.875 3 0.848837209 0.383333333 2 6 11.8 2 1.5333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLCollection.png 0 3 3 1 0 0 3 3 0 0 3 2.0 0.0 0 0.0 0.555555556 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_TreeWalkerImpl.png 0 547 20 1 0 1 29 58 1 0 14 0.547368421 0.2 3 0.0 0.31 0 0 26.1 10 3.95
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLOptgroupElementImpl.png 0 50 9 4 0 3 12 36 0 3 9 2.0 0.0 0 0.911111111 0.555555556 1 6 4.555555556 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_Method.png 0 9 1 1 0 0 2 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLSetvarElement.png 0 4 4 1 0 2 4 6 1 1 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFieldSetElementImpl.png 0 6 1 4 0 3 2 0 0 3 1 2.0 0.0 0 1.0 1.0 0 0 5.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_EntityReferenceImpl.png 0 115 10 4 1 6 29 43 3 4 9 0.944444444 0.5 0 0.890243902 0.325 1 6 10.3 6 1.5
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_ElementImpl.png 1 598 29 4 4 17 70 124 12 9 24 0.75 0.666666667 1 0.73 0.337931034 2 11 19.51724138 6 2.4828
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLAnchorElement.png 0 26 26 1 0 0 26 325 0 0 26 2.0 0.0 0 0.0 0.487179487 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_TextImpl.png 1 90 6 3 2 9 21 15 6 4 6 1.2 0.0 0 0.915254237 0.333333333 1 4 13.83333333 2 1.1667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_SchemaGrammar.png 0 962 45 2 0 13 63 862 3 10 16 0.896780303 0.875 6 0.463414634 0.119298246 1 5 19.84444444 5 1.5556
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_XMLFilterImpl.png 0 436 36 1 0 0 69 246 0 0 35 0.804761905 1.0 6 0.0 0.125925926 0 0 10.94444444 2 1.1389
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_XMLMessages.png 0 1114 5 1 0 2 14 0 1 1 4 1.24380805 0.009287926 0 0.0 0.5 0 0 157.2 9 2.2
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTimerElementImpl.png 0 50 9 4 0 3 12 36 0 3 9 2.0 0.0 0 0.911111111 0.555555556 1 5 4.555555556 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_DefaultHandler.png 0 40 18 1 0 0 19 153 0 0 18 2.0 0.0 0 0.0 0.285714286 0 0 1.222222222 1 0.9444
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableSectionElement.png 0 11 11 1 0 0 11 55 0 0 11 2.0 0.0 0 0.0 0.515151515 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_ChildNode.png 0 69 8 2 2 9 14 18 9 2 5 0.904761905 0.666666667 2 0.88 0.416666667 1 3 7.25 2 1.25
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLAnchorElementImpl.png 0 171 27 4 0 2 35 351 0 2 27 2.0 0.0 0 0.783333333 0.37962963 0 0 5.333333333 3 1.1111
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLDocumentImpl.png 0 580 4 3 0 39 23 4 37 3 2 0.982905983 0.051282051 0 0.977777778 0.555555556 1 1 134.25 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_UTF8DataChunk.png 0 1528 22 1 0 6 39 89 1 5 12 0.703296703 0.692307692 4 0.0 0.232142857 0 0 67.86363636 24 4.6818
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLDocument.png 0 0 0 1 0 1 0 0 1 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDirectoryElementImpl.png 0 17 3 4 0 2 6 3 0 2 3 2.0 0.0 0 0.979166667 0.5 0 0 4.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_range_RangeException.png 0 11 1 4 1 0 2 0 0 0 1 2.0 0.0 0 1.0 1.0 0 0 7.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLHeadElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_DOMException.png 2 24 1 4 1 0 2 0 0 0 1 2.0 0.0 0 1.0 1.0 0 0 7.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDocumentImpl.png 0 1017 34 3 0 59 83 541 55 9 29 0.96969697 0.8 5 0.733333333 0.284848485 2 4 28.61764706 7 2.2059
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLErrorReporter.png 0 5 2 1 0 22 2 1 22 0 2 2.0 0.0 0 0.0 0.6 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_SchemaSymbols.png 0 121 1 1 0 0 2 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFontElement.png 0 6 6 1 0 0 6 15 0 0 6 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTemplateElement.png 0 6 6 1 0 2 6 15 1 1 6 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_events_EventTarget.png 2 3 3 1 0 0 3 3 0 0 3 2.0 0.0 0 0.0 0.666666667 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableRowElement.png 0 15 15 1 0 0 15 105 0 0 15 2.0 0.0 0 0.0 0.488888889 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_SchemaMessageProvider.png 0 236 5 1 0 3 14 0 2 1 4 1.185483871 0.064516129 0 0.0 0.5 0 0 40.0 9 2.2
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_NodeList.png 2 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_Printer.png 0 357 18 1 1 6 28 47 5 1 18 0.720588235 1.0 1 0.0 0.179012346 0 0 18.38888889 3 1.7778
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_DatatypeMessages.png 0 247 3 3 0 0 4 1 0 0 2 0.5 0.0 0 0.974358974 1.0 0 0 81.0 1 0.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_MIME2Java.png 0 395 4 1 0 3 9 2 3 0 2 0.666666667 1.0 0 0.0 0.5 0 0 97.25 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_LocatorImpl.png 0 64 10 1 0 0 15 37 0 0 10 0.777777778 1.0 0 0.0 0.375 0 0 5.0 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLMetaElement.png 0 8 8 1 0 0 8 28 0 0 8 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLIElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLParagraphElementImpl.png 0 17 3 4 0 2 6 3 0 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 4.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_range_DocumentRange.png 0 1 1 1 0 0 1 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_javax_xml_parsers_ParserConfigurationException.png 1 9 2 3 0 0 4 1 0 0 2 2.0 0.0 0 1.0 0.75 0 0 3.5 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_XMLReader.png 0 14 14 1 0 0 14 91 0 0 14 2.0 0.0 0 0.0 0.206349206 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_XMLReaderFactory.png 0 102 3 1 0 0 14 3 0 0 2 2.0 0.0 0 0.0 0.333333333 0 0 33.0 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_QName.png 0 191 11 1 0 38 16 25 38 0 11 0.05 0.0 0 0.0 0.409090909 1 1 16.0 7 1.1818
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_RegularExpression.png 0 6637 53 1 0 29 143 1146 10 20 20 0.906177156 0.090909091 6 0.0 0.192307692 1 1 123.6037736 147 13.3585
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_domx_DOMException.png 1 8 1 5 1 1 2 0 1 0 1 2.0 0.0 0 1.0 1.0 0 0 5.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DatatypeValidatorFactory.png 0 1 1 1 0 3 1 0 1 2 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLSmallElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_AttrNSImpl.png 1 192 6 3 1 4 18 3 2 3 4 0.8 0.666666667 0 0.9375 0.611111111 3 3 30.5 3 1.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLAreaElementImpl.png 0 123 17 4 0 2 27 136 0 2 17 2.0 0.0 0 0.854545455 0.317647059 0 0 6.235294118 3 1.1765
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMAny.png 0 120 9 2 0 6 19 0 2 4 1 0.625 1.0 0 0.5 0.388888889 1 2 12.0 2 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLRefreshElementImpl.png 0 28 5 4 0 3 8 10 0 3 5 2.0 0.0 0 0.953488372 0.6 1 4 4.6 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLAttrList.png 0 1200 29 1 0 8 37 0 6 2 28 0.813909774 1.0 2 0.0 0.333333333 0 0 39.72413793 6 2.8621
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredElementNSImpl.png 0 103 4 4 0 6 20 0 1 6 1 0.666666667 0.5 0 0.962025316 0.5 3 11 24.25 4 1.5
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_jaxp_SAXParserFactoryImpl.png 1 13 2 2 0 1 6 1 0 1 2 2.0 0.0 0 0.928571429 1.0 0 0 5.5 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDivElementImpl.png 0 19 3 4 0 2 7 3 0 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 5.333333333 1 0.6667
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_AttributeMap.png 2 592 10 2 0 8 43 25 1 8 5 2.0 0.0 0 0.571428571 0.328571429 1 7 58.2 13 2.8
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_javax_xml_parsers_DocumentBuilder.png 1 53 10 1 1 0 15 45 0 0 9 2.0 0.0 0 0.0 0.228571429 0 0 4.3 1 0.9
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFrameElement.png 0 16 16 1 0 0 16 120 0 0 16 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_Match.png 0 332 12 1 0 3 22 0 3 1 6 0.53030303 0.0 0 0.0 0.35 0 0 26.16666667 8 2.75
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLQuoteElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLLinkElement.png 0 18 18 1 0 0 18 153 0 0 18 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_events_MutationEventImpl.png 2 62 6 2 0 7 8 0 6 1 6 0.981818182 0.0 1 0.642857143 0.375 0 0 7.5 1 0.8333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLBElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMStateSet.png 0 471 10 1 0 7 16 0 6 1 1 0.066666667 0.0 0 0.0 0.566666667 0 0 45.6 7 2.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_RecurringDurationDatatypeValidator.png 0 1405 18 2 0 7 54 141 1 6 9 0.891176471 0.15 2 0.2 0.189814815 0 0 75.94444444 4 1.1667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_SAXNotSupportedException.png 0 5 1 4 0 0 2 0 0 0 1 2.0 0.0 0 1.0 1.0 0 0 4.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLObjectElement.png 0 35 35 1 0 0 35 595 0 0 35 2.0 0.0 0 0.0 0.371428571 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDocument.png 0 19 19 1 0 0 19 171 0 0 19 2.0 0.0 0 0.0 0.438596491 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLDoElementImpl.png 0 83 15 4 0 3 18 105 0 3 15 2.0 0.0 0 0.854166667 0.533333333 1 6 4.533333333 1 0.9333
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_readers_UTF8Reader.png 1 7413 41 2 0 13 75 0 1 12 22 0.608823529 0.882352941 3 0.152173913 0.170833333 1 4 179.3902439 2 1.0488
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLAppletElementImpl.png 0 127 23 4 0 2 26 253 0 2 23 2.0 0.0 0 0.810344828 0.52173913 0 0 4.52173913 1 0.9565
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_QNameDatatypeValidator.png 0 967 10 2 0 6 39 37 1 5 7 0.709876543 1.0 2 0.333333333 0.285714286 0 0 93.9 1 0.8
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_events_EventImpl.png 1 87 11 1 1 3 13 35 3 0 11 0.9 0.1 2 0.0 0.393939394 0 0 6.0 1 0.9091
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLModElement.png 0 4 4 1 0 0 4 6 0 0 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_DOMImplementationImpl.png 1 127 6 1 2 5 18 13 3 3 5 0.8 0.0 1 0.0 0.533333333 0 0 20.0 14 3.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_AbstractDatatypeValidator.png 0 13 5 1 14 17 6 10 15 2 5 1.25 1.0 0 0.0 0.533333333 0 0 1.4 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_Op.png 0 268 24 1 6 10 39 234 7 9 0 1.023550725 0.0 1 0.0 0.195652174 0 0 9.166666667 2 0.9583
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_traversal_DocumentTraversal.png 2 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_InputSource.png 0 75 14 1 0 0 15 81 0 0 14 0.876923077 1.0 0 0.0 0.392857143 0 0 4.0 1 0.7143
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_readers_DefaultEntityHandler.png 1 2272 62 1 0 24 130 753 10 17 39 0.850197852 0.862068966 12 0.0 0.138248848 0 0 35.17741935 6 1.3226
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_DOMImplementation.png 2 3 3 1 0 0 3 3 0 0 3 2.0 0.0 0 0.0 0.777777778 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLFieldsetElementImpl.png 0 50 9 4 0 3 12 36 0 3 9 2.0 0.0 0 0.911111111 0.555555556 1 6 4.555555556 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_GrammarResolverImpl.png 0 93 10 1 0 4 21 0 2 2 10 0.0 1.0 0 0.0 0.533333333 0 0 8.2 2 1.1
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_HandlerBase.png 0 34 15 1 0 0 16 105 0 0 15 2.0 0.0 0 0.0 0.285714286 0 0 1.266666667 1 0.9333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeepNodeListImpl.png 0 264 5 1 1 4 21 0 3 2 4 0.25 1.0 1 0.0 0.44 0 0 50.6 22 6.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLDOMImplementationImpl.png 0 31 4 2 0 2 8 4 0 2 2 0.666666667 1.0 1 0.666666667 0.5 0 0 6.5 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLBaseFontElement.png 0 6 6 1 0 0 6 15 0 0 6 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_utils_HexBin.png 1 208 7 1 0 1 9 13 1 0 4 0.875 1.0 0 0.0 0.25 0 0 28.14285714 4 1.5714
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XCatalog.png 0 223 8 2 0 2 32 10 1 2 7 1.040816327 0.214285714 0 0.588235294 0.46875 1 1 25.125 6 1.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTrElement.png 0 0 0 1 0 2 0 0 1 1 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDivElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLCollectionImpl.png 0 366 9 1 0 9 22 18 7 2 3 1.028846154 0.153846154 1 0.0 0.317460317 0 0 38.22222222 17 4.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLDocumentScanner.png 0 2550 45 1 0 23 108 602 7 17 16 0.942775974 0.071428571 15 0.0 0.153030303 0 0 54.42222222 2 1.0222
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredNode.png 0 1 1 1 0 16 1 0 16 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBaseElementImpl.png 0 28 5 4 0 2 8 10 0 2 5 2.0 0.0 0 0.959183673 0.6 0 0 4.6 1 0.8
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_EntityReference.png 2 0 0 1 0 0 0 0 0 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTableElement.png 0 8 8 1 0 2 8 28 1 1 8 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLAccessElementImpl.png 0 50 9 4 0 3 12 36 0 3 9 2.0 0.0 0 0.911111111 0.555555556 1 4 4.555555556 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredDocumentImpl.png 0 2553 61 3 0 25 109 1294 16 22 48 0.89047619 0.952380952 1 0.602739726 0.226229508 2 10 40.50819672 12 2.4918
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBRElementImpl.png 0 19 3 4 0 2 7 3 0 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 5.333333333 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLSelectElement.png 0 22 22 1 0 0 22 231 0 0 22 2.0 0.0 0 0.0 0.281818182 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLIElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLPElementImpl.png 0 61 11 4 0 3 14 55 0 3 11 2.0 0.0 0 0.891304348 0.545454545 1 6 4.545454545 1 0.9091
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_XHTMLSerializer.png 0 76 5 3 0 3 10 10 1 2 5 2.0 0.0 0 0.985507246 0.55 1 1 14.2 2 0.4
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_Hash2intTable.png 0 224 3 1 0 1 5 0 1 0 3 1.0 1.0 0 0.0 0.833333333 0 0 72.66666667 8 4.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLDTDScanner.png 0 7218 70 1 0 17 192 1069 1 16 22 0.922959573 1.0 15 0.0 0.148033126 0 0 101.0285714 3 1.0429
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLIFrameElement.png 0 20 20 1 0 0 20 190 0 0 20 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLDeclRecognizer.png 0 191 5 1 3 12 15 8 7 9 3 0.75 1.0 0 0.0 0.333333333 0 0 36.6 1 0.6
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLBigElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLMapElement.png 0 3 3 1 0 0 3 3 0 0 3 2.0 0.0 0 0.0 0.666666667 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_Attr.png 2 5 5 1 0 0 5 10 0 0 5 2.0 0.0 0 0.0 0.6 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_AttributeListImpl.png 0 178 12 1 0 0 24 0 0 0 12 0.303030303 0.0 0 0.0 0.4375 0 0 13.58333333 2 1.25
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredElementDefinitionImpl.png 0 84 4 3 0 6 13 0 1 6 1 0.666666667 0.5 0 0.94 0.5 2 7 19.5 2 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTdElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_Encodings.png 0 185 5 1 0 2 10 4 1 1 0 0.875 0.5 1 0.0 0.333333333 0 0 35.6 3 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_NamespacesScope.png 0 233 5 1 0 4 9 0 3 1 5 0.166666667 1.0 1 0.0 0.533333333 0 0 45.0 4 1.4
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_StringDatatypeValidator.png 0 1265 10 2 0 6 38 13 1 5 7 0.524691358 0.944444444 2 0.333333333 0.314285714 0 0 123.7 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFormElement.png 0 16 16 1 0 0 16 120 0 0 16 2.0 0.0 0 0.0 0.6875 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLNoopElement.png 0 0 0 1 0 2 0 0 1 1 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_RangeImpl.png 2 2564 41 1 0 4 85 0 1 4 26 0.796875 0.0 7 0.0 0.222222222 0 0 61.14634146 11 3.0244
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_SAXNotRecognizedException.png 0 5 1 4 0 0 2 0 0 0 1 2.0 0.0 0 1.0 1.0 0 0 4.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredAttrNSImpl.png 0 117 4 4 0 5 18 0 1 5 1 0.666666667 0.5 0 0.955223881 0.5 4 9 27.75 7 2.25
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_framework_XMLContentSpec.png 0 855 12 1 0 9 19 24 8 2 11 0.924242424 0.0 0 0.0 0.291666667 1 1 68.75 28 5.0833
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_ImplementationMessages.png 0 247 3 3 0 0 4 1 0 0 2 0.5 0.0 0 0.974358974 1.0 0 0 81.0 1 0.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLHeadingElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_jaxp_SAXParserImpl.png 1 81 5 2 0 2 13 0 1 1 3 0.5 1.0 1 0.863636364 0.6 1 1 14.6 1 0.6
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_javax_xml_parsers_SAXParserFactory.png 1 115 8 1 1 0 16 14 0 0 6 0.785714286 1.0 0 0.0 0.571428571 0 0 12.875 1 0.75
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_ParseException.png 0 13 2 4 0 4 3 0 4 0 2 0.0 0.0 0 0.944444444 0.666666667 0 0 5.0 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_ElementState.png 0 14 1 1 0 4 2 0 4 0 0 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DatatypeMessageProvider.png 0 201 5 1 0 10 14 0 9 1 4 1.166666667 0.083333333 0 0.0 0.5 0 0 34.4 9 2.2
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLImageElement.png 0 26 26 1 0 0 26 325 0 0 26 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLSetvarElementImpl.png 0 50 9 4 0 3 12 36 0 3 9 2.0 0.0 0 0.911111111 0.555555556 1 5 4.555555556 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLAnchorElement.png 0 4 4 1 0 2 4 6 1 1 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_SimpleContentModel.png 0 1019 7 1 0 7 13 5 1 6 7 0.366666667 1.0 3 0.0 0.387755102 0 0 143.8571429 1 0.7143
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLWmlElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredEntityImpl.png 0 85 4 3 0 5 17 0 1 5 1 0.666666667 0.5 0 0.946428571 0.5 2 7 19.75 1 0.75
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLFieldSetElement.png 0 1 1 1 0 0 1 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLFieldsetElement.png 0 4 4 1 0 2 4 6 1 1 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_framework_Version.png 4 14 3 1 0 0 5 1 0 0 2 0.5 0.0 0 0.0 0.5 0 0 3.333333333 1 0.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DocumentFragmentImpl.png 0 16 4 4 0 2 6 6 1 2 4 1.333333333 0.0 0 0.975308642 0.625 2 5 2.75 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMNode.png 0 77 9 1 4 8 11 20 6 2 0 0.825 1.0 3 0.0 0.518518519 0 0 7.0 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLScriptElementImpl.png 0 126 15 4 0 2 30 105 0 2 15 2.0 0.0 0 0.87037037 0.4 0 0 7.4 3 1.1333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDListElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_XMLContentModel.png 0 5 5 1 0 10 5 10 6 4 5 2.0 0.0 0 0.0 0.4 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFontElementImpl.png 0 43 7 4 0 2 11 21 0 2 7 2.0 0.0 0 0.94 0.571428571 0 0 5.142857143 1 0.8571
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_CDATASection.png 2 0 0 1 0 0 0 0 0 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_IDDatatypeValidator.png 0 181 10 2 0 7 29 33 1 6 7 0.825396825 0.857142857 2 0.333333333 0.244444444 0 0 16.4 4 1.1
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableCaptionElementImpl.png 0 17 3 4 0 3 6 3 1 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 4.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_validators_common_DFAContentModel.png 2 1444 13 1 0 13 52 30 1 12 7 0.757575758 1.0 7 0.0 0.307692308 0 0 108.3846154 3 1.0769
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLLIElementImpl.png 0 31 5 4 0 2 10 10 0 2 5 2.0 0.0 0 0.959183673 0.45 1 2 5.2 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLOptionElement.png 0 8 8 1 0 2 8 28 1 1 8 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_ChunkyCharArray.png 0 184 8 1 0 6 17 4 3 3 8 0.653061224 1.0 2 0.0 0.303571429 0 0 21.125 2 1.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLHRElementImpl.png 0 52 9 4 0 2 15 36 0 2 9 2.0 0.0 0 0.921568627 0.416666667 0 0 4.777777778 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLAnchorElementImpl.png 0 50 9 4 0 3 12 36 0 3 9 2.0 0.0 0 0.911111111 0.555555556 1 6 4.555555556 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLImgElement.png 0 18 18 1 0 2 18 153 1 1 18 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLHRElement.png 0 8 8 1 0 0 8 28 0 0 8 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableRowElementImpl.png 0 284 20 4 0 6 42 190 2 6 19 1.0 0.0 1 0.831858407 0.275 0 0 13.15 4 2.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLButtonElement.png 0 12 12 1 0 0 12 66 0 0 12 2.0 0.0 0 0.0 0.354166667 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLEntityReaderFactory.png 0 8 8 1 0 11 8 28 7 5 8 2.0 0.0 0 0.0 0.363636364 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTextAreaElementImpl.png 0 149 23 4 0 3 32 253 0 3 23 2.0 0.0 0 0.810344828 0.295652174 1 3 5.47826087 3 1.1304
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_EBCDICRecognizer.png 0 140 2 2 0 8 14 1 1 8 1 2.0 0.0 0 0.75 0.571428571 2 2 69.0 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLDoElement.png 0 10 10 1 0 2 10 45 1 1 10 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredDocumentTypeImpl.png 0 176 4 3 0 7 28 0 1 7 1 0.666666667 0.5 0 0.947368421 0.5 2 5 42.5 8 2.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableElement.png 0 34 34 1 0 0 34 561 0 0 34 2.0 0.0 0 0.0 0.282352941 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableCellElement.png 0 29 29 1 0 0 29 406 0 0 29 2.0 0.0 0 0.0 0.370689655 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLRefreshElement.png 0 0 0 1 0 2 0 0 1 1 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_validators_common_XMLValidator.png 2 6176 86 1 0 46 255 1993 8 44 51 0.943103448 0.965517241 38 0.0 0.101328904 0 0 69.46511628 17 1.5581
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLPreElementImpl.png 0 20 3 4 0 2 8 3 0 2 3 2.0 0.0 0 0.979166667 0.5 0 0 5.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_MixedContentModel.png 0 464 8 1 0 7 12 20 1 6 8 0.333333333 1.0 2 0.0 0.464285714 0 0 56.25 1 0.625
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLBElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_BaseMarkupSerializer.png 0 1901 55 1 3 10 125 811 3 7 36 0.787654321 0.933333333 3 0.0 0.127272727 0 0 33.29090909 13 2.9273
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_HTMLdtd.png 0 703 19 1 0 1 49 149 1 0 10 0.967320261 0.941176471 0 0.0 0.233333333 0 0 35.10526316 15 2.7895
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableSectionElementImpl.png 0 172 14 4 0 5 29 91 2 4 12 1.0 1.0 1 0.878504673 0.357142857 0 0 11.21428571 4 1.7857
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLEmElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLUElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_ProcessingInstructionImpl.png 0 46 6 3 1 4 10 9 3 2 6 0.9 0.5 0 0.915254237 0.5 1 5 6.333333333 2 1.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLHtmlElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_ElementNSImpl.png 1 165 6 3 1 4 18 3 2 3 4 0.8 0.666666667 0 0.947368421 0.611111111 3 3 26.0 3 1.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLScriptElement.png 0 14 14 1 0 0 14 91 0 0 14 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLEntityReader.png 0 183 9 1 6 10 12 0 6 4 5 0.65 1.0 3 0.0 0.466666667 0 0 18.22222222 2 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTemplateElementImpl.png 0 61 11 4 0 3 14 55 0 3 11 2.0 0.0 0 0.891304348 0.545454545 1 4 4.545454545 1 0.9091
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_Document.png 2 17 17 1 0 0 17 136 0 0 17 2.0 0.0 0 0.0 0.455882353 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLElementImpl.png 0 249 23 3 52 55 42 253 53 3 17 2.0 0.0 0 0.765957447 0.456521739 1 2 9.826086957 4 1.6087
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLPreElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBodyElementImpl.png 0 72 13 4 0 2 16 78 1 2 13 2.0 0.0 0 0.886792453 0.538461538 0 0 4.538461538 1 0.9231
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_CharDataChunk.png 0 601 20 1 0 10 38 62 5 5 13 0.708133971 0.636363636 4 0.0 0.233082707 0 0 28.5 11 2.65
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_SymbolCache.png 0 608 6 1 0 2 11 0 2 0 6 0.844444444 0.0 0 0.0 0.458333333 0 0 98.83333333 8 2.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_UCSRecognizer.png 0 145 2 2 0 8 5 1 1 8 1 2.0 0.0 0 0.75 0.571428571 0 0 71.5 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_AttributeList.png 0 6 6 1 0 0 6 15 0 0 6 2.0 0.0 0 0.0 0.611111111 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLPElement.png 0 6 6 1 0 2 6 15 1 1 6 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLLegendElement.png 0 5 5 1 0 0 5 10 0 0 5 2.0 0.0 0 0.0 0.7 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DoubleDatatypeValidator.png 0 686 10 2 0 7 35 35 1 6 6 0.673611111 1.0 3 0.333333333 0.233333333 0 0 66.0 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLModElementImpl.png 0 28 5 4 0 2 8 10 0 2 5 2.0 0.0 0 0.959183673 0.6 0 0 4.6 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTrElementImpl.png 0 28 5 4 0 3 8 10 0 3 5 2.0 0.0 0 0.953488372 0.6 1 4 4.6 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_XMLCharacterProperties.png 0 7825 10 1 0 10 13 5 10 0 8 0.908496732 0.176470588 0 0.0 0.25 0 0 779.8 9 4.7
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLOneventElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 4 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_traversal_NodeIterator.png 2 7 7 1 0 0 7 21 0 0 7 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_EntityImpl.png 0 93 10 4 1 5 15 37 4 2 10 0.933333333 0.8 0 0.897727273 0.4 2 6 7.8 2 1.6
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_events_EventException.png 2 10 1 4 0 0 2 0 0 0 1 2.0 0.0 0 1.0 1.0 0 0 7.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredEntityReferenceImpl.png 0 118 5 3 0 4 22 0 1 4 1 0.75 0.5 0 0.921568627 0.466666667 2 8 22.2 7 2.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLSelectElement.png 0 16 16 1 0 2 16 120 1 1 16 2.0 0.0 0 0.0 0.375 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableColElement.png 0 12 12 1 0 0 12 66 0 0 12 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_XMLMessages.png 0 2145 3 3 0 0 4 1 0 0 2 0.5 0.0 0 0.974358974 1.0 0 0 713.6666667 1 0.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_InsertableElementsInfo.png 0 12 1 1 0 6 2 0 5 1 1 2.0 0.0 2 0.0 1.0 0 0 3.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLNoopElementImpl.png 0 28 5 4 0 3 8 10 0 3 5 2.0 0.0 0 0.953488372 0.6 1 4 4.6 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_XMLFilter.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLAElementImpl.png 0 61 11 4 0 3 14 55 0 3 11 2.0 0.0 0 0.891304348 0.545454545 1 6 4.545454545 1 0.9091
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_xml_sax_ext_DeclHandler.png 1 4 4 1 0 0 4 6 0 0 4 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_validators_schema_TraverseSchema.png 4 8696 66 1 0 27 209 1255 4 26 8 0.769230769 0.962962963 9 0.0 0.154871795 0 0 130.3484848 25 1.697
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_ContentHandler.png 0 11 11 1 0 0 11 55 0 0 11 2.0 0.0 0 0.0 0.348484848 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTextAreaElement.png 0 23 23 1 0 0 23 253 0 0 23 2.0 0.0 0 0.0 0.347826087 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMBinOp.png 0 154 6 2 0 5 14 0 2 3 1 0.2 1.0 2 0.615384615 0.416666667 1 2 24.33333333 1 0.8333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLPostfieldElement.png 0 4 4 1 0 2 4 6 1 1 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_Node.png 2 37 25 1 0 0 25 300 0 0 25 1.041666667 0.0 0 0.0 0.33 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredCommentImpl.png 0 33 3 4 0 4 7 0 1 4 1 0.75 0.5 0 0.966101695 0.555555556 2 7 9.333333333 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLMetaElementImpl.png 0 50 9 4 0 2 12 36 0 2 9 2.0 0.0 0 0.921568627 0.555555556 0 0 4.555555556 1 0.8889
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_Entity.png 2 3 3 1 0 0 3 3 0 0 3 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLInputElementImpl.png 0 229 38 4 0 3 49 703 0 3 38 2.0 0.0 0 0.717557252 0.294736842 1 3 5.026315789 3 1.0789
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLInputElementImpl.png 0 142 25 4 0 3 32 300 0 3 25 2.0 0.0 0 0.773584906 0.312 1 7 4.68 1 0.96
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLHeadElementImpl.png 0 28 5 4 0 3 8 10 0 3 5 2.0 0.0 0 0.953488372 0.6 1 4 4.6 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLSelectElementImpl.png 0 179 22 4 0 5 39 231 0 5 22 0.952380952 1.0 1 0.817391304 0.25 1 1 7.090909091 3 1.2273
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLInputElement.png 0 20 20 1 0 2 20 190 1 1 20 2.0 0.0 0 0.0 0.375 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_jaxp_DocumentBuilderImpl.png 0 109 8 2 0 3 22 0 1 2 6 0.619047619 1.0 1 0.7 0.3 1 1 12.25 1 0.75
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_ElementDefinitionImpl.png 0 52 5 4 1 7 13 2 4 4 5 0.833333333 0.666666667 1 0.951807229 0.4 2 6 8.8 2 1.2
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_ImplementationMessages.png 0 205 5 1 0 6 14 0 5 1 4 1.159090909 0.136363636 0 0.0 0.5 0 0 35.6 9 2.2
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLTableCaptionElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_ExceptionMessages.png 0 923 3 3 0 0 4 1 0 0 2 0.5 0.0 0 0.974358974 1.0 0 0 306.3333333 1 0.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTdElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFrameSetElementImpl.png 0 28 5 4 0 2 8 10 0 2 5 2.0 0.0 0 0.959183673 0.6 0 0 4.6 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLCardElementImpl.png 0 107 19 4 0 3 24 171 0 3 19 2.0 0.0 0 0.82 0.394736842 1 6 4.631578947 1 0.9474
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_Text.png 2 1 1 1 0 0 1 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_SAXParseException.png 0 106 9 4 0 0 15 28 0 0 8 0.375 1.0 0 0.8 0.466666667 0 0 10.33333333 1 0.5556
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLUElementImpl.png 0 39 7 4 0 3 10 21 0 3 7 2.0 0.0 0 0.931818182 0.571428571 1 6 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLBaseElement.png 0 4 4 1 0 0 4 6 0 0 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLOptionElement.png 0 13 13 1 0 0 13 78 0 0 13 2.0 0.0 0 0.0 0.461538462 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBaseFontElementImpl.png 0 43 7 4 0 2 11 21 0 2 7 2.0 0.0 0 0.94 0.571428571 0 0 5.142857143 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMLeaf.png 0 147 9 2 0 7 23 0 2 5 2 0.375 1.0 1 0.533333333 0.355555556 1 2 15.11111111 2 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLLinkElementImpl.png 0 105 19 4 0 2 24 171 0 2 19 2.0 0.0 0 0.839285714 0.394736842 0 0 4.526315789 1 0.9474
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_domx_XGrammarWriter.png 0 2103 46 1 0 4 111 683 0 4 27 0.838888889 1.0 2 0.0 0.137777778 0 0 44.54347826 19 4.0435
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_traversal_NodeFilter.png 2 17 1 1 0 0 1 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLOptionElementImpl.png 0 195 15 4 0 3 38 105 1 2 15 2.0 0.0 0 0.87037037 0.32 1 1 12.0 6 1.7333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLOptgroupElement.png 0 4 4 1 0 2 4 6 1 1 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_Notation.png 2 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLGoElement.png 0 8 8 1 0 2 8 28 1 1 8 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_ChunkyByteArray.png 0 284 8 2 0 7 13 0 7 0 7 0.767857143 1.0 0 0.5625 0.40625 1 2 33.5 2 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLPrevElementImpl.png 0 28 5 4 0 3 8 10 0 3 5 2.0 0.0 0 0.953488372 0.6 1 4 4.6 1 0.8
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_ExceptionMessagesLocalizer.png 0 103 2 1 0 0 17 1 0 0 2 2.0 0.0 0 0.0 0.5 0 0 50.0 10 5.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLParamElementImpl.png 0 52 9 4 0 2 13 36 0 2 9 2.0 0.0 0 0.921568627 0.555555556 1 1 4.777777778 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLLabelElement.png 0 5 5 1 0 0 5 10 0 0 5 2.0 0.0 0 0.0 0.7 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_CharacterDataImpl.png 2 333 14 3 3 10 41 17 3 7 11 0.717948718 0.666666667 1 0.806451613 0.480769231 1 2 22.57142857 6 1.5714
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLInputElement.png 0 38 38 1 0 0 38 703 0 0 38 2.0 0.0 0 0.0 0.355263158 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_StringPool.png 0 2121 30 1 0 52 50 67 49 4 26 0.829022989 0.916666667 2 0.0 0.338888889 0 0 68.9 9 3.1667
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_jaxp_DocumentBuilderFactoryImpl.png 1 13 2 2 0 1 6 1 0 1 2 2.0 0.0 0 0.958333333 1.0 0 0 5.5 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_XMLCatalogHandler.png 0 102 11 1 1 1 18 15 1 0 11 0.5 1.0 0 0.0 0.431818182 0 0 8.090909091 1 0.9091
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_msg_SchemaMessages.png 0 325 3 3 0 0 4 1 0 0 2 0.5 0.0 0 0.974358974 1.0 0 0 107.0 1 0.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_Token.png 0 2172 49 1 9 16 87 866 15 11 2 0.995138889 0.366666667 20 0.0 0.1875 0 0 42.10204082 24 2.2857
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_parsers_SAXParser.png 1 1384 48 2 1 10 122 568 2 8 41 0.90212766 1.0 6 0.737142857 0.141337386 2 9 27.625 3 1.0625
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_CMUniOp.png 0 60 5 2 0 5 11 0 2 3 1 0.25 1.0 1 0.666666667 0.45 1 2 10.8 1 0.8
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_DocumentType.png 2 6 6 1 0 0 6 15 0 0 6 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableElementImpl.png 0 471 36 4 0 6 58 630 1 6 35 1.0 1.0 2 0.728682171 0.214285714 0 0 12.02777778 7 2.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_range_Range.png 0 28 24 1 0 0 24 276 0 0 24 1.043478261 0.0 0 0.0 0.270833333 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLAccessElement.png 0 4 4 1 0 2 4 6 1 1 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_DOMExceptionImpl.png 1 6 1 6 0 17 2 0 16 1 1 2.0 0.0 0 1.0 1.0 0 0 5.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_ISO8601Format.png 0 4 1 1 0 0 2 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_BinaryDatatypeValidator.png 0 393 7 2 0 7 27 15 1 6 6 0.740740741 1.0 1 0.444444444 0.333333333 1 1 53.85714286 1 0.7143
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLBuilder.png 0 332 11 1 0 5 37 0 0 5 11 0.716666667 1.0 3 0.0 0.318181818 0 0 28.63636364 1 0.9091
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLSelectElementImpl.png 0 118 21 4 0 3 28 210 0 3 21 2.0 0.0 0 0.803921569 0.314285714 1 7 4.619047619 1 0.9524
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLLegendElementImpl.png 0 52 5 4 0 2 10 10 0 2 5 2.0 0.0 0 0.959183673 0.6 0 0 9.4 3 1.6
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_GrammarResolver.png 0 8 8 1 0 9 8 28 8 1 8 2.0 0.0 0 0.0 0.583333333 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLMenuElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableColElementImpl.png 0 103 13 4 0 2 21 78 0 2 13 2.0 0.0 0 0.886792453 0.403846154 0 0 6.923076923 3 1.2308
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_NOTATIONDatatypeValidator.png 0 56 8 2 0 5 15 26 1 4 7 0.785714286 1.0 1 0.4 0.285714286 0 0 5.75 1 0.75
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_Comment.png 2 0 0 1 0 0 0 0 0 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLMenuElementImpl.png 0 17 3 4 0 2 6 3 0 2 3 2.0 0.0 0 0.979166667 0.5 0 0 4.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_StateMessageDatatype.png 0 3 3 1 0 7 3 3 7 0 3 2.0 0.0 0 0.0 0.666666667 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFormElementImpl.png 0 98 17 4 0 3 23 136 0 3 17 0.9375 1.0 1 0.854545455 0.490196078 0 0 4.705882353 2 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_IndentPrinter.png 0 403 17 2 0 3 34 0 1 2 16 0.4625 1.0 0 0.515151515 0.183006536 1 15 22.41176471 8 2.2353
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredCDATASectionImpl.png 0 44 3 5 0 4 9 0 1 4 1 0.75 0.5 0 0.969230769 0.555555556 3 11 13.0 2 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_DOMSerializer.png 0 3 3 1 0 2 3 3 2 0 3 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLPostfieldElementImpl.png 0 50 9 4 0 3 12 36 0 3 9 2.0 0.0 0 0.911111111 0.555555556 1 5 4.555555556 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLQuoteElementImpl.png 0 17 3 4 0 2 6 3 0 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 4.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_common_XMLAttributeDecl.png 0 112 6 1 0 8 12 3 6 2 6 0.984615385 0.0 2 0.0 0.5 1 1 13.33333333 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_URIReferenceDatatypeValidator.png 0 608 7 2 0 8 30 17 1 7 6 0.740740741 1.0 2 0.444444444 0.333333333 0 0 84.57142857 1 0.7143
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLElement.png 0 10 10 1 0 0 10 45 0 0 10 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_Parser.png 0 7 7 1 0 0 7 21 0 0 7 2.0 0.0 0 0.0 0.25 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLDOMImplementationImpl.png 0 31 4 2 0 4 8 4 0 4 3 0.666666667 0.0 1 0.666666667 0.444444444 0 0 6.5 1 0.5
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_traversal_TreeWalker.png 2 13 13 1 0 0 13 78 0 0 13 2.0 0.0 0 0.0 0.538461538 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDirectoryElement.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_RegexParser.png 0 3171 50 1 1 15 105 711 2 13 3 0.850863422 0.076923077 0 0.0 0.194285714 0 0 61.64 55 2.48
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLDOMImplementation.png 0 0 0 1 0 1 0 0 1 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_EntityResolver.png 0 1 1 1 0 0 1 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLHeadingElementImpl.png 0 17 3 4 0 2 6 3 0 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 4.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_StringReader.png 0 2599 30 2 0 11 64 0 1 10 22 0.522988506 0.833333333 3 0.2 0.201149425 1 2 85.23333333 4 1.3
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLDOMImplementation.png 0 1 1 1 0 0 1 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLTimerElement.png 0 4 4 1 0 2 4 6 1 1 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLHeadElement.png 0 0 0 1 0 2 0 0 1 1 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLFrameElementImpl.png 0 96 17 4 0 2 23 136 0 2 17 2.0 0.0 0 0.854545455 0.397058824 0 0 4.647058824 1 0.9412
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredAttrImpl.png 0 60 4 3 0 5 13 0 1 5 1 0.666666667 0.5 0 0.952380952 0.5 2 7 13.5 2 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLStyleElementImpl.png 0 39 7 4 0 2 12 21 0 2 7 2.0 0.0 0 0.94 0.428571429 0 0 4.571428571 1 0.8571
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_UCSReader.png 0 2556 31 2 0 15 60 0 1 14 24 0.81372549 0.647058824 3 0.194444444 0.188888889 1 4 80.90322581 5 1.2581
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_ParserFactory.png 0 25 3 1 0 0 8 3 0 0 2 2.0 0.0 0 0.0 0.333333333 0 0 7.333333333 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLAppletElement.png 0 22 22 1 0 0 22 231 0 0 22 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLMapElementImpl.png 0 32 4 4 0 3 8 6 0 3 4 1.0 1.0 1 0.969072165 0.583333333 0 0 6.75 2 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_Locator.png 0 4 4 1 0 0 4 6 0 0 4 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_ProcessingInstruction.png 2 3 3 1 0 0 3 3 0 0 3 2.0 0.0 0 0.0 0.666666667 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_InvalidDatatypeFacetException.png 0 64 8 4 0 17 12 0 16 1 8 0.285714286 1.0 0 0.818181818 0.4375 0 0 6.75 1 0.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLAreaElement.png 0 16 16 1 0 0 16 120 0 0 16 2.0 0.0 0 0.0 0.375 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_NodeImpl.png 2 1123 66 1 3 25 106 1829 21 9 36 0.967521368 0.833333333 1 0.0 0.116550117 0 0 15.74242424 31 2.2727
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredElementImpl.png 0 75 4 3 0 6 17 0 1 6 1 0.666666667 0.5 0 0.96 0.5 2 8 17.25 3 1.25
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_CDATASectionImpl.png 0 13 3 4 1 3 4 3 2 2 3 1.5 0.0 0 0.967741935 0.555555556 1 4 3.0 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLHeadElementImpl.png 0 17 3 4 0 2 6 3 1 2 3 2.0 0.0 0 0.979166667 0.666666667 0 0 4.666666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_DocumentHandler.png 0 8 8 1 0 0 8 28 0 0 8 2.0 0.0 0 0.0 0.354166667 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredNotationImpl.png 0 59 3 3 0 5 12 0 1 5 1 0.75 0.5 0 0.961538462 0.555555556 2 3 18.0 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_DTDHandler.png 0 2 2 1 0 0 2 1 0 0 2 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLEmElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_validators_datatype_DecimalDatatypeValidator.png 1 1337 13 2 0 7 52 58 1 6 8 0.76984127 1.0 3 0.266666667 0.2 0 0 100.2307692 4 1.0769
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLOptGroupElement.png 0 4 4 1 0 0 4 6 0 0 4 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_CommentImpl.png 0 13 3 3 1 3 4 3 2 2 3 1.5 0.0 0 0.964285714 0.555555556 1 4 3.0 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredTextImpl.png 0 44 3 4 0 4 9 0 1 4 1 0.75 0.5 0 0.967741935 0.555555556 3 12 13.0 2 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLImgElementImpl.png 0 127 23 4 0 3 26 253 0 3 23 2.0 0.0 0 0.788461538 0.52173913 1 6 4.52173913 1 0.9565
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLTableElementImpl.png 0 73 13 4 0 3 18 78 0 3 13 2.0 0.0 0 0.872340426 0.403846154 1 6 4.615384615 1 0.9231
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_javax_xml_parsers_FactoryConfigurationError.png 1 34 5 3 0 0 6 8 0 0 5 0.0 1.0 0 0.944444444 0.6 0 0 5.6 1 0.2
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLParamElement.png 0 8 8 1 0 0 8 28 0 0 8 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLImageElementImpl.png 0 151 27 4 0 2 33 351 0 2 27 2.0 0.0 0 0.783333333 0.388888889 0 0 4.592592593 1 0.963
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_XMLReaderAdapter.png 0 161 22 1 0 0 43 127 0 0 20 0.698412698 0.0 3 0.0 0.15034965 0 0 6.181818182 2 0.9545
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_LCount.png 0 42 3 1 0 6 7 1 6 0 0 0.5 0.0 0 0.0 0.5 0 0 11.66666667 2 0.6667
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_DocumentFragment.png 2 0 0 1 0 0 0 0 0 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_readers_UTF8CharReader.png 0 1583 9 3 0 5 16 0 0 5 0 0.579545455 1.0 0 0.826086957 0.366666667 1 3 173.6666667 1 0.8889
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_HTMLTableCellElementImpl.png 0 259 31 4 0 3 46 465 1 2 31 2.0 0.0 0 0.758064516 0.309677419 0 0 7.35483871 6 1.3871
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLWmlElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_Serializer.png 0 6 6 1 0 5 6 15 3 2 6 2.0 0.0 0 0.0 0.375 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_XMLMessageProvider.png 0 3 3 1 0 5 3 3 5 0 3 2.0 0.0 0 0.0 0.583333333 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_ParserForXMLSchema.png 0 804 39 2 0 10 72 277 1 9 2 1.0 1.0 0 0.571428571 0.184210526 1 12 19.46153846 12 1.5641
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_ErrorHandler.png 0 3 3 1 0 0 3 3 0 0 3 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_utils_regex_BMPattern.png 0 574 8 1 0 1 14 0 1 0 5 0.142857143 0.0 0 0.0 0.520833333 0 0 70.375 8 5.625
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLAElement.png 0 8 8 1 0 2 8 28 1 1 8 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLElementImpl.png 0 93 11 3 35 39 20 55 36 4 7 2.0 0.0 0 0.87804878 0.436363636 2 3 7.454545455 3 1.2727
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_FloatDatatypeValidator.png 0 728 12 2 0 7 42 50 1 6 7 0.710227273 1.0 3 0.285714286 0.208333333 0 0 58.33333333 1 0.8333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLBrElement.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_html_dom_NameNodeListImpl.png 0 76 2 2 0 4 10 1 1 3 1 2.0 0.0 0 0.75 0.625 2 2 37.0 11 5.5
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_xml_sax_helpers_NamespaceSupport.png 0 238 13 1 0 0 30 4 0 0 11 0.733333333 0.8 2 0.0 0.375 0 0 16.92307692 4 1.4615
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_w3c_dom_events_MutationEvent.png 2 5 5 1 0 0 5 10 0 0 5 2.0 0.0 0 0.0 0.4 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xml_serialize_SerializerFactory.png 0 108 8 1 1 3 20 22 1 3 6 0.928571429 0.5 0 0.0 0.285714286 0 0 12.25 1 0.75
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_WMLElement.png 0 4 4 1 0 36 4 6 36 0 4 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_datatype_ENTITYDatatypeValidator.png 0 207 7 2 0 8 27 17 1 7 6 0.766666667 0.8 3 0.444444444 0.333333333 0 0 27.85714286 1 0.7143
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_validators_schema_EquivClassComparator.png 0 167 3 1 0 10 13 0 5 5 2 0.166666667 1.0 2 0.0 0.5 0 0 53.66666667 1 0.3333
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLOListElement.png 0 6 6 1 0 0 6 15 0 0 6 2.0 0.0 0 0.0 0.375 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_dom_NodeIteratorImpl.png 1 374 13 1 0 2 24 8 1 2 9 0.6875 1.0 4 0.0 0.307692308 0 0 27.15384615 11 4.1538
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLGoElementImpl.png 0 72 13 4 0 3 16 78 0 3 13 2.0 0.0 0 0.872340426 0.538461538 1 4 4.538461538 1 0.9231
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_xerces_dom_DeferredProcessingInstructionImpl.png 0 40 3 3 0 4 8 0 1 4 1 0.75 0.5 0 0.960784314 0.555555556 2 7 11.66666667 1 0.6667
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_w3c_dom_html_HTMLIsIndexElement.png 0 3 3 1 0 0 3 3 0 0 3 2.0 0.0 0 0.0 0.666666667 0 0 0.0 1 1.0
+../data/img/grb_img/xerces-1.2/clean/xerces-1.2_src_java_org_apache_wml_dom_WMLMetaElementImpl.png 0 84 15 4 0 3 20 105 0 3 15 2.0 0.0 0 0.854166667 0.4 1 4 4.6 1 0.9333
+../data/img/grb_img/xerces-1.2//buggy/xerces-1.2_src_java_org_apache_xerces_readers_AbstractCharReader.png 1 3041 33 2 2 16 70 0 3 14 20 0.565625 1.0 2 0.184210526 0.174479167 1 3 90.84848485 2 1.0606
