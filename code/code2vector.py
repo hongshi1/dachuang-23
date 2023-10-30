@@ -4,6 +4,7 @@ from scipy.io import savemat
 
 import javalang
 from gensim.models import Word2Vec
+#我写的一种读取将java文件转化为ast的方法,然后提取token,用于word2vec训练,转换为1
 
 base_path = '/home/'
 save_path = '../data/embedding_mat/'

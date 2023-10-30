@@ -4,6 +4,7 @@ import numpy as np
 import cv2  # opencv-python package
 import os  # build-in package
 import binascii
+#可视化的方法
 
 def get_FileSize(filePath):
     filePath = str(filePath)

@@ -7,6 +7,8 @@ from sklearn.cluster import KMeans
 import numpy as np
 import pandas as pd
 
+#常杰写的用于聚类的工具类文件
+
 def replace_with_rank(matrix):
     flattened_matrix = matrix.flatten()
     unique_values, counts = np.unique(flattened_matrix, return_counts=True)

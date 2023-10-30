@@ -1,6 +1,8 @@
 import pandas as pd
 from scipy.stats import wilcoxon
 
+
+#符号秩检验方法
 # 1. 读取Excel文件
 data = pd.read_excel("../output/total_result.xlsx")  # 请将"your_file_path.xlsx"替换为你的文件路径
 

@@ -4,6 +4,8 @@ import torch.nn as nn
 from torch.autograd import Variable
 import time
 
+#dan损失定义
+
 
 def EntropyLoss(input_):
     mask = input_.ge(0.000001)

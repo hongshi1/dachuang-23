@@ -15,7 +15,7 @@ from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor  # 新增引用RandomForestRegressor
 
-
+#随机森林的方法结果
 def train(source, target):
     # Load Source Data
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',

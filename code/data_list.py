@@ -9,6 +9,7 @@ import torch.utils.data as data
 import os
 import os.path
 
+#数据读取加载器
 
 
 def make_dataset(image_list, labels):

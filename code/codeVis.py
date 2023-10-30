@@ -6,6 +6,7 @@ from random import *
 import colorMap
 import cv2  # pip install opencv-python==4.3.0.38
 import time
+#代码可视化的文件
 
 rs = Random()
 

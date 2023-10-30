@@ -31,7 +31,7 @@ import matplotlib.pyplot as plt
 import random
 import time
 from PIL import Image
-
+#主训练函数
 
 class HuberLoss(nn.Module):
     def __init__(self, delta):

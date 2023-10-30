@@ -14,7 +14,7 @@ import time
 import pandas as pd
 from sklearn.svm import SVR  # 新增引用SVR
 
-
+#svr方法
 def train(source, target):
     # Load Source Data
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',

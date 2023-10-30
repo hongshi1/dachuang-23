@@ -1,3 +1,4 @@
+#学习率调度器
 def inv_lr_scheduler(param_lr, optimizer, iter_num, gamma, power, init_lr=0.001):
     """Decay learning rate by a factor of 0.1 every lr_decay_epoch epochs."""
     lr = init_lr * (1 + gamma * iter_num) ** (-power)

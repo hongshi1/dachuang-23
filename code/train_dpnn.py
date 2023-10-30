@@ -8,6 +8,7 @@ import random
 import time
 import numpy as np
 
+#dpnn的方法结果
 class DPNN():
     def __init__(self, ch_in):
         self.ch_in = ch_in

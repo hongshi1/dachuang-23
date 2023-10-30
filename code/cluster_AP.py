@@ -7,6 +7,8 @@ import pandas as pd
 from sklearn.cluster import AffinityPropagation
 from numpy import unique
 
+
+
 def replace_with_rank(matrix):
     flattened_matrix = matrix.flatten()
     unique_values, counts = np.unique(flattened_matrix, return_counts=True)

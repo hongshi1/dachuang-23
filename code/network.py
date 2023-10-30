@@ -15,6 +15,7 @@ from torch.autograd import Variable
 import time
 
 
+#各种各样的网络文件
 class Self_Attn(nn.Module):
     """ Self attention Layer"""
 

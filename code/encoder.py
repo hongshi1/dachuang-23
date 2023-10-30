@@ -1,6 +1,8 @@
 import torch.nn as nn
 import torchvision.models as models
 
+#我写的图像编码器,将图像编码为100维向量
+
 
 class ImageEncoder(nn.Module):
     def __init__(self):

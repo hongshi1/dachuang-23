@@ -26,6 +26,7 @@ from Origin_PerformanceMeasure import Origin_PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
+#ray方法,目前已经没有使用,废弃了,保留
 optim_dict = {"SGD": optim.SGD}  #键值对设置
 # optim_dict = {"ADAM":optim.Adam}
 from sklearn.manifold import TSNE

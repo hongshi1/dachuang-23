@@ -5,7 +5,7 @@ from PIL import Image, ImageOps
 import numbers
 import torch
 
-
+#预处理方法文件
 class ResizeImage():
     def __init__(self, size):
         if isinstance(size, int):
