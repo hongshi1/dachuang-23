@@ -1,11 +1,10 @@
 # coding=utf-8
 import numpy as np
 
-#
 
 class Origin_PerformanceMeasure():
 
-    def __init__(self, real_list=None, pred_list=None, loc=None, cc=None, percentage=0.2, ranking="density", cost="loc"):
+    def __init__(self, real_list=None, pred_list=None, loc=None, cc=None, percentage=0.2, ranking="defect", cost="module"):
         self.real = real_list
         self.pred = pred_list
         self.loc = loc
@@ -28,6 +27,8 @@ class Origin_PerformanceMeasure():
 
 
         if (self.ranking == "density" and self.cost=='loc'):
+
+
 
             density = []
             for i in range(len(self.pred)):
@@ -202,17 +203,13 @@ class Origin_PerformanceMeasure():
 
         M = len(self.real)
         L = sum(self.loc)
-        # C =sum(self.cc)
+        C =sum(self.cc)
         Q = sum(self.real)
 
         if (self.ranking == "density" and self.cost == 'loc'):
 
-            density = []
-            for i in range(len(self.pred)):
-                if self.loc[i] != 0:
-                    density.append(self.pred[i] / self.loc[i])
-                else:
-                    density.append(-1000000)
+
+            density = [self.pred[i] / self.loc[i] for i in range(len(self.pred))]
 
             sort_axis = np.argsort(density)[::-1]
             sorted_loc = np.array(self.loc)[sort_axis]
@@ -227,12 +224,7 @@ class Origin_PerformanceMeasure():
                     m = i + 1
                     break
 
-            realdensity = []
-            for i in range(len(self.real)):
-                if self.loc[i] != 0:
-                    realdensity.append(self.real[i] / self.loc[i])
-                else:
-                    realdensity.append(-100000)
+            realdensity=[self.real[i] / self.loc[i] for i in range(len(self.real))]
             sort_axis = np.argsort(realdensity)[::-1]
             sorted_loc = np.array(self.loc)[sort_axis]
             locOfPercentage = self.percentage * L
@@ -246,12 +238,7 @@ class Origin_PerformanceMeasure():
                     optimalm = i + 1
                     break
 
-            realdensity = []
-            for i in range(len(self.real)):
-                if self.loc[i] != 0:
-                    realdensity.append(self.real[i] / self.loc[i])
-                else:
-                    realdensity.append(0)
+            realdensity = [self.real[i] / self.loc[i] for i in range(len(self.real))]
             sort_axis = np.argsort(realdensity)
             sorted_loc = np.array(self.loc)[sort_axis]
             locOfPercentage = self.percentage * L
@@ -279,7 +266,7 @@ class Origin_PerformanceMeasure():
 
             sort_axis = np.argsort(complexitydensity)[::-1]
             sorted_cc = np.array(self.cc)[sort_axis]
-            # ccOfPercentage = self.percentage * C
+            ccOfPercentage = self.percentage * C
             sum_ = 0
             for i in range(len(sorted_cc)):
                 sum_ += sorted_cc[i]
@@ -648,12 +635,3 @@ if __name__ == '__main__':
     pred = [60, 20, 22.5, 9, 9.9, 0, -80, -270, -100, -150]
     loc = [200, 100, 150, 90, 110, 500, 400, 900, 250, 300]
     cc= [210, 110, 160, 100, 120, 510, 410, 910, 260, 310]
-
-
-
-
-
-
-
-
-

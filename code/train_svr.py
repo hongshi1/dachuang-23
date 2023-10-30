@@ -35,6 +35,8 @@ def train(source, target):
     target_data = pd.read_csv(target_file_path, usecols=cols)  # Columns D to W are 3 to 22
     target_features = target_data.iloc[:, :].values  # All columns except the last one
     label_data = pd.read_csv(target_file_path, usecols=['bug'])
+    cc_data = pd.read_csv(target_file_path, usecols=['avg_cc'])  # Add this line to load "cc" feature
+    cc_labels = cc_data.iloc[:].values.flatten()  # Extract "cc" feature
     loc_data = pd.read_csv(target_file_path, usecols=['loc'])
     loc_labels = loc_data.iloc[:].values.flatten()
     target_labels = label_data.iloc[:].values.flatten()  # The last column
@@ -56,7 +58,7 @@ def train(source, target):
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)
     # print(loc_labels)
-    per = PerformanceMeasure(target_labels, predictions, loc_labels)
+    per = PerformanceMeasure(target_labels, predictions, loc_labels,cc_labels)
     popt = per.PercentPOPT()
 
     # Return the MSE

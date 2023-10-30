@@ -41,6 +41,8 @@ def train(source, target):
     scaler = MinMaxScaler().fit(source_features)  # Only fit on source_features
     source_features = scaler.transform(source_features)
     target_features = scaler.transform(target_features)
+    cc_data = pd.read_csv(target_file_path, usecols=['avg_cc'])  # Add this line to load "cc" feature
+    cc_labels = cc_data.iloc[:].values.flatten()
 
     # Train a Decision Tree Model using Source Data
     model = DecisionTreeRegressor()
@@ -48,8 +50,9 @@ def train(source, target):
 
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)
-    per = PerformanceMeasure(target_labels, predictions,loc_labels)
-    pofb = per.POPT()
+    per = PerformanceMeasure(target_labels, predictions,loc_labels,cc_labels)
+
+    pofb = per.PercentPOPT()
 
 
     # Return the MSE

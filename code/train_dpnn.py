@@ -12,6 +12,15 @@ import torch.nn as nn
 import torch.optim as optim
 from sklearn.preprocessing import MinMaxScaler
 from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
+
+class LinearRegressor(nn.Module):
+    def __init__(self, input_dim=20):
+        super(LinearRegressor, self).__init__()
+        self.fc = nn.Linear(input_dim, 1)
+
+    def forward(self, x):
+        return self.fc(x)
+
 class TransformerRegressor(nn.Module):
     def __init__(self, input_dim=20, d_model=256, nhead=4, num_encoder_layers=2, dim_feedforward=512):
         super(TransformerRegressor, self).__init__()
@@ -80,9 +89,11 @@ def train(source, target, seed):
 
     source_features = torch.Tensor(source_features).unsqueeze(1).to(device)  # Added unsqueeze to get shape [116, 1, 20]
     source_labels = torch.Tensor(source_labels).to(device)
+    cc_data = pd.read_csv(target_file_path, usecols=['cc'])  # Add this line to load "cc" feature
+    cc_labels = cc_data.iloc[:].values.flatten()
     target_features = torch.Tensor(target_features).unsqueeze(1).to(device)  # Added unsqueeze
 
-    model =  TransformerRegressor(20).to(device)
+    model =  LinearRegressor(20).to(device)
     optimizer = optim.Adam(model.parameters(),lr=0.0001)
     criterion = nn.MSELoss()
 
@@ -101,8 +112,8 @@ def train(source, target, seed):
     # Convert predictions to numpy array for the PerformanceMeasure class
     predictions = predictions.cpu().numpy()
 
-    per = PerformanceMeasure(target_labels, predictions, loc_labels)
-    pofb = per.POPT()
+    per = PerformanceMeasure(target_labels, predictions, loc_labels,cc_labels)
+    pofb = per.PercentPOPT()
 
     # Return the MSE
     return pofb

@@ -45,6 +45,8 @@ def train(source, target):
     target_features = target_data.iloc[:, :].values
     label_data = pd.read_csv(target_file_path, usecols=['bug'])
     loc_data = pd.read_csv(target_file_path, usecols=['loc'])
+    cc_data = pd.read_csv(target_file_path, usecols=['avg_cc'])  # Add this line to load "cc" feature
+    cc_labels = cc_data.iloc[:].values.flatten()
     loc_labels = loc_data.iloc[:].values.flatten()
     target_labels = label_data.iloc[:].values.flatten()
 
@@ -58,8 +60,8 @@ def train(source, target):
 
     # Predict using the model and calculate MSE
     predictions = model.predict(target_features)
-    per = PerformanceMeasure(target_labels, predictions, loc_labels)
-    pofb = per.POPT()
+    per = PerformanceMeasure(target_labels, predictions, loc_labels,cc_labels)
+    pofb = per.PercentPOPT()
 
     # Return the MSE
     return pofb
