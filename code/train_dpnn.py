@@ -104,7 +104,7 @@ def train(source, target, seed):
     target_features = torch.Tensor(target_features).to(device)
 
     model = DPNN(20).to(device)
-    optimizer = optim.Adam(model.parameters())
+    optimizer = optim.Adam(model.parameters(), lr=0.0001, weight_decay=0.05, betas=(0.8, 0.99))
     criterion = nn.MSELoss()
 
     for epoch in range(50):
@@ -123,7 +123,7 @@ def train(source, target, seed):
     predictions = predictions.cpu().numpy()
 
     per = PerformanceMeasure(target_labels, predictions, loc_labels)
-    pofb = per.POPT()
+    pofb = per.PercentPOPT()
 
     # Return the MSE
     return pofb
@@ -165,4 +165,4 @@ if __name__ == '__main__':
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
 
         # 保存文件
-        workbook.save('../output/dp_data/output_DPNN_popt_newData'+str(round+1)+'.xlsx')  # 保存的文件名也修改为对应模型的名字
+        workbook.save('../output/new_dpnn/output_DPNN_popt_newData'+str(round+1)+'.xlsx')  # 保存的文件名也修改为对应模型的名字
