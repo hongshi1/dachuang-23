@@ -12,61 +12,33 @@ import torch.nn as nn
 import torch.optim as optim
 from sklearn.preprocessing import MinMaxScaler
 from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
-
-class DPNN(nn.Module):
-    def __init__(self, ch_in):
-        super(DPNN, self).__init__()
-        self.layers = nn.Sequential(
-            nn.Linear(ch_in, 256),
-            nn.BatchNorm1d(256),
-            nn.LeakyReLU(0.1),
-            nn.Dropout(0.3),
-
-            nn.Linear(256, 256),
-            nn.BatchNorm1d(256),
-            nn.LeakyReLU(0.1),
-            nn.Dropout(0.3),
-
-            nn.Linear(256, 128),
-            nn.BatchNorm1d(128),
-            nn.LeakyReLU(0.1),
-            nn.Dropout(0.3),
-
-            nn.Linear(128, 128),
-            nn.BatchNorm1d(128),
-            nn.LeakyReLU(0.1),
-            nn.Dropout(0.3),
-
-            nn.Linear(128, 64),
-            nn.BatchNorm1d(64),
-            nn.LeakyReLU(0.1),
-            nn.Dropout(0.3),
-
-            nn.Linear(64, 64),
-            nn.BatchNorm1d(64),
-            nn.LeakyReLU(0.1),
-            nn.Dropout(0.3),
-
-            nn.Linear(64, 32),
-            nn.BatchNorm1d(32),
-            nn.LeakyReLU(0.1),
-            nn.Dropout(0.3),
-
-            nn.Linear(32, 32),
-            nn.BatchNorm1d(32),
-            nn.LeakyReLU(0.1),
-            nn.Dropout(0.3),
-
-            nn.Linear(32, 16),
-            nn.BatchNorm1d(16),
-            nn.LeakyReLU(0.1),
-            nn.Dropout(0.3),
-
-            nn.Linear(16, 1)
-        )
+class TransformerEncoder(nn.Module):
+    def __init__(self, d_model, nhead, num_encoder_layers, dim_feedforward):
+        super(TransformerEncoder, self).__init__()
+        self.transformer = nn.Transformer(d_model, nhead, num_encoder_layers, dim_feedforward=dim_feedforward)
+        self.pos_encoder = nn.Embedding(5000, d_model)
+        self.d_model = d_model
 
     def forward(self, x):
-        return self.layers(x)
+        pos = torch.arange(0, x.size(1)).unsqueeze(0).to(x.device)
+        x = x * np.sqrt(self.d_model) + self.pos_encoder(pos)
+        return self.transformer.encoder(x)
+
+
+class TransformerRegressor(nn.Module):
+    def __init__(self, ch_in, d_model=256, nhead=4, num_encoder_layers=2, dim_feedforward=512):
+        super(TransformerRegressor, self).__init__()
+
+        self.embedding = nn.Linear(ch_in, d_model)
+        self.transformer = TransformerEncoder(d_model, nhead, num_encoder_layers, dim_feedforward)
+        self.fc = nn.Linear(d_model, 1)
+
+    def forward(self, x):
+        x = self.embedding(x)
+        x = x.transpose(0, 1)  # Transformer expects seq_len, batch, features
+        x = self.transformer(x)
+        x = x.mean(dim=0)  # Take mean across sequence length
+        return self.fc(x)
 
 
 def train(source, target, seed):
@@ -103,11 +75,11 @@ def train(source, target, seed):
     source_labels = torch.Tensor(source_labels).to(device)
     target_features = torch.Tensor(target_features).to(device)
 
-    model = DPNN(20).to(device)
-    optimizer = optim.Adam(model.parameters())
+    model =  TransformerRegressor(20).to(device)
+    optimizer = optim.Adam(model.parameters(),lr=0.0001)
     criterion = nn.MSELoss()
 
-    for epoch in range(50):
+    for epoch in range(100):
         optimizer.zero_grad()
         outputs = model(source_features)
         loss = criterion(outputs, source_labels)
