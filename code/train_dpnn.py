@@ -70,6 +70,7 @@ class DPNN(nn.Module):
 
 
 def train(source, target, seed):
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # Load Source Data
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',
             'cbm', 'amc', 'max_cc', 'avg_cc','loc']
@@ -98,21 +99,29 @@ def train(source, target, seed):
     loc_labels = loc_data.iloc[:].values.flatten()
     target_labels = label_data.iloc[:].values.flatten()  # The last column
 
-    source_features = np.log(np.array(source_features) + 1e-6)
-    target_features = np.log(target_features + 1e-6)
+    source_features = torch.Tensor(source_features).to(device)
+    source_labels = torch.Tensor(source_labels).to(device)
+    target_features = torch.Tensor(target_features).to(device)
 
-    # 2. Feature Scaling (Normalization) using source data's parameters
-    scaler = MinMaxScaler().fit(source_features)  # Only fit on source_features
-    source_features = scaler.transform(source_features)
-    target_features = scaler.transform(
-        target_features)  # Transform target_features using source's normalization parameters
+    model = DPNN(20).to(device)
+    optimizer = optim.Adam(model.parameters())
+    criterion = nn.MSELoss()
 
-    model = DPNN(19).get_model()
-    model.compile(optimizer='adam', loss='mean_squared_error')
-    model.fit(source_features, np.array(source_labels), epochs=50)
+    for epoch in range(50):
+        optimizer.zero_grad()
+        outputs = model(source_features)
+        loss = criterion(outputs, source_labels)
+        loss.backward()
+        optimizer.step()
 
-    # Predict using the model and calculate MSE
-    predictions = model.predict(target_features)
+    # Predict using the model
+    model.eval()
+    with torch.no_grad():
+        predictions = model(target_features)
+
+    # Convert predictions to numpy array for the PerformanceMeasure class
+    predictions = predictions.cpu().numpy()
+
     per = PerformanceMeasure(target_labels, predictions, loc_labels)
     pofb = per.POPT()
 
