@@ -12,34 +12,41 @@ import torch.nn as nn
 import torch.optim as optim
 from sklearn.preprocessing import MinMaxScaler
 from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
-class TransformerEncoder(nn.Module):
-    def __init__(self, d_model, nhead, num_encoder_layers, dim_feedforward):
-        super(TransformerEncoder, self).__init__()
-        self.transformer = nn.Transformer(d_model, nhead, num_encoder_layers, dim_feedforward=dim_feedforward)
-        self.pos_encoder = nn.Embedding(5000, d_model)
+class TransformerRegressor(nn.Module):
+    def __init__(self, input_dim=20, d_model=256, nhead=4, num_encoder_layers=2, dim_feedforward=512):
+        super(TransformerRegressor, self).__init__()
+
+        # Input Linear layer
+        self.embedding = nn.Linear(input_dim, d_model)
+
+        # Transformer Encoder
+        self.transformer = nn.TransformerEncoder(
+            nn.TransformerEncoderLayer(d_model, nhead, dim_feedforward),
+            num_encoder_layers
+        )
+
+        # Output layer
+        self.fc = nn.Linear(d_model, 1)
         self.d_model = d_model
 
     def forward(self, x):
-        pos = torch.arange(0, x.size(1)).unsqueeze(0).to(x.device)
-        x = x * np.sqrt(self.d_model) + self.pos_encoder(pos)
-        return self.transformer.encoder(x)
-
-
-class TransformerRegressor(nn.Module):
-    def __init__(self, ch_in, d_model=256, nhead=4, num_encoder_layers=2, dim_feedforward=512):
-        super(TransformerRegressor, self).__init__()
-
-        self.embedding = nn.Linear(ch_in, d_model)
-        self.transformer = TransformerEncoder(d_model, nhead, num_encoder_layers, dim_feedforward)
-        self.fc = nn.Linear(d_model, 1)
-
-    def forward(self, x):
+        # x: [batch_size, 1, input_dim]
         x = self.embedding(x)
-        x = x.transpose(0, 1)  # Transformer expects seq_len, batch, features
-        x = self.transformer(x)
-        x = x.mean(dim=0)  # Take mean across sequence length
-        return self.fc(x)
 
+        # Transformer requires [seq_len, batch_size, d_model]
+        x = x.transpose(0, 1)
+
+        # Pass through Transformer
+        x = self.transformer(x)
+
+        # Convert back to [batch_size, seq_len, d_model]
+        x = x.transpose(0, 1)
+
+        # Aggregate across the sequence length and pass through the output layer
+        x = x.mean(dim=1)
+        x = self.fc(x)
+
+        return x
 
 def train(source, target, seed):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -71,9 +78,9 @@ def train(source, target, seed):
     loc_labels = loc_data.iloc[:].values.flatten()
     target_labels = label_data.iloc[:].values.flatten()  # The last column
 
-    source_features = torch.Tensor(source_features).to(device)
+    source_features = torch.Tensor(source_features).unsqueeze(1).to(device)  # Added unsqueeze to get shape [116, 1, 20]
     source_labels = torch.Tensor(source_labels).to(device)
-    target_features = torch.Tensor(target_features).to(device)
+    target_features = torch.Tensor(target_features).unsqueeze(1).to(device)  # Added unsqueeze
 
     model =  TransformerRegressor(20).to(device)
     optimizer = optim.Adam(model.parameters(),lr=0.0001)
