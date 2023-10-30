@@ -356,8 +356,6 @@ class Origin_PerformanceMeasure():
 
         #print('percentoptimaldauc', percentoptimal_auc)
 
-
-
         pred_X = [0]
         pred_Y = [0]
         for i in pred_index:
