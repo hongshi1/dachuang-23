@@ -31,18 +31,33 @@ class DeepRegressor(nn.Module):
         x = self.fc3(x)
         return x
 
+class MLPRegressor(nn.Module):
+    def __init__(self, input_dim, hidden_dim, num_layers):
+        super(MLPRegressor, self).__init__()
+        layers = []
+        layers.append(nn.Linear(input_dim, hidden_dim))
+        layers.append(nn.ReLU())
+        for _ in range(num_layers - 1):
+            layers.append(nn.Linear(hidden_dim, hidden_dim))
+            layers.append(nn.ReLU())
+        layers.append(nn.Linear(hidden_dim, 1))
+        self.model = nn.Sequential(*layers)
+
+    def forward(self, x):
+        return self.model(x)
+
 
 # Training function using the deep regressor model
 def train(source, target):
     # Load Source Data
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',
-            'cbm', 'amc', 'max_cc', 'avg_cc']
+            'cbm', 'amc', 'max_cc', 'avg_cc','loc']
     source_file_path = f'../data/promise_csv/{source}.csv'
     source_data = pd.read_csv(source_file_path, usecols=cols)
     source_features = source_data.iloc[:, :].values
     label_data = pd.read_csv(source_file_path, usecols=['bug'])
     source_labels = label_data.iloc[:, :].values
-
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # Load Target Data
     target_file_path = f'../data/promise_csv/{target}.csv'
     target_data = pd.read_csv(target_file_path, usecols=cols)
@@ -70,11 +85,11 @@ def train(source, target):
     target_features = torch.Tensor(target_features)
 
     # Define your deep regressor model
-    model = DeepRegressor(input_dim=source_features.shape[1])
-
+    # model = DeepRegressor(input_dim=source_features.shape[1])
+    model = MLPRegressor(input_dim=20, hidden_dim=64, num_layers=3).to(device)
     # Define loss function and optimizer
     criterion = nn.MSELoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.01)
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
 
     # Training loop
     for epoch in range(100):
@@ -141,4 +156,4 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=2, value=avg_result)
 
     # Save the Excel file
-    workbook.save('../output/average_output_deep_regressor_popt_30_log_perpopt_newData_loc.xlsx')
+    workbook.save('../output/average_output_MLP_popt_30_log_perpopt_newData_loc.xlsx')
