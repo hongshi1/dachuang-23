@@ -1,6 +1,5 @@
 import openpyxl
-from keras.models import Sequential
-from keras.layers import Dense, Activation
+
 from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
@@ -8,35 +7,72 @@ import random
 import time
 import numpy as np
 
-#dpnn的方法结果
-class DPNN():
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from sklearn.preprocessing import MinMaxScaler
+from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
+
+class DPNN(nn.Module):
     def __init__(self, ch_in):
-        self.ch_in = ch_in
+        super(DPNN, self).__init__()
+        self.layers = nn.Sequential(
+            nn.Linear(ch_in, 256),
+            nn.BatchNorm1d(256),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.3),
 
-    def get_model(self):
-        # 创建一个Sequential模型
-        model = Sequential()
+            nn.Linear(256, 256),
+            nn.BatchNorm1d(256),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.3),
 
-        # 添加第一层，并设置权重初始化为均匀分布
-        model.add(Dense(units=20, input_dim=self.ch_in, kernel_initializer='uniform'))
-        model.add(Activation('tanh'))
+            nn.Linear(256, 128),
+            nn.BatchNorm1d(128),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.3),
 
-        # 添加第二层，并设置权重初始化为均匀分布
-        model.add(Dense(units=10, kernel_initializer='uniform'))
-        model.add(Activation('relu'))
+            nn.Linear(128, 128),
+            nn.BatchNorm1d(128),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.3),
 
-        # 添加第三层，并设置权重初始化为均匀分布
-        model.add(Dense(units=6, kernel_initializer='uniform'))
-        model.add(Activation('relu'))
+            nn.Linear(128, 64),
+            nn.BatchNorm1d(64),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.3),
 
-        # 添加最后一层
-        model.add(Dense(units=1, kernel_initializer='normal'))
-        return model
+            nn.Linear(64, 64),
+            nn.BatchNorm1d(64),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.3),
+
+            nn.Linear(64, 32),
+            nn.BatchNorm1d(32),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.3),
+
+            nn.Linear(32, 32),
+            nn.BatchNorm1d(32),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.3),
+
+            nn.Linear(32, 16),
+            nn.BatchNorm1d(16),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.3),
+
+            nn.Linear(16, 1)
+        )
+
+    def forward(self, x):
+        return self.layers(x)
+
 
 def train(source, target, seed):
     # Load Source Data
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'dam', 'moa', 'mfa', 'cam', 'ic',
-            'cbm', 'amc', 'max_cc', 'avg_cc']
+            'cbm', 'amc', 'max_cc', 'avg_cc','loc']
     source_file_path = f'../data/promise_csv/{source}.csv'
     source_data = pd.read_csv(source_file_path, usecols=cols)  # Columns D to W are 3 to 22
     source_features = source_data.iloc[:, :].values  # All columns except the last one
