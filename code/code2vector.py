@@ -9,59 +9,9 @@ from gensim.models import Word2Vec
 base_path = '/home/'
 save_path = '../data/embedding_mat/'
 
-SELECTED_NODES = (javalang.tree.MethodInvocation, javalang.tree.SuperMethodInvocation,
-                  javalang.tree.SuperConstructorInvocation,
-                  javalang.tree.ClassCreator, javalang.tree.ArrayCreator,
-                  javalang.tree.PackageDeclaration, javalang.tree.InterfaceDeclaration, javalang.tree.ClassDeclaration,
-                  javalang.tree.ConstructorDeclaration, javalang.tree.MethodDeclaration,
-                  javalang.tree.VariableDeclaration,
-                  javalang.tree.FormalParameter, javalang.tree.IfStatement, javalang.tree.ForStatement,
-                  javalang.tree.WhileStatement, javalang.tree.DoStatement, javalang.tree.AssertStatement,
-                  javalang.tree.BreakStatement, javalang.tree.ContinueStatement, javalang.tree.ReturnStatement,
-                  javalang.tree.ThrowStatement, javalang.tree.TryStatement, javalang.tree.SynchronizedStatement,
-                  javalang.tree.SwitchStatement, javalang.tree.BlockStatement, javalang.tree.CatchClauseParameter,
-                  javalang.tree.TryResource, javalang.tree.CatchClause, javalang.tree.SwitchStatementCase,
-                  javalang.tree.ForControl, javalang.tree.EnhancedForControl, javalang.tree.BasicType,
-                  javalang.tree.MemberReference, javalang.tree.ReferenceType, javalang.tree.SuperMemberReference,
-                  javalang.tree.StatementExpression)  # https://github.com/c2nes/javalang/blob/master/javalang/tree.py
-
-NODES_STRING = ['javalang.tree.MethodInvocation', 'javalang.tree.SuperMethodInvocation',
-                'javalang.tree.SuperConstructorInvocation',
-                'javalang.tree.ClassCreator', 'javalang.tree.ArrayCreator',
-                'javalang.tree.PackageDeclaration', 'javalang.tree.InterfaceDeclaration',
-                'javalang.tree.ClassDeclaration',
-                'javalang.tree.ConstructorDeclaration', 'javalang.tree.MethodDeclaration',
-                'javalang.tree.VariableDeclaration',
-                'javalang.tree.FormalParameter', 'javalang.tree.IfStatement', 'javalang.tree.ForStatement',
-                'javalang.tree.WhileStatement', 'javalang.tree.DoStatement', 'javalang.tree.AssertStatement',
-                'javalang.tree.BreakStatement', 'javalang.tree.ContinueStatement', 'javalang.tree.ReturnStatement',
-                'javalang.tree.ThrowStatement', 'javalang.tree.TryStatement', 'javalang.tree.SynchronizedStatement',
-                'javalang.tree.SwitchStatement', 'javalang.tree.BlockStatement', 'javalang.tree.CatchClauseParameter',
-                'javalang.tree.TryResource', 'javalang.tree.CatchClause', 'javalang.tree.SwitchStatementCase',
-                'javalang.tree.ForControl', 'javalang.tree.EnhancedForControl', 'javalang.tree.BasicType',
-                'javalang.tree.MemberReference', 'javalang.tree.ReferenceType', 'javalang.tree.SuperMemberReference',
-                'javalang.tree.StatementExpression']
-
-
-
-
-
-
-# This function extracts tokens from the AST of a Java file.
-def tokenize(node, SELECTED_NODES):
-    i = 0
-    for key in SELECTED_NODES:
-        if isinstance(node, key):
-            str = NODES_STRING[i]
-            temp = str.split('.')
-            return temp[-1]
-        i += 1
-    return 'UKN'
-
-# 修改 extract_tokens_from_ast 函数
 def extract_tokens_from_ast(node):
     tokens = []
-    if isinstance(node, javalang.ast.Node) and type(node) in SELECTED_NODES:
+    if isinstance(node, javalang.ast.Node):
         tokens.append(type(node).__name__)
         for child_node in node.children:
             tokens.extend(extract_tokens_from_ast(child_node))
@@ -74,7 +24,6 @@ def generate_ast_from_java(java_file_path):
         code = file.read()
     tree = javalang.parse.parse(code)
     return extract_tokens_from_ast(tree)
-
 
 if __name__ == '__main__':
     all_tokens = []
@@ -115,6 +64,7 @@ if __name__ == '__main__':
                         0] + '/src/java' + '/' + java_path_parts + '.java'
 
                     if os.path.exists(java_file_path):
+
                         tokens = generate_ast_from_java(java_file_path)
                         vectors = [model.wv[token] for token in tokens if token in model.wv]
 
