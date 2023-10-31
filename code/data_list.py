@@ -18,7 +18,7 @@ def make_dataset(image_list, labels):
         images = [(image_list[i].strip(), labels[i, :]) for i in range(len_)]
     else:
         if len(image_list[0].split()) > 2:
-            images = [(val.split()[0], np.array([int(la) for la in val.split()[1:]])) for val in image_list]
+            images = [(val.split()[0], np.array([float(la) for la in val.split()[1:]])) for val in image_list]
         else:
             images = [(val.split()[0], float(val.split()[1])) for val in image_list]
     return images
@@ -49,7 +49,7 @@ def default_loader(path):
 def convert_to_ast_vector_path(image_paths):
     ast_vector_paths = []
     for path in image_paths:
-        ast_path = path.replace('data/img/grb_img', 'data/embedding')
+        ast_path = path[0].replace('data/img/grb_img', 'data/embedding')
         ast_path = os.path.splitext(ast_path)[0] + '.npy'
         ast_vector_paths.append(ast_path)
     return ast_vector_paths
@@ -74,10 +74,9 @@ class ImageList(object):
     def __init__(self, image_list, labels=None, transform=None, target_transform=None,
                  loader=default_loader):
         # Convert image paths to AST vector paths
-        ast_vector_list = convert_to_ast_vector_path(image_list)
-
         # Make dataset for images
         imgs = make_dataset(image_list, labels)
+        ast_vector_list = convert_to_ast_vector_path(imgs)
         if len(imgs) == 0:
             root = '../data/'
             raise (RuntimeError("Found 0 images in subfolders of: " + root + "\n"

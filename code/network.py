@@ -169,7 +169,7 @@ class SelfAttention(nn.Module):
 
 
 class AttentionModel(nn.Module):
-    def __init__(self, input_dim=200, embed_size=20, heads=2):
+    def __init__(self, input_dim=100, embed_size=20, heads=2):
         super(AttentionModel, self).__init__()
 
         self.attention = SelfAttention(embed_size=embed_size, heads=heads)
@@ -720,6 +720,32 @@ class My_Transformer(nn.Module):
         return self.d_model  # Return the stored d_model value
 
 
+class SimpleRegressor(nn.Module):
+    def __init__(self, in_features=100, out_features=1):
+        super(SimpleRegressor, self).__init__()
+
+        # Feature extractor
+        self.feature_extractor = nn.Sequential(
+            nn.Linear(in_features, 128),
+            nn.ReLU(),
+            nn.Linear(128, 64),
+            nn.ReLU()
+        )
+
+        # Regression Head
+        self.regressor = nn.Linear(64, out_features)
+
+    def forward(self, x):
+        feature = self.feature_extractor(x)
+        output = self.regressor(feature)
+        return output
+
+    def output_num(self):
+        return 64  # Feature dimensionality
+
+
+#
+
 # Add these models to the existing network_dict
 
 
@@ -730,3 +756,4 @@ network_dict = {"AlexNet": AlexNetFc, "ResNet18": ResNet18Fc, "ResNet34": ResNet
 network_dict["My_ResNet"] = My_ResNet
 network_dict["My_LSTM"] = My_LSTM
 network_dict["My_Transformer"] = My_Transformer
+network_dict["SimpleRegressor"] = SimpleRegressor

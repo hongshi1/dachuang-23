@@ -30,6 +30,13 @@ class DeepRegressor(nn.Module):
         x = torch.relu(self.fc2(x))
         x = self.fc3(x)
         return x
+class LinearRegressor(nn.Module):
+    def __init__(self, input_dim=20):
+        super(LinearRegressor, self).__init__()
+        self.fc = nn.Linear(input_dim, 1)
+
+    def forward(self, x):
+        return self.fc(x)
 
 class MLPRegressor(nn.Module):
     def __init__(self, input_dim, hidden_dim, num_layers):
@@ -85,8 +92,8 @@ def train(source, target):
     target_features = torch.Tensor(target_features)
 
     # Define your deep regressor model
-    # model = DeepRegressor(input_dim=source_features.shape[1])
-    model = MLPRegressor(input_dim=20, hidden_dim=64, num_layers=20).to(device)
+    model = DeepRegressor(input_dim=source_features.shape[1])
+    # model = MLPRegressor(input_dim=20, hidden_dim=64, num_layers=20).to(device)
     # Define loss function and optimizer
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -156,4 +163,4 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=2, value=avg_result)
 
     # Save the Excel file
-    workbook.save('../output/average_output_MLP_popt_30_log_perpopt_newData_loc.xlsx')
+    workbook.save('../output/average_output_deepreg_popt_30_log_perpopt_newData_loc.xlsx')
