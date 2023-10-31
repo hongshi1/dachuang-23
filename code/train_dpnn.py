@@ -101,8 +101,9 @@ def train(source, target):
     # Training loop
     for epoch in range(100):
         optimizer.zero_grad()
-        outputs = model(source_features)
-        loss = criterion(outputs, source_labels)
+        outputs = model(source_features.to(device))
+        loss = criterion(outputs.to(device), source_labels.to(device))
+        # print("第", epoch, "轮：", "loss=", loss.item())
         loss.backward()
         optimizer.step()
 
@@ -111,10 +112,10 @@ def train(source, target):
 
     # Predict using the model
     with torch.no_grad():
-        predictions = model(target_features)
+        predictions = model(target_features.to(device))
 
     # Convert predictions to numpy array for the PerformanceMeasure class
-    predictions = predictions.numpy().flatten()
+    predictions = predictions.cpu().numpy().flatten()
 
     # Calculate and return the POPT
     per = PerformanceMeasure(target_labels, predictions, loc_labels,cc_labels)
@@ -163,4 +164,4 @@ if __name__ == "__main__":
         worksheet.cell(row=i + 1, column=2, value=avg_result)
 
     # Save the Excel file
-    workbook.save('../output/average_output_deepreg_popt_30_log_perpopt_newData_loc.xlsx')
+    workbook.save('../output/average_output_MLP_popt_30_log_perpopt_newData_loc_2.xlsx')

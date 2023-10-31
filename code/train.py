@@ -1,7 +1,6 @@
 # encoding: utf-8
 import argparse
 import os
-from encoder import ImageEncoder
 import torch.utils.data as data
 from sklearn.metrics import mean_squared_error as mse
 import cluster
@@ -25,13 +24,14 @@ from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
 import math
 
-optim_dict = {"ADAM": optim.Adam, "SGD": optim.SGD}
+optim_dict = {"SGD": optim.SGD}  #键值对设置
+# optim_dict = {"ADAM":optim.Adam}
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import random
 import time
 from PIL import Image
-#主训练函数
+
 
 class HuberLoss(nn.Module):
     def __init__(self, delta):
@@ -90,6 +90,7 @@ def setup_seed(seed):
         torch.backends.cudnn.benchmark = True
 
 
+
 def tsne(df_fea, df_lab):
     # print(df_fea, df_lab)
     tsne = TSNE(2, 38, 20, 600)
@@ -118,89 +119,83 @@ def get_tsne_img(what, loader, model, gpu=True):
     plt.close()
 
 
-def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=True):
+def image_classification_predict(loader, model, test_10crop=True, gpu=True):
     start_test = True
-    device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
-
-    model = model.to(device)
-    encoder = encoder.to(device)
-
     if test_10crop:
-        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
+        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]  # xrange in python2 -> range in python3
         for i in range(len(loader['test0'])):
             data = [next(iter_test[j]) for j in range(10)]
-            inputs = [data[j][0].to(device) for j in range(10)]
-            labels = data[0][1].to(device)
-
-            image_features = [encoder(input_img) for input_img in inputs]
-            concatenated_features = [torch.cat((feat, data[0][3].to(device)), dim=1) for feat in image_features]
-            concatenated_features = [Variable(feat) for feat in concatenated_features]
-            labels = Variable(labels)
-
+            # data = [iter_test[j].next() for j in range(10)]  # .next() in python2
+            inputs = [data[j][0] for j in range(10)]
+            labels = data[0][1]
+            if gpu:
+                for j in range(10):
+                    inputs[j] = Variable(inputs[j].cuda())
+                labels = Variable(labels.cuda())
+            else:
+                for j in range(10):
+                    inputs[j] = Variable(inputs[j])
+                labels = Variable(labels)
             outputs = []
-            for j, feat in enumerate(concatenated_features):
-                outputs.append(model(feat))
+            for j in range(10):
+                outputs.append(model(inputs[j]))
             outputs = sum(outputs)
-
             if start_test:
                 all_output = outputs.data.float()
                 all_label = labels.data.float()
-                start_test = False
+                start_test = False  # 重置
             else:
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
     else:
-        iter_test = iter(loader["test"])
-        for _ in range(len(loader["test"])):
-            data = next(iter_test)
-            inputs = data[0].to(device)
-            labels = data[1].to(device)
-
-            image_features = encoder(inputs)
-            concatenated_features = torch.cat((image_features, data[3].to(device)), dim=1)
-            concatenated_features = Variable(concatenated_features)
-            labels = Variable(labels)
-
-            outputs = model(concatenated_features)
-
+        iter_val = iter(loader["test"])
+        for i in range(len(loader['test'])):
+            data = next(iter_val)
+            inputs = data[0]
+            labels = data[1]
+            if gpu:
+                inputs = Variable(inputs.cuda())
+                labels = Variable(labels.cuda())
+            else:
+                inputs = Variable(inputs)
+                labels = Variable(labels)
+            outputs = model(inputs)
             if start_test:
-                all_output = outputs.data.float()
+                all_output = outputs.data.cpu().float()
                 all_label = labels.data.float()
                 start_test = False
             else:
-                all_output = torch.cat((all_output, outputs.data.float()), 0)
+                all_output = torch.cat((all_output, outputs.data.cpu().float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
-
+    # _, predict = torch.max(all_output, 1)
+    # _, predict = torch.max(all_output, 1)
     predict = all_output.flatten()
     return all_label, predict
 
-# I'll continue the modifications for the second function here:
-
-def image_classification_test(loader, model, encoder, test_10crop=False, gpu=True):
+def image_classification_test(loader, model, test_10crop=True, gpu=True):
     start_test = True
     names = []
-    device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
-
-    model = model.to(device)
-    encoder = encoder.to(device)
-
     if test_10crop:
-        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
+        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]  # xrange->range
         for i in range(len(loader['test0'])):
-            data = [next(iter_test[j]) for j in range(10)]
-            inputs = [data[j][0].to(device) for j in range(10)]
+            data = [iter_test[j].next() for j in range(10)]
+            inputs = [data[j][0] for j in range(10)]
             names.append(data[0][2])
-            labels = data[0][1].to(device)
-
-            image_features = [encoder(input_img) for input_img in inputs]
-            concatenated_features = [torch.cat((feat, data[0][3].to(device)), dim=1) for feat in image_features]
-            concatenated_features = [Variable(feat) for feat in concatenated_features]
-            labels = Variable(labels)
-
+            labels = data[0][1]
+            if gpu:
+                for j in range(10):
+                    inputs[j] = Variable(inputs[j].cuda())
+                labels = Variable(labels.cuda())
+            else:
+                for j in range(10):
+                    inputs[j] = Variable(inputs[j])
+                labels = Variable(labels)
             outputs = []
-            for j, feat in enumerate(concatenated_features):
-                outputs.append(model(feat))
+            for j in range(10):
+                outputs.append(model(inputs[j]))  # Call model() to make prediction
             outputs = sum(outputs)
+
+            # print(outputs)
 
             if start_test:
                 all_output = outputs.data.float()
@@ -210,19 +205,22 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
     else:
-        iter_test = iter(loader["test"])
-        for _ in range(len(loader["test"])):
+        iter_test = iter(loader["test"])  # iter() -- 迭代器，python内置函数
+        attention_time = 0
+        for _ in range(len(loader["test"])):  # 'len(dataloader)' -- 返回batch数目
             data = next(iter_test)
-            inputs = data[0].to(device)
-            labels = data[1].to(device)
+            # data = iter_test.next()  # .next() in python2 -> next() in python3
+            inputs = data[0]
+            labels = data[1]
             names.append(data[2])
+            if gpu:
+                inputs = Variable(inputs.cuda())
+                labels = Variable(labels.cuda())
+            else:
+                inputs = Variable(inputs)
+                labels = Variable(labels)
 
-            image_features = encoder(inputs)
-            concatenated_features = torch.cat((image_features, data[3].to(device)), dim=1)
-            concatenated_features = Variable(concatenated_features)
-            labels = Variable(labels)
-
-            outputs = model(concatenated_features)
+            outputs = model(inputs)
 
             if start_test:
                 all_output = outputs.data.float()
@@ -232,26 +230,21 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
                 all_output = torch.cat((all_output, outputs.data.float()), 0)
                 all_label = torch.cat((all_label, labels.data.float()), 0)
 
+    # _, predict = torch.max(all_output, 1) #返回每一个all_output样本中概率最大的那个类别作为预测值
     predict_list = all_output.cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
-    pred = all_label_list[:, 0]
-    loc = all_label_list[:, 1]
+    pred = all_label_list[:,0]
+    loc = all_label_list[:,1]
 
-    if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, all_label_list[:, 1])
+
+    if(all_label_list.shape[1] > 1):
+        p = PerformanceMeasure(all_label_list[:,0], predict_list,all_label_list[:,1])
         popt = p.PercentPOPT()
 
     return popt
 
-
-
 def transfer_classification(config):
-    encoder = ImageEncoder()
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    encoder =encoder.to(device)
-    # Moving models to the device
-    tencoder = ImageEncoder().to(device)
     # 定义一个字典类型变量
     prep_dict = {}
     # Add kry-value pairs for 'prep_dict'
@@ -334,7 +327,7 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
-    class_num = 1  # ??
+    class_num = 1# ??
 
     ## set base network
     net_config = config["network"]
@@ -386,15 +379,17 @@ def transfer_classification(config):
     param_lr = []
     for param_group in optimizer.param_groups:
         param_lr.append(param_group["lr"])
+    schedule_param = optimizer_config["lr_param"]
+    lr_scheduler = lr_schedule.schedule_dict[optimizer_config["lr_type"]]
 
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
     len_train_target = len(dset_loaders["target"]["train"]) - 1
-    F_best = 0  # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
+    F_best = 0 # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
 
     best_model = ''
     predict_best = ''
-    for i in range(config["num_iterations"]):  # 网格法确定最佳参数组合
+    for i in range(config["num_iterations"]):                               #网格法确定最佳参数组合
         if F_best >= 1:
             break
         else:
@@ -405,18 +400,17 @@ def transfer_classification(config):
                     bottleneck_layer.train(False)
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
                                                   nn.Sequential(base_network, bottleneck_layer, classifier_layer),
-                                                  encoder,
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
                 else:
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                                  nn.Sequential(base_network, classifier_layer), encoder,
+                                                  nn.Sequential(base_network, classifier_layer),
                                                   # nn.Sequential一个用于存放神经网络模块的序列容器，可以用来自定义模型，运行顺序按照输入顺序进行
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
 
                 print(args.source + '->' + args.target)
                 print("F")
                 print(F)
-                if F_best < F:
+                if F_best > F:
                     F_best = F
                     base_network.train(False)
                     classifier_layer.train(False)
@@ -424,12 +418,10 @@ def transfer_classification(config):
                         bottleneck_layer.train(False)
                         best_model = nn.Sequential(base_network, bottleneck_layer, classifier_layer)
                         all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                               encoder,
                                                                                test_10crop=False, gpu=use_gpu)
                     else:
                         best_model = nn.Sequential(base_network, classifier_layer)
                         all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                               encoder,
                                                                                test_10crop=False, gpu=use_gpu)
 
             loss_test = nn.BCELoss()
@@ -437,54 +429,39 @@ def transfer_classification(config):
             if net_config["use_bottleneck"]:
                 bottleneck_layer.train(True)
             classifier_layer.train(True)  # 将模型设置为训练模式
-            # optimizer_config = config["optimizer"]
-            # optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
-            # 调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
+            optimizer = lr_scheduler(param_lr, optimizer, i,
+                                     **schedule_param)  # 调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
             optimizer.zero_grad()  # 用于将梯度缓存清零
             if i % len_train_source == 0:
                 iter_source = iter(dset_loaders["source"]["train"])  # 更新源域数据集迭代器
             if i % len_train_target == 0:
                 iter_target = iter(dset_loaders["target"]["train"])  # 更新目标域数据集迭代器
+            inputs_source, labels_source, _ = next(iter_source)  # python3
+            inputs_target, labels_target, _ = next(iter_target)
 
-            # base_network = base_network.to(device)
-            # bottleneck_layer = bottleneck_layer.to(device)
-            classifier_layer = classifier_layer.to(device)
+            # inputs_source, labels_source, _ = iter_source.next()  # python2
+            # inputs_target, labels_target, _ = iter_target.next()
 
-            # Get data
-            inputs_tupian, labels_source, _, meta_source = next(iter_source)  # python3
-            inputs_tupian2, labels_source2, _, meta_target2 = next(iter_target)
+            if use_gpu:
+                inputs_source, inputs_target, labels_source = Variable(inputs_source).cuda(), Variable(
+                    inputs_target).cuda(), Variable(labels_source).cuda()
+            else:
+                inputs_source, inputs_target, labels_source = Variable(inputs_source), Variable(inputs_target), Variable(
+                    labels_source)
 
-            # Move data to the device
-            inputs_tupian = inputs_tupian.to(device)
-            labels_source = labels_source.to(device)
-            meta_source = meta_source.to(device)
-            inputs_tupian2 = inputs_tupian2.to(device)
-            labels_source2 = labels_source2.to(device)
-            meta_target2 = meta_target2.to(device)
+            inputs = torch.cat((inputs_source, inputs_target), dim=0)  # 第一维上进行拼接
+            # start_train = time.clock()
+            start_train = time.process_time()
 
-            # Step 1: Extract features from the images using the encoder
-            image_features_source = encoder(inputs_tupian)
-            image_features_target = encoder(inputs_tupian2)
-
-            # Step 2: Concatenate the image features with meta_source and meta_target
-            combined_features_source = torch.cat((image_features_source, meta_source), dim=1)
-            combined_features_target = torch.cat((image_features_target, meta_target2), dim=1)
-
-            # Step 3: Pass the combined features through base_network (without its final layer)
-            features_source = base_network(combined_features_source)  # Process features for source
-            features_target = base_network(combined_features_target)  # Process features for target
-
-            features = torch.cat((features_source, features_target), dim=0)  # Combine the features
-
-            # ... [rest of the code remains mostly the same]
+            features = base_network(inputs)  # 进行特征提取
 
             if net_config["use_bottleneck"]:
-                features = bottleneck_layer(features)  # Process through bottleneck layer if needed
+                features = bottleneck_layer(features)  # 瓶颈层分类
+            outputs = classifier_layer(features)  # 分类器分类
 
-            outputs = classifier_layer(features)  #
-            inputs = torch.cat((inputs_tupian, inputs_tupian2), dim=0)
             classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
-                                              labels_source[:, 0].float().view(-1, 1))  # python3
+                                              labels_source[:,0].float().view(-1, 1))  # python3
+            # classifier_loss = class_criterion(outputs.narrow(0, 0, inputs.size(0) / 2), labels_source)  # python2
 
             ## switch between different transfer loss
             if loss_config["name"] == "DAN":
@@ -528,11 +505,12 @@ def transfer_classification(config):
     print(F_best)
     popt = 0.0
 
+
     all_label_list = all_label.cpu().numpy()
-    predict_list = predict_best.view(-1, 1).cpu().numpy().flatten()
+    predict_list =  predict_best.view(-1,1).cpu().numpy().flatten()
 
     if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, all_label_list[:, 1])
+        p = PerformanceMeasure(all_label_list[:,0], predict_list, all_label_list[:,1])
         popt = p.PercentPOPT()
     print(popt)
     return popt
@@ -577,6 +555,7 @@ if __name__ == "__main__":
             new_arr.append(strings[i] + "->" + strings[j])
             new_arr.append(strings[j] + "->" + strings[i])
 
+
     parser = argparse.ArgumentParser(description='Transfer Learning')
     args = parser.parse_args()
     args.gpu_id = '0'
@@ -588,9 +567,9 @@ if __name__ == "__main__":
     args.task = 'CPDP'  # 'WPDP' or 'CPDP'
     # cpdp 表示跨项目缺陷预测
 
-    # kmeans++聚类
+    #kmeans++聚类
     # clusters, distances = cluster.project_cluster(3)
-    # 谱聚类
+    #谱聚类
     clusters, distances = cluster_spectral.project_cluster(3)
 
     for round_cir in range(30):
@@ -603,7 +582,7 @@ if __name__ == "__main__":
                 new_arr.append(strings[j] + "->" + strings[i])
 
         for i in range(len(new_arr)):
-            setup_seed(round_cir + 1)
+            setup_seed(round_cir+1)
             args.source = new_arr[i].split("->")[0]
             args.target = new_arr[i].split("->")[1]
             mytarget_path = "../data/txt/" + args.target + ".txt"
@@ -625,26 +604,23 @@ if __name__ == "__main__":
             config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
             #
             config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                               "batch_size": {"train": 32, "test": 32}},
+                               "batch_size": {"train": 4, "test": 4}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                               "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "AttentionModel", "use_bottleneck": args.using_bottleneck,
-                                 "bottleneck_dim": 256}
-            # config["optimizer"] = {"type": "SGD",
-            #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
-            #                                         "nesterov": True},
-            #                        "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
+                               "batch_size": {"train": 4, "test": 4}}]
+            config["network"] = {"name": "ResNet152", "use_bottleneck": args.using_bottleneck, "bottleneck_dim": 256}
+            config["optimizer"] = {"type": "SGD",
+                                   "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
+                                                    "nesterov": True},
+                                   "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
 
             config["clusters"] = clusters
             config["distances"] = distances
             # config["rate"] = [5, 10, 100]
-            config["optimizer"] = {
-                "type": "ADAM",
-                "optim_params": {"lr": 0.001, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005,
-                                 "amsgrad": False},
-                "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
-            }
-
+            # config["optimizer"] = {
+            #     "type": "ADAM",
+            #     "optim_params": {"lr": 0.00201, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005, "amsgrad": False},
+            #     "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
+            # }
             # 对代码的修改和理解  都吧注释写满  方便组员学习
             # num_iterations表示训练的迭代次数；
             # test_interval表示每多少个迭代进行一次测试；
@@ -667,4 +643,6 @@ if __name__ == "__main__":
             worksheet.cell(row=i + 1, column=1, value=new_arr[i])
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
         # 保存文件
-        workbook.save('../output/average/' + str(round_cir + 1) + '_RCAN_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
+        workbook.save('../output/average/' + str(round_cir+1) + '_round.xlsx')  # 运行失败 需要改一个别的文件名
+
+
