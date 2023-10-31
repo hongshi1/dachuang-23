@@ -86,7 +86,7 @@ def train(source, target):
 
     # Define your deep regressor model
     # model = DeepRegressor(input_dim=source_features.shape[1])
-    model = MLPRegressor(input_dim=20, hidden_dim=64, num_layers=3).to(device)
+    model = MLPRegressor(input_dim=20, hidden_dim=64, num_layers=20).to(device)
     # Define loss function and optimizer
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
