@@ -34,7 +34,7 @@ def get_complex_augmentation():
     ]
     return transforms.Compose(augmentation)
 
-def process_images_updated(model, source_dir='D:/PROJECT/dachuang/dachuang/data/img/', target_dir='D:/PROJECT/dachuang/dachuang/data/img/imgVec/'):
+def process_images_updated(model, source_dir='../data/img/', target_dir='../data/img/imgVec/'):
     # 设置图像预处理
     transform = get_complex_augmentation()
 
