@@ -1,652 +1,668 @@
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_SAXXMLOutput.png 0 509 16 3 0 6 52 112 1 5 11 0.777777778 1.0 0 0.74 0.344444444 2 8 30.625 1 0.8125
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Operation.png 0 149 12 2 14 23 23 0 17 8 12 0.363636364 1.0 2 0.731707317 0.21875 1 7 11.25 5 1.5833
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_BasisLibrary.png 1 2089 53 1 0 34 150 1362 22 15 49 1.001602564 0.375 0 0.0 0.125 0 0 37.96226415 49 4.3962
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XString.png 0 743 49 3 2 43 100 1176 34 12 46 1.0 0.0 1 0.606837607 0.122222222 3 21 14.14285714 16 1.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_StripFilter.png 0 1 1 1 0 5 1 0 5 1 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_Serializer.png 0 9 9 1 0 8 9 36 7 1 9 2.0 0.0 0 0.0 0.333333333 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemExsltFunction.png 1 166 7 4 0 18 28 15 4 14 6 0.5 1.0 0 0.97309417 0.314285714 4 7 22.57142857 1 0.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_SAXHTMLOutput.png 0 177 8 3 0 4 22 28 1 3 7 2.0 0.0 0 0.860465116 0.375 2 4 21.125 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_CoroutineParser.png 0 8 8 1 0 1 8 28 0 1 8 2.0 0.0 0 0.0 0.28125 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_StringValueHandler.png 0 129 5 2 0 3 16 4 1 2 5 0.0 1.0 0 0.851851852 0.4 0 0 24.4 5 1.6
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_CharKey.png 0 32 5 1 0 1 6 0 1 0 5 0.25 1.0 0 0.0 0.533333333 1 1 5.2 2 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_Type.png 0 300 33 1 10 113 53 526 103 21 32 0.998046875 0.0 16 0.0 0.234375 0 0 7.606060606 2 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_transformer_StackGuard.png 1 155 7 1 0 7 18 0 3 6 5 0.5 0.0 1 0.0 0.458333333 0 0 20.85714286 4 1.4286
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_WriterToUTF8Buffered.png 0 632 11 2 0 2 20 0 1 1 9 0.2 1.0 0 0.590909091 0.381818182 1 2 56.18181818 1 0.8182
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_EmptyFilter.png 0 7 2 1 0 1 3 1 0 1 2 2.0 0.0 0 0.0 0.75 0 0 2.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncCeiling.png 0 15 2 4 0 5 7 1 0 5 2 2.0 0.0 0 0.979591837 0.75 1 6 6.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Number.png 0 1308 15 3 0 55 96 23 0 55 9 0.798319328 1.0 8 0.811594203 0.214285714 2 3 85.06666667 14 3.1333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_XPathDumper.png 0 4 1 1 0 0 2 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_TextOutput.png 0 2321 48 1 0 8 106 388 1 7 26 0.895702962 0.901960784 2 0.0 0.236702128 0 0 46.29166667 21 1.8958
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorUnknown.png 0 8 3 5 0 3 4 3 1 2 3 2.0 0.0 0 0.990697674 0.666666667 1 2 1.666666667 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_ChunkedIntArray.png 0 353 9 1 0 3 24 0 2 2 0 0.892857143 0.0 1 0.0 0.62962963 0 0 37.44444444 3 1.4444
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_BinOpExpr.png 0 242 7 3 0 15 36 0 0 15 6 0.814814815 0.444444444 2 0.934210526 0.285714286 2 8 32.28571429 3 1.1429
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_SerializerToText.png 0 229 16 2 0 4 24 120 2 2 14 2.0 0.0 0 0.821428571 0.3046875 1 7 13.3125 1 0.9375
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_PrefixResolver.png 0 4 4 1 0 67 4 6 67 0 4 2.0 0.0 0 0.0 0.583333333 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerJavaPackage.png 2 615 6 3 0 10 44 15 0 10 5 1.0 0.0 0 0.615384615 0.375 3 6 101.1666667 7 2.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_XMLStringFactory.png 0 8 5 1 1 17 6 10 15 2 5 2.0 0.0 0 0.0 0.4 0 0 0.6 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemComment.png 0 74 5 3 0 4 17 10 0 4 5 2.0 0.0 0 0.98 0.466666667 2 5 13.8 16 3.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_res_XPATHErrorResources.png 0 273 8 3 0 1 21 28 1 0 7 1.142857143 0.0 0 0.857142857 0.225 0 0 17.375 2 0.875
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_MatchPatternIterator.png 1 251 5 5 0 13 23 4 1 13 3 0.75 1.0 2 0.968992248 0.44 1 5 48.4 10 3.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Constants.png 0 188 0 1 0 6 0 0 5 1 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_TransletOutputHandlerFactory.png 0 343 14 1 0 15 36 39 3 12 14 0.826923077 0.75 0 0.0 0.196428571 0 0 22.64285714 2 1.0714
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_Method.png 0 8 1 1 0 0 2 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_TreeWalker.png 0 596 10 1 0 12 59 0 7 5 7 0.305555556 0.75 1 0.0 0.44 0 0 58.2 1 0.7
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_SQLErrorDocument.png 0 179 4 5 0 5 12 0 1 4 2 0.636363636 1.0 0 0.989528796 0.55 1 1 41.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ProcessingInstruction.png 0 123 4 3 0 21 26 0 0 21 3 0.333333333 1.0 1 0.949152542 0.4 2 5 29.5 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringToIntTable.png 0 217 8 1 0 2 12 0 2 0 8 0.523809524 0.833333333 0 0.0 0.583333333 0 0 25.375 4 1.875
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Equals.png 0 40 3 3 0 6 7 3 1 5 3 2.0 0.0 0 0.953488372 0.555555556 2 2 12.33333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LastCall.png 0 225 5 4 0 19 22 4 1 19 5 0.5 1.0 0 0.96969697 0.4 2 4 43.8 13 3.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_CoroutineManager.png 0 183 6 1 0 4 17 0 3 1 6 0.7 0.0 0 0.0 0.722222222 0 0 28.5 7 1.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncStringLength.png 0 14 2 5 0 5 6 1 0 5 2 2.0 0.0 0 0.982142857 0.75 2 7 6.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NodeSortRecord.png 0 248 11 1 0 4 18 5 2 2 8 0.714285714 0.714285714 2 0.0 0.366666667 0 0 20.27272727 5 1.2727
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_TemplateSubPatternAssociation.png 0 139 15 1 0 8 25 49 2 6 12 0.833333333 0.833333333 3 0.0 0.208333333 0 0 7.866666667 6 1.2667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AVTPartXPath.png 0 74 7 2 0 14 20 0 1 13 7 0.0 1.0 1 0.5 0.25974026 0 0 9.428571429 1 0.7143
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_UnaryOperation.png 0 88 11 2 4 12 20 0 6 7 11 0.2 1.0 1 0.75 0.227272727 1 7 6.909090909 3 1.3636
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorGlobalParamDecl.png 0 30 3 5 0 6 10 3 1 5 1 2.0 0.0 0 0.990697674 0.583333333 1 2 9.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NamedMethodGenerator.png 0 28 3 5 0 5 6 1 1 4 2 0.5 1.0 0 0.992805755 0.625 2 3 8.0 2 0.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_DescendantIterator.png 1 426 9 5 0 14 43 0 2 12 8 0.583333333 1.0 1 0.946969697 0.277777778 3 11 46.0 14 2.7778
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorTemplate.png 0 19 2 5 0 6 8 1 1 5 0 2.0 0.0 0 0.995327103 0.666666667 1 1 8.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSubstringAfter.png 0 34 2 5 0 7 8 1 0 7 2 2.0 0.0 0 0.98245614 0.75 1 6 16.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_IdPattern.png 0 6 1 6 0 1 2 0 1 1 1 2.0 0.0 0 1.0 1.0 0 0 5.0 0 0.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExpressionContext.png 1 6 6 1 0 18 6 15 16 3 6 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemWhen.png 0 55 7 3 0 10 16 9 1 9 6 0.5 1.0 1 0.97029703 0.314285714 2 5 6.714285714 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPath.png 0 462 17 1 0 60 64 78 44 16 17 0.96875 0.2 1 0.0 0.211764706 0 0 25.58823529 2 0.9412
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_MsgMgr.png 0 212 14 1 0 13 23 55 12 2 13 0.153846154 1.0 2 0.0 0.427350427 0 0 14.0 1 0.8571
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DOMImpl.png 2 2911 116 1 0 60 203 4934 44 48 62 0.905590062 1.0 6 0.0 0.103864734 0 0 23.85344828 13 2.0776
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ArgumentList.png 0 35 2 1 0 1 7 0 0 1 2 0.0 1.0 2 0.0 0.666666667 0 0 15.5 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_FuncKey.png 0 177 3 5 0 17 33 1 1 16 2 0.5 1.0 0 0.98245614 0.75 1 7 57.66666667 1 0.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Instruction.png 0 24 3 2 26 37 9 3 29 8 2 2.0 0.0 0 0.964285714 0.5 1 2 7.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_NodeSorter.png 0 475 4 1 0 9 28 2 2 8 2 0.333333333 0.0 1 0.0 0.583333333 0 0 117.25 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_SmartTransformerFactoryImpl.png 0 498 21 3 0 3 43 0 0 3 19 0.5 1.0 0 0.5 0.220238095 1 2 22.47619048 3 1.0476
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_BooleanExpr.png 0 70 7 3 0 20 16 1 1 19 7 0.333333333 1.0 0 0.922077922 0.371428571 2 8 8.857142857 2 1.1429
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_ContextNodeList.png 0 12 12 1 0 1 12 66 1 0 12 2.0 0.0 0 0.0 0.444444444 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_ElemDesc.png 0 90 4 1 0 0 10 0 0 0 0 1.266666667 0.0 0 0.0 0.833333333 0 0 15.25 4 2.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_Translet.png 0 9 9 1 0 20 9 36 16 4 9 2.0 0.0 0 0.0 0.296296296 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ObjectType.png 0 167 14 2 0 30 39 71 6 25 13 0.538461538 1.0 0 0.733333333 0.222222222 2 3 10.85714286 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_TraceListenerEx.png 0 1 1 1 0 4 1 0 2 2 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncPosition.png 0 92 5 3 0 9 17 8 1 8 5 0.5 1.0 0 0.904761905 0.4 1 6 17.2 8 2.4
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_getopt_IllegalArgumentException.png 0 5 1 4 0 2 2 0 1 1 1 2.0 0.0 0 1.0 1.0 0 0 4.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemCopy.png 0 121 4 4 0 8 24 6 0 8 4 2.0 0.0 0 0.985365854 0.625 2 4 29.25 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_StepIterator.png 0 157 8 2 1 4 21 0 2 3 8 0.238095238 1.0 2 0.588235294 0.34375 1 5 18.25 3 1.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_StepPattern.png 0 1125 18 6 1 57 94 31 9 49 11 0.810457516 1.0 1 0.853448276 0.261904762 3 8 61.0 6 2.6111
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerExsltFunction.png 1 189 8 2 0 14 27 20 0 14 6 0.571428571 1.0 2 0.5 0.349206349 1 1 22.25 8 2.375
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NumberCall.png 0 59 3 4 0 12 15 3 0 12 3 2.0 0.0 0 0.979591837 0.444444444 3 13 18.66666667 3 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorNamespaceAlias.png 0 65 2 4 0 6 17 1 1 5 1 2.0 0.0 0 0.995260664 0.625 3 4 31.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_MultiHashtable.png 0 61 3 3 0 2 11 3 2 0 3 2.0 0.0 0 0.95 0.833333333 1 2 19.33333333 5 2.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_ListingErrorHandler.png 0 569 17 1 0 4 52 50 0 4 16 0.65625 1.0 0 0.0 0.196078431 0 0 32.23529412 14 1.8824
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_WriterToUTF8.png 0 213 7 2 0 1 13 0 1 0 7 0.0 1.0 0 0.684210526 0.342857143 1 2 29.28571429 1 0.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncRound.png 0 17 2 4 0 5 7 1 0 5 2 2.0 0.0 0 0.979591837 0.75 1 6 7.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_XalanProperties.png 0 5 1 1 0 0 2 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Operators.png 0 36 1 1 0 3 1 0 3 0 0 2.0 0.0 0 0.0 0.0 0 0 28.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_TraceListenerEx2.png 0 1 1 1 0 4 1 0 2 2 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_AnyNodeCounter.png 0 58 4 2 1 5 10 6 1 5 4 2.0 0.0 0 0.823529412 0.5 1 4 13.5 5 1.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_WhitespaceStrippingElementMatcher.png 0 2 2 1 0 2 2 1 1 1 2 2.0 0.0 0 0.0 0.666666667 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_TransformerFactoryImpl.png 3 979 25 3 0 23 103 210 12 13 20 0.916666667 0.357142857 0 0.465116279 0.199074074 1 2 37.6 17 1.76
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamXMLOutput.png 1 859 20 3 0 8 56 188 2 6 15 1.019736842 1.0 0 0.709677419 0.292857143 2 8 41.55 12 2.3
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_TransletLoader.png 0 38 3 1 0 4 11 0 4 0 3 0.0 0.0 0 0.0 0.833333333 0 0 11.33333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_ExpressionOwner.png 0 2 2 1 0 53 2 1 53 1 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_ref_sax2dtm_SAX2DTM.png 1 2275 67 4 1 25 179 1873 3 23 57 0.911111111 0.933333333 11 0.591194969 0.131313131 2 19 32.50746269 13 2.3284
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Div.png 0 25 3 3 0 7 7 3 2 5 3 2.0 0.0 0 0.953488372 0.555555556 1 1 7.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Sort.png 0 1465 19 3 0 64 101 119 2 64 13 0.85 0.8 4 0.756756757 0.23923445 1 3 75.57894737 9 3.0526
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_serialize_SerializerToXML.png 2 2724 71 1 2 24 151 1037 8 16 48 0.878405316 0.604651163 6 0.0 0.133333333 0 0 36.76056338 12 1.507
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_HasPositionalPredChecker.png 0 93 4 2 0 18 7 0 1 17 4 0.166666667 1.0 0 0.8 0.4 0 0 21.75 12 4.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeCounterGenerator.png 0 26 4 4 0 5 6 4 1 4 4 0.666666667 1.0 0 0.964285714 0.45 0 0 5.25 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_WrongNumberArgsException.png 0 5 1 3 0 12 2 0 12 0 1 2.0 0.0 0 1.0 1.0 0 0 4.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_TopLevelElement.png 0 56 5 2 10 27 17 10 16 11 4 2.0 0.0 0 0.931034483 0.44 1 4 10.2 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_XslAttribute.png 0 416 6 3 0 35 56 0 2 33 5 0.45 1.0 2 0.918032787 0.305555556 2 8 67.66666667 28 6.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_WriterToASCI.png 0 65 7 2 0 1 13 0 1 0 7 0.0 1.0 0 0.684210526 0.342857143 1 2 8.142857143 1 0.8571
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorLRE.png 1 468 4 5 0 17 75 6 1 17 3 2.0 0.0 0 0.986111111 0.5 4 6 116.0 3 1.25
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_SAX2TO.png 0 154 19 1 0 6 42 57 2 4 19 0.666666667 0.0 1 0.0 0.278195489 0 0 7.0 1 0.9474
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamOutput.png 1 505 17 2 4 8 36 30 5 3 6 0.912946429 1.0 0 0.704545455 0.25 0 0 27.05882353 3 1.2353
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_Expression.png 0 276 32 1 6 106 57 466 98 11 31 0.806451613 1.0 1 0.0 0.163461538 0 0 7.59375 3 1.2813
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSubstring.png 0 113 4 6 0 10 16 6 0 10 3 2.0 0.0 0 0.955223881 0.5 2 8 27.25 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeSortRecordFactGenerator.png 0 13 2 4 0 3 3 1 1 2 2 2.0 0.0 0 0.987804878 0.6 0 0 5.5 1 0.5
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMNodeList.png 2 115 5 1 0 8 17 0 6 2 4 0.4375 1.0 2 0.0 0.45 0 0 21.2 4 1.6
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NamespaceSupport2.png 0 127 11 2 0 5 26 0 4 2 11 0.55 0.5 1 0.583333333 0.409090909 1 3 10.36363636 3 1.3636
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerJava.png 0 32 3 2 2 3 7 0 2 1 2 0.5 1.0 0 0.75 0.666666667 0 0 9.0 1 0.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_Util.png 1 141 3 1 0 6 23 3 2 4 3 2.0 0.0 0 0.0 0.333333333 0 0 46.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_OneStepIteratorForward.png 0 94 6 7 2 13 16 0 4 10 4 0.2 1.0 0 0.97080292 0.4 4 10 14.5 3 1.1667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XNull.png 0 31 8 5 0 5 10 28 2 3 8 2.0 0.0 0 0.951048951 0.416666667 3 19 2.875 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemOtherwise.png 0 10 3 3 0 1 4 3 0 1 3 2.0 0.0 0 0.98989899 1.0 2 4 2.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathVisitable.png 0 1 1 1 0 26 1 0 24 2 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_KeyIterator.png 0 97 4 8 0 10 15 2 2 8 3 0.333333333 1.0 1 0.978571429 0.4375 2 2 22.75 4 1.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Neg.png 0 19 3 3 0 6 7 3 1 5 3 2.0 0.0 0 0.952380952 0.555555556 1 1 5.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMNodeIterator.png 0 101 9 1 0 11 19 0 7 4 9 0.5 1.0 1 0.0 0.555555556 0 0 10.0 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncFloor.png 0 15 2 4 0 5 7 1 0 5 2 2.0 0.0 0 0.979591837 0.75 1 6 6.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_ExsltCommon.png 0 41 3 1 0 6 6 3 0 6 3 2.0 0.0 0 0.0 0.444444444 0 0 12.66666667 6 2.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_VariableStack.png 0 476 22 1 0 27 42 0 20 9 21 0.682539683 0.333333333 2 0.0 0.365079365 0 0 20.36363636 3 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_OneStepIterator.png 2 230 12 7 0 16 35 6 3 14 8 0.409090909 1.0 1 0.93006993 0.291666667 4 13 18.0 5 1.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TransformerHandlerImpl.png 0 394 29 1 0 10 73 114 2 8 29 0.846428571 1.0 4 0.0 0.237068966 0 0 12.24137931 1 0.9655
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_RawCharacterHandler.png 0 1 1 1 0 0 1 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorText.png 0 40 3 5 0 7 10 3 1 6 2 2.0 0.0 0 0.990697674 0.583333333 2 4 12.33333333 1 0.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_ErrorMessages.png 1 91 4 2 1 1 9 2 1 0 3 0.666666667 1.0 0 0.942857143 0.666666667 2 3 21.25 3 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemUnknown.png 0 6 2 5 0 2 3 1 0 2 2 2.0 0.0 0 0.995833333 0.75 1 1 2.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_PositionCall.png 0 149 4 4 0 20 20 0 1 20 4 0.333333333 1.0 0 0.979591837 0.45 2 4 36.0 10 2.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemVariablePsuedo.png 0 26 3 4 0 8 9 1 1 7 3 0.5 0.0 1 0.99086758 0.555555556 0 0 7.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XSLTVisitor.png 0 28 9 2 1 21 10 36 20 6 1 2.0 0.0 0 0.6 0.314814815 0 0 2.111111111 1 0.8889
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_DocumentCall.png 0 264 3 4 0 26 33 0 0 26 3 0.166666667 1.0 3 0.979591837 0.444444444 4 15 86.0 3 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_Axis.png 0 136 1 1 0 5 1 0 5 0 0 2.0 0.0 0 0.0 0.0 0 0 119.0 0 0.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_GenerateIdCall.png 1 43 2 4 0 13 13 1 0 13 2 2.0 0.0 0 0.989690722 0.6 2 4 20.5 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_TracerEvent.png 0 183 3 1 0 7 15 3 4 3 3 1.0 0.0 3 0.0 0.388888889 0 0 58.66666667 5 3.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorKey.png 0 169 3 4 0 10 34 3 1 9 1 2.0 0.0 0 0.990566038 0.666666667 1 1 55.33333333 1 0.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XRTreeFragSelectWrapper.png 2 86 10 4 0 8 23 25 1 7 10 0.555555556 0.0 1 0.905263158 0.28 3 22 7.5 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_KeyRefIterator.png 0 171 3 7 0 20 26 0 1 19 2 0.0 0.75 3 0.985185185 0.444444444 3 4 54.66666667 6 3.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorPreserveSpace.png 0 50 2 4 1 9 14 1 2 7 1 2.0 0.0 0 0.995260664 0.625 2 2 24.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Plus.png 0 25 3 3 0 7 7 3 2 5 3 2.0 0.0 0 0.953488372 0.555555556 1 1 7.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TreeWalker2Result.png 0 152 4 2 0 6 25 0 1 5 2 0.444444444 0.0 2 0.727272727 0.5625 1 4 36.25 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_IntExpr.png 0 44 4 3 0 13 14 0 0 13 4 0.333333333 1.0 0 0.959459459 0.4 2 7 9.75 1 0.75
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorExsltFunction.png 2 193 6 5 0 16 27 15 1 15 4 2.0 0.0 0 0.97706422 0.533333333 2 4 31.16666667 6 1.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemChoose.png 0 160 6 3 0 9 26 15 0 9 6 2.0 0.0 0 0.975124378 0.444444444 2 5 25.66666667 4 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_Keywords.png 0 583 3 1 0 4 9 1 4 0 2 1.456896552 0.896551724 0 0.0 0.5 0 0 174.0 3 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncExtFunctionAvailable.png 0 72 2 4 0 8 14 1 0 8 2 2.0 0.0 0 0.979591837 0.75 2 7 35.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_TransletOutput.png 0 144 5 3 0 20 30 0 0 20 4 0.75 1.0 1 0.933333333 0.333333333 2 6 27.4 3 1.2
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_Extensions.png 1 477 12 1 0 15 62 66 2 13 9 0.909090909 0.0 0 0.0 0.25 0 0 38.58333333 5 2.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TransformerImpl.png 0 1704 34 2 0 20 144 337 4 17 19 0.894660895 1.0 6 0.288888889 0.131487889 0 0 48.5 18 2.7059
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamTextOutput.png 0 44 11 3 0 3 16 55 1 2 11 2.0 0.0 0 0.830188679 0.348484848 0 0 3.0 1 0.8182
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_StepPattern.png 0 1095 31 3 2 23 77 241 11 14 26 0.733333333 0.4 2 0.641975309 0.180107527 2 9 34.16129032 17 3.0645
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformSnapshot.png 0 0 0 1 0 2 0 0 2 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FunctionDef1Arg.png 0 110 8 4 9 18 21 28 9 9 4 2.0 0.0 0 0.872727273 0.5 2 5 12.75 2 1.125
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemSort.png 0 164 15 3 0 7 26 53 2 5 15 0.785714286 1.0 5 0.933333333 0.293333333 2 5 9.6 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemExtensionDecl.png 0 290 14 3 0 10 41 27 1 9 14 0.666666667 1.0 2 0.937799043 0.25 3 4 19.5 2 1.0714
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorAttributeSet.png 0 54 3 4 0 7 19 3 1 6 2 2.0 0.0 0 0.990566038 0.666666667 2 3 17.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_WhiteSpaceInfo.png 0 30 4 4 1 9 8 4 7 4 4 0.666666667 1.0 0 0.99086758 0.45 0 0 6.25 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_getopt_GetOpt.png 0 328 5 1 0 5 33 0 3 4 5 0.65 1.0 2 0.0 0.466666667 0 0 63.6 3 1.6
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AlternativePattern.png 0 135 8 4 0 18 27 0 1 17 8 0.142857143 1.0 2 0.925531915 0.270833333 2 3 15.625 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Attribute.png 0 37 3 3 0 5 14 1 0 5 2 0.5 1.0 1 0.965517241 0.555555556 1 4 11.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_XMLString.png 0 37 37 1 0 41 37 666 41 0 37 2.0 0.0 0 0.0 0.191891892 1 1 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NodeConsumer.png 0 1 1 1 0 3 1 0 3 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Otherwise.png 0 43 4 3 0 11 12 6 1 10 3 2.0 0.0 0 0.949152542 0.4 1 4 9.75 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncNamespace.png 0 65 2 5 0 5 11 1 0 5 2 2.0 0.0 0 0.982142857 0.75 3 8 31.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_FunctionTable.png 0 391 5 1 0 7 14 0 3 4 4 1.211538462 0.051282051 1 0.0 0.375 0 0 69.4 2 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResourceBundle.png 0 424 5 3 12 13 16 8 13 0 3 1.223684211 0.0 0 0.926829268 0.416666667 0 0 80.0 3 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_WithParam.png 0 201 6 3 0 25 39 0 1 24 5 0.4 1.0 2 0.918032787 0.361111111 1 6 32.16666667 3 1.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_PipeDocument.png 0 261 3 1 0 11 46 3 0 11 3 2.0 0.0 0 0.0 0.466666667 0 0 86.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Variable.png 0 282 6 4 0 36 48 15 10 30 5 2.0 0.0 0 0.938271605 0.4 2 12 46.0 8 3.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XNodeSet.png 2 600 33 4 2 42 74 516 24 19 31 0.96875 0.0 6 0.801470588 0.173611111 3 29 17.0 2 1.1515
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemNumber.png 0 2387 42 3 0 29 135 617 4 28 27 0.860310421 1.0 9 0.830508475 0.136298422 2 6 55.57142857 26 2.0952
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_OpCodes.png 0 68 1 1 0 0 2 0 0 0 1 2.0 0.015625 0 0.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ApplyTemplates.png 0 361 6 3 0 29 58 0 2 28 5 0.65 1.0 3 0.918032787 0.305555556 1 5 58.5 13 3.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMSafeStringPool.png 0 305 5 2 0 2 15 10 1 1 5 2.0 0.0 0 0.5 0.35 2 5 60.0 8 2.2
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemIf.png 0 117 8 3 0 14 27 0 0 14 7 0.285714286 1.0 1 0.965517241 0.270833333 2 5 13.5 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DOMAdapter.png 0 437 42 1 0 10 85 0 4 6 42 0.783972125 1.0 2 0.0 0.235449735 0 0 9.238095238 6 1.1905
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NameSpace.png 0 16 1 1 0 1 2 0 1 0 1 2.0 0.0 1 0.0 1.0 0 0 12.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Bool.png 0 24 3 3 0 6 7 3 1 5 3 2.0 0.0 0 0.952380952 0.555555556 1 1 7.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ConcatCall.png 0 131 3 4 0 22 22 3 0 22 3 2.0 0.0 0 0.979591837 0.444444444 3 14 42.66666667 5 2.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_Redirect.png 0 499 7 1 0 11 45 1 0 11 4 0.75 0.5 0 0.0 0.571428571 0 0 69.71428571 7 1.7143
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Whitespace.png 0 805 14 3 0 33 79 89 1 32 7 1.030769231 0.3 0 0.821917808 0.207142857 2 5 55.78571429 11 3.5714
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_DOMOrder.png 0 1 1 1 0 1 1 0 1 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_trace_PrintTraceListener.png 1 593 7 1 0 18 47 9 1 17 7 0.722222222 0.0 0 0.0 0.333333333 0 0 82.85714286 10 2.4286
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_VariableBase.png 0 335 19 3 2 32 61 99 15 20 18 0.907407407 1.0 3 0.769230769 0.190789474 1 4 16.0 7 1.7368
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_SourceLoader.png 0 1 1 1 0 6 1 0 6 1 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_SuballocatedByteVector.png 0 833 18 1 0 0 20 3 0 0 10 0.329411765 1.0 0 0.0 0.685185185 0 0 45.0 8 3.1111
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Lte.png 0 13 2 3 0 4 4 1 1 3 2 2.0 0.0 0 0.976190476 0.75 1 1 5.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FilterParentPath.png 0 213 6 3 0 27 31 0 2 25 6 0.333333333 1.0 2 0.934210526 0.305555556 2 7 34.0 4 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LocationPathPattern.png 0 96 12 4 3 16 17 52 7 9 12 0.840909091 1.0 1 0.887755102 0.236111111 2 3 6.666666667 6 1.4167
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TemplatesHandlerImpl.png 0 180 8 2 0 9 39 10 1 9 7 0.714285714 1.0 1 0.915662651 0.267857143 1 1 21.0 8 1.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemTemplate.png 0 179 22 3 2 29 46 189 24 11 22 0.942857143 0.8 4 0.903225806 0.181818182 2 14 6.681818182 1 0.9545
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_XslElement.png 0 658 10 3 0 36 70 7 1 35 7 0.644444444 1.0 2 0.861538462 0.3 1 9 64.3 13 4.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_IncrementalSAXSource.png 0 5 5 1 0 6 5 10 6 0 5 2.0 0.0 0 0.0 0.333333333 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ResultTreeType.png 1 715 22 2 0 43 58 201 9 36 21 0.523809524 1.0 0 0.622641509 0.199300699 2 4 31.45454545 7 1.5455
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_IdKeyPattern.png 0 158 9 5 2 28 26 22 3 26 9 0.75 1.0 1 0.925233645 0.259259259 3 4 16.22222222 2 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemAttribute.png 2 195 9 5 0 11 39 36 1 10 6 2.0 0.0 0 0.963800905 0.314814815 4 7 20.66666667 16 3.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringVector.png 0 234 11 1 0 8 15 0 8 0 11 0.425 1.0 0 0.0 0.515151515 0 0 19.90909091 4 1.7273
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DupFilterIterator.png 0 212 8 2 0 4 14 0 1 3 8 0.628571429 1.0 1 0.588235294 0.416666667 1 5 24.875 12 2.375
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_EncodingInfo.png 0 16 1 1 0 1 2 0 1 0 1 2.0 0.0 0 0.0 1.0 0 0 12.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RelationalExpr.png 0 600 10 3 0 33 54 0 0 33 10 0.185185185 1.0 2 0.8875 0.257142857 2 9 58.7 7 2.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_DOM.png 0 51 37 1 0 27 37 666 24 4 37 1.027777778 0.0 0 0.0 0.27027027 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_DOMCache.png 0 1 1 1 0 6 1 0 4 2 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_NodeSequence.png 4 693 37 3 1 18 68 218 10 8 34 0.625 1.0 2 0.682692308 0.171171171 2 9 17.62162162 12 2.2432
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_DefaultSAXOutputHandler.png 0 967 36 1 0 3 69 428 2 1 28 0.834920635 1.0 3 0.0 0.215873016 0 0 25.11111111 2 0.8889
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemLiteralResult.png 0 657 32 4 2 17 84 354 6 12 28 0.88172043 1.0 2 0.86695279 0.180555556 3 19 19.25 10 1.8438
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_SAXSourceLocator.png 0 119 8 2 0 17 29 0 17 0 8 0.285714286 0.0 0 0.666666667 0.34375 0 0 13.75 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FunctionAvailableCall.png 0 311 9 4 0 21 41 24 0 21 5 0.53125 1.0 1 0.923076923 0.253968254 3 13 33.11111111 6 2.4444
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemExtensionScript.png 0 33 6 3 0 2 7 3 1 1 6 0.6 1.0 0 0.975124378 0.666666667 1 2 4.166666667 1 0.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_WalkingIterator.png 0 281 17 5 1 19 41 0 8 13 16 0.4375 1.0 2 0.892857143 0.165775401 2 9 15.41176471 7 1.8824
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Template.png 0 485 22 3 0 28 72 121 10 22 21 0.852380952 1.0 4 0.740740741 0.140495868 2 7 20.59090909 8 2.0455
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_SelectionEvent.png 0 28 1 1 1 8 2 0 4 4 1 2.0 0.0 4 0.0 1.0 0 0 21.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_SynthesisException.png 0 54 4 3 0 6 5 0 6 0 2 1.095238095 0.0 0 0.944444444 0.666666667 0 0 10.75 1 0.25
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_Filter.png 0 1 1 1 0 6 1 0 6 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_WalkingIteratorSorted.png 0 129 5 6 0 5 13 0 1 5 3 0.25 1.0 0 0.979020979 0.366666667 1 1 24.6 17 4.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_NamespaceAlias.png 0 52 10 3 0 6 12 37 6 2 10 0.888888889 1.0 0 0.956097561 0.4 1 1 3.8 1 0.9
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ErrorMsg.png 0 485 18 1 0 51 33 3 51 2 15 1.015345269 0.086956522 0 0.0 0.411764706 0 0 20.83333333 3 0.7222
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TrAXFilter.png 0 199 7 2 0 3 35 1 1 2 6 0.5 1.0 1 0.85 0.265306122 1 6 27.14285714 6 1.7143
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DocumentCache.png 0 399 8 1 0 7 54 6 1 7 3 0.660714286 1.0 0 0.0 0.339285714 0 0 47.875 7 2.375
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMAxisIterator.png 0 11 10 1 0 26 10 45 26 0 10 1.111111111 0.0 0 0.0 0.55 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_QueryParameter.png 0 30 5 1 0 1 6 0 1 0 5 0.5 1.0 0 0.0 0.8 0 0 4.6 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_If.png 0 129 5 3 0 18 28 0 1 17 4 0.25 1.0 1 0.933333333 0.333333333 1 5 24.4 5 1.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_StopParseException.png 0 5 1 4 0 2 2 0 2 0 0 2.0 0.0 0 1.0 1.0 0 0 4.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_StylesheetPIHandler.png 0 462 6 2 0 3 26 3 1 2 6 0.733333333 0.0 0 0.772727273 0.458333333 1 1 75.0 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CastExpr.png 0 508 9 3 0 58 46 0 33 25 8 0.583333333 1.0 2 0.91025641 0.3125 2 7 55.11111111 5 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemValueOf.png 0 228 11 3 0 17 41 15 3 15 10 0.7 1.0 1 0.951456311 0.233766234 2 5 19.45454545 4 1.2727
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Parameter.png 0 29 2 1 0 2 3 0 2 0 2 0.0 0.0 0 0.0 0.875 0 0 12.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FlowList.png 0 155 7 1 0 29 17 0 26 3 7 0.0 1.0 0 0.0 0.464285714 0 0 21.0 4 1.8571
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_Constants.png 1 353 1 1 0 0 2 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemFallback.png 0 39 5 3 0 5 12 10 2 3 5 2.0 0.0 0 0.98 0.7 2 4 6.8 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemEmpty.png 0 4 1 3 0 1 2 0 0 1 1 2.0 0.0 0 1.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_res_XSLTErrorResources.png 3 430 8 3 0 1 21 28 1 0 7 1.142857143 0.0 0 0.857142857 0.225 0 0 17.375 2 0.875
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnsupportedElement.png 0 131 7 2 0 11 24 5 1 11 6 0.583333333 1.0 2 0.9 0.238095238 1 5 17.42857143 6 1.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Closure.png 0 4 4 1 0 6 4 6 6 1 4 2.0 0.0 0 0.0 0.625 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemText.png 0 49 6 3 0 3 11 9 2 1 6 0.6 1.0 0 0.975124378 0.444444444 2 5 7.0 3 1.1667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_BooleanCall.png 0 51 3 4 0 8 11 0 0 8 3 0.0 1.0 1 0.979591837 0.444444444 3 13 15.66666667 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathProcessorException.png 0 11 2 5 0 4 4 1 3 1 2 2.0 0.0 0 1.0 0.833333333 0 0 4.5 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformerIdentityImpl.png 0 1086 43 2 0 12 139 575 1 11 41 0.863945578 0.785714286 2 0.236363636 0.153100775 0 0 23.93023256 2 1.0465
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Minus.png 0 25 3 3 0 7 7 3 2 5 3 2.0 0.0 0 0.953488372 0.555555556 1 1 7.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_MatchGenerator.png 0 79 10 5 0 9 16 27 1 8 9 0.844444444 1.0 0 0.945205479 0.263888889 2 5 6.4 2 0.9
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_compiler_OpMap.png 1 409 21 1 1 12 29 76 11 1 20 0.858333333 0.166666667 0 0.0 0.404761905 0 0 18.19047619 8 1.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_Util.png 1 258 18 1 0 44 38 151 43 1 17 0.941176471 0.0 0 0.0 0.235294118 0 0 13.27777778 5 1.5556
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FilteredAbsoluteLocationPath.png 0 143 7 3 0 21 28 0 0 21 7 0.0 1.0 1 0.934210526 0.285714286 2 7 19.28571429 2 1.1429
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncCurrent.png 0 50 3 3 0 10 12 3 1 9 3 2.0 0.0 0 0.95 0.5 1 6 15.66666667 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemCopyOf.png 0 217 9 3 0 20 45 6 0 20 8 0.375 0.0 1 0.960784314 0.238095238 2 5 23.0 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UseAttributeSets.png 0 127 4 3 0 21 30 0 5 17 4 0.833333333 1.0 0 0.949152542 0.416666667 1 3 30.25 4 2.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_Function2Args.png 0 123 9 4 7 20 23 6 12 9 8 0.375 0.0 1 0.857142857 0.355555556 3 9 12.55555556 6 1.7778
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XBoolean.png 1 99 10 3 1 26 17 1 24 3 9 0.703703704 0.0 2 0.91025641 0.333333333 2 22 8.6 3 1.3
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_UnionPathIterator.png 1 561 16 5 0 23 52 46 4 22 13 0.6 1.0 2 0.899280576 0.2 2 13 33.9375 9 2.4375
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_TestSeq.png 0 360 11 1 0 15 45 0 1 15 9 0.633333333 1.0 2 0.0 0.222222222 0 0 31.18181818 11 2.4545
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_ref_ExpandedNameTable.png 1 247 10 1 0 15 24 0 13 3 9 0.970760234 0.210526316 3 0.0 0.475 0 0 21.8 4 1.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorDecimalFormat.png 0 27 2 4 0 6 9 1 1 5 1 2.0 0.0 0 0.995260664 0.625 2 2 12.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_SortingIterator.png 0 271 11 2 0 5 26 0 0 5 8 0.666666667 1.0 3 0.5 0.309090909 1 5 23.09090909 4 1.6364
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMDOMException.png 0 12 2 5 0 3 3 1 3 0 2 2.0 0.0 0 1.0 0.833333333 0 0 5.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_ReverseIterator.png 0 152 8 2 0 2 14 0 0 2 8 0.666666667 1.0 1 0.588235294 0.416666667 1 5 17.25 5 1.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathException.png 0 257 13 4 1 6 25 8 4 2 12 0.541666667 0.5 0 0.771428571 0.269230769 2 4 18.61538462 5 1.8462
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_XSLTCSource.png 0 182 10 1 0 5 33 0 1 4 8 0.472222222 1.0 2 0.0 0.4 0 0 16.8 2 0.9
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XUnresolvedVariable.png 0 134 6 3 0 7 23 9 1 7 6 0.833333333 1.0 1 0.934210526 0.361111111 2 12 20.33333333 1 0.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_MutableAttrListImpl.png 0 107 5 2 0 2 18 10 2 0 5 2.0 0.0 0 0.888888889 0.6 1 2 20.4 4 1.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_ElemDesc.png 0 80 4 1 0 2 8 0 1 1 0 1.269230769 0.0 1 0.0 0.833333333 0 0 12.5 3 1.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_Counter.png 0 84 3 1 0 5 8 0 1 4 0 0.833333333 0.0 2 0.0 0.466666667 0 0 25.0 4 2.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NotCall.png 0 56 3 4 0 16 12 3 1 15 3 2.0 0.0 0 0.979591837 0.6 2 6 17.66666667 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemUse.png 0 119 7 3 4 9 16 0 4 6 6 0.166666667 1.0 1 0.97029703 0.428571429 0 0 15.85714286 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_Function3Args.png 0 124 9 5 4 14 23 6 6 9 8 0.375 0.0 1 0.875 0.355555556 4 15 12.66666667 6 1.7778
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XObjectFactory.png 0 207 3 1 0 13 19 3 1 13 3 2.0 0.0 0 0.0 0.444444444 0 0 68.0 11 5.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_TemplateList.png 0 943 22 1 0 19 74 121 3 18 9 0.680272109 0.857142857 4 0.0 0.180952381 0 0 41.54545455 19 3.0455
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMConfigurationException.png 0 34 6 5 0 2 11 15 1 1 6 2.0 0.0 0 1.0 0.625 0 0 4.666666667 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncLast.png 0 59 5 3 0 8 12 8 1 7 5 0.5 1.0 0 0.904761905 0.4 1 6 10.6 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_UnionChildIterator.png 0 119 3 7 0 11 14 0 1 10 3 0.0 1.0 0 0.985185185 0.555555556 3 3 38.33333333 5 2.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_QueuedEvents.png 0 99 7 1 1 5 10 13 3 2 2 0.861111111 0.75 2 0.0 0.571428571 0 0 11.42857143 1 0.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncNormalizeSpace.png 0 45 3 5 0 6 11 3 0 6 3 2.0 0.0 0 0.964912281 0.666666667 2 7 14.0 1 0.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamHTMLOutput.png 1 807 25 3 0 7 57 232 2 5 18 0.901041667 1.0 1 0.676923077 0.217592593 2 6 30.96 18 2.24
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NthIterator.png 0 120 11 2 0 2 20 0 0 2 11 0.566666667 1.0 1 0.5 0.340909091 1 5 9.636363636 5 1.3636
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_StylesheetComposed.png 0 333 11 4 1 17 43 39 11 10 9 0.8 1.0 0 0.964285714 0.309090909 1 2 28.90909091 4 1.5455
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_serialize_Encodings.png 1 419 11 1 0 6 43 23 4 2 8 0.925 0.375 1 0.0 0.3 0 0 36.36363636 10 3.1818
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_And.png 0 42 3 3 0 6 7 3 1 5 3 2.0 0.0 0 0.953488372 0.833333333 1 6 13.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemApplyImport.png 0 69 5 3 0 6 17 10 0 6 5 2.0 0.0 0 0.98 0.466666667 2 5 12.8 1 0.8
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_XPathContext.png 3 1294 81 2 1 171 136 2426 155 22 78 0.936206897 0.793103448 11 0.195876289 0.069318182 0 0 14.61728395 5 1.2716
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_ConnectionPoolManager.png 0 69 6 1 0 3 16 0 1 2 5 0.3 0.0 0 0.0 0.6 0 0 10.16666667 3 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_ExtendedSAX.png 0 1 1 1 0 2 1 0 2 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_XSLTSchema.png 2 2654 6 2 0 27 47 3 5 25 2 0.7875 0.03125 0 0.848484848 0.444444444 1 2 436.0 36 6.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AncestorPattern.png 0 302 10 6 0 35 46 1 2 33 10 0.518518519 1.0 2 0.925233645 0.242857143 3 4 28.9 8 1.6
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_ContextMatchStepPattern.png 0 176 3 4 0 8 16 3 1 8 3 2.0 0.0 0 0.975903614 0.583333333 2 12 57.66666667 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_TypeCheckError.png 0 97 6 3 0 88 14 0 87 2 6 0.1 0.0 2 0.894736842 0.4 1 1 14.83333333 3 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NameCall.png 0 37 3 5 0 11 11 3 0 11 3 2.0 0.0 0 0.99 0.533333333 3 5 11.33333333 1 0.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NodeSortRecordFactory.png 0 127 5 1 0 7 14 4 1 6 3 0.75 1.0 2 0.0 0.416666667 0 0 22.8 1 0.6
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XRTreeFrag.png 1 336 19 3 1 21 43 87 6 15 18 0.6 0.2 3 0.816091954 0.184210526 2 24 16.42105263 9 1.6842
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMDefaultBaseIterators.png 0 242 3 3 3 40 31 3 30 33 3 2.0 0.0 0 0.978723404 0.523809524 0 0 79.66666667 2 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_StringLengthCall.png 0 44 2 4 0 13 13 1 0 13 2 2.0 0.0 0 0.989690722 0.6 2 4 21.0 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_AttributeList.png 0 261 16 1 0 4 38 58 3 1 16 0.741666667 1.0 1 0.0 0.453125 0 0 14.8125 3 1.3125
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LiteralExpr.png 0 75 8 3 0 19 18 4 6 13 5 0.571428571 1.0 0 0.922077922 0.325 2 8 8.125 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Text.png 0 262 10 3 0 21 32 0 4 18 7 0.583333333 1.0 0 0.875 0.266666667 2 6 24.8 10 2.1
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_BoolStack.png 0 160 13 1 0 6 16 0 6 0 12 0.361111111 1.0 0 0.0 0.41025641 0 0 11.07692308 2 1.2308
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncDoclocation.png 0 43 2 5 0 5 9 1 0 5 2 2.0 0.0 0 0.982142857 0.75 2 7 20.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorStripSpace.png 0 50 2 5 0 9 14 1 1 8 1 2.0 0.0 0 0.995283019 0.625 2 2 24.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_XSLTC.png 0 1204 53 1 0 24 140 1026 19 9 47 0.89516129 0.870967742 3 0.0 0.106918239 0 0 21.13207547 17 1.6792
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_Constructor.png 0 61 5 2 0 3 13 4 2 3 5 1.0 1.0 3 0.904761905 0.5 1 1 10.0 1 0.4
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_DOM2SAX.png 0 559 25 1 0 3 70 254 3 0 20 0.902777778 1.0 0 0.0 0.152727273 0 0 21.12 3 1.08
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RoundCall.png 0 61 2 4 0 18 13 1 0 18 2 2.0 0.0 0 0.989690722 0.6 2 4 29.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_ResultNameSpace.png 0 16 1 1 0 0 2 0 0 0 1 2.0 0.0 1 0.0 1.0 0 0 12.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Gte.png 0 13 2 3 0 4 4 1 1 3 2 2.0 0.0 0 0.976190476 0.75 1 1 5.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMNodeProxy.png 0 1019 120 1 0 10 148 5942 5 5 118 0.798319328 0.0 1 0.0 0.185807656 0 0 7.466666667 4 1.1833
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Stylesheet.png 2 1914 54 2 0 70 185 1235 27 55 43 0.948113208 0.916666667 6 0.504672897 0.10130719 2 7 34.0 9 2.1296
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Mod.png 0 25 3 3 0 7 7 3 2 5 3 2.0 0.0 0 0.953488372 0.555555556 1 1 7.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Message.png 0 115 4 3 0 22 23 0 0 22 3 0.333333333 1.0 0 0.949152542 0.4 2 5 27.5 2 1.25
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_PsuedoNames.png 0 10 1 1 0 0 2 0 0 0 1 2.0 0.0 0 0.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformerHandlerImpl.png 0 914 36 1 0 9 100 0 2 8 33 0.817582418 0.923076923 2 0.0 0.176623377 0 0 24.02777778 7 1.1944
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_XSLProcessorContext.png 0 321 7 1 1 25 49 5 6 19 7 0.733333333 1.0 4 0.0 0.392857143 0 0 44.14285714 1 0.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathVisitor.png 0 40 13 1 5 42 14 78 40 13 13 2.0 0.0 0 0.0 0.203296703 0 0 2.076923077 1 0.9231
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TemplatesImpl.png 1 331 15 1 0 7 34 15 4 6 8 0.619047619 1.0 1 0.0 0.19047619 0 0 20.46666667 1 0.8667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Key.png 1 531 6 3 0 42 56 0 1 41 5 0.55 1.0 4 0.923076923 0.361111111 2 4 86.83333333 4 1.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_AbstractTranslet.png 0 831 36 1 0 25 96 516 10 16 35 0.929142857 0.52 9 0.0 0.142592593 0 0 21.38888889 12 2.0556
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncGenerateId.png 0 28 2 5 0 4 10 1 0 4 2 2.0 0.0 0 0.982142857 0.75 2 7 13.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMAxisTraverser.png 0 19 5 1 12 28 6 10 28 0 5 2.0 0.0 0 0.0 0.9 0 0 2.8 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_AttributeIterator.png 0 31 3 7 0 5 6 3 1 4 1 2.0 0.0 0 0.985185185 0.555555556 3 5 9.333333333 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CopyOf.png 0 253 5 3 0 26 32 0 1 25 4 0.25 1.0 1 0.933333333 0.333333333 1 3 49.4 5 1.8
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Output.png 1 706 6 3 0 21 40 0 2 21 5 0.8 1.0 0 0.923076923 0.333333333 3 7 114.3333333 28 7.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_SourceTree.png 0 12 1 1 0 1 2 0 1 0 1 2.0 0.0 0 0.0 1.0 0 0 9.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_CompareGenerator.png 0 141 11 5 0 16 23 37 3 13 10 0.916666667 1.0 0 0.93877551 0.225 2 5 10.72727273 2 0.9091
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_ChildIterator.png 0 64 4 5 0 6 9 6 1 5 3 2.0 0.0 0 0.9765625 0.4375 1 6 15.0 4 1.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMIterator.png 0 28 25 1 0 53 25 300 52 2 25 1.041666667 0.0 0 0.0 0.34 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_Arg.png 0 158 15 1 0 3 21 0 1 2 15 0.628571429 1.0 2 0.0 0.311111111 0 0 9.2 2 0.8667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RealExpr.png 0 44 4 3 0 13 14 0 0 13 4 0.333333333 1.0 0 0.959459459 0.4 2 7 9.75 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_GenerateEvent.png 0 92 5 1 0 5 6 0 4 1 5 1.0 0.0 1 0.0 0.666666667 0 0 13.8 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMNamedNodeMap.png 0 143 9 1 0 3 16 24 2 2 8 0.708333333 0.0 1 0.0 0.4 0 0 14.55555556 3 1.5556
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NSInfo.png 0 55 3 1 0 1 4 0 1 0 3 0.642857143 0.0 0 0.0 0.666666667 0 0 15.0 0 0.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FunctionCall.png 3 1894 25 3 23 62 126 68 25 37 15 0.848958333 0.9375 4 0.76344086 0.131410256 3 10 74.12 15 2.92
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_SelfIteratorNoPredicate.png 1 52 5 5 0 9 8 10 3 6 4 2.0 0.0 0 0.9765625 0.45 1 4 9.4 3 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_SerializableLocatorImpl.png 0 64 10 1 0 0 15 37 0 0 10 0.777777778 1.0 0 0.0 0.375 0 0 5.0 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorImport.png 0 10 3 5 0 2 4 3 1 1 0 2.0 0.0 0 0.990950226 1.0 1 1 2.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_BitArray.png 0 621 17 1 0 4 24 0 4 0 16 0.653409091 0.818181818 0 0.0 0.291666667 0 0 34.88235294 10 2.2353
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemMessage.png 0 60 6 3 0 5 17 3 0 5 6 0.4 1.0 0 0.975124378 0.444444444 2 4 8.833333333 1 0.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncBoolean.png 0 15 2 4 0 5 5 1 0 5 2 2.0 0.0 0 0.979591837 0.75 1 6 6.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMAxisIteratorBase.png 0 133 16 1 1 24 23 92 22 2 14 0.888888889 1.0 0 0.0 0.5625 0 0 6.9375 3 1.125
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_CustomStringPool.png 0 62 4 2 0 1 15 0 0 1 4 0.833333333 0.0 0 0.571428571 0.5 1 4 14.0 3 1.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_SourceTreeManager.png 0 345 13 1 0 8 45 42 4 5 13 0.625 0.5 0 0.0 0.340659341 0 0 25.38461538 5 1.8462
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_IllegalCharException.png 0 5 1 3 0 0 2 0 0 0 1 2.0 0.0 0 1.0 1.0 0 0 4.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FilterExpr.png 0 282 7 3 0 25 38 0 2 24 6 0.083333333 1.0 1 0.922077922 0.306122449 2 9 39.0 3 1.7143
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AVT.png 0 546 14 1 0 23 44 29 11 13 14 0.769230769 1.0 0 0.0 0.206349206 0 0 37.64285714 4 1.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncFalse.png 0 9 3 3 0 4 4 3 0 4 3 2.0 0.0 0 0.95 0.5 1 6 2.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LiteralElement.png 0 663 13 3 0 28 76 42 5 24 9 0.783333333 1.0 1 0.823529412 0.207692308 2 11 49.61538462 18 4.5385
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_NodeSetDTM.png 0 839 56 2 1 21 84 714 14 7 56 0.739393939 0.833333333 1 0.363636364 0.160714286 1 4 13.875 9 1.5714
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_compiler_Lexer.png 1 815 10 1 0 5 25 3 1 5 0 0.611111111 0.5 3 0.0 0.3125 0 0 79.9 11 2.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_SAXOutput.png 0 114 8 2 3 7 16 18 3 4 6 0.8 1.0 0 0.837837838 0.5 1 1 12.625 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TrAXFilter.png 0 104 6 2 0 4 25 13 2 2 5 0.9 1.0 1 0.871794872 0.305555556 1 1 16.0 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_QName.png 0 732 28 1 0 54 49 268 50 4 28 0.562962963 0.8 0 0.0 0.285714286 1 1 24.96428571 9 1.4286
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Variable.png 0 356 16 2 1 25 51 50 7 19 16 0.746666667 0.8 1 0.666666667 0.1875 2 9 20.9375 9 2.25
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AbsoluteLocationPath.png 0 143 7 3 0 22 28 0 1 21 7 0.0 1.0 1 0.934210526 0.285714286 2 7 19.28571429 2 1.1429
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_DOMBuilder.png 0 460 30 1 0 4 62 223 2 2 28 0.634482759 0.6 0 0.0 0.2 0 0 14.16666667 5 1.0667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_TestGenerator.png 0 119 13 5 0 11 20 54 2 9 12 0.9 1.0 0 0.926174497 0.21875 2 5 7.384615385 2 0.9231
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_WrongParserException.png 0 5 1 4 0 0 2 0 0 0 1 2.0 0.0 0 1.0 1.0 0 0 4.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AbsolutePathPattern.png 0 241 8 5 0 33 44 0 1 33 8 0.142857143 1.0 1 0.933962264 0.270833333 3 4 29.0 6 1.875
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AVTPart.png 0 13 7 1 2 8 8 21 3 5 7 2.0 0.0 0 0.0 0.306122449 0 0 0.857142857 1 0.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Attributes.png 0 30 7 1 0 1 8 21 0 1 7 1.0 1.0 1 0.0 0.5 0 0 3.0 1 0.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_FilterExprIteratorSimple.png 0 261 16 5 0 19 44 8 4 16 14 0.75 1.0 2 0.899280576 0.18125 3 10 15.0625 4 1.4375
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMManagerDefault.png 0 736 16 2 0 25 85 76 6 22 16 0.8 0.8 2 0.558823529 0.215909091 1 1 44.6875 25 4.125
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XStringForFSB.png 1 904 31 4 0 10 57 117 1 10 29 0.5 0.5 0 0.802721088 0.150537634 4 20 28.03225806 15 3.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_Function.png 0 51 9 2 7 21 15 36 15 8 8 2.0 0.0 0 0.789473684 0.285714286 1 7 4.666666667 2 1.1111
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_TransletOutputHandler.png 0 22 22 1 0 22 22 231 20 2 22 2.0 0.0 0 0.0 0.303030303 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_CountersTable.png 0 198 5 3 0 7 23 8 3 5 2 0.875 0.5 1 0.904761905 0.44 0 0 38.2 2 1.2
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CallTemplate.png 0 183 6 3 0 20 40 3 0 20 5 0.4 1.0 1 0.918032787 0.305555556 1 6 29.33333333 5 1.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_NodeIterator.png 0 11 10 1 0 53 10 45 53 0 10 1.111111111 0.0 0 0.0 0.4 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NameBase.png 0 149 5 4 3 19 21 0 3 16 5 0.25 1.0 2 0.96969697 0.366666667 3 14 28.4 4 1.2
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_BooleanType.png 0 288 20 2 0 52 51 190 17 39 19 2.0 0.0 0 0.634615385 0.245 1 2 13.4 4 1.4
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_Method.png 0 58 6 2 0 5 16 15 3 4 6 2.0 0.0 0 0.863636364 0.388888889 2 3 8.666666667 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_RedundentExprEliminator.png 0 1852 38 3 0 29 122 607 1 29 6 0.9 0.0 2 0.357142857 0.194594595 0 0 47.47368421 15 3.7632
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_TestDriver.png 0 189 7 1 0 6 31 15 1 6 4 0.833333333 0.5 0 0.0 0.233333333 0 0 25.71428571 2 0.8571
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemExtensionCall.png 2 272 9 5 0 20 50 32 4 17 7 1.025 0.0 1 0.967611336 0.351851852 3 7 28.66666667 5 1.5556
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorStylesheetDoc.png 0 4 1 4 0 2 2 0 1 1 1 2.0 0.0 0 1.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemTemplateElement.png 1 1279 84 2 29 101 125 3056 91 17 75 0.913654618 0.75 3 0.567708333 0.090336134 1 12 14.08333333 9 1.5595
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_IntStack.png 1 143 10 2 0 6 16 45 5 1 10 2.0 0.0 0 0.666666667 0.8 1 14 13.3 2 1.1
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_ConnectionPool.png 0 14 14 1 0 4 14 91 4 0 14 2.0 0.0 0 0.0 0.273809524 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_NodeSet.png 0 1450 61 1 0 8 71 714 4 4 60 0.629166667 0.875 0 0.0 0.219262295 0 0 22.63934426 9 2.2131
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Parser.png 1 3247 75 1 1 96 196 2497 86 23 59 0.933783784 1.0 9 0.0 0.093333333 0 0 41.89333333 13 2.2667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Mode.png 0 2953 30 1 0 46 138 309 4 44 12 0.847549909 1.0 6 0.0 0.1625 0 0 96.8 40 5.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_IntVector.png 1 458 18 1 1 4 20 0 4 0 18 0.382352941 1.0 0 0.0 0.916666667 0 0 24.22222222 4 1.8889
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_ExsltMath.png 2 198 5 1 0 2 18 10 0 2 5 2.0 0.0 0 0.0 0.6 0 0 38.6 4 2.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ErrorMessages.png 1 378 4 2 1 1 9 2 1 0 3 0.666666667 1.0 0 0.942857143 0.666666667 2 3 93.0 6 1.75
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_KeyCall.png 1 562 4 4 0 38 46 0 1 37 3 0.083333333 1.0 4 0.96969697 0.458333333 3 7 138.5 12 3.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XObject.png 0 465 42 2 7 146 68 819 133 15 40 0.953929539 0.111111111 0 0.428571429 0.120879121 2 8 9.857142857 4 1.1667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_SystemIDResolver.png 1 295 4 1 0 14 23 6 12 2 4 2.0 0.0 0 0.0 0.5 0 0 72.75 6 2.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMStringPool.png 0 419 5 1 2 6 24 0 5 1 5 0.6 0.0 1 0.0 0.35 0 0 81.8 8 3.4
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncNot.png 0 15 2 4 0 5 5 1 0 5 2 2.0 0.0 0 0.979591837 0.75 1 6 6.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XMLNSDecl.png 0 28 4 1 0 2 5 0 2 0 4 0.666666667 1.0 0 0.0 0.5 0 0 5.25 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSystemProperty.png 0 253 5 4 0 8 37 6 0 8 3 0.65 0.4 0 0.941176471 0.4375 2 7 48.6 4 1.2
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_Compile.png 0 240 4 1 0 4 40 0 0 4 3 0.333333333 1.0 0 0.0 0.333333333 0 0 58.0 12 3.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_XSLInfiniteLoopException.png 0 7 2 1 0 0 3 1 0 0 1 2.0 0.0 0 0.0 1.0 0 0 2.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ContainsCall.png 0 126 5 4 0 20 22 4 0 20 5 0.25 1.0 2 0.96 0.4 3 14 23.8 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NodeIteratorBase.png 0 140 14 1 28 40 22 55 38 2 12 0.807692308 1.0 0 0.0 0.404761905 0 0 8.571428571 3 1.2143
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_XSLTElementDef.png 1 804 37 1 1 8 57 440 6 4 0 0.793209877 0.722222222 3 0.0 0.289189189 0 0 20.24324324 15 2.2162
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Pattern.png 0 7 4 3 2 17 5 6 11 6 4 2.0 0.0 0 0.959459459 0.4375 2 4 0.75 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_NumeratorFormatter.png 0 360 4 1 0 3 11 4 1 3 0 1.095238095 0.428571429 3 0.0 0.428571429 0 0 87.25 7 3.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_StringCall.png 0 75 3 4 0 14 17 3 0 14 3 2.0 0.0 0 0.979591837 0.444444444 3 13 24.0 3 1.3333
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_MethodResolver.png 1 1997 13 1 0 11 70 66 2 9 6 0.952898551 0.043478261 7 0.0 0.266666667 0 0 150.8461538 14 3.2308
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_CharInfo.png 0 292 6 1 0 5 39 3 3 2 3 0.86 0.4 1 0.0 0.666666667 0 0 46.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Node.png 0 12 1 1 0 1 2 0 1 0 1 2.0 0.0 0 0.0 1.0 0 0 9.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_StylesheetRoot.png 0 990 50 5 0 59 120 1069 51 25 34 0.939909297 0.944444444 11 0.853658537 0.079130435 3 6 18.44 10 1.6
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XUnresolvedVariableSimple.png 0 39 4 3 0 6 15 6 1 5 4 2.0 0.0 0 0.959459459 0.5 2 12 8.75 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AbsPathChecker.png 0 37 4 2 0 8 6 0 1 7 4 0.0 1.0 0 0.8 0.45 0 0 8.0 3 1.25
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_JavaUtils.png 0 157 5 1 0 0 18 4 0 0 3 0.625 1.0 0 0.0 0.25 0 0 30.0 6 1.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_Version.png 0 69 9 1 0 1 15 36 0 1 9 2.0 0.0 0 0.0 0.111111111 0 0 6.666666667 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XMLStringFactoryImpl.png 0 39 7 2 0 8 11 19 4 6 6 0.833333333 1.0 1 0.444444444 0.333333333 0 0 4.428571429 1 0.7143
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_VariableSafeAbsRef.png 0 39 2 3 0 10 11 1 1 9 2 2.0 0.0 0 0.97826087 0.666666667 1 1 18.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemAttributeSet.png 0 97 8 4 0 10 24 16 6 7 8 0.571428571 0.0 1 0.966507177 0.3 2 4 11.0 3 1.125
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemForEach.png 2 492 18 3 1 25 83 79 6 21 17 0.735294118 0.5 1 0.920187793 0.136752137 2 6 26.11111111 4 1.2778
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerJavaClass.png 2 505 6 3 0 9 37 0 0 9 5 0.76 0.4 0 0.615384615 0.375 2 6 82.33333333 8 2.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTM.png 0 81 66 1 0 77 66 2145 74 3 66 1.015384615 0.0 0 0.0 0.277056277 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_KeyIndex.png 1 375 17 1 0 5 35 0 2 3 17 0.7109375 1.0 2 0.0 0.341176471 0 0 20.58823529 6 2.1176
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandler.png 1 91 8 1 3 13 17 26 9 4 5 0.942857143 0.8 0 0.0 0.339285714 0 0 9.75 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_NodeLocator.png 0 57 6 1 0 1 11 0 1 0 6 0.65 1.0 0 0.0 0.444444444 0 0 7.833333333 1 0.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMFilter.png 0 17 2 1 0 5 2 1 5 0 2 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_NodeSortKey.png 0 80 1 1 0 6 10 0 3 4 0 2.0 0.0 3 0.0 1.0 0 0 71.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_PathComponent.png 0 1 1 1 0 8 1 0 8 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_ExsltSets.png 0 158 7 1 0 4 19 21 0 4 7 2.0 0.0 0 0.0 0.380952381 0 0 21.57142857 6 2.5714
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_OutputSettings.png 0 47 2 1 0 0 4 1 0 0 2 1.0 1.0 0 0.0 1.0 0 0 18.0 1 0.5
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_FuncDocument.png 1 543 8 5 0 17 66 28 1 16 6 2.0 0.0 0 0.888888889 0.475 3 8 66.875 1 0.875
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMException.png 0 357 15 4 1 9 35 0 8 1 15 0.392857143 0.0 0 0.62962963 0.311111111 1 2 22.66666667 8 2.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionsTable.png 1 146 6 1 0 8 21 0 2 6 6 0.5 0.5 1 0.0 0.380952381 0 0 23.0 1 0.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringToStringTable.png 0 286 11 1 0 1 15 0 1 0 11 0.45 1.0 0 0.0 0.606060606 0 0 24.63636364 4 2.1818
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnparsedEntityUriCall.png 0 62 3 4 0 17 14 0 0 17 3 0.0 1.0 1 0.979591837 0.444444444 3 13 19.33333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_SAXTextOutput.png 0 79 11 3 0 3 19 55 1 2 11 2.0 0.0 0 0.804347826 0.363636364 0 0 6.181818182 1 0.8182
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Copy.png 0 253 5 3 0 31 42 4 0 31 4 0.5 1.0 1 0.933333333 0.333333333 1 6 49.4 4 1.6
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_RtMethodGenerator.png 0 41 5 5 0 7 8 6 0 7 5 0.916666667 1.0 0 0.971830986 0.325 1 2 6.6 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_StripWhitespaceFilter.png 0 1 1 1 0 1 1 0 0 1 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnaryOpExpr.png 0 101 6 3 0 14 28 0 0 14 6 0.0 1.0 1 0.934210526 0.305555556 2 8 15.66666667 1 0.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_DecimalFormatting.png 0 496 5 3 0 23 30 4 2 22 4 1.0 1.0 1 0.9375 0.4 3 6 97.6 17 4.4
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_AbsoluteIterator.png 0 105 8 2 0 3 21 0 1 3 8 0.428571429 0.5 1 0.588235294 0.34375 1 5 11.875 3 1.125
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NamespaceUriCall.png 0 37 3 5 0 11 11 3 0 11 3 2.0 0.0 0 0.99 0.533333333 3 5 11.33333333 1 0.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemElement.png 0 388 13 4 1 15 50 30 2 13 9 0.583333333 1.0 2 0.943925234 0.230769231 2 6 28.69230769 8 1.6923
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncString.png 0 10 2 5 0 5 4 1 0 5 2 2.0 0.0 0 0.982142857 0.75 2 7 4.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_SerializerSwitcher.png 0 157 4 1 0 6 23 6 2 4 3 2.0 0.0 0 0.0 0.4 0 0 38.25 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_ObjectArray.png 0 432 7 1 0 3 19 0 3 1 6 0.25 1.0 1 0.0 0.464285714 0 0 60.14285714 3 1.4286
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_SerializerToHTML.png 0 2190 22 2 0 10 80 173 2 8 15 0.857142857 0.875 4 0.775280899 0.232804233 2 30 98.18181818 3 1.1364
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DOMBuilder.png 0 0 0 1 0 11 0 0 10 1 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMDefaultBase.png 0 2010 97 1 1 64 139 4474 51 14 72 0.941666667 0.96 14 0.0 0.151442308 0 0 19.46391753 12 2.1031
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_FilterExprIterator.png 0 163 14 6 0 15 32 0 1 15 11 0.730769231 1.0 2 0.914285714 0.234693878 4 8 10.35714286 3 1.2143
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_FuncFormatNumb.png 0 186 5 6 0 16 36 10 1 15 4 2.0 0.0 0 0.941176471 0.5 2 8 36.2 1 0.8
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_sql_SQLDocument.png 2 1073 10 5 0 8 53 0 1 7 5 0.883141762 1.0 1 0.954545455 0.211111111 2 8 100.5 11 3.4
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_client_XSLTProcessorApplet.png 0 782 29 5 0 2 73 300 1 2 21 0.879251701 0.857142857 1 0.94214876 0.344827586 3 5 25.24137931 10 1.5172
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xslt_Process.png 1 1490 4 1 0 8 96 6 0 8 2 2.0 0.0 0 0.0 0.25 0 0 371.5 86 22.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_DOMHelper.png 0 1119 26 1 1 17 84 315 12 5 23 0.884444444 0.888888889 6 0.0 0.22 0 0 41.69230769 40 4.9615
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeSortRecordGenerator.png 0 25 3 4 0 5 5 1 1 4 3 1.0 1.0 0 0.975903614 0.466666667 0 0 6.666666667 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CurrentCall.png 0 13 2 4 0 8 6 1 0 8 2 2.0 0.0 0 0.989690722 0.625 2 4 5.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CeilingCall.png 0 31 2 4 0 12 10 1 0 12 2 2.0 0.0 0 0.989690722 0.6 2 5 14.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_When.png 0 118 7 3 0 14 25 0 1 13 6 0.5 1.0 1 0.903225806 0.285714286 1 5 15.57142857 5 1.4286
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncTrue.png 0 9 3 3 0 4 4 3 0 4 3 2.0 0.0 0 0.95 0.5 1 6 2.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncLocalPart.png 0 42 2 5 0 5 9 1 0 5 2 2.0 0.0 0 0.982142857 0.75 3 8 20.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncCount.png 0 23 2 4 0 6 8 1 0 6 2 2.0 0.0 0 0.979591837 0.75 1 6 10.5 1 0.5
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_ExsltDatetime.png 3 1326 43 1 0 4 74 903 0 4 36 1.023809524 0.0 0 0.0 0.168604651 0 0 29.65116279 5 1.2791
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemTextLiteral.png 0 114 11 3 0 8 20 29 5 4 11 0.825 1.0 0 0.951456311 0.340909091 2 5 9.0 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_MatchingIterator.png 0 121 10 2 0 3 22 0 0 3 10 0.666666667 1.0 1 0.526315789 0.35 1 5 10.7 4 1.3
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorInclude.png 0 282 7 4 1 11 48 15 2 9 3 0.333333333 1.0 0 0.972222222 0.5 1 1 39.14285714 1 0.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ParentLocationPath.png 0 380 11 4 0 23 38 0 2 22 11 0.64 1.0 3 0.879518072 0.204545455 2 7 33.09090909 35 4.8182
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_MultiDOM.png 1 572 42 1 0 11 86 0 4 9 41 0.887195122 1.0 2 0.0 0.19047619 0 0 12.42857143 3 1.1429
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_SerializerFactory.png 0 69 3 1 0 7 14 3 4 3 2 1.0 1.0 0 0.0 0.5 0 0 21.66666667 4 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_DOMSerializer.png 0 1 1 1 0 3 1 0 3 0 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemVariable.png 1 383 22 3 3 38 68 155 20 24 19 0.828571429 0.8 2 0.907407407 0.168181818 2 15 16.18181818 4 1.0909
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_DecimalToRoman.png 0 20 1 1 0 2 2 0 2 0 1 2.0 0.0 0 0.0 1.0 0 0 15.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Comment.png 0 92 4 3 0 19 20 6 0 19 3 2.0 0.0 0 0.949152542 0.4 1 3 22.0 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Fallback.png 0 49 6 3 0 13 12 0 1 12 5 0.2 1.0 0 0.918032787 0.333333333 1 3 7.0 2 1.1667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathAPI.png 0 116 10 1 0 6 21 45 1 5 10 2.0 0.0 0 0.0 0.5 0 0 10.6 1 0.9
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_SymbolTable.png 0 494 25 1 0 91 47 214 88 10 24 0.891666667 1.0 1 0.0 0.185454545 0 0 18.36 5 2.2
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_FuncLoader.png 0 64 3 1 0 3 11 0 2 1 3 0.5 1.0 0 0.0 0.555555556 0 0 19.66666667 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_res_XSLMessages.png 0 442 15 1 0 92 33 69 90 2 13 0.836734694 1.0 0 0.0 0.333333333 0 0 28.0 7 2.5333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_TransletOutputBase.png 0 52 24 1 1 4 25 276 1 3 24 2.0 0.0 0 0.0 0.298611111 0 0 1.166666667 1 0.9583
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemWithParam.png 0 168 11 3 0 22 33 15 2 20 10 0.825 0.5 2 0.951456311 0.191919192 2 9 13.90909091 3 1.0909
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LogicalExpr.png 0 362 10 3 0 20 41 0 0 20 9 0.62962963 0.666666667 2 0.898734177 0.26984127 2 9 34.6 8 2.4
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_SAXAdapter.png 1 205 26 1 0 8 42 243 1 7 25 0.693333333 1.0 2 0.0 0.258241758 0 0 6.769230769 1 0.9615
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FunctionOneArg.png 0 113 11 3 15 33 20 0 25 8 10 0.3 0.0 1 0.791666667 0.345454545 2 4 9.181818182 6 1.5455
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_compiler_Compiler.png 1 1193 45 2 0 60 111 932 24 40 15 0.568181818 0.6 1 0.328125 0.175925926 0 0 25.4 12 1.2222
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_util_IntegerArray.png 1 256 19 1 0 4 25 0 4 0 18 0.513888889 1.0 0 0.0 0.394736842 0 0 12.26315789 3 1.2105
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_Class.png 0 2306 65 1 0 7 134 508 6 5 59 0.7375 0.85 12 0.0 0.1515625 0 0 34.16923077 18 1.8462
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringToStringTableVector.png 0 180 10 1 0 1 14 0 0 1 10 0.472222222 1.0 1 0.0 0.4 0 0 16.6 3 1.6
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ParameterRef.png 0 152 3 4 0 22 31 3 1 21 3 2.0 0.0 0 0.974358974 0.5 2 3 49.66666667 8 3.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ApplyImports.png 0 237 7 3 0 25 47 17 1 24 5 0.888888889 1.0 1 0.903225806 0.30952381 1 4 32.42857143 6 1.7143
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_functions_FunctionMultiArgs.png 1 214 8 6 1 10 23 8 2 9 7 0.428571429 0.0 1 0.901408451 0.375 5 22 25.625 7 2.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_Axis.png 0 111 1 1 0 3 1 0 3 0 0 2.0 0.0 0 0.0 0.0 0 0 88.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncConcat.png 0 81 4 7 0 10 13 6 0 10 3 2.0 0.0 0 0.96 0.5 3 8 19.25 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncId.png 0 169 3 4 0 11 27 3 0 11 2 2.0 0.0 0 0.96 0.476190476 1 6 55.33333333 8 3.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_sax2dtm_SAX2RTFDTM.png 0 392 9 5 0 12 32 18 2 10 8 0.78125 0.25 6 0.954285714 0.26984127 2 20 41.66666667 10 2.8889
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_XSLProcessorVersion.png 0 67 3 1 0 2 9 1 2 0 2 1.0 0.0 0 0.0 0.5 0 0 19.0 1 0.3333
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_LoadDocument.png 1 329 3 1 0 15 49 3 0 15 3 1.5 1.0 0 0.0 0.533333333 0 0 108.3333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AttributeValue.png 0 44 2 3 2 10 8 1 7 5 1 2.0 0.0 0 0.986111111 0.5 0 0 21.0 3 1.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_FilteredStepIterator.png 0 59 3 3 0 5 13 0 0 5 3 0.0 1.0 1 0.909090909 0.555555556 2 7 18.33333333 3 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LiteralAttribute.png 0 84 5 3 0 21 24 0 2 19 4 0.25 1.0 1 0.933333333 0.314285714 1 4 15.4 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorOutputElem.png 0 174 14 4 0 9 40 0 1 8 13 0.076923077 1.0 1 0.941704036 0.295918367 2 3 11.35714286 1 0.9286
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnionPathExpr.png 0 289 6 3 0 24 36 0 2 23 5 0.5 1.0 3 0.934210526 0.285714286 2 8 46.5 7 2.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_KeyManager.png 0 104 2 1 0 10 14 0 2 8 2 0.0 1.0 0 0.0 0.583333333 0 0 50.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Param.png 0 369 6 4 0 36 62 15 8 32 5 2.0 0.0 0 0.938271605 0.305555556 3 15 60.5 7 2.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_Field.png 0 469 33 1 0 3 73 0 1 3 33 0.75 0.0 2 0.0 0.158508159 1 1 13.03030303 6 1.303
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_UnImplNode.png 0 648 107 1 1 3 117 5671 2 1 107 2.0 0.0 0 0.0 0.191069574 0 0 5.056074766 1 0.9907
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathFactory.png 0 1 1 1 0 5 1 0 3 2 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorGlobalVariableDecl.png 0 30 3 5 0 6 10 3 1 5 1 2.0 0.0 0 0.990697674 0.583333333 1 2 9.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_FilterGenerator.png 0 29 4 4 0 6 6 2 2 4 3 0.666666667 1.0 0 0.975903614 0.466666667 0 0 5.75 1 0.5
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_WalkerFactory.png 1 2159 51 1 0 27 115 1275 11 25 40 1.02 0.0 0 0.0 0.181372549 0 0 40.82352941 18 3.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_SubContextList.png 0 2 2 1 0 6 2 1 6 1 2 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_SyntaxTreeNode.png 0 942 52 1 5 111 110 942 87 36 10 0.911764706 1.0 6 0.0 0.16399287 0 0 16.88461538 6 1.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_RealType.png 0 504 27 3 0 45 56 351 14 36 26 2.0 0.0 0 0.573770492 0.202020202 1 3 17.66666667 8 1.7778
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Or.png 0 42 3 3 0 6 7 3 1 5 3 2.0 0.0 0 0.953488372 0.833333333 1 6 13.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_TransletException.png 0 16 3 4 0 27 5 3 27 0 3 2.0 0.0 0 1.0 0.555555556 0 0 4.333333333 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Hashtable.png 0 483 15 1 0 22 26 1 21 2 14 0.553571429 1.0 1 0.0 0.383333333 0 0 30.93333333 6 2.4667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_compiler_XPathParser.png 1 3479 58 1 0 13 88 0 4 10 5 0.679425837 0.454545455 2 0.0 0.163793103 0 0 58.79310345 6 1.4828
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_dom2dtm_DOM2DTMdefaultNamespaceDeclarationNode.png 0 245 46 1 0 3 53 1009 2 1 45 0.966666667 0.0 0 0.0 0.190217391 0 0 4.195652174 1 0.9783
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_XMLCharacterRecognizer.png 0 85 5 1 0 8 10 10 8 0 5 2.0 0.0 0 0.0 0.2 0 0 16.0 5 3.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMTreeWalker.png 0 437 10 1 1 6 41 0 3 3 7 0.333333333 0.666666667 1 0.0 0.475 0 0 42.4 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_MultipleNodeCounter.png 0 162 4 2 1 6 19 0 1 6 4 0.333333333 1.0 1 0.823529412 0.5 1 4 39.25 11 3.25
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_ClonerToResultTree.png 0 118 2 1 0 6 24 1 4 4 2 1.0 1.0 2 0.0 0.583333333 0 0 57.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_PrefixResolverDefault.png 0 108 5 1 0 4 17 8 3 1 5 1.0 0.0 0 0.0 0.6 0 0 20.2 12 3.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Step.png 1 900 18 4 0 41 70 21 6 38 14 0.588235294 1.0 0 0.811111111 0.238095238 2 9 48.77777778 20 4.0556
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnresolvedRef.png 0 153 7 4 0 17 22 0 0 17 5 0.625 1.0 4 0.926829268 0.30952381 2 4 20.28571429 6 1.7143
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Lt.png 0 13 2 3 0 4 4 1 1 3 2 2.0 0.0 0 0.976190476 0.75 1 1 5.5 1 0.5
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_transformer_TransformerImpl.png 7 3260 123 2 0 106 355 6589 67 56 115 0.93969555 0.714285714 18 0.097014925 0.057650273 1 2 25.16260163 5 1.3821
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_AttList.png 0 168 13 1 0 2 27 0 1 1 13 0.694444444 0.0 1 0.0 0.4 0 0 11.69230769 6 1.6923
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_ObjectPool.png 0 119 7 1 0 4 20 0 2 2 7 0.166666667 1.0 0 0.0 0.342857143 0 0 15.71428571 2 0.7143
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_NodeInfo.png 0 204 9 1 0 3 20 36 0 3 9 2.0 0.0 0 0.0 0.333333333 0 0 21.66666667 4 2.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Expression.png 0 238 18 2 21 101 43 115 79 24 17 0.838235294 1.0 3 0.76056338 0.285714286 1 2 12.0 6 1.4444
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_SingleNodeCounter.png 0 107 5 2 1 5 16 2 1 5 4 0.625 0.5 1 0.823529412 0.5 1 4 20.0 9 2.2
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_CachedXPathAPI.png 0 139 12 1 0 5 23 54 0 5 12 0.454545455 1.0 1 0.0 0.533333333 0 0 10.5 1 0.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ForEach.png 0 314 6 3 0 31 54 3 2 30 5 0.6 1.0 2 0.918032787 0.361111111 1 5 51.0 9 2.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_DOM2Helper.png 0 125 11 2 1 13 29 53 10 3 11 0.8 1.0 0 0.705882353 0.327272727 1 5 10.27272727 4 1.4545
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_ReverseAxesWalker.png 1 200 8 5 0 8 24 26 1 7 4 0.571428571 1.0 1 0.936363636 0.4375 2 8 23.875 4 1.875
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FormatNumberCall.png 0 191 3 4 0 25 24 0 0 25 3 0.0 1.0 4 0.979591837 0.444444444 3 13 61.33333333 3 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncQname.png 0 35 2 5 0 5 7 1 0 5 2 2.0 0.0 0 0.982142857 0.75 2 7 16.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_IteratorPool.png 0 76 4 1 0 4 13 0 2 2 4 0.166666667 1.0 1 0.0 0.75 0 0 17.5 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RelativeLocationPath.png 0 6 3 3 2 4 4 3 3 1 2 2.0 0.0 0 0.97260274 0.666666667 0 0 1.0 1 0.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_ExtensionsProvider.png 1 3 3 1 0 4 3 3 4 0 3 2.0 0.0 0 0.0 0.666666667 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_StringStack.png 0 20 4 5 0 0 8 6 0 0 4 2.0 0.0 0 0.963855422 0.625 0 0 4.0 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NamespaceAlias.png 0 30 4 3 0 9 8 6 1 8 3 1.0 1.0 0 0.952380952 0.4 2 4 6.0 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_XMLChar.png 0 3198 23 1 0 2 26 181 2 0 22 0.97979798 0.0 0 0.0 0.25 0 0 137.6521739 17 3.913
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerGeneral.png 1 555 7 2 0 15 50 11 0 15 5 0.911111111 0.866666667 0 0.545454545 0.351851852 0 0 76.14285714 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamUnknownOutput.png 0 460 22 3 0 10 55 0 1 9 21 0.55952381 1.0 1 0.6875 0.25 2 2 19.36363636 1 0.9091
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_DecimalFormatProperties.png 0 161 25 3 0 6 49 0 4 3 25 0.520833333 0.5 1 0.890909091 0.253333333 1 1 5.36 2 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_transformer_TransformSnapshotImpl.png 1 283 2 1 0 13 34 0 1 13 0 0.066666667 0.866666667 6 0.0 1.0 0 0 133.0 4 2.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_DefaultErrorHandler.png 0 260 13 1 1 13 36 58 10 3 13 0.666666667 0.0 0 0.0 0.307692308 0 0 18.92307692 11 2.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeType.png 0 452 22 2 0 46 54 211 14 35 20 0.619047619 1.0 0 0.622641509 0.215909091 2 4 19.5 7 1.3182
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XStringForChars.png 0 148 12 4 0 5 22 4 1 4 11 0.484848485 0.333333333 0 0.921875 0.25 3 15 11.08333333 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ClassGenerator.png 0 87 10 3 4 123 15 27 119 6 9 0.888888889 1.0 2 0.898734177 0.288888889 0 0 6.9 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_util_JavaCupRedirect.png 0 124 3 1 0 1 15 3 0 1 3 1.5 1.0 0 0.0 0.333333333 0 0 40.0 6 2.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_KeyPattern.png 0 6 1 6 0 1 2 0 0 1 1 2.0 0.0 0 1.0 1.0 0 0 5.0 0 0.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_ChildTestIterator.png 1 65 6 6 5 13 13 3 7 7 4 0.4 1.0 1 0.96969697 0.366666667 2 4 9.666666667 2 0.8333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_SingletonIterator.png 0 105 8 2 1 6 11 0 4 2 8 0.214285714 1.0 0 0.666666667 0.5 1 6 11.875 4 1.125
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XNumber.png 2 307 13 3 0 41 36 22 37 5 12 0.416666667 0.0 0 0.865853659 0.182692308 2 22 22.53846154 11 2.3077
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_RTFIterator.png 1 12 2 8 0 4 4 1 2 2 1 2.0 0.0 0 1.0 0.833333333 0 0 5.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_WhitespaceInfoPaths.png 0 23 4 5 0 5 6 0 2 3 3 0.333333333 1.0 0 0.986486486 0.5 0 0 4.5 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_IntType.png 0 393 27 3 0 48 58 351 8 42 26 2.0 0.0 0 0.573770492 0.202020202 1 3 13.55555556 8 1.6296
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeSetType.png 1 450 21 2 0 44 49 210 15 32 19 2.0 0.0 0 0.622641509 0.238095238 2 4 20.42857143 7 1.4762
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncContains.png 0 36 2 5 0 6 7 1 0 6 2 2.0 0.0 0 0.98245614 0.75 1 6 17.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_MethodType.png 0 332 14 2 0 10 29 0 8 2 14 0.269230769 1.0 1 0.785714286 0.410714286 1 1 22.57142857 6 1.6429
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_FastStringBuffer.png 1 1676 28 1 0 20 42 0 19 1 21 0.62962963 0.0625 1 0.0 0.242798354 0 0 58.28571429 11 3.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSubstringBefore.png 0 34 2 5 0 6 8 1 0 6 2 2.0 0.0 0 0.98245614 0.75 1 6 16.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Number.png 0 23 3 3 0 7 8 3 2 5 3 2.0 0.0 0 0.952380952 0.555555556 1 1 6.666666667 1 0.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_URI.png 1 2042 42 1 0 3 68 375 1 2 29 0.780487805 1.0 0 0.0 0.226480836 0 0 47.33333333 33 3.1429
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Mult.png 0 25 3 3 0 7 7 3 2 5 3 2.0 0.0 0 0.953488372 0.555555556 1 1 7.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_BasicTestIterator.png 0 163 7 5 2 12 23 21 3 10 2 2.0 0.0 0 0.9765625 0.371428571 2 4 22.28571429 11 1.8571
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ValueOf.png 0 177 5 3 0 24 32 0 1 23 4 0.375 1.0 1 0.933333333 0.333333333 2 5 34.0 4 1.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorStylesheetElement.png 0 107 3 4 0 9 29 3 2 9 2 2.0 0.0 0 0.990566038 0.666666667 1 1 34.66666667 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DTDMonitor.png 0 265 13 1 0 11 41 38 8 4 12 0.944444444 1.0 2 0.0 0.269230769 0 0 18.92307692 9 1.6923
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_CurrentNodeListFilter.png 0 1 1 1 0 3 1 0 1 2 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_SlotAllocator.png 0 242 4 1 0 4 16 0 1 3 3 0.5 1.0 0 0.0 0.4375 0 0 58.5 6 3.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_trace_TraceManager.png 1 293 13 1 0 40 32 0 27 14 13 0.333333333 1.0 1 0.0 0.211538462 0 0 21.38461538 4 1.7692
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_AttributeSetMethodGenerator.png 0 100 8 5 0 11 15 14 1 10 7 0.839285714 1.0 0 0.958333333 0.476190476 1 2 10.5 1 0.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_QName.png 0 106 10 1 0 56 18 17 56 0 10 0.777777778 1.0 0 0.0 0.4 1 1 9.1 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_XSLTElementProcessor.png 0 280 15 3 11 21 48 101 17 6 10 0.821428571 1.0 2 0.933333333 0.348148148 0 0 17.53333333 1 0.9333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemPI.png 0 164 8 3 0 10 33 8 0 10 8 0.428571429 1.0 1 0.965517241 0.3 2 5 19.375 16 2.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMDefaultBaseTraversers.png 0 213 2 2 1 33 26 1 24 29 2 2.0 0.0 0 0.989130435 0.642857143 0 0 105.5 5 2.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Import.png 0 233 5 3 0 14 43 4 0 14 4 0.5 1.0 1 0.9375 0.36 2 5 45.4 10 2.6
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NodeVector.png 0 933 30 1 1 7 33 0 7 0 30 0.422413793 1.0 0 0.0 0.4 0 0 29.96666667 5 2.1667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMWSFilter.png 0 4 1 1 0 15 1 0 14 1 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XSLTVisitable.png 0 1 1 1 0 4 1 0 3 1 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_DOM2TO.png 1 327 22 1 0 2 49 221 1 1 20 0.964285714 1.0 1 0.0 0.143939394 0 0 13.68181818 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_TraceListener.png 0 3 3 1 0 8 3 3 5 3 3 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_VariableRefBase.png 0 146 7 3 3 16 21 0 10 9 7 0.416666667 1.0 2 0.934210526 0.357142857 2 4 19.57142857 3 1.1429
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemCallTemplate.png 0 352 13 4 1 16 49 40 1 15 13 0.638888889 0.666666667 3 0.946902655 0.188034188 4 11 25.84615385 2 1.1538
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Gt.png 0 13 2 3 0 4 4 1 1 3 2 2.0 0.0 0 0.976190476 0.75 1 1 5.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_Transform.png 0 683 8 1 0 12 67 8 0 12 4 0.74025974 1.0 1 0.0 0.30952381 0 0 83.0 18 4.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_VarNameCollector.png 0 34 5 2 0 5 12 0 1 4 4 0.0 0.0 0 0.75 0.4 0 0 5.6 1 0.8
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_OutputBase.png 1 371 32 1 2 12 54 470 7 5 23 0.95601173 1.0 2 0.0 0.286458333 0 0 10.25 5 1.3125
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_StartsWithCall.png 0 108 3 4 0 18 17 0 0 18 3 0.0 1.0 2 0.979591837 0.444444444 3 14 34.33333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AttributeSet.png 0 279 8 3 0 26 54 6 3 25 7 0.80952381 1.0 3 0.895522388 0.3 2 5 33.125 7 2.25
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_ExpressionVisitor.png 0 23 2 2 0 7 6 0 1 6 2 0.0 1.0 1 0.923076923 0.625 0 0 10.0 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CompilerException.png 0 40 4 3 0 2 9 0 2 0 4 0.333333333 1.0 0 0.944444444 0.5 1 1 8.75 2 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Choose.png 0 245 3 3 0 26 36 3 1 25 2 2.0 0.0 0 0.965517241 0.5 2 4 80.66666667 15 5.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformState.png 0 7 7 1 0 4 7 21 2 2 7 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ProcessingInstructionPattern.png 0 289 6 7 0 26 39 5 0 26 6 0.6 1.0 0 0.959349593 0.333333333 4 8 46.83333333 4 1.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_EntryPoint.png 0 827 22 1 2 6 49 71 4 5 20 0.706349206 0.833333333 4 0.0 0.272727273 1 1 36.04545455 16 2.7727
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_NotEquals.png 0 13 2 3 0 4 4 1 1 3 2 2.0 0.0 0 0.976190476 0.75 1 1 5.5 1 0.5
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_functions_FuncExtFunction.png 2 137 8 3 0 11 21 8 3 8 7 0.714285714 0.0 0 0.844444444 0.285714286 2 8 15.625 3 1.125
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSum.png 0 44 2 4 0 8 11 1 0 8 2 2.0 0.0 0 0.979591837 0.75 1 6 21.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FloorCall.png 0 26 2 4 0 12 10 1 0 12 2 2.0 0.0 0 0.989690722 0.6 2 4 12.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_KeyDeclaration.png 0 79 9 3 0 10 17 16 6 6 9 0.75 1.0 3 0.960784314 0.296296296 1 2 7.444444444 1 0.8889
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncTranslate.png 0 70 2 6 0 7 12 1 0 7 2 2.0 0.0 0 0.984615385 0.75 1 6 34.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NumberType.png 0 10 3 2 2 5 4 3 4 1 3 2.0 0.0 0 0.942857143 1.0 0 0 2.333333333 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorCharacters.png 0 151 5 4 0 9 31 2 2 7 4 0.333333333 1.0 1 0.981308411 0.4 1 2 28.6 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionNamespacesManager.png 0 453 9 1 0 7 29 12 5 2 8 0.625 1.0 0 0.0 0.416666667 0 0 49.0 7 2.5556
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionNamespaceSupport.png 0 133 3 1 0 5 12 0 4 1 3 0.5 0.0 0 0.0 0.555555556 0 0 42.0 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorExsltFuncResult.png 0 57 2 5 0 8 8 1 1 7 2 2.0 0.0 0 0.995327103 0.625 1 1 27.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorTemplateElem.png 0 94 4 4 8 14 23 6 9 5 3 2.0 0.0 0 0.985915493 0.55 1 1 22.5 1 0.75
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_sql_DefaultConnectionPool.png 3 395 19 1 0 4 47 57 1 3 16 0.784722222 1.0 0 0.0 0.218045113 0 0 19.36842105 3 1.2105
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemExsltFuncResult.png 1 62 5 4 0 10 15 10 3 7 5 2.0 0.0 0 0.981900452 0.6 3 7 11.4 3 1.2
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_WrappedRuntimeException.png 0 22 3 4 0 35 5 0 35 0 3 0.0 1.0 0 0.944444444 0.666666667 0 0 6.0 1 0.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemParam.png 0 80 6 4 0 18 21 15 7 11 6 1.0 0.0 0 0.981900452 0.375 3 8 12.16666667 1 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_FunctionPattern.png 0 156 7 4 0 14 18 0 3 12 6 0.166666667 0.0 1 0.931034483 0.367346939 3 17 21.14285714 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_CurrentNodeListIterator.png 0 245 12 2 0 6 31 6 0 6 11 0.602272727 1.0 4 0.5 0.319444444 1 5 18.75 3 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncLang.png 0 73 2 4 0 6 15 1 0 6 2 2.0 0.0 0 0.979591837 0.75 1 6 35.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncUnparsedEntityURI.png 0 30 2 4 0 6 10 1 0 6 2 2.0 0.0 0 0.979591837 0.75 1 6 14.0 1 0.5
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemApplyTemplates.png 1 586 9 5 0 21 84 20 1 21 9 0.6875 1.0 1 0.965811966 0.311111111 5 10 63.88888889 1 0.8889
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_UnionIterator.png 2 369 9 2 0 6 25 0 1 5 8 0.607142857 1.0 2 0.555555556 0.361111111 1 6 39.22222222 6 2.6667
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_ref_dom2dtm_DOM2DTM.png 1 1628 38 4 0 19 117 581 1 19 28 0.86977887 0.545454545 1 0.717557252 0.142857143 2 18 41.55263158 42 4.6316
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMDocumentImpl.png 0 1853 110 1 0 13 149 5191 0 13 96 0.943807339 0.666666667 8 0.0 0.11983945 0 0 15.62727273 10 1.5364
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_EqualityExpr.png 0 836 12 3 0 40 49 0 1 39 11 0.333333333 1.0 2 0.865853659 0.238095238 2 8 68.41666667 18 3.25
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Constants.png 0 14 0 1 0 5 0 0 5 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Quo.png 0 16 2 3 0 4 5 1 1 3 2 2.0 0.0 0 0.976190476 0.75 1 1 7.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_FoundIndex.png 0 4 1 4 0 0 2 0 0 0 1 2.0 0.0 0 1.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_FilterExprWalker.png 0 244 18 5 0 22 48 19 5 18 16 0.75 1.0 2 0.858333333 0.185185185 4 14 12.33333333 3 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Include.png 0 319 5 3 0 14 49 4 1 14 4 0.5 1.0 1 0.9375 0.36 2 5 62.6 13 3.2
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_StylesheetHandler.png 1 1340 71 2 0 47 152 2163 25 25 33 0.941326531 0.75 6 0.197674419 0.108035714 1 1 17.47887324 7 1.3239
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_PooledConnection.png 0 41 5 1 0 1 9 0 1 0 5 0.5 1.0 0 0.0 0.466666667 0 0 6.8 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_EndSelectionEvent.png 0 10 1 2 0 8 2 0 3 5 1 2.0 0.0 0 0.0 1.0 0 0 9.0 0 0.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ReferenceType.png 1 353 20 2 0 41 44 190 18 30 19 2.0 0.0 0 0.634615385 0.230769231 2 4 16.65 8 1.45
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_SimpleAttributeValue.png 0 38 5 4 0 14 10 4 1 14 4 0.5 1.0 0 0.947368421 0.36 2 8 6.4 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_VariableRef.png 0 137 2 4 0 22 25 1 2 20 2 2.0 0.0 0 0.987012987 0.625 2 3 67.5 9 4.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XNodeSetForDOM.png 0 115 7 5 0 7 18 0 1 6 7 0.0 0.0 0 0.978417266 0.285714286 3 14 15.28571429 1 0.4286
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_VoidType.png 0 82 8 2 0 14 19 28 1 14 7 2.0 0.0 0 0.825 0.375 2 3 9.25 2 1.25
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncNumber.png 0 12 2 5 0 4 5 1 0 4 2 2.0 0.0 0 0.982142857 0.75 2 7 5.0 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_UnionPattern.png 0 212 9 2 0 12 20 0 4 10 8 0.125 1.0 1 0.789473684 0.197530864 1 7 22.44444444 7 2.4444
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_transformer_KeyTable.png 1 68 5 1 0 10 15 2 1 9 4 0.5 1.0 1 0.0 0.342857143 0 0 12.2 1 0.8
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LocalNameCall.png 0 50 3 5 0 12 13 3 0 12 3 2.0 0.0 0 0.99 0.533333333 3 5 15.66666667 1 0.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_getopt_GetOptsException.png 0 5 1 3 2 3 2 0 3 0 1 2.0 0.0 0 1.0 1.0 0 0 4.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NodeCounter.png 0 824 15 1 3 9 39 91 5 4 7 0.811688312 0.818181818 3 0.0 0.267857143 0 0 52.46666667 14 3.4667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncExtElementAvailable.png 0 87 2 4 0 10 17 1 0 10 2 2.0 0.0 0 0.979591837 0.75 2 7 42.5 1 0.5
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_DTMManager.png 1 299 21 1 2 43 49 196 36 8 17 0.975 0.4 1 0.0 0.15 0 0 12.76190476 10 1.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_ProcessorVersion.png 0 44 3 1 0 0 9 1 0 0 2 0.5 1.0 0 0.0 0.5 0 0 12.66666667 2 0.6667
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XBooleanStatic.png 0 25 2 4 0 5 5 0 3 3 2 0.0 0.0 0 0.987341772 0.666666667 2 3 11.0 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformerClient.png 0 1 1 1 0 2 1 0 1 1 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncStartsWith.png 0 21 2 5 0 7 6 1 0 7 2 2.0 0.0 0 0.98245614 0.75 1 6 9.5 1 0.5
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_sql_DTMDocument.png 2 2509 95 4 2 15 191 0 2 13 66 0.920621931 1.0 2 0.5 0.197894737 1 25 25.27368421 11 2.0421
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_String.png 0 9 2 3 0 5 4 1 1 4 2 2.0 0.0 0 0.975609756 0.75 1 1 3.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Predicate.png 0 1066 21 3 0 65 104 68 6 64 20 0.765 1.0 4 0.78021978 0.210884354 2 8 49.28571429 12 3.1429
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_Trie.png 0 100 3 1 0 2 8 0 2 1 3 0.75 0.0 1 0.0 0.666666667 0 0 31.66666667 4 2.3333
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringBufferPool.png 0 44 5 1 0 6 13 4 4 2 3 0.75 0.5 1 0.0 0.25 0 0 7.4 1 0.6
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AVTPartSimple.png 0 22 5 2 0 6 7 4 1 5 5 0.5 1.0 0 0.555555556 0.325 0 0 3.2 1 0.8
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TransformerFactoryImpl.png 2 697 27 3 0 11 87 201 5 10 24 0.783653846 1.0 0 0.444444444 0.171328671 1 2 24.51851852 3 1.0741
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_SuballocatedIntVector.png 0 860 18 1 0 13 20 3 13 0 11 0.294117647 1.0 0 0.0 0.916666667 0 0 46.38888889 8 3.1111
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_getopt_MissingOptArgException.png 0 5 1 4 0 2 2 0 1 1 1 2.0 0.0 0 1.0 1.0 0 0 4.0 0 0.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ElementAvailableCall.png 0 85 5 4 0 19 19 10 0 19 5 2.0 0.0 0 0.96 0.333333333 3 12 16.0 2 1.2
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_ExpressionNode.png 0 5 5 1 0 41 5 10 41 0 5 2.0 0.0 0 0.0 0.6 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_LocPathIterator.png 1 658 52 4 8 46 84 1030 28 22 45 0.85130719 0.833333333 4 0.616 0.145104895 2 9 11.42307692 10 1.3846
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_SAX2DOM.png 1 292 21 1 0 2 51 134 1 1 21 0.716666667 1.0 0 0.0 0.265306122 0 0 12.76190476 7 1.381
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ParentPattern.png 0 253 8 6 0 31 41 0 1 30 8 0.285714286 1.0 2 0.933962264 0.25 4 5 30.375 8 1.75
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_StringType.png 0 268 18 2 0 44 42 153 18 30 17 2.0 0.0 0 0.66 0.283950617 2 4 13.88888889 4 1.2778
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_Member.png 0 4 4 1 0 6 4 6 4 2 4 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_MessageHandler.png 0 9 2 1 0 1 4 1 1 0 2 2.0 0.0 0 0.0 0.75 0 0 3.5 1 0.5
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_MethodGenerator.png 0 414 26 4 6 136 47 287 121 15 26 0.978461538 1.0 1 0.795081967 0.161538462 1 2 13.92307692 4 1.3077
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_NodeTestFilter.png 0 1 1 1 0 1 1 0 0 1 1 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LangCall.png 0 84 4 4 0 19 17 0 0 19 4 0.666666667 1.0 2 0.96969697 0.375 3 8 19.5 2 1.0
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_FilterIterator.png 0 106 9 2 0 5 24 0 1 4 9 0.625 1.0 2 0.555555556 0.288888889 1 5 10.44444444 3 1.2222
-../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RelativePathPattern.png 0 4 1 5 3 7 2 0 6 1 0 2.0 0.0 0 1.0 1.0 0 0 3.0 0 0.0
-../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_AxesWalker.png 1 451 27 4 2 21 53 257 8 15 23 0.807692308 0.625 4 0.747572816 0.138888889 1 4 15.40740741 5 1.5926
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_SAXXMLOutput.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Operation.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_BasisLibrary.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XString.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_StripFilter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_Serializer.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemExsltFunction.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_SAXHTMLOutput.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_CoroutineParser.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_StringValueHandler.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_CharKey.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_Type.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_transformer_StackGuard.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_WriterToUTF8Buffered.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_EmptyFilter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncCeiling.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Number.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_XPathDumper.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_TextOutput.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorUnknown.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_ChunkedIntArray.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_BinOpExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_SerializerToText.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_PrefixResolver.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerJavaPackage.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_XMLStringFactory.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemComment.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_res_XPATHErrorResources.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_MatchPatternIterator.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Constants.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_TransletOutputHandlerFactory.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_Method.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_TreeWalker.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_SQLErrorDocument.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ProcessingInstruction.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringToIntTable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Equals.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LastCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_CoroutineManager.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncStringLength.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NodeSortRecord.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_TemplateSubPatternAssociation.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AVTPartXPath.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_UnaryOperation.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorGlobalParamDecl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NamedMethodGenerator.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_DescendantIterator.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorTemplate.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSubstringAfter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_IdPattern.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExpressionContext.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemWhen.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPath.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_MsgMgr.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DOMImpl.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ArgumentList.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_FuncKey.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Instruction.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_NodeSorter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_SmartTransformerFactoryImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_BooleanExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_ContextNodeList.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_ElemDesc.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_Translet.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ObjectType.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_TraceListenerEx.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncPosition.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_getopt_IllegalArgumentException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemCopy.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_StepIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_StepPattern.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerExsltFunction.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NumberCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorNamespaceAlias.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_MultiHashtable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_ListingErrorHandler.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_WriterToUTF8.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncRound.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_XalanProperties.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Operators.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_TraceListenerEx2.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_AnyNodeCounter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_WhitespaceStrippingElementMatcher.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_TransformerFactoryImpl.png	3
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamXMLOutput.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_TransletLoader.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_ExpressionOwner.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_ref_sax2dtm_SAX2DTM.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Div.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Sort.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_serialize_SerializerToXML.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_HasPositionalPredChecker.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeCounterGenerator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_WrongNumberArgsException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_TopLevelElement.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_XslAttribute.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_WriterToASCI.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorLRE.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_SAX2TO.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamOutput.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_Expression.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSubstring.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeSortRecordFactGenerator.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMNodeList.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NamespaceSupport2.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerJava.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_Util.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_OneStepIteratorForward.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XNull.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemOtherwise.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathVisitable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_KeyIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Neg.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMNodeIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncFloor.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_ExsltCommon.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_VariableStack.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_OneStepIterator.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TransformerHandlerImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_RawCharacterHandler.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorText.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_ErrorMessages.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_ja_JP_HA.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemUnknown.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_PositionCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemVariablePsuedo.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XSLTVisitor.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_DocumentCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_Axis.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_GenerateIdCall.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_TracerEvent.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorKey.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XRTreeFragSelectWrapper.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_KeyRefIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorPreserveSpace.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Plus.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TreeWalker2Result.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_IntExpr.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorExsltFunction.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemChoose.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_Keywords.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncExtFunctionAvailable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_TransletOutput.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_Extensions.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TransformerImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamTextOutput.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_StepPattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformSnapshot.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FunctionDef1Arg.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemSort.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemExtensionDecl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorAttributeSet.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_WhiteSpaceInfo.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_getopt_GetOpt.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AlternativePattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Attribute.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_XMLString.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NodeConsumer.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Otherwise.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncNamespace.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_FunctionTable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResourceBundle.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_WithParam.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_PipeDocument.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Variable.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XNodeSet.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemNumber.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_OpCodes.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ApplyTemplates.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMSafeStringPool.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemIf.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DOMAdapter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NameSpace.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Bool.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ConcatCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_Redirect.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Whitespace.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_DOMOrder.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_trace_PrintTraceListener.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_VariableBase.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_SourceLoader.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_SuballocatedByteVector.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Lte.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FilterParentPath.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LocationPathPattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TemplatesHandlerImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemTemplate.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_XslElement.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_IncrementalSAXSource.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ResultTreeType.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_IdKeyPattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_ka.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemAttribute.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringVector.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DupFilterIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_EncodingInfo.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RelationalExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_DOM.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_DOMCache.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_NodeSequence.png	4
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_DefaultSAXOutputHandler.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemLiteralResult.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_SAXSourceLocator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FunctionAvailableCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemExtensionScript.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_WalkingIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Template.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_SelectionEvent.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_SynthesisException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_Filter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_WalkingIteratorSorted.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_NamespaceAlias.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ErrorMsg.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TrAXFilter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DocumentCache.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMAxisIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_QueryParameter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_If.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_StopParseException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_he.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_StylesheetPIHandler.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CastExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_hy.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemValueOf.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Parameter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FlowList.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_Constants.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemFallback.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemEmpty.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_res_XSLTErrorResources.png	3
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnsupportedElement.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Closure.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemText.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_BooleanCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathProcessorException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformerIdentityImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Minus.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_MatchGenerator.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_compiler_OpMap.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_Util.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FilteredAbsoluteLocationPath.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncCurrent.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemCopyOf.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UseAttributeSets.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_Function2Args.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XBoolean.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_UnionPathIterator.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_TestSeq.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_ref_ExpandedNameTable.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorDecimalFormat.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_SortingIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_ErrorMessages_no.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_el.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMDOMException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_ReverseIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_XSLTCSource.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XUnresolvedVariable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_MutableAttrListImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_ElemDesc.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_Counter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NotCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemUse.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_Function3Args.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XObjectFactory.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_TemplateList.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMConfigurationException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncLast.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_UnionChildIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_QueuedEvents.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncNormalizeSpace.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamHTMLOutput.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NthIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_StylesheetComposed.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_serialize_Encodings.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_And.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemApplyImport.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_XPathContext.png	3
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_ConnectionPoolManager.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_ExtendedSAX.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_XSLTSchema.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ErrorMessages_no.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AncestorPattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_ContextMatchStepPattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_TypeCheckError.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NameCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NodeSortRecordFactory.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XRTreeFrag.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMDefaultBaseIterators.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_StringLengthCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_AttributeList.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LiteralExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Text.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_BoolStack.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncDoclocation.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorStripSpace.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_XSLTC.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_Constructor.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_DOM2SAX.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RoundCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_ResultNameSpace.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Gte.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMNodeProxy.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Stylesheet.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Mod.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Message.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_PsuedoNames.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformerHandlerImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_XSLProcessorContext.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathVisitor.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TemplatesImpl.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Key.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_AbstractTranslet.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncGenerateId.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMAxisTraverser.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_AttributeIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CopyOf.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Output.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_SourceTree.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_CompareGenerator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_ChildIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_Arg.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RealExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_GenerateEvent.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMNamedNodeMap.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NSInfo.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FunctionCall.png	3
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_SelfIteratorNoPredicate.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_SerializableLocatorImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorImport.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_BitArray.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemMessage.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncBoolean.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMAxisIteratorBase.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_CustomStringPool.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_SourceTreeManager.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_IllegalCharException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FilterExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AVT.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncFalse.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LiteralElement.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_NodeSetDTM.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_compiler_Lexer.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_SAXOutput.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TrAXFilter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_QName.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Variable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AbsoluteLocationPath.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_DOMBuilder.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_TestGenerator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_WrongParserException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AbsolutePathPattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AVTPart.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Attributes.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_FilterExprIteratorSimple.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMManagerDefault.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XStringForFSB.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_Function.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_TransletOutputHandler.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_CountersTable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CallTemplate.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_NodeIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NameBase.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_BooleanType.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_Method.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_RedundentExprEliminator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_TestDriver.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemExtensionCall.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_zh_TW.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorStylesheetDoc.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemTemplateElement.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_IntStack.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_ConnectionPool.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_NodeSet.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Parser.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Mode.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_IntVector.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_ExsltMath.png	2
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ErrorMessages.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_KeyCall.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XObject.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_SystemIDResolver.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMStringPool.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncNot.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XMLNSDecl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSystemProperty.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_Compile.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_XSLInfiniteLoopException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ContainsCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NodeIteratorBase.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_XSLTElementDef.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Pattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_NumeratorFormatter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_StringCall.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_MethodResolver.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_CharInfo.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Node.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_StylesheetRoot.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XUnresolvedVariableSimple.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AbsPathChecker.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_JavaUtils.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_Version.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XMLStringFactoryImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_VariableSafeAbsRef.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemAttributeSet.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemForEach.png	2
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerJavaClass.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTM.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_KeyIndex.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandler.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_NodeLocator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMFilter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_NodeSortKey.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_PathComponent.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_ExsltSets.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_OutputSettings.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_FuncDocument.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMException.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionsTable.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringToStringTable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnparsedEntityUriCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_SAXTextOutput.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Copy.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_RtMethodGenerator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_StripWhitespaceFilter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnaryOpExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_DecimalFormatting.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_AbsoluteIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NamespaceUriCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemElement.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncString.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_SerializerSwitcher.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_ObjectArray.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_SerializerToHTML.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DOMBuilder.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMDefaultBase.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_FilterExprIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_FuncFormatNumb.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_sql_SQLDocument.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_client_XSLTProcessorApplet.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xslt_Process.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_DOMHelper.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeSortRecordGenerator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CurrentCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CeilingCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_When.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncTrue.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncLocalPart.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncCount.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_ExsltDatetime.png	3
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemTextLiteral.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_MatchingIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorInclude.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ParentLocationPath.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_MultiDOM.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_SerializerFactory.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_serialize_DOMSerializer.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemVariable.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_DecimalToRoman.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Comment.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Fallback.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_ja_JP_HI.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathAPI.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_SymbolTable.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_compiler_FuncLoader.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_res_XSLMessages.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_TransletOutputBase.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_IncrementalSAXSource_Filter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemWithParam.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LogicalExpr.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_SAXAdapter.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FunctionOneArg.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_compiler_Compiler.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_util_IntegerArray.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_Class.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringToStringTableVector.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_IncrementalSAXSource_Xerces.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ParameterRef.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ApplyImports.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_functions_FunctionMultiArgs.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_Axis.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncConcat.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncId.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_sax2dtm_SAX2RTFDTM.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_XSLProcessorVersion.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_LoadDocument.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AttributeValue.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_FilteredStepIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LiteralAttribute.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorOutputElem.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnionPathExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_KeyManager.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Param.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_Field.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_UnImplNode.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_XPathFactory.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorGlobalVariableDecl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_FilterGenerator.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_WalkerFactory.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_SubContextList.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_SyntaxTreeNode.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_RealType.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Or.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_TransletException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Hashtable.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_compiler_XPathParser.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_dom2dtm_DOM2DTMdefaultNamespaceDeclarationNode.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_XMLCharacterRecognizer.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMTreeWalker.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_MultipleNodeCounter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_ClonerToResultTree.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_PrefixResolverDefault.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Step.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_UnresolvedRef.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Lt.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_transformer_TransformerImpl.png	7
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_AttList.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_ObjectPool.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_NodeInfo.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Expression.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_SingleNodeCounter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_CachedXPathAPI.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ForEach.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_DOM2Helper.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_ReverseAxesWalker.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FormatNumberCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncQname.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_IteratorPool.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RelativeLocationPath.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_ExtensionsProvider.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_StringStack.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_NamespaceAlias.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_XMLChar.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionHandlerGeneral.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_StreamUnknownOutput.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_DecimalFormatProperties.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_transformer_TransformSnapshotImpl.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_DefaultErrorHandler.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeType.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XStringForChars.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ClassGenerator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_util_JavaCupRedirect.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_KeyPattern.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_ChildTestIterator.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_SingletonIterator.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_objects_XNumber.png	2
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_RTFIterator.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_WhitespaceInfoPaths.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_IntType.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NodeSetType.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_ja_JP_A.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_ja_JP_I.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncContains.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_MethodType.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_FastStringBuffer.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSubstringBefore.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Number.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_utils_URI.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Mult.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_BasicTestIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ValueOf.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorStylesheetElement.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_DTDMonitor.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_CurrentNodeListFilter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_SlotAllocator.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_trace_TraceManager.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_AttributeSetMethodGenerator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_cy.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_QName.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_XSLTElementProcessor.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemPI.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMDefaultBaseTraversers.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Import.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_NodeVector.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_DTMWSFilter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_XSLTVisitable.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_DOM2TO.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_TraceListener.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_en.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_VariableRefBase.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemCallTemplate.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Gt.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_Transform.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_VarNameCollector.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_output_OutputBase.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_StartsWithCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_AttributeSet.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_ExpressionVisitor.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_CompilerException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Choose.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformState.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ProcessingInstructionPattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_EntryPoint.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_NotEquals.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_functions_FuncExtFunction.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncSum.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_FloorCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_KeyDeclaration.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_res_XResources_zh_CN.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncTranslate.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_NumberType.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorCharacters.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionNamespacesManager.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_extensions_ExtensionNamespaceSupport.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorExsltFuncResult.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_processor_ProcessorTemplateElem.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_sql_DefaultConnectionPool.png	3
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemExsltFuncResult.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_WrappedRuntimeException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_ElemParam.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_FunctionPattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_CurrentNodeListIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncLang.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncUnparsedEntityURI.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_templates_ElemApplyTemplates.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_UnionIterator.png	2
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_ref_dom2dtm_DOM2DTM.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_dtm_ref_DTMDocumentImpl.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_EqualityExpr.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_Constants.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_Quo.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_FoundIndex.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_axes_FilterExprWalker.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Include.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_processor_StylesheetHandler.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_lib_sql_PooledConnection.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_trace_EndSelectionEvent.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_ReferenceType.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_SimpleAttributeValue.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_VariableRef.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XNodeSetForDOM.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_VoidType.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncNumber.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_UnionPattern.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_transformer_KeyTable.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LocalNameCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_getopt_GetOptsException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_NodeCounter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncExtElementAvailable.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xml_dtm_DTMManager.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_ProcessorVersion.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_objects_XBooleanStatic.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_transformer_TransformerClient.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_functions_FuncStartsWith.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_lib_sql_DTMDocument.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_operations_String.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_Predicate.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_Trie.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_StringBufferPool.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_templates_AVTPartSimple.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_TransformerFactoryImpl.png	2
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_SuballocatedIntVector.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_cmdline_getopt_MissingOptArgException.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ElementAvailableCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_ExpressionNode.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_LocPathIterator.png	1
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xalan_xsltc_trax_SAX2DOM.png	1
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_ParentPattern.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_StringType.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xml_utils_synthetic_reflection_Member.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_runtime_MessageHandler.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_util_MethodGenerator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xpath_patterns_NodeTestFilter.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_LangCall.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_dom_FilterIterator.png	0
+../data/img/grb_img/xalan-2.4/clean/xalan-2.4_src_java_org_apache_xalan_xsltc_compiler_RelativePathPattern.png	0
+../data/img/grb_img/xalan-2.4//buggy/xalan-2.4_src_java_org_apache_xpath_axes_AxesWalker.png	1

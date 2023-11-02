@@ -118,13 +118,11 @@ def get_tsne_img(what, loader, model, gpu=True):
     plt.close()
 
 
-def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=True):
+def image_classification_predict(loader, model, test_10crop=False, gpu=True):
     start_test = True
     device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
 
     model = model.to(device)
-    encoder = encoder.to(device)
-
     if test_10crop:
         iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
         for i in range(len(loader['test0'])):
@@ -132,14 +130,10 @@ def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=
             inputs = [data[j][0].to(device) for j in range(10)]
             labels = data[0][1].to(device)
 
-            image_features = [encoder(input_img) for input_img in inputs]
-            concatenated_features = [torch.cat((feat, data[0][3].to(device)), dim=1) for feat in image_features]
-            concatenated_features = [Variable(feat) for feat in concatenated_features]
             labels = Variable(labels)
 
             outputs = []
-            for j, feat in enumerate(concatenated_features):
-                outputs.append(model(feat))
+
             outputs = sum(outputs)
 
             if start_test:
@@ -156,12 +150,10 @@ def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=
             inputs = data[0].to(device)
             labels = data[1].to(device)
 
-            image_features = encoder(inputs)
-            concatenated_features = torch.cat((image_features, data[3].to(device)), dim=1)
-            concatenated_features = Variable(concatenated_features)
+
             labels = Variable(labels)
 
-            outputs = model(image_features)
+            outputs = model(inputs )
 
             if start_test:
                 all_output = outputs.data.float()
@@ -176,12 +168,11 @@ def image_classification_predict(loader, model, encoder, test_10crop=False, gpu=
 
 # I'll continue the modifications for the second function here:
 
-def image_classification_test(loader, model, encoder, test_10crop=False, gpu=True):
+def image_classification_test(loader, model, test_10crop=False, gpu=True):
     start_test = True
     device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
 
     model = model.to(device)
-    encoder = encoder.to(device)
 
     if test_10crop:
         iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
@@ -190,14 +181,10 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
             inputs = [data[j][0].to(device) for j in range(10)]
             labels = data[0][1].to(device)
 
-            image_features = [encoder(input_img) for input_img in inputs]
-            concatenated_features = [torch.cat((feat, data[0][3].to(device)), dim=1) for feat in image_features]
-            concatenated_features = [Variable(feat) for feat in concatenated_features]
             labels = Variable(labels)
 
             outputs = []
-            for j, feat in enumerate(concatenated_features):
-                outputs.append(model(feat))
+
             outputs = sum(outputs)
 
             if start_test:
@@ -212,14 +199,17 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
         for _ in range(len(loader["test"])):
             data = next(iter_test)
             inputs = data[0].to(device)  # 指的是图片
-            labels = data[1].to(device) #各种各样的label输入 第一行是代码bug,第二行是loc 等等等
+            labels = data[1].to(device)
+            imgName = data[2].to(device)
+            astVec = data[3].to(device)
+            imgVec = data[4].to(device)
+            #各种各样的label输入 第一行是代码bug,第二行是loc 等等等
 
-            image_features = encoder(inputs)
-            # concatenated_features = torch.cat((image_features, data[3].to(device)), dim=1)
-            # concatenated_features = Variable(concatenated_features)
+
             labels = Variable(labels)
 
-            outputs = model(image_features)
+#待定
+            outputs = model(inputs)
 
             if start_test:
                 all_output = outputs.data.float()
@@ -244,10 +234,7 @@ def image_classification_test(loader, model, encoder, test_10crop=False, gpu=Tru
 
 
 def transfer_classification(config):
-    encoder =  Res18Encoder()
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    encoder =encoder.to(device)
-    # Moving models to the device
     # 定义一个字典类型变量
     prep_dict = {}
     # Add kry-value pairs for 'prep_dict'
@@ -399,11 +386,10 @@ def transfer_classification(config):
                     bottleneck_layer.train(False)
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
                                                   nn.Sequential(base_network, bottleneck_layer, regressor_layer),
-                                                  encoder,
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
                 else:
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                                  nn.Sequential(base_network, regressor_layer), encoder,
+                                                  nn.Sequential(base_network, regressor_layer),
                                                   # nn.Sequential一个用于存放神经网络模块的序列容器，可以用来自定义模型，运行顺序按照输入顺序进行
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
 
@@ -418,12 +404,10 @@ def transfer_classification(config):
                         bottleneck_layer.train(False)
                         best_model = nn.Sequential(base_network, bottleneck_layer, regressor_layer)
                         all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                               encoder,
                                                                                test_10crop=False, gpu=use_gpu)
                     else:
                         best_model = nn.Sequential(base_network, regressor_layer)
                         all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                               encoder,
                                                                                test_10crop=False, gpu=use_gpu)
 
             loss_test = nn.BCELoss()
@@ -445,8 +429,8 @@ def transfer_classification(config):
             regressor_layer = regressor_layer.to(device)
 
             # Get data
-            inputs_tupian, labels_source, _, meta_source = next(iter_source)  # python3
-            inputs_tupian2, labels_source2, _, meta_target2 = next(iter_target)
+            inputs_tupian, labels_source, _, meta_source,imgVec = next(iter_source)  # python3
+            inputs_tupian2, labels_source2, _, meta_target2,imgVec = next(iter_target)
 
             # Move data to the device
             inputs_tupian = inputs_tupian.to(device)
@@ -456,19 +440,16 @@ def transfer_classification(config):
             labels_source2 = labels_source2.to(device)
             meta_target2 = meta_target2.to(device)
 
-            # Step 1: Extract features from the images using the encoder
-            image_features_source = encoder(inputs_tupian)
-            image_features_target = encoder(inputs_tupian2)
 
             # Step 2: Concatenate the image features with meta_source and meta_target
-            combined_features_source = torch.cat((image_features_source, meta_source), dim=1)
-            combined_features_target = torch.cat((image_features_target, meta_target2), dim=1)
+            # combined_features_source = torch.cat((image_features_source, meta_source), dim=1)
+            # combined_features_target = torch.cat((image_features_target, meta_target2), dim=1)
 
             # Step 3: Pass the combined features through base_network (without its final layer)
-            features_source = base_network(combined_features_source)  # Process features for source
-            features_target = base_network(combined_features_target)  # Process features for target
+            # features_source = base_network(combined_features_source)  # Process features for source
+            # features_target = base_network(combined_features_target)  # Process features for target
 
-            features = torch.cat((features_source, features_target), dim=0)  # Combine the features
+            # features = torch.cat((features_source, features_target), dim=0)  # Combine the features
 
             # ... [rest of the code remains mostly the same]
 
@@ -477,36 +458,37 @@ def transfer_classification(config):
 
             outputs = regressor_layer(features)  #
             inputs = torch.cat((inputs_tupian, inputs_tupian2), dim=0)
-            classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
+            regressor_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
                                               labels_source[:, 0].float().view(-1, 1))  # python3
 
             ## switch between different transfer loss
-            if loss_config["name"] == "DAN":
-                transfer_loss = transfer_criterion(torch.narrow(features, 0, 0, int(features.size(0) / 2)),
-                                                   torch.narrow(features, 0, int(features.size(0) / 2),
-                                                                int(features.size(0) / 2)),
-                                                   **loss_config["params"])
-                # transfer_loss = transfer_criterion(features.narrow(0, 0, features.size(0) / 2),
-                #                                    features.narrow(0, features.size(0) / 2, features.size(0) / 2),
-                #                                    **loss_config["params"])
-            elif loss_config["name"] == "RTN":
-                ## RTN is still under developing
-                transfer_loss = 0
-            elif loss_config["name"] == "JAN":
-                softmax_out = softmax_layer(outputs)
-                transfer_loss = transfer_criterion(
-                    [torch.narrow(features, 0, 0, int(features.size(0) / 2)),
-                     torch.narrow(softmax_out, 0, 0, softmax_out.size(0) / 2)],
-                    [torch.narrow(features, 0, int(features.size(0) / 2), int(features.size(0) / 2)),
-                     torch.narrow(softmax_out, 0, int(softmax_out.size(0) / 2), int(softmax_out.size(0) / 2))],
-                    **loss_config["params"])
-                # transfer_loss = transfer_criterion(
-                #     [features.narrow(0, 0, features.size(0) / 2), softmax_out.narrow(0, 0, softmax_out.size(0) / 2)],
-                #     [features.narrow(0, features.size(0) / 2, features.size(0) / 2),
-                #      softmax_out.narrow(0, softmax_out.size(0) / 2, softmax_out.size(0) / 2)], **loss_config["params"])
-
-            rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
-            total_loss = 1 * transfer_loss + classifier_loss
+            # if loss_config["name"] == "DAN":
+            #     transfer_loss = transfer_criterion(torch.narrow(features, 0, 0, int(features.size(0) / 2)),
+            #                                        torch.narrow(features, 0, int(features.size(0) / 2),
+            #                                                     int(features.size(0) / 2)),
+            #                                        **loss_config["params"])
+            #     # transfer_loss = transfer_criterion(features.narrow(0, 0, features.size(0) / 2),
+            #     #                                    features.narrow(0, features.size(0) / 2, features.size(0) / 2),
+            #     #                                    **loss_config["params"])
+            # elif loss_config["name"] == "RTN":
+            #     ## RTN is still under developing
+            #     transfer_loss = 0
+            # elif loss_config["name"] == "JAN":
+            #     softmax_out = softmax_layer(outputs)
+            #     transfer_loss = transfer_criterion(
+            #         [torch.narrow(features, 0, 0, int(features.size(0) / 2)),
+            #          torch.narrow(softmax_out, 0, 0, softmax_out.size(0) / 2)],
+            #         [torch.narrow(features, 0, int(features.size(0) / 2), int(features.size(0) / 2)),
+            #          torch.narrow(softmax_out, 0, int(softmax_out.size(0) / 2), int(softmax_out.size(0) / 2))],
+            #         **loss_config["params"])
+            #     # transfer_loss = transfer_criterion(
+            #     #     [features.narrow(0, 0, features.size(0) / 2), softmax_out.narrow(0, 0, softmax_out.size(0) / 2)],
+            #     #     [features.narrow(0, features.size(0) / 2, features.size(0) / 2),
+            #     #      softmax_out.narrow(0, softmax_out.size(0) / 2, softmax_out.size(0) / 2)], **loss_config["params"])
+            #
+            # rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
+            # total_loss = 1 * transfer_loss + classifier_loss
+            total_loss = regressor_loss
             # print("rate:", rate)
             # print("transfer_loss: ", transfer_loss)
             # print("classifier_loss:", classifier_loss)

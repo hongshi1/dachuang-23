@@ -34,7 +34,7 @@ def get_complex_augmentation():
     ]
     return transforms.Compose(augmentation)
 
-def process_images_updated(model, source_dir='../data/img/', target_dir='../data/img/imgVec/'):
+def process_images_updated(model, source_dir='../data/img/', target_dir='../data/imgVec/'):
     # 设置图像预处理
     transform = get_complex_augmentation()
 
@@ -58,8 +58,29 @@ def process_images_updated(model, source_dir='../data/img/', target_dir='../data
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = models.resnet50(pretrained=False)
 model.fc = torch.nn.Linear(in_features=2048, out_features=128)
-checkpoint = torch.load('../model/checkpoint_0160.pth.tar')  # 请确保替换'XXXX'为您的检查点编号
-model.load_state_dict(checkpoint['state_dict'])
+
+# 加载检查点
+checkpoint_path = '../model/checkpoint_0160.pth.tar'
+if os.path.isfile(checkpoint_path):
+    print("=> loading checkpoint '{}'".format(checkpoint_path))
+    checkpoint = torch.load(checkpoint_path, map_location=device)
+
+    # rename moco pre-trained keys
+    state_dict = checkpoint["state_dict"]
+    new_state_dict = {}
+    for k, v in state_dict.items():
+        # retain only encoder_q up to before the embedding layer
+        if k.startswith("module.encoder_q") and not k.startswith("module.encoder_q.fc"):
+            # remove prefix
+            new_key = k[len("module.encoder_q."):]
+            new_state_dict[new_key] = v
+
+    # Load the new state dict
+    model.load_state_dict(new_state_dict, strict=False)
+    print("=> loaded pre-trained model from '{}'".format(checkpoint_path))
+else:
+    print("=> no checkpoint found at '{}'".format(checkpoint_path))
+
 model = model.to(device)
 model.eval()
 

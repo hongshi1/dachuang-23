@@ -721,7 +721,7 @@ class My_Transformer(nn.Module):
 
 
 class SimpleRegressor(nn.Module):
-    def __init__(self, in_features=100, out_features=1):
+    def __init__(self, in_features=128, out_features=1):
         super(SimpleRegressor, self).__init__()
 
         # Feature extractor
