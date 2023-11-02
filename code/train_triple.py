@@ -338,9 +338,9 @@ def transfer_classification(config):
 
     if net_config["use_bottleneck"]:
         bottleneck_layer = nn.Linear(base_network.output_num(), net_config["bottleneck_dim"])  # 创建瓶颈层
-        classifier_layer = nn.Linear(bottleneck_layer.out_features, class_num)  # 创建分类层  用于最后将卷积层和全连接层的特征进行分类
+        regressor_layer = nn.Linear(bottleneck_layer.out_features, 1, bias=True)  # 创建回归层
     else:
-        classifier_layer = nn.Linear(base_network.output_num(), class_num)  # 创建分类层
+        regressor_layer = nn.Linear(base_network.output_num(), 1, bias=True)  # 创建回归层
     for param in base_network.parameters():
         param.requires_grad = True
 
@@ -349,26 +349,24 @@ def transfer_classification(config):
         bottleneck_layer.weight.data.normal_(0, 0.005)
         bottleneck_layer.bias.data.fill_(0.1)
         bottleneck_layer = nn.Sequential(bottleneck_layer, nn.ReLU(), nn.Dropout(0.6))
-    # 设置分类层神经节点的权重和偏置
-    classifier_layer.weight.data.normal_(0, 0.01)
-    classifier_layer.bias.data.fill_(0.0)
+
 
     use_gpu = torch.cuda.is_available()
     print(use_gpu)
     if use_gpu:  # 如果GPU可用则不使用CPU进行训练，默认使用CPU
         if net_config["use_bottleneck"]:
             bottleneck_layer = bottleneck_layer.cuda()
-        classifier_layer = classifier_layer.cuda()
+        regressor_layer = regressor_layer.cuda()
         base_network = base_network.cuda()
 
     ## collect parameters
     if net_config["use_bottleneck"]:
         parameter_list = [{"params": base_network.parameters(), "lr": 0.1},
                           {"params": bottleneck_layer.parameters(), "lr": 0.1},
-                          {"params": classifier_layer.parameters(), "lr": 0.1}]
+                          {"params": regressor_layer.parameters(), "lr": 0.1}]
     else:
         parameter_list = [{"params": base_network.parameters(), "lr": 0.1},
-                          {"params": classifier_layer.parameters(), "lr": 0.1}]
+                          {"params": regressor_layer.parameters(), "lr": 0.1}]
 
     ## add additional network for some methodsf
     if loss_config["name"] == "JAN":
@@ -396,16 +394,16 @@ def transfer_classification(config):
         else:
             if i % config["test_interval"] == 0:  # "test_interval"?
                 base_network.train(False)
-                classifier_layer.train(False)  # False -- ?
+                regressor_layer.train(False)  # False -- ?
                 if net_config["use_bottleneck"]:
                     bottleneck_layer.train(False)
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                                  nn.Sequential(base_network, bottleneck_layer, classifier_layer),
+                                                  nn.Sequential(base_network, bottleneck_layer, regressor_layer),
                                                   encoder,
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
                 else:
                     F = image_classification_test(dset_loaders["source"],  # not 'target' when training
-                                                  nn.Sequential(base_network, classifier_layer), encoder,
+                                                  nn.Sequential(base_network, regressor_layer), encoder,
                                                   # nn.Sequential一个用于存放神经网络模块的序列容器，可以用来自定义模型，运行顺序按照输入顺序进行
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
 
@@ -415,15 +413,15 @@ def transfer_classification(config):
                 if F_best < F:
                     F_best = F
                     base_network.train(False)
-                    classifier_layer.train(False)
+                    regressor_layer.train(False)
                     if net_config["use_bottleneck"]:
                         bottleneck_layer.train(False)
-                        best_model = nn.Sequential(base_network, bottleneck_layer, classifier_layer)
+                        best_model = nn.Sequential(base_network, bottleneck_layer, regressor_layer)
                         all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
                                                                                encoder,
                                                                                test_10crop=False, gpu=use_gpu)
                     else:
-                        best_model = nn.Sequential(base_network, classifier_layer)
+                        best_model = nn.Sequential(base_network, regressor_layer)
                         all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
                                                                                encoder,
                                                                                test_10crop=False, gpu=use_gpu)
@@ -432,7 +430,7 @@ def transfer_classification(config):
             ## train one iter
             if net_config["use_bottleneck"]:
                 bottleneck_layer.train(True)
-            classifier_layer.train(True)  # 将模型设置为训练模式
+            regressor_layer.train(True)  # 将模型设置为训练模式
             # optimizer_config = config["optimizer"]
             # optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
             # 调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
@@ -444,7 +442,7 @@ def transfer_classification(config):
 
             # base_network = base_network.to(device)
             # bottleneck_layer = bottleneck_layer.to(device)
-            classifier_layer = classifier_layer.to(device)
+            regressor_layer = regressor_layer.to(device)
 
             # Get data
             inputs_tupian, labels_source, _, meta_source = next(iter_source)  # python3
@@ -477,7 +475,7 @@ def transfer_classification(config):
             if net_config["use_bottleneck"]:
                 features = bottleneck_layer(features)  # Process through bottleneck layer if needed
 
-            outputs = classifier_layer(features)  #
+            outputs = regressor_layer(features)  #
             inputs = torch.cat((inputs_tupian, inputs_tupian2), dim=0)
             classifier_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
                                               labels_source[:, 0].float().view(-1, 1))  # python3
