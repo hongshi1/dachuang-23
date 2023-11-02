@@ -200,7 +200,7 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
             data = next(iter_test)
             inputs = data[0].to(device)  # 指的是图片
             labels = data[1].to(device)
-            imgName = data[2].to(device)
+            imgName = data[2]
             astVec = data[3].to(device)
             imgVec = data[4].to(device)
             #各种各样的label输入 第一行是代码bug,第二行是loc 等等等
@@ -209,7 +209,7 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
             labels = Variable(labels)
 
 #待定
-            outputs = model(inputs)
+            outputs = model(imgVec)
 
             if start_test:
                 all_output = outputs.data.float()
