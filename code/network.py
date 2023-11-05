@@ -725,21 +725,70 @@ class SimpleRegressor(nn.Module):
         super(SimpleRegressor, self).__init__()
 
         # Feature extractor
-        self.feature_extractor = nn.Sequential(
-            nn.Linear(in_features, 128),
-            nn.ReLU(),
-            nn.Linear(128, 64),
-            nn.ReLU()
-        )
+        # 输入层，从128维映射到更宽的维度，例如1024维
+        self.input_layer = nn.Linear(in_features, 1024)
 
+        # 更深和更宽的中间层，可以根据需要添加更多层
+        self.hidden_layer1 = nn.Linear(1024, 512)
+        self.hidden_layer2 = nn.Linear(512, 256)
+        self.hidden_layer3 = nn.Linear(256, 128)
+        self.hidden_layer4 = nn.Linear(128, 64)
+        self.hidden_layer5 = nn.Linear(64, 32)
+        self.hidden_layer6 = nn.Linear(32, 16)
+        self.hidden_layer7 = nn.Linear(16, 8)
+
+        # 输出层，从8维映射到最终的64维输出
+        self.output_layer = nn.Linear(8, 64)
 
     def forward(self, x):
-        feature = self.feature_extractor(x)
-        return feature
+        x = torch.relu(self.input_layer(x))
+        x = torch.relu(self.hidden_layer1(x))
+        x = torch.relu(self.hidden_layer2(x))
+        x = torch.relu(self.hidden_layer3(x))
+        x = torch.relu(self.hidden_layer4(x))
+        x = torch.relu(self.hidden_layer5(x))
+        x = torch.relu(self.hidden_layer6(x))
+        x = torch.relu(self.hidden_layer7(x))
+        x = self.output_layer(x)
+        return x
 
     def output_num(self):
         return 64  # Feature dimensionality
 
+
+class dpnn(nn.Module):
+    def __init__(self, in_features=128, out_features=1):
+        super(dpnn, self).__init__()
+        self.layer1 = nn.Sequential(
+            nn.Linear(in_features, 256),
+            nn.Tanh()
+        )
+        nn.init.uniform_(self.layer1[0].weight)
+
+        self.layer2 = nn.Sequential(
+            nn.Linear(256, 128),
+            nn.ReLU()
+        )
+        nn.init.normal_(self.layer2[0].weight)  # 使用'normal'初始化
+
+        self.layer3 = nn.Sequential(
+            nn.Linear(128, 64),
+            nn.ReLU()
+        )
+        nn.init.normal_(self.layer3[0].weight)  # 使用'normal'初始化
+
+        self.output_layer = nn.Linear(64, 64)
+        nn.init.normal_(self.output_layer.weight)  # 使用'normal'初始化
+
+    def forward(self, x):
+        x = self.layer1(x)
+        x = self.layer2(x)
+        x = self.layer3(x)
+        x = self.output_layer(x)
+        return x
+
+    def output_num(self):
+        return 64  # Feature dimensionality
 
 #
 
@@ -754,3 +803,4 @@ network_dict["My_ResNet"] = My_ResNet
 network_dict["My_LSTM"] = My_LSTM
 network_dict["My_Transformer"] = My_Transformer
 network_dict["SimpleRegressor"] = SimpleRegressor
+network_dict["dpnn"] = dpnn
