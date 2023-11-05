@@ -33,6 +33,85 @@ import time
 from PIL import Image
 #主训练函数
 
+def process_data(data, device):
+    """
+    Process a single batch of data.
+    """
+    labels = data[1].to(device)
+    imgName = data[2]
+    astVec = data[3].to(device)  # AST vector.
+    imgVec = data[4].squeeze(1).to(device)  # Image vector, reshaped as needed.
+
+    # Get a subset of labels (excluding the first column)
+    labels_subset = labels[:, 1:]
+
+    # Concatenate the AST vector, Image vector, and the subset of labels.
+    combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
+    return combinedVec, labels
+
+def compute_features_and_loss(iter_source, iter_target, base_network, regressor_layer, class_criterion, transfer_criterion, loss_config, device,net_config, bottleneck_layer= None):
+    """
+    Compute features from source and target, then compute the loss.
+    """
+    # Process source data
+    data_source = next(iter_source)
+    combinedVec_s, labels_source = process_data(data_source, device)
+    features_source = base_network(combinedVec_s)
+
+    # Process target data
+    data_target = next(iter_target)
+    combinedVec_t, labels_target = process_data(data_target, device)
+    features_target = base_network(combinedVec_t)
+
+    # Combine the features
+    features_combined = torch.cat((features_source, features_target), dim=0)
+
+    # Apply bottleneck layer if configured
+    if net_config.get("use_bottleneck"):
+        features_combined = bottleneck_layer(features_combined)
+
+    # Compute the regressor output
+    outputs = regressor_layer(features_combined)
+
+    # Compute the regressor loss using the source data
+    regressor_loss = class_criterion(outputs[:len(labels_source)], labels_source[:, 0].float().view(-1, 1))
+
+    # Compute the transfer loss
+    transfer_loss = compute_transfer_loss(features_combined, transfer_criterion, loss_config)
+
+    return regressor_loss, transfer_loss
+
+def compute_transfer_loss(features_combined, transfer_criterion, loss_config):
+    """
+    Compute the transfer loss based on the loss configuration.
+    """
+    half_size = len(features_combined) // 2
+    source_features = features_combined[:half_size]
+    target_features = features_combined[half_size:]
+
+    if loss_config["name"] == "DAN":
+        transfer_loss = transfer_criterion(source_features, target_features, **loss_config["params"])
+    elif loss_config["name"] == "RTN":
+        # RTN is still under development
+        transfer_loss = 0
+    elif loss_config["name"] == "JAN":
+        # JAN requires softmax outputs as well
+        # softmax_out = softmax_layer(outputs)
+        # source_softmax = softmax_out[:half_size]
+        # target_softmax = softmax_out[half_size:]
+        # transfer_loss = transfer_criterion(
+        #     [source_features, source_softmax],
+        #     [target_features, target_softmax],
+        #     **loss_config["params"]
+        # )
+        pass
+    else:
+        raise ValueError("Unknown transfer loss name: {}".format(loss_config["name"]))
+
+    return transfer_loss
+
+
+
 class HuberLoss(nn.Module):
     def __init__(self, delta):
         super(HuberLoss, self).__init__()
@@ -123,45 +202,34 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
     device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
 
     model = model.to(device)
-    if test_10crop:
-        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
-        for i in range(len(loader['test0'])):
-            data = [next(iter_test[j]) for j in range(10)]
-            inputs = [data[j][0].to(device) for j in range(10)]
-            labels = data[0][1].to(device)
 
-            labels = Variable(labels)
+    iter_test = iter(loader["test"])
+    for _ in range(len(loader["test"])):
+        data = next(iter_test)
+        inputs = data[0].to(device)  # This is the image data.
+        labels = data[1].to(device)
+        imgName = data[2]
+        astVec = data[3].to(device)  # AST vector.
+        imgVec = data[4].squeeze(1).to(device)  # Image vector, reshaped as needed.
 
-            outputs = []
+        labels = Variable(labels)
 
-            outputs = sum(outputs)
+        labels = Variable(labels)
+        labels_subset = labels[:, 1:]
 
-            if start_test:
-                all_output = outputs.data.float()
-                all_label = labels.data.float()
-                start_test = False
-            else:
-                all_output = torch.cat((all_output, outputs.data.float()), 0)
-                all_label = torch.cat((all_label, labels.data.float()), 0)
-    else:
-        iter_test = iter(loader["test"])
-        for _ in range(len(loader["test"])):
-            data = next(iter_test)
-            inputs = data[0].to(device)
-            labels = data[1].to(device)
+        # Concatenate the AST vector, Image vector, and the subset of labels.
+        combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
 
+        # 待定
+        outputs = model(combinedVec)
 
-            labels = Variable(labels)
-
-            outputs = model(inputs )
-
-            if start_test:
-                all_output = outputs.data.float()
-                all_label = labels.data.float()
-                start_test = False
-            else:
-                all_output = torch.cat((all_output, outputs.data.float()), 0)
-                all_label = torch.cat((all_label, labels.data.float()), 0)
+        if start_test:
+            all_output = outputs.data.float()
+            all_label = labels.data.float()
+            start_test = False
+        else:
+            all_output = torch.cat((all_output, outputs.data.float()), 0)
+            all_label = torch.cat((all_label, labels.data.float()), 0)
 
     predict = all_output.flatten()
     return all_label, predict
@@ -174,59 +242,42 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
 
     model = model.to(device)
 
-    if test_10crop:
-        iter_test = [iter(loader['test' + str(i)]) for i in range(10)]
-        for i in range(len(loader['test0'])):
-            data = [next(iter_test[j]) for j in range(10)]
-            inputs = [data[j][0].to(device) for j in range(10)]
-            labels = data[0][1].to(device)
 
-            labels = Variable(labels)
+    iter_test = iter(loader["test"])
+    for _ in range(len(loader["test"])):
+        data = next(iter_test)
+        inputs = data[0].to(device)  # 指的是图片
+        labels = data[1].to(device)
+        imgName = data[2]
+        astVec = data[3].to(device)
+        imgVec = data[4].squeeze(1).to(device)
+        #各种各样的label输入 第一行是代码bug,第二行是loc 等等等
 
-            outputs = []
+        labels = Variable(labels)
+        labels_subset = labels[:, 1:]
 
-            outputs = sum(outputs)
+        # Concatenate the AST vector, Image vector, and the subset of labels.
+        combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
 
-            if start_test:
-                all_output = outputs.data.float()
-                all_label = labels.data.float()
-                start_test = False
-            else:
-                all_output = torch.cat((all_output, outputs.data.float()), 0)
-                all_label = torch.cat((all_label, labels.data.float()), 0)
-    else:
-        iter_test = iter(loader["test"])
-        for _ in range(len(loader["test"])):
-            data = next(iter_test)
-            inputs = data[0].to(device)  # 指的是图片
-            labels = data[1].to(device)
-            imgName = data[2]
-            astVec = data[3].to(device)
-            imgVec = data[4].to(device)
-            #各种各样的label输入 第一行是代码bug,第二行是loc 等等等
+        # 待定
+        outputs = model(combinedVec)
 
-
-            labels = Variable(labels)
-
-#待定
-            outputs = model(imgVec)
-
-            if start_test:
-                all_output = outputs.data.float()
-                all_label = labels.data.float()
-                start_test = False
-            else:
-                all_output = torch.cat((all_output, outputs.data.float()), 0)
-                all_label = torch.cat((all_label, labels.data.float()), 0)
+        if start_test:
+            all_output = outputs.data.float()
+            all_label = labels.data.float()
+            start_test = False
+        else:
+            all_output = torch.cat((all_output, outputs.data.float()), 0)
+            all_label = torch.cat((all_label, labels.data.float()), 0)
 
     predict_list = all_output.cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
-    pred = all_label_list[:, 0]
     loc = all_label_list[:, 1]
+    cc  = all_label_list[:, 20]
 
     if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, all_label_list[:, 1])
+        p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc,cc)
         popt = p.PercentPOPT()
 
     return popt
@@ -321,8 +372,8 @@ def transfer_classification(config):
 
     ## set base network
     net_config = config["network"]
+    bottleneck_layer = ''
     base_network = network.network_dict[net_config["name"]]()  # 'network_dict'是一个字典，包含各种类型的AlexNet
-
     if net_config["use_bottleneck"]:
         bottleneck_layer = nn.Linear(base_network.output_num(), net_config["bottleneck_dim"])  # 创建瓶颈层
         regressor_layer = nn.Linear(bottleneck_layer.out_features, 1, bias=True)  # 创建回归层
@@ -424,75 +475,34 @@ def transfer_classification(config):
             if i % len_train_target == 0:
                 iter_target = iter(dset_loaders["target"]["train"])  # 更新目标域数据集迭代器
 
-            # base_network = base_network.to(device)
+            base_network = base_network.to(device)
             # bottleneck_layer = bottleneck_layer.to(device)
             regressor_layer = regressor_layer.to(device)
 
             # Get data
-            inputs_tupian, labels_source, _, meta_source,imgVec = next(iter_source)  # python3
-            inputs_tupian2, labels_source2, _, meta_target2,imgVec = next(iter_target)
+            # data_s= next(iter_source)
+            # python3
+            # data_t= next(iter_target)
 
-            # Move data to the device
-            inputs_tupian = inputs_tupian.to(device)
-            labels_source = labels_source.to(device)
-            meta_source = meta_source.to(device)
-            inputs_tupian2 = inputs_tupian2.to(device)
-            labels_source2 = labels_source2.to(device)
-            meta_target2 = meta_target2.to(device)
+            regressor_loss, transfer_loss = compute_features_and_loss(
+                iter_source,
+                iter_target,
+                base_network,
+                regressor_layer,
+                class_criterion,
+                transfer_criterion,
+                loss_config,
+                device,
+                net_config,
+                bottleneck_layer,
+            )
 
 
-            # Step 2: Concatenate the image features with meta_source and meta_target
-            # combined_features_source = torch.cat((image_features_source, meta_source), dim=1)
-            # combined_features_target = torch.cat((image_features_target, meta_target2), dim=1)
 
-            # Step 3: Pass the combined features through base_network (without its final layer)
-            # features_source = base_network(combined_features_source)  # Process features for source
-            # features_target = base_network(combined_features_target)  # Process features for target
-
-            # features = torch.cat((features_source, features_target), dim=0)  # Combine the features
-
-            # ... [rest of the code remains mostly the same]
-
-            if net_config["use_bottleneck"]:
-                features = bottleneck_layer(features)  # Process through bottleneck layer if needed
-
-            outputs = regressor_layer(features)  #
-            inputs = torch.cat((inputs_tupian, inputs_tupian2), dim=0)
-            regressor_loss = class_criterion(torch.narrow(outputs, 0, 0, int(inputs.size(0) / 2)),
-                                              labels_source[:, 0].float().view(-1, 1))  # python3
-
-            ## switch between different transfer loss
-            # if loss_config["name"] == "DAN":
-            #     transfer_loss = transfer_criterion(torch.narrow(features, 0, 0, int(features.size(0) / 2)),
-            #                                        torch.narrow(features, 0, int(features.size(0) / 2),
-            #                                                     int(features.size(0) / 2)),
-            #                                        **loss_config["params"])
-            #     # transfer_loss = transfer_criterion(features.narrow(0, 0, features.size(0) / 2),
-            #     #                                    features.narrow(0, features.size(0) / 2, features.size(0) / 2),
-            #     #                                    **loss_config["params"])
-            # elif loss_config["name"] == "RTN":
-            #     ## RTN is still under developing
-            #     transfer_loss = 0
-            # elif loss_config["name"] == "JAN":
-            #     softmax_out = softmax_layer(outputs)
-            #     transfer_loss = transfer_criterion(
-            #         [torch.narrow(features, 0, 0, int(features.size(0) / 2)),
-            #          torch.narrow(softmax_out, 0, 0, softmax_out.size(0) / 2)],
-            #         [torch.narrow(features, 0, int(features.size(0) / 2), int(features.size(0) / 2)),
-            #          torch.narrow(softmax_out, 0, int(softmax_out.size(0) / 2), int(softmax_out.size(0) / 2))],
-            #         **loss_config["params"])
-            #     # transfer_loss = transfer_criterion(
-            #     #     [features.narrow(0, 0, features.size(0) / 2), softmax_out.narrow(0, 0, softmax_out.size(0) / 2)],
-            #     #     [features.narrow(0, features.size(0) / 2, features.size(0) / 2),
-            #     #      softmax_out.narrow(0, softmax_out.size(0) / 2, softmax_out.size(0) / 2)], **loss_config["params"])
-            #
-            # rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
+            rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
             # total_loss = 1 * transfer_loss + classifier_loss
             total_loss = regressor_loss
-            # print("rate:", rate)
-            # print("transfer_loss: ", transfer_loss)
-            # print("classifier_loss:", classifier_loss)
-            # end_train = time.clock()
+            #
             end_train = time.perf_counter()
 
             # print('loss: %.4f' % total_loss)
@@ -506,9 +516,11 @@ def transfer_classification(config):
 
     all_label_list = all_label.cpu().numpy()
     predict_list = predict_best.view(-1, 1).cpu().numpy().flatten()
+    loc = all_label_list[:, 1]
+    cc = all_label_list[:, 20]
 
     if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, all_label_list[:, 1])
+        p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
         popt = p.PercentPOPT()
     print(popt)
     return popt
@@ -549,9 +561,11 @@ if __name__ == "__main__":
     test_arr = []
 
     for i in range(len(strings)):
-        for j in range(i + 1, len(strings)):
-            new_arr.append(strings[i] + "->" + strings[j])
-            new_arr.append(strings[j] + "->" + strings[i])
+        for j in range(i+1, i+2):
+            m = (i+1) % len(strings)
+            n = (i+2) % len(strings)
+            new_arr.append(strings[i] + "->" + strings[m])
+            new_arr.append(strings[i] + "->" + strings[n])
 
     parser = argparse.ArgumentParser(description='Transfer Learning')
     args = parser.parse_args()
@@ -569,7 +583,7 @@ if __name__ == "__main__":
     # 谱聚类
     clusters, distances = cluster_spectral.project_cluster(3)
 
-    for round_cir in range(30):
+    for round_cir in range(20):
         new_arr = []
         test_arr = []
 
@@ -592,7 +606,7 @@ if __name__ == "__main__":
             # 定义一个字典类型变量
             config = {}
             # 添加键值对
-            config["num_iterations"] = 15
+            config["num_iterations"] = 10
             config["test_interval"] = 1  # ?
             # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
             config["prep"] = [
@@ -643,4 +657,4 @@ if __name__ == "__main__":
             worksheet.cell(row=i + 1, column=1, value=new_arr[i])
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
         # 保存文件
-        workbook.save('../output/average/' + str(round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
+        workbook.save('../output/moco+linear_regress+imgVec+normal_feature+astVec/' + str(round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名

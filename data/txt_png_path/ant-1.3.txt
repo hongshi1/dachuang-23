@@ -1,116 +1,116 @@
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecuteOn.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_DefaultLogger.png	2
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_TaskOutputStream.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Cvs.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Copyfile.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_GlobPatternMapper.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Move.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarInputStream.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_CompileTask.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_types_PatternSet.png	1
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Patch.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Mkdir.png	1
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Exec.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_AntClassLoader.png	2
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_EnumeratedAttribute.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_XmlLogger.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Rmic.png	1
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_regexp_JakartaRegexpMatcher.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_FlatFileNameMapper.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_BuildLogger.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_DataType.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Get.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Zip.png	3
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_CompilerAdapter.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_LogOutputStream.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_StreamPumper.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_DirectoryScanner.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_JikesOutputParser.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Tstamp.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_IdentityMapper.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_CompilerAdapterFactory.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_Constants.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_War.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Echo.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_types_FileSet.png	1
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Available.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_Main.png	1
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_UnknownElement.png	3
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Transform.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Rename.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_regexp_RegexpMatcherFactory.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Property.png	2
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Ant.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_ZipScanner.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_SignJar.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Jikes.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_Jikes.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecuteStreamHandler.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_regexp_JakartaOroMatcher.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_MatchingTask.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_Javac13.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_ProjectHelper.png	3
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_LogStreamHandler.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Delete.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_SQLExec.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Javac.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_RegexpPatternMapper.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Exit.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_BuildListener.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_FileNameMapper.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_Mapper.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_Location.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_GUnzip.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_BuildEvent.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_JavacOutputStream.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_Reference.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Tar.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_XSLTProcess.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_KeySubst.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecuteJava.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_regexp_RegexpMatcher.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_FixCRLF.png	3
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Execute.png	1
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Jar.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_CallTarget.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Deltree.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecuteWatchdog.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_SourceFileScanner.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_ZipFileSet.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Copy.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarConstants.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarEntry.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarBuffer.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_Environment.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarOutputStream.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_FileScanner.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_DefaultCompilerAdapter.png	1
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarUtils.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_GZip.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Touch.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_Jvc.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Taskdef.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecTask.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_mail_SmtpResponseReader.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Java.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_Commandline.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Replace.png	1
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Expand.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_types_CommandlineJava.png	1
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_DOMElementWriter.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Untar.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_XSLTLiaison.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_PumpStreamHandler.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_PathTokenizer.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_MergingMapper.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_DesirableFilter.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_GenerateKey.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Chmod.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_Javac12.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_Task.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_TaskAdapter.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Javadoc.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_BuildException.png	0
-../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_IntrospectionHelper.png	2
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_NoBannerLogger.png	0
-../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_mail_MailMessage.png	0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecuteOn.png 0 395 11 4 2 14 42 29 2 12 5 0.725 1.0 1 0.885057471 0.232323232 3 4 34.54545455 3 1.2727
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_DefaultLogger.png 2 257 14 1 1 8 32 49 4 4 12 0.835164835 1.0 0 0.0 0.307692308 0 0 16.85714286 6 1.6429
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_TaskOutputStream.png 0 58 3 2 0 1 9 0 0 1 1 0.0 1.0 1 0.714285714 0.666666667 1 1 17.33333333 1 0.6667
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Cvs.png 0 310 12 3 0 12 37 32 0 12 12 0.858585859 1.0 1 0.770833333 0.458333333 0 0 24.08333333 3 1.4167
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Copyfile.png 0 136 6 3 0 4 21 1 0 4 6 0.7 1.0 0 0.880952381 0.416666667 2 2 21.0 1 0.8333
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_GlobPatternMapper.png 0 137 5 1 0 3 15 0 2 1 4 0.5 1.0 0 0.0 0.9 0 0 25.2 4 1.8
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Move.png 0 325 4 4 0 6 32 6 0 6 1 2.0 0.0 0 0.963855422 0.75 3 5 80.25 11 5.25
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarInputStream.png 0 604 16 3 0 3 40 84 1 2 16 0.658333333 1.0 2 0.580645161 0.291666667 2 7 36.25 1 0.8125
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_CompileTask.png 0 87 4 5 0 5 21 0 0 5 4 0.333333333 1.0 0 0.98089172 1.0 1 1 20.5 3 1.25
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_types_PatternSet.png 1 461 17 3 0 10 55 76 5 6 11 0.59375 1.0 0 0.652173913 0.285714286 1 1 25.88235294 6 2.6471
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Patch.png 0 168 9 3 0 9 29 0 0 9 9 0.583333333 1.0 1 0.822222222 0.444444444 0 0 17.33333333 2 1.4444
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Mkdir.png 1 84 3 3 0 3 14 1 0 3 3 0.5 1.0 0 0.948717949 0.666666667 1 1 26.66666667 1 0.6667
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Exec.png 0 360 10 3 0 5 41 21 1 5 7 0.793650794 1.0 0 0.804347826 0.45 0 0 34.3 2 1.1
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_AntClassLoader.png 2 713 17 2 0 9 64 76 7 2 9 0.879166667 0.6 2 0.708333333 0.339285714 1 3 40.05882353 9 1.4118
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_EnumeratedAttribute.png 0 59 5 1 5 12 11 8 11 1 5 0.75 1.0 0 0.0 0.7 0 0 10.6 5 1.6
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_XmlLogger.png 0 382 10 1 0 9 49 1 0 9 8 0.920634921 1.0 0 0.0 0.833333333 0 0 35.1 4 1.9
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Rmic.png 1 675 22 4 0 16 72 165 1 16 16 0.904761905 1.0 1 0.787878788 0.227272727 3 3 29.04545455 4 1.2273
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_regexp_JakartaRegexpMatcher.png 0 65 5 1 0 4 13 0 0 4 5 0.5 1.0 0 0.0 0.8 0 0 11.6 3 1.2
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_FlatFileNameMapper.png 0 20 4 1 0 2 7 6 1 1 4 2.0 0.0 0 0.0 0.875 0 0 4.0 1 0.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_BuildLogger.png 0 4 4 1 0 3 4 6 2 1 4 2.0 0.0 0 0.0 0.5 0 0 0.0 1 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_DataType.png 0 98 9 1 4 8 15 18 5 3 5 0.708333333 1.0 1 0.0 0.288888889 0 0 9.555555556 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Get.png 0 394 8 3 0 6 46 10 0 6 7 0.771428571 1.0 0 0.840909091 0.375 1 1 47.625 2 1.0
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Zip.png 3 1180 22 4 1 15 104 185 2 13 8 0.839285714 1.0 0 0.795918367 0.180272109 3 3 52.27272727 3 1.0455
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_CompilerAdapter.png 0 2 2 1 0 4 2 1 3 2 2 2.0 0.0 0 0.0 0.75 0 0 0.0 1 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_LogOutputStream.png 0 92 7 2 1 8 15 1 7 1 4 0.583333333 1.0 1 0.454545455 0.464285714 1 1 11.57142857 1 0.8571
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_StreamPumper.png 0 39 2 1 0 1 6 0 1 0 2 1.0 1.0 0 0.0 0.666666667 0 0 16.5 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_DirectoryScanner.png 0 1407 23 1 1 22 51 181 20 2 14 0.731404959 1.0 0 0.0 0.290909091 0 0 59.69565217 35 5.8696
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_JikesOutputParser.png 0 147 12 1 0 3 21 44 1 2 5 0.805194805 1.0 1 0.0 0.261904762 0 0 10.66666667 4 1.25
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Tstamp.png 0 91 3 3 0 5 17 0 1 5 3 0.0 1.0 0 0.948717949 1.0 0 0 29.0 1 0.6667
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_IdentityMapper.png 0 16 4 1 0 2 5 6 1 1 4 2.0 0.0 0 0.0 0.875 0 0 3.0 1 0.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_CompilerAdapterFactory.png 0 125 3 1 0 8 16 3 1 7 1 2.0 0.0 0 0.0 0.444444444 0 0 40.66666667 1 0.6667
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_Constants.png 0 0 0 1 0 0 0 0 0 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_War.png 0 163 9 6 0 7 33 28 0 7 6 0.8125 1.0 0 0.950617284 0.4 4 6 16.88888889 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Echo.png 0 147 7 3 0 7 22 0 0 7 7 0.625 1.0 0 0.860465116 0.342857143 1 1 19.42857143 5 1.4286
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_types_FileSet.png 1 353 16 3 2 24 56 0 16 8 14 0.6 1.0 1 0.681818182 0.2265625 1 1 20.8125 4 1.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Available.png 0 273 13 3 0 7 35 52 0 7 10 0.869047619 1.0 2 0.755102041 0.353846154 1 1 19.46153846 6 1.6923
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_Main.png 1 1253 14 1 0 7 82 65 0 7 1 0.816568047 0.846153846 0 0.0 0.169642857 0 0 87.57142857 4 2.1429
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_UnknownElement.png 3 198 6 3 0 10 33 0 3 8 5 0.466666667 1.0 1 0.880952381 0.333333333 2 4 31.5 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Transform.png 0 375 9 5 0 12 36 0 0 12 4 0.525 1.0 3 0.930434783 0.4 2 4 40.11111111 11 2.4444
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Rename.png 0 107 5 3 0 4 18 0 0 4 5 0.666666667 1.0 0 0.902439024 0.8 1 1 19.8 1 0.8
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_regexp_RegexpMatcherFactory.png 0 43 3 1 0 3 9 3 1 2 2 2.0 0.0 0 0.0 0.666666667 0 0 13.33333333 1 0.6667
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Property.png 2 658 27 3 0 11 83 291 2 9 20 0.889423077 1.0 2 0.587301587 0.185185185 0 0 23.07407407 11 1.9259
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Ant.png 0 440 10 3 0 9 70 1 1 8 8 0.703703704 0.666666667 1 0.804347826 0.466666667 1 1 42.4 6 1.9
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_ZipScanner.png 0 68 6 2 0 3 11 13 2 1 6 0.8 1.0 0 0.924242424 0.444444444 1 5 10.16666667 3 1.5
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_SignJar.png 0 307 14 3 0 5 35 63 0 5 13 0.909090909 1.0 0 0.74 0.595238095 2 3 20.14285714 7 1.3571
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Jikes.png 0 176 2 1 0 5 29 0 0 5 0 0.0 1.0 2 0.0 0.6 0 0 85.5 10 5.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_Jikes.png 0 204 2 2 0 9 23 1 1 8 2 2.0 0.0 0 0.958333333 1.0 1 1 101.0 1 0.5
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecuteStreamHandler.png 0 5 5 1 0 10 5 10 10 0 5 2.0 0.0 0 0.0 0.533333333 0 0 0.0 1 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_regexp_JakartaOroMatcher.png 0 75 5 1 0 7 17 0 0 7 5 0.5 1.0 0 0.0 0.8 0 0 13.4 3 1.2
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_MatchingTask.png 0 164 12 3 11 18 37 0 12 6 11 0.454545455 1.0 1 0.770833333 0.416666667 0 0 12.5 6 1.5833
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_Javac13.png 0 97 2 2 0 8 17 1 1 7 2 2.0 1.0 0 0.958333333 1.0 0 0 47.0 1 0.5
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_ProjectHelper.png 3 502 17 1 0 19 73 112 13 7 5 0.84375 1.0 1 0.0 0.170454545 0 0 28.17647059 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_LogStreamHandler.png 0 14 1 2 0 9 3 0 6 3 1 2.0 0.0 0 1.0 1.0 0 0 13.0 0 0.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Delete.png 0 579 18 4 0 8 49 19 0 8 16 0.773109244 1.0 0 0.821052632 0.296296296 2 3 30.77777778 14 2.1111
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_SQLExec.png 0 1034 23 3 0 10 96 175 1 10 19 0.886363636 1.0 2 0.627118644 0.191304348 3 3 43.08695652 7 1.3043
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Javac.png 0 550 42 4 1 19 74 741 7 13 40 0.948350072 1.0 4 0.655462185 0.210884354 3 3 11.69047619 2 1.2143
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_RegexpPatternMapper.png 0 144 5 1 0 4 20 0 0 4 4 0.333333333 1.0 1 0.0 0.9 0 0 27.2 5 2.2
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Exit.png 0 29 3 3 0 2 6 1 0 2 3 0.5 1.0 0 0.948717949 0.666666667 0 0 8.333333333 1 0.6667
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_BuildListener.png 0 7 7 1 0 6 7 21 5 1 7 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_FileNameMapper.png 0 3 3 1 0 15 3 3 15 0 3 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_Mapper.png 0 285 11 3 0 11 37 11 3 8 10 0.683333333 1.0 3 0.75 0.287878788 1 1 24.36363636 3 1.9091
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_Location.png 0 69 5 1 0 51 10 8 51 0 3 0.3125 0.75 1 0.0 0.583333333 0 0 12.0 3 0.6
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_GUnzip.png 0 215 4 3 0 4 32 2 0 4 4 0.666666667 1.0 0 0.925 0.75 1 1 52.25 1 0.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_BuildEvent.png 0 97 11 2 0 7 15 13 5 3 11 0.75 1.0 3 0.2 0.220779221 0 0 7.272727273 1 0.7273
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_JavacOutputStream.png 0 68 4 2 0 1 11 0 0 1 1 0.222222222 1.0 1 0.625 0.5 1 1 15.25 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_Reference.png 0 55 5 1 0 16 12 4 14 2 5 0.25 1.0 0 0.0 0.533333333 0 0 9.8 1 0.6
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Tar.png 0 583 8 4 0 12 65 2 0 12 6 0.916666667 0.166666667 0 0.917647059 0.333333333 3 3 70.375 3 1.25
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_XSLTProcess.png 0 590 13 4 0 7 55 30 1 7 10 0.802083333 1.0 1 0.866666667 0.5 2 2 43.76923077 1 0.9231
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_KeySubst.png 0 271 8 3 0 3 40 10 0 3 8 0.714285714 1.0 0 0.840909091 0.40625 1 1 32.375 4 1.25
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecuteJava.png 0 185 6 1 0 7 26 0 1 6 6 0.65 1.0 3 0.0 0.305555556 0 0 29.16666667 1 0.8333
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_regexp_RegexpMatcher.png 0 4 4 1 0 5 4 6 4 1 4 2.0 0.0 0 0.0 0.875 0 0 0.0 1 1.0
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_FixCRLF.png 3 626 8 4 0 7 34 6 0 7 8 0.761904762 1.0 0 0.917647059 0.4375 2 2 76.5 3 1.625
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Execute.png 1 566 21 1 0 25 77 162 10 16 14 0.7375 0.916666667 4 0.0 0.135 0 0 25.38095238 7 1.8095
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Jar.png 0 164 6 5 1 6 33 7 1 5 3 0.7 1.0 0 0.961538462 0.5 3 6 26.0 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_CallTarget.png 0 76 5 3 0 7 20 2 0 7 5 0.625 1.0 1 0.902439024 0.6 2 2 13.8 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Deltree.png 0 152 4 3 0 3 17 4 0 3 3 0.666666667 1.0 0 0.925 0.75 1 1 36.75 1 0.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecuteWatchdog.png 0 169 8 1 0 6 25 0 5 1 7 0.6 1.0 0 0.0 0.416666667 0 0 19.5 7 1.875
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_SourceFileScanner.png 0 277 3 1 0 9 25 1 7 2 3 0.0 1.0 1 0.0 0.666666667 0 0 91.0 14 5.3333
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_ZipFileSet.png 0 110 9 5 0 10 20 4 3 7 9 0.6875 1.0 0 0.919191919 0.388888889 2 7 10.77777778 3 1.2222
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Copy.png 0 642 17 3 1 12 64 52 1 11 13 0.793269231 1.0 1 0.698113208 0.242647059 1 1 36.0 11 2.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarConstants.png 0 24 0 1 0 1 0 0 1 0 0 2.0 0.0 0 0.0 0.0 0 0 0.0 0 0.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarEntry.png 0 747 31 1 0 6 65 243 4 2 30 0.726666667 1.0 0 0.0 0.182795699 1 1 22.61290323 4 1.1613
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarBuffer.png 0 617 21 1 0 2 35 38 2 0 17 0.631818182 0.818181818 0 0.0 0.293650794 0 0 27.85714286 3 0.8571
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_Environment.png 0 47 3 1 1 5 9 0 3 2 3 0.0 1.0 0 0.0 0.666666667 0 0 14.33333333 1 0.6667
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarOutputStream.png 0 437 15 3 0 3 37 41 1 2 14 0.696428571 0.75 1 0.454545455 0.311111111 1 2 27.33333333 1 0.8
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_FileScanner.png 0 13 13 1 0 4 13 78 4 0 13 2.0 0.0 0 0.0 0.326923077 0 0 0.0 1 1.0
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_DefaultCompilerAdapter.png 1 743 10 1 4 17 81 5 4 13 4 0.783625731 1.0 7 0.0 0.259259259 0 0 71.4 14 4.2
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_tar_TarUtils.png 0 274 8 1 0 1 14 28 1 0 8 2.0 0.0 0 0.0 0.45 0 0 33.25 7 2.875
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_GZip.png 0 157 6 3 0 4 25 11 0 4 4 0.8 1.0 0 0.880952381 0.4 2 2 24.83333333 1 0.8333
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Touch.png 0 300 8 3 0 7 32 8 3 4 5 0.738095238 0.833333333 0 0.860465116 0.357142857 1 1 35.75 1 0.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_Jvc.png 0 120 2 2 0 9 19 1 1 8 2 2.0 0.0 0 0.958333333 1.0 1 1 59.0 1 0.5
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Taskdef.png 0 157 8 3 0 8 25 14 1 7 8 0.714285714 1.0 1 0.840909091 0.375 0 0 18.25 2 1.125
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_ExecTask.png 0 406 19 3 1 18 56 97 5 13 12 0.814814815 1.0 2 0.672727273 0.190789474 0 0 19.89473684 3 1.0526
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_mail_SmtpResponseReader.png 0 96 5 1 0 1 18 0 1 0 3 0.5 1.0 0 0.0 0.533333333 0 0 17.8 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Java.png 0 439 22 3 0 17 77 95 0 17 19 0.742857143 1.0 1 0.637931034 0.172727273 1 1 18.72727273 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_types_Commandline.png 0 448 19 1 0 23 46 65 22 3 17 0.416666667 1.0 0 0.0 0.289473684 0 0 22.47368421 16 2.4211
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Replace.png 1 632 19 4 0 8 69 91 2 8 13 0.777777778 1.0 2 0.8125 0.368421053 1 1 31.89473684 5 1.2632
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Expand.png 0 261 5 4 0 8 45 6 0 8 4 0.75 1.0 0 0.951219512 0.6 4 5 50.8 7 2.0
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_types_CommandlineJava.png 1 277 21 1 0 9 47 48 1 8 21 0.68 1.0 4 0.0 0.30952381 0 0 11.95238095 7 1.4286
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_DOMElementWriter.png 0 354 5 1 0 1 35 4 1 0 4 0.583333333 1.0 0 0.0 0.5 0 0 69.2 8 3.2
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Untar.png 0 242 4 3 0 8 42 2 0 8 4 0.666666667 1.0 0 0.925 0.75 2 3 59.0 1 0.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_XSLTLiaison.png 0 3 3 1 0 1 3 3 1 0 3 2.0 0.0 0 0.0 1.0 0 0 0.0 1 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_PumpStreamHandler.png 0 93 11 1 1 8 17 41 6 2 8 0.7 1.0 0 0.0 0.666666667 0 0 7.090909091 1 0.7273
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_PathTokenizer.png 0 100 3 1 0 2 15 0 2 0 3 0.166666667 1.0 0 0.0 0.666666667 0 0 31.33333333 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_util_MergingMapper.png 0 24 4 1 0 4 5 0 3 1 4 0.333333333 1.0 0 0.0 0.875 0 0 4.75 1 0.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_DesirableFilter.png 0 45 2 1 0 0 6 1 0 0 2 2.0 0.0 0 0.0 0.666666667 0 0 21.5 8 4.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_GenerateKey.png 0 404 14 3 0 6 33 65 0 6 14 0.91025641 1.0 1 0.74 0.595238095 2 3 27.0 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Chmod.png 0 168 14 5 0 10 43 15 0 10 12 0.615384615 1.0 1 0.891666667 0.392857143 3 5 10.85714286 5 1.3571
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_compilers_Javac12.png 0 132 3 2 0 8 18 3 1 7 2 1.0 0.0 0 0.92 0.5 0 0 42.0 1 0.6667
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_Task.png 0 125 19 1 34 78 23 119 75 5 16 0.873015873 1.0 4 0.0 0.218045113 0 0 5.210526316 2 1.0
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_TaskAdapter.png 0 82 4 3 0 6 15 0 4 2 4 0.333333333 0.0 0 0.925 0.625 1 1 19.25 1 0.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_taskdefs_Javadoc.png 0 1504 65 3 0 21 155 1670 6 21 59 0.9171875 1.0 5 0.37 0.244140625 3 3 21.83076923 10 1.5231
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_BuildException.png 0 153 14 4 0 99 28 0 98 1 14 0.384615385 1.0 1 0.65 0.333333333 1 2 9.785714286 2 0.6429
+../data/img/grb_img/ant-1.3//buggy/ant-1.3_src_java_org_apache_tools_ant_IntrospectionHelper.png 2 822 14 1 0 24 63 63 20 20 9 0.841346154 0.4375 0 0.0 0.333333333 0 0 56.57142857 24 2.7857
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_ant_NoBannerLogger.png 0 59 4 2 0 3 16 0 0 3 4 0.333333333 1.0 0 0.842105263 0.875 1 1 13.5 5 1.75
+../data/img/grb_img/ant-1.3/clean/ant-1.3_src_java_org_apache_tools_mail_MailMessage.png 0 527 27 1 0 3 63 297 1 2 10 0.778846154 0.0 2 0.0 0.37962963 0 0 18.22222222 11 1.4444

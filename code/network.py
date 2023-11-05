@@ -721,7 +721,7 @@ class My_Transformer(nn.Module):
 
 
 class SimpleRegressor(nn.Module):
-    def __init__(self, in_features=128, out_features=1):
+    def __init__(self, in_features=248, out_features=1):
         super(SimpleRegressor, self).__init__()
 
         # Feature extractor
@@ -732,13 +732,10 @@ class SimpleRegressor(nn.Module):
             nn.ReLU()
         )
 
-        # Regression Head
-        self.regressor = nn.Linear(64, out_features)
 
     def forward(self, x):
         feature = self.feature_extractor(x)
-        output = self.regressor(feature)
-        return output
+        return feature
 
     def output_num(self):
         return 64  # Feature dimensionality
