@@ -72,9 +72,11 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
 
     # Compute the regressor output
     outputs = regressor_layer(features_combined)
+    output_s = regressor_layer(features_source)
+    bug_s = labels_source[:,0].float().view(-1,1)
 
     # Compute the regressor loss using the source data
-    regressor_loss = class_criterion(outputs[:len(labels_source)], labels_source[:, 0].float().view(-1, 1))
+    regressor_loss = class_criterion(output_s, bug_s)
 
     # Compute the transfer loss
     transfer_loss = compute_transfer_loss(features_combined, transfer_criterion, loss_config)
@@ -502,6 +504,7 @@ def transfer_classification(config):
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
             # total_loss = 1 * transfer_loss + classifier_loss
             total_loss = regressor_loss
+            print(total_loss)
             #
             end_train = time.perf_counter()
 
