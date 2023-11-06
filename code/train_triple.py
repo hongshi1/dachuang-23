@@ -33,6 +33,15 @@ import time
 from PIL import Image
 #主训练函数
 
+def standardize_batch(features):
+    """
+    Standardize the features by removing the mean and scaling to unit variance
+    """
+    mean = features.mean(dim=0, keepdim=True)
+    std = features.std(dim=0, keepdim=True) + 1e-6  # 防止除以0
+    features_standardized = (features - mean) / std
+    return features_standardized
+
 def process_data(data, device):
     """
     Process a single batch of data.
@@ -56,11 +65,14 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     # Process source data
     data_source = next(iter_source)
     combinedVec_s, labels_source = process_data(data_source, device)
+    combinedVec_s = standardize_batch(combinedVec_s)
+
     features_source = base_network(combinedVec_s)
 
     # Process target data
     data_target = next(iter_target)
     combinedVec_t, labels_target = process_data(data_target, device)
+    combinedVec_t = standardize_batch(combinedVec_t)
     features_target = base_network(combinedVec_t)
 
     # Combine the features
@@ -221,6 +233,7 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
 
         # Concatenate the AST vector, Image vector, and the subset of labels.
         combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
+        combinedVec = standardize_batch(combinedVec)
 
         # 待定
         outputs = model(combinedVec)
@@ -260,6 +273,7 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
 
         # Concatenate the AST vector, Image vector, and the subset of labels.
         combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
+        combinedVec = standardize_batch(combinedVec)
 
         # 待定
         outputs = model(combinedVec)
@@ -277,6 +291,7 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
     popt = -1.0
     loc = all_label_list[:, 1]
     cc  = all_label_list[:, 20]
+    
 
     if (all_label_list.shape[1] > 1):
         p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc,cc)
