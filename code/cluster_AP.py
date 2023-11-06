@@ -66,28 +66,28 @@ def project_cluster():
     for i, project in enumerate(strings):
         project_clusters[project] = train[i]
 
-    # 使用项目名称作为键，将 'cluster' 数组中的值关联起来
-    tsne_result = TSNE(n_components=2, learning_rate="auto", perplexity=5).fit_transform(data_set)
-    # 创建颜色映射
-    colors = ['r', 'b', 'g', 'y', 'c', 'm', 'k', 'orange', 'purple', 'pink',
-              'dodgerblue', 'lime', 'indigo', 'goldenrod', 'brown', 'tomato',
-              'peru', 'slategray', 'seagreen', 'deepskyblue', 'darkviolet']  # 可以根据需要添加更多颜色
-
-    # 绘制散点图，为每个数据点分配相应的颜色
-    for i in range(len(train)):
-        if i < len(train) - clusters.size:
-            plt.scatter(tsne_result[i, 0], tsne_result[i, 1], c=colors[train[i]])
-        else:
-            plt.scatter(tsne_result[i, 0], tsne_result[i, 1], c=colors[len(colors)-1])
-
-    # 显示图例
-    for i in range(clusters.size):
-        plt.scatter([], [], c=colors[i], label=f'Cluster {i}')
-    plt.scatter([], [], c=colors[len(colors)-1], label=f'Cluster Century')
-
-    plt.legend()
-    plt.title('t-SNE Visualization with K-Means Clusters')
-    plt.show()
+    # # 使用项目名称作为键，将 'cluster' 数组中的值关联起来
+    # tsne_result = TSNE(n_components=2, learning_rate="auto", perplexity=5).fit_transform(data_set)
+    # # 创建颜色映射
+    # colors = ['r', 'b', 'g', 'y', 'c', 'm', 'k', 'orange', 'purple', 'pink',
+    #           'dodgerblue', 'lime', 'indigo', 'goldenrod', 'brown', 'tomato',
+    #           'peru', 'slategray', 'seagreen', 'deepskyblue', 'darkviolet']  # 可以根据需要添加更多颜色
+    #
+    # # 绘制散点图，为每个数据点分配相应的颜色
+    # for i in range(len(train)):
+    #     if i < len(train) - clusters.size:
+    #         plt.scatter(tsne_result[i, 0], tsne_result[i, 1], c=colors[train[i]])
+    #     else:
+    #         plt.scatter(tsne_result[i, 0], tsne_result[i, 1], c=colors[len(colors)-1])
+    #
+    # # 显示图例
+    # for i in range(clusters.size):
+    #     plt.scatter([], [], c=colors[i], label=f'Cluster {i}')
+    # plt.scatter([], [], c=colors[len(colors)-1], label=f'Cluster Century')
+    #
+    # plt.legend()
+    # plt.title('t-SNE Visualization with K-Means Clusters')
+    # plt.show()
 
     return project_clusters, distances
 
