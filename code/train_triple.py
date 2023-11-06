@@ -41,6 +41,14 @@ def standardize_batch(features):
     std = features.std(dim=0, keepdim=True) + 1e-6  # 防止除以0
     features_standardized = (features - mean) / std
     return features_standardized
+    # min_val = features.min(dim=0, keepdim=True)[0]
+    # max_val = features.max(dim=0, keepdim=True)[0]
+    #
+    # # Avoid division by zero by adding a small constant (1e-6)
+    # range_val = max_val - min_val + 1e-6
+    #
+    # features_normalized = (features - min_val) / range_val
+    # return features_normalized
 
 def process_data(data, device):
     """
