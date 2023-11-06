@@ -4,7 +4,7 @@ import os
 from encoder import *
 import torch.utils.data as data
 from sklearn.metrics import mean_squared_error as mse
-import cluster
+import cluster_AP
 import numpy as np
 import torch
 import torch.nn as nn
@@ -91,9 +91,9 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
         features_combined = bottleneck_layer(features_combined)
 
     # Compute the regressor output
-    outputs = regressor_layer(features_combined)
+    # outputs = regressor_layer(features_combined)
     output_s = regressor_layer(features_source)
-    bug_s = labels_source[:,0].float().view(-1,1)
+    bug_s = labels_source[:, 0].float().view(-1, 1)
 
     # Compute the regressor loss using the source data
     regressor_loss = class_criterion(output_s, bug_s)
@@ -527,7 +527,8 @@ def transfer_classification(config):
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
             # total_loss = 1 * transfer_loss + classifier_loss
             total_loss = regressor_loss
-            print(total_loss)
+            print("regressor_loss:", total_loss.item())
+            print("transfer_loss:", transfer_loss.item())
             #
             end_train = time.perf_counter()
 
@@ -607,8 +608,8 @@ if __name__ == "__main__":
     # kmeans++聚类
     # clusters, distances = cluster.project_cluster(3)
     # 谱聚类
-    clusters, distances = cluster_spectral.project_cluster(3)
-
+    # clusters, distances = cluster_spectral.project_cluster(3)
+    clusters, distances = cluster_AP.project_cluster()
     for round_cir in range(20):
         new_arr = []
         test_arr = []
@@ -632,7 +633,7 @@ if __name__ == "__main__":
             # 定义一个字典类型变量
             config = {}
             # 添加键值对
-            config["num_iterations"] = 10
+            config["num_iterations"] = 20
             config["test_interval"] = 1  # ?
             # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
             config["prep"] = [
@@ -644,7 +645,7 @@ if __name__ == "__main__":
                                "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                                "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "SimpleRegressor", "use_bottleneck": args.using_bottleneck,
+            config["network"] = {"name": "dpnn", "use_bottleneck": args.using_bottleneck,
                                  "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,

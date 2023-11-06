@@ -757,7 +757,7 @@ class SimpleRegressor(nn.Module):
 
 
 class dpnn(nn.Module):
-    def __init__(self, in_features=128, out_features=1):
+    def __init__(self, in_features=248, out_features=1):
         super(dpnn, self).__init__()
         self.layer1 = nn.Sequential(
             nn.Linear(in_features, 256),
