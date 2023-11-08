@@ -92,7 +92,7 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
 
     # Compute the regressor output
     # outputs = regressor_layer(features_combined)
-    output_s = regressor_layer(features_source)
+    output_s = torch.round(regressor_layer(features_source))
     bug_s = labels_source[:, 0].float().view(-1, 1)
 
     # Compute the regressor loss using the source data
@@ -161,7 +161,7 @@ def get_fea_lab(what, loader, model, gpu):
             inputs = Variable(inputs)
             labels = Variable(labels)
 
-        outputs = model(inputs)  # get features
+        outputs = torch.round(model(inputs))  # get features
 
         if start_test:
             all_output = outputs.data.float()
@@ -244,7 +244,7 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
         combinedVec = standardize_batch(combinedVec)
 
         # 待定
-        outputs = model(combinedVec)
+        outputs = torch.round(model(combinedVec))
 
         if start_test:
             all_output = outputs.data.float()
@@ -284,7 +284,7 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
         combinedVec = standardize_batch(combinedVec)
 
         # 待定
-        outputs = model(combinedVec)
+        outputs = torch.round(torch.round(model(combinedVec)))
 
         if start_test:
             all_output = outputs.data.float()
