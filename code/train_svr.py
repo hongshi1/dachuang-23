@@ -57,7 +57,7 @@ def train(source, target):
     model.fit(source_features, source_labels.ravel())
 
     # Predict using the model and calculate MSE
-    predictions = torch.round(model.predict(target_features))
+    predictions = np.round(model.predict(target_features))
     # print(loc_labels)
     per = PerformanceMeasure(target_labels, predictions, loc_labels,cc_labels)
     popt = per.PercentPOPT()

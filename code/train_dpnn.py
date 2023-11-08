@@ -12,7 +12,6 @@ from sklearn.metrics import mean_squared_error
 from sklearn.tree import DecisionTreeRegressor
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
-import torch
 import torch.nn as nn
 import torch.optim as optim
 
