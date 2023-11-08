@@ -115,7 +115,7 @@ def train(source, target):
         predictions = model(target_features.to(device))
 
     # Convert predictions to numpy array for the PerformanceMeasure class
-    predictions = predictions.cpu().numpy().flatten()
+    predictions = torch.round(predictions.cpu().numpy().flatten())
 
     # Calculate and return the POPT
     per = PerformanceMeasure(target_labels, predictions, loc_labels,cc_labels)

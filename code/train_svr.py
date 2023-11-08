@@ -3,6 +3,7 @@
 import openpyxl
 from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
 import numpy as np
+import torch
 from sklearn.utils import shuffle
 from sklearn.preprocessing import MinMaxScaler
 import torch.optim as optim
@@ -56,7 +57,7 @@ def train(source, target):
     model.fit(source_features, source_labels.ravel())
 
     # Predict using the model and calculate MSE
-    predictions = model.predict(target_features)
+    predictions = torch.round(model.predict(target_features))
     # print(loc_labels)
     per = PerformanceMeasure(target_labels, predictions, loc_labels,cc_labels)
     popt = per.PercentPOPT()
