@@ -142,7 +142,7 @@ class HuberLoss(nn.Module):
     def forward(self, y_true, y_pred):
         error = torch.abs(y_true - y_pred)
         quadratic = 0.5 * error ** 2
-        linear = self.delta * (error - 0.5 * self.delta)
+        linear = self.delta * (error  )
         loss = torch.where(error <= self.delta, quadratic, linear)
         return loss.mean()
 
