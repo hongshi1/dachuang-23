@@ -39,18 +39,18 @@ def standardize_batch(features):
     """
     Standardize the features by removing the mean and scaling to unit variance
     """
-    mean = features.mean(dim=0, keepdim=True)
-    std = features.std(dim=0, keepdim=True) + 1e-6  # 防止除以0
-    features_standardized = (features - mean) / std
-    return features_standardized
-    # min_val = features.min(dim=0, keepdim=True)[0]
-    # max_val = features.max(dim=0, keepdim=True)[0]
-    #
-    # # Avoid division by zero by adding a small constant (1e-6)
-    # range_val = max_val - min_val + 1e-6
-    #
-    # features_normalized = (features - min_val) / range_val
-    # return features_normalized
+    # mean = features.mean(dim=0, keepdim=True)
+    # std = features.std(dim=0, keepdim=True) + 1e-6  # 防止除以0
+    # features_standardized = (features - mean) / std
+    # return features_standardized
+    min_val = features.min(dim=0, keepdim=True)[0]
+    max_val = features.max(dim=0, keepdim=True)[0]
+
+    # Avoid division by zero by adding a small constant (1e-6)
+    range_val = max_val - min_val + 1e-6
+
+    features_normalized = (features - min_val) / range_val
+    return features_normalized
 
 
 def process_data(data, device):
@@ -98,14 +98,15 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     # Compute the regressor output
     # outputs = regressor_layer(features_combined)
 
-
     output_s = regressor_layer(features_source)
-    p = PerformanceMeasure(labels_target[:, 0], output_s, labels_target[:, 1], labels_target[:, 20])
-    popt = p.PercentPOPT()
+    a = output_s = regressor_layer(features_source).deatch().cpu()
+    p = PerformanceMeasure(labels_target[:, 0].cpu(),a, labels_target[:, 1].cpu(),
+                           labels_target[:, 20].cpu())
+    popt = p.PercentPOPT().to(device)
     bug_s = labels_source[:, 0].float().view(-1, 1)
 
     # Compute the regressor loss using the source data
-    regressor_loss = class_criterion(output_s, bug_s)*(1-popt)
+    regressor_loss = class_criterion(output_s, bug_s) * (1 - popt)
 
     # Compute the transfer loss
     transfer_loss = compute_transfer_loss(features_combined, transfer_criterion, loss_config)
@@ -303,8 +304,7 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
             all_output = torch.cat((all_output, outputs.data.float()), 0)
             all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    predict_list = all_output.cpu().numpy().flatten()
-    predict_list = np.torch(predict_list)
+    predict_list = all_output.round().cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
     loc = all_label_list[:, 1]
@@ -511,11 +511,6 @@ def transfer_classification(config):
             # bottleneck_layer = bottleneck_layer.to(device)
             regressor_layer = regressor_layer.to(device)
 
-            # Get data
-            # data_s= next(iter_source)
-            # python3
-            # data_t= next(iter_target)
-
             regressor_loss, transfer_loss = compute_features_and_loss(
                 iter_source,
                 iter_target,
@@ -547,8 +542,7 @@ def transfer_classification(config):
     popt = 0.0
 
     all_label_list = all_label.cpu().numpy()
-    predict_list = predict_best.view(-1, 1).cpu().numpy().flatten()
-    predict_list= np.round(predict_list)
+    predict_list = predict_best.view(-1, 1).round().cpu().numpy().flatten()
     loc = all_label_list[:, 1]
     cc = all_label_list[:, 20]
 
@@ -690,5 +684,4 @@ if __name__ == "__main__":
             worksheet.cell(row=i + 1, column=1, value=new_arr[i])
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
         # 保存文件
-        workbook.save('../output/moco+linear_regress+imgVec+normal_feature+astVec/' + str(
-            round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
+        workbook.save('../output/newloss_round/' + str(round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
