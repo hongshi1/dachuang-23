@@ -304,6 +304,7 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
             all_label = torch.cat((all_label, labels.data.float()), 0)
 
     predict_list = all_output.cpu().numpy().flatten()
+    predict_list = np.torch(predict_list)
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
     loc = all_label_list[:, 1]
@@ -547,6 +548,7 @@ def transfer_classification(config):
 
     all_label_list = all_label.cpu().numpy()
     predict_list = predict_best.view(-1, 1).cpu().numpy().flatten()
+    predict_list= np.round(predict_list)
     loc = all_label_list[:, 1]
     cc = all_label_list[:, 20]
 
@@ -661,7 +663,7 @@ if __name__ == "__main__":
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
                 "type": "ADAM",
-                "optim_params": {"lr": 0.001, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005,
+                "optim_params": {"lr": 0.001, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005,
                                  "amsgrad": False},
                 "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
             }
