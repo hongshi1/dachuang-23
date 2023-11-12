@@ -3,6 +3,7 @@
 import openpyxl
 import random
 import time
+import torch
 import openpyxl
 from PerformanceMeasure import  Origin_PerformanceMeasure as PerformanceMeasure
 import random
@@ -59,7 +60,7 @@ def train(source, target):
     target_features = scaler.transform(target_features)
 
     # Predict using the model and calculate MSE
-    predictions = model.predict(target_features)
+    predictions =np.round(model.predict(target_features))
     per = PerformanceMeasure(target_labels, predictions, loc_labels,cc_labels)
     pofb = per.PercentPOPT()
 

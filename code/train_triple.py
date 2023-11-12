@@ -31,24 +31,27 @@ import matplotlib.pyplot as plt
 import random
 import time
 from PIL import Image
-#主训练函数
 
-def standardize_batch(features):
-    """
-    Standardize the features by removing the mean and scaling to unit variance
-    """
-    mean = features.mean(dim=0, keepdim=True)
-    std = features.std(dim=0, keepdim=True) + 1e-6  # 防止除以0
-    features_standardized = (features - mean) / std
-    return features_standardized
-    # min_val = features.min(dim=0, keepdim=True)[0]
-    # max_val = features.max(dim=0, keepdim=True)[0]
-    #
-    # # Avoid division by zero by adding a small constant (1e-6)
-    # range_val = max_val - min_val + 1e-6
-    #
-    # features_normalized = (features - min_val) / range_val
-    # return features_normalized
+
+# 主训练函数
+
+# def standardize_batch(features):
+#     """
+#     Standardize the features by removing the mean and scaling to unit variance
+#     """
+#     # mean = features.mean(dim=0, keepdim=True)
+#     # std = features.std(dim=0, keepdim=True) + 1e-6  # 防止除以0
+#     # features_standardized = (features - mean) / std
+#     # return features_standardized
+#     min_val = features.min(dim=0, keepdim=True)[0]
+#     max_val = features.max(dim=0, keepdim=True)[0]
+#
+#     # Avoid division by zero by adding a small constant (1e-6)
+#     range_val = max_val - min_val + 1e-6
+#
+#     features_normalized = (features - min_val) / range_val
+#     return features_normalized
+
 
 def process_data(data, device):
     """
@@ -66,21 +69,23 @@ def process_data(data, device):
     combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
     return combinedVec, labels
 
-def compute_features_and_loss(iter_source, iter_target, base_network, regressor_layer, class_criterion, transfer_criterion, loss_config, device,net_config, bottleneck_layer= None):
+
+def compute_features_and_loss(iter_source, iter_target, base_network, regressor_layer, class_criterion,
+                              transfer_criterion, loss_config, device, net_config, bottleneck_layer=None):
     """
     Compute features from source and target, then compute the loss.
     """
     # Process source data
     data_source = next(iter_source)
     combinedVec_s, labels_source = process_data(data_source, device)
-    combinedVec_s = standardize_batch(combinedVec_s)
+    # combinedVec_s = standardize_batch(combinedVec_s)
 
     features_source = base_network(combinedVec_s)
 
     # Process target data
     data_target = next(iter_target)
     combinedVec_t, labels_target = process_data(data_target, device)
-    combinedVec_t = standardize_batch(combinedVec_t)
+    # combinedVec_t = standardize_batch(combinedVec_t)
     features_target = base_network(combinedVec_t)
 
     # Combine the features
@@ -92,16 +97,21 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
 
     # Compute the regressor output
     # outputs = regressor_layer(features_combined)
+
     output_s = regressor_layer(features_source)
+    p = PerformanceMeasure(labels_target[:, 0].cpu(), output_s.detach().cpu(), labels_target[:, 1].cpu(),
+                           labels_target[:, 20].cpu())
+    popt = p.PercentPOPT().to(device)
     bug_s = labels_source[:, 0].float().view(-1, 1)
 
     # Compute the regressor loss using the source data
-    regressor_loss = class_criterion(output_s, bug_s)
+    regressor_loss = class_criterion(output_s, bug_s) * (1 - popt)
 
     # Compute the transfer loss
     transfer_loss = compute_transfer_loss(features_combined, transfer_criterion, loss_config)
 
     return regressor_loss, transfer_loss
+
 
 def compute_transfer_loss(features_combined, transfer_criterion, loss_config):
     """
@@ -133,14 +143,16 @@ def compute_transfer_loss(features_combined, transfer_criterion, loss_config):
     return transfer_loss
 
 
-
 class HuberLoss(nn.Module):
     def __init__(self, delta):
         super(HuberLoss, self).__init__()
         self.delta = delta
 
     def forward(self, y_true, y_pred):
-        error = torch.abs(y_true - y_pred)
+        # 对 y_pred 中大于 20 的部分应用 log100 映射
+        y_pred_mapped = torch.where(y_pred > 20, 20 + torch.log(y_pred - 20 + 1) / torch.log(torch.tensor(100.0)), y_pred)
+
+        error = torch.abs(y_true - y_pred_mapped)
         quadratic = 0.5 * error ** 2
         linear = self.delta * (error - 0.5 * self.delta)
         loss = torch.where(error <= self.delta, quadratic, linear)
@@ -241,7 +253,7 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
 
         # Concatenate the AST vector, Image vector, and the subset of labels.
         combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
-        combinedVec = standardize_batch(combinedVec)
+        # combinedVec = standardize_batch(combinedVec)
 
         # 待定
         outputs = model(combinedVec)
@@ -257,6 +269,7 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
     predict = all_output.flatten()
     return all_label, predict
 
+
 # I'll continue the modifications for the second function here:
 
 def image_classification_test(loader, model, test_10crop=False, gpu=True):
@@ -264,7 +277,6 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
     device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
 
     model = model.to(device)
-
 
     iter_test = iter(loader["test"])
     for _ in range(len(loader["test"])):
@@ -274,14 +286,14 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
         imgName = data[2]
         astVec = data[3].to(device)
         imgVec = data[4].squeeze(1).to(device)
-        #各种各样的label输入 第一行是代码bug,第二行是loc 等等等
+        # 各种各样的label输入 第一行是代码bug,第二行是loc 等等等
 
         labels = Variable(labels)
         labels_subset = labels[:, 1:]
 
         # Concatenate the AST vector, Image vector, and the subset of labels.
         combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
-        combinedVec = standardize_batch(combinedVec)
+        # combinedVec = standardize_batch(combinedVec)
 
         # 待定
         outputs = model(combinedVec)
@@ -294,19 +306,17 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
             all_output = torch.cat((all_output, outputs.data.float()), 0)
             all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    predict_list = all_output.cpu().numpy().flatten()
+    predict_list = all_output.round().cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
     loc = all_label_list[:, 1]
-    cc  = all_label_list[:, 20]
-    
+    cc = all_label_list[:, 20]
 
     if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc,cc)
+        p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
         popt = p.PercentPOPT()
 
     return popt
-
 
 
 def transfer_classification(config):
@@ -413,7 +423,6 @@ def transfer_classification(config):
         bottleneck_layer.bias.data.fill_(0.1)
         bottleneck_layer = nn.Sequential(bottleneck_layer, nn.ReLU(), nn.Dropout(0.6))
 
-
     use_gpu = torch.cuda.is_available()
     print(use_gpu)
     if use_gpu:  # 如果GPU可用则不使用CPU进行训练，默认使用CPU
@@ -504,11 +513,6 @@ def transfer_classification(config):
             # bottleneck_layer = bottleneck_layer.to(device)
             regressor_layer = regressor_layer.to(device)
 
-            # Get data
-            # data_s= next(iter_source)
-            # python3
-            # data_t= next(iter_target)
-
             regressor_loss, transfer_loss = compute_features_and_loss(
                 iter_source,
                 iter_target,
@@ -521,8 +525,6 @@ def transfer_classification(config):
                 net_config,
                 bottleneck_layer,
             )
-
-
 
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
             # total_loss = 1 * transfer_loss + classifier_loss
@@ -542,7 +544,7 @@ def transfer_classification(config):
     popt = 0.0
 
     all_label_list = all_label.cpu().numpy()
-    predict_list = predict_best.view(-1, 1).cpu().numpy().flatten()
+    predict_list = predict_best.view(-1, 1).round().cpu().numpy().flatten()
     loc = all_label_list[:, 1]
     cc = all_label_list[:, 20]
 
@@ -588,9 +590,9 @@ if __name__ == "__main__":
     test_arr = []
 
     for i in range(len(strings)):
-        for j in range(i+1, i+2):
-            m = (i+1) % len(strings)
-            n = (i+2) % len(strings)
+        for j in range(i + 1, i + 2):
+            m = (i + 1) % len(strings)
+            n = (i + 2) % len(strings)
             new_arr.append(strings[i] + "->" + strings[m])
             new_arr.append(strings[i] + "->" + strings[n])
 
@@ -657,7 +659,7 @@ if __name__ == "__main__":
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
                 "type": "ADAM",
-                "optim_params": {"lr": 0.001, "betas": (0.7, 0.799), "eps": 1e-08, "weight_decay": 0.0005,
+                "optim_params": {"lr": 0.0001, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005,
                                  "amsgrad": False},
                 "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
             }
@@ -684,4 +686,4 @@ if __name__ == "__main__":
             worksheet.cell(row=i + 1, column=1, value=new_arr[i])
             worksheet.cell(row=i + 1, column=2, value=test_arr[i])
         # 保存文件
-        workbook.save('../output/moco+linear_regress+imgVec+normal_feature+astVec/' + str(round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
+        workbook.save('../output/newloss_round/' + str(round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名

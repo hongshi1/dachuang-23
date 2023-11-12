@@ -5,6 +5,7 @@ from PerformanceMeasure  import Origin_PerformanceMeasure as PerformanceMeasure
 import torch.optim as optim
 import random
 import time
+import torch
 import pandas as pd
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
@@ -49,7 +50,7 @@ def train(source, target):
     model.fit(source_features, source_labels)
 
     # Predict using the model and calculate MSE
-    predictions = model.predict(target_features)
+    predictions = np.round(model.predict(target_features))
     per = PerformanceMeasure(target_labels, predictions,loc_labels,cc_labels)
 
     pofb = per.PercentPOPT()
