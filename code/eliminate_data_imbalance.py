@@ -111,6 +111,6 @@ def eliminate_data_imbalance(origin_data_path, target_data_path, seed):
     return mat_data
 
 if __name__=='__main__':
-    data = eliminate_data_imbalance('../data/promise_csv/ant-1.3.csv', '../data/promise_csv/camel-1.6.csv')
+    data = eliminate_data_imbalance('../data/promise_csv/ant-1.3.csv', '../data/promise_csv/camel-1.6.csv', 1)
 
 
