@@ -790,6 +790,36 @@ class dpnn(nn.Module):
     def output_num(self):
         return 64  # Feature dimensionality
 
+
+class deepRegressor(nn.Module):
+    def __init__(self, in_features=248):
+        super(deepRegressor,self).__init__()
+        self.input_layer = nn.Linear(in_features, 512)
+
+        # 隐含层（16个）
+        self.hidden_layers = nn.ModuleList([
+            nn.Linear(512, 512) for _ in range(16)
+        ])
+
+        self.output_layer = nn.Linear(512, 64)
+
+    def forward(self, x):
+        # 输入层
+        x = self.input_layer(x)
+        x = nn.functional.relu(x)
+        # 隐含层（16个）
+        for layer in self.hidden_layers:
+            x = layer(x)
+            x = nn.functional.relu(x)
+
+        # 输出层
+        x = self.output_layer(x)
+
+        return x
+
+    def output_num(self):
+        return 64
+
 #
 
 # Add these models to the existing network_dict
@@ -804,3 +834,4 @@ network_dict["My_LSTM"] = My_LSTM
 network_dict["My_Transformer"] = My_Transformer
 network_dict["SimpleRegressor"] = SimpleRegressor
 network_dict["dpnn"] = dpnn
+network_dict['deepRegressor']=deepRegressor
