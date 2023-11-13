@@ -834,4 +834,4 @@ network_dict["My_LSTM"] = My_LSTM
 network_dict["My_Transformer"] = My_Transformer
 network_dict["SimpleRegressor"] = SimpleRegressor
 network_dict["dpnn"] = dpnn
-network_dict['deepRegressor']=deepRegressor
+network_dict['deepRegressor'] = deepRegressor
