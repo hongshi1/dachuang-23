@@ -108,9 +108,9 @@ def eliminate_data_imbalance(origin_data_path, target_data_path, seed):
 
     ori_data_shse_x, ori_data_shse_y = SHSE(np.array(origin_data), seed)
     mat_data = np.hstack([ori_data_shse_x, ori_data_shse_y.reshape(-1, 1)])
-    return mat_data
+    return mat_data, target_data
 
 if __name__=='__main__':
-    data = eliminate_data_imbalance('../data/promise_csv/ant-1.3.csv', '../data/promise_csv/camel-1.6.csv', 1)
-
+    source_data, target_data = eliminate_data_imbalance('../data/promise_csv/ant-1.3.csv', '../data/promise_csv/camel-1.6.csv', 1)
+    print(len(source_data), len(target_data))
 
