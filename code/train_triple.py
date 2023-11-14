@@ -463,7 +463,9 @@ def transfer_classification(config):
 
     best_model = ''
     predict_best = ''
-    for i in range(config["num_iterations"]):  # 网格法确定最佳参数组合
+    jud = True
+    i = 0
+    while i < config["num_iterations"]:  # 网格法确定最佳参数组合
         if F_best >= 1:
             break
         else:
@@ -531,7 +533,12 @@ def transfer_classification(config):
 
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
             # total_loss = 1 * transfer_loss + classifier_loss
-            total_loss = regressor_loss
+            total_loss = regressor_loss + rate*transfer_loss
+            if(regressor_loss.item() < 2):
+                jud = False
+                i = 0
+            if(jud):
+                i = i - 1
             print("regressor_loss:", total_loss.item())
             print("transfer_loss:", transfer_loss.item())
             #
@@ -540,6 +547,7 @@ def transfer_classification(config):
             # print('loss: %.4f' % total_loss)
             total_loss.backward()
             optimizer.step()
+            i += 1
 
     print(args.source + '->' + args.target)
     print('训练结果：')
