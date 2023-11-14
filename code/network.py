@@ -5,6 +5,7 @@ import torchvision
 from torchvision import models
 from torch.autograd import Variable
 from torch.autograd import Function
+from torch.nn import TransformerEncoder, TransformerEncoderLayer
 import sklearn
 import sklearn.preprocessing
 
@@ -791,30 +792,34 @@ class dpnn(nn.Module):
         return 64  # Feature dimensionality
 
 
-class deepRegressor(nn.Module):
-    def __init__(self, in_features=248):
-        super(deepRegressor,self).__init__()
-        self.input_layer = nn.Linear(in_features, 512)
+class RegressionTransformer(nn.Module):
+    def __init__(self, input_dim=128, d_model=64, nhead=8, num_encoder_layers=3, dim_feedforward=256, dropout=0.1):
+        super(RegressionTransformer, self).__init__()
 
-        # 隐含层（16个）
-        self.hidden_layers = nn.ModuleList([
-            nn.Linear(512, 512) for _ in range(16)
-        ])
+        self.input_fc = nn.Linear(input_dim, d_model)
 
-        self.output_layer = nn.Linear(512, 64)
+        # Transformer Encoder Layer
+        encoder_layers = TransformerEncoderLayer(d_model, nhead, dim_feedforward, dropout)
+        self.transformer_encoder = TransformerEncoder(encoder_layers, num_encoder_layers)
+
+        # Output fully connected layer
+        self.output_fc = nn.Linear(d_model, 64)  # Output dimension is 64
 
     def forward(self, x):
-        # 输入层
-        x = self.input_layer(x)
-        x = nn.functional.relu(x)
-        # 隐含层（16个）
-        for layer in self.hidden_layers:
-            x = layer(x)
-            x = nn.functional.relu(x)
+        # Transform input to d_model dimension
+        x = self.input_fc(x)
 
-        # 输出层
-        x = self.output_layer(x)
+        # Reshape x to (seq_len, batch, d_model)
+        x = x.view(1, -1, x.size(-1))
 
+        # Pass through the transformer encoder
+        x = self.transformer_encoder(x)
+
+        # Reshape back to (batch, seq_len * d_model)
+        x = x.view(x.size(1), -1)
+
+        # Pass through the output fully connected layer
+        x = self.output_fc(x)
         return x
 
     def output_num(self):
@@ -828,10 +833,9 @@ class deepRegressor(nn.Module):
 
 network_dict = {"AlexNet": AlexNetFc, "ResNet18": ResNet18Fc, "ResNet34": ResNet34Fc, "ResNet50": ResNet50Fc,
                 "ResNet101": ResNet101Fc, "ResNet152": ResNet152Fc,"RCAN": RCAN,
-                "MyNet": My_ResNet152Fc,"NormalAlex":NormalAlex,"AttentionModel": AttentionModel}
+                "MyNet": My_ResNet152Fc,"NormalAlex":NormalAlex,"AttentionModel": AttentionModel,"regressionTransformer":RegressionTransformer}
 network_dict["My_ResNet"] = My_ResNet
 network_dict["My_LSTM"] = My_LSTM
 network_dict["My_Transformer"] = My_Transformer
 network_dict["SimpleRegressor"] = SimpleRegressor
 network_dict["dpnn"] = dpnn
-network_dict['deepRegressor'] = deepRegressor

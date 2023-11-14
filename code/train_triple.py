@@ -105,7 +105,7 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     bug_s = labels_source[:, 0].float().view(-1, 1)
 
     # Compute the regressor loss using the source data
-    regressor_loss = class_criterion(output_s, bug_s) * (1 - popt)
+    regressor_loss = class_criterion( bug_s,output_s)
 
     # Compute the transfer loss
     transfer_loss = compute_transfer_loss(features_combined, transfer_criterion, loss_config)
@@ -437,14 +437,17 @@ def transfer_classification(config):
                           {"params": bottleneck_layer.parameters(), "lr": 0.1},
                           {"params": regressor_layer.parameters(), "lr": 0.1}]
     else:
-        parameter_list = [{"params": base_network.parameters(), "lr": 0.1},
-                          {"params": regressor_layer.parameters(), "lr": 0.1}]
+        parameter_list = [{"params": base_network.parameters(), "lr": 0.01},
+                          {"params": regressor_layer.parameters(), "lr": 0.01}]
 
     ## add additional network for some methodsf
     if loss_config["name"] == "JAN":
         softmax_layer = nn.Softmax()
         if use_gpu:
             softmax_layer = softmax_layer.cuda()
+
+    nn.init.normal_(regressor_layer.weight, mean=0.0, std=0.01)
+    nn.init.zeros_(regressor_layer.bias)
 
     ## set optimizer
     optimizer_config = config["optimizer"]
@@ -625,9 +628,11 @@ if __name__ == "__main__":
         test_arr = []
 
         for i in range(len(strings)):
-            for j in range(i + 1, len(strings)):
-                new_arr.append(strings[i] + "->" + strings[j])
-                new_arr.append(strings[j] + "->" + strings[i])
+            for j in range(i + 1, i + 2):
+                m = (i + 1) % len(strings)
+                n = (i + 2) % len(strings)
+                new_arr.append(strings[i] + "->" + strings[m])
+                new_arr.append(strings[i] + "->" + strings[n])
 
         for i in range(len(new_arr)):
             setup_seed(round_cir + 1)
