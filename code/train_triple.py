@@ -8,6 +8,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import openpyxl
+from eliminate_data_imbalance import eliminate_data_imbalance
 import cluster_spectral
 # 定义和训练神经网络的类和函数。它包括各种层、激活函数、损失函数和配置神经网络结构的实用工具。
 import torch.optim as optim
@@ -55,20 +56,12 @@ from PIL import Image
 
 
 def process_data(data, device):
-    """
-    Process a single batch of data.
-    """
-    labels = data[1].to(device)
-    imgName = data[2]
-    astVec = data[3].to(device)  # AST vector.
-    imgVec = data[4].squeeze(1).to(device)  # Image vector, reshaped as needed.
+    loc = data[:, 10]  # 第11维度的索引是10
+    cc = data[:, 19]  # 第19维度的索引是18
+    labels = data[:, 20]  # 第20维度的索引是19
+    combinedVec = torch.cat((data[:, :20], data[:, 21:]), dim=1)
 
-    # Get a subset of labels (excluding the first column)
-    labels_subset = labels[:, 1:]
-
-    # Concatenate the AST vector, Image vector, and the subset of labels.
-    combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
-    return combinedVec, labels
+    return combinedVec, labels, loc, cc
 
 
 def compute_features_and_loss(iter_source, iter_target, base_network, regressor_layer, class_criterion,
@@ -78,14 +71,14 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     """
     # Process source data
     data_source = next(iter_source)
-    combinedVec_s, labels_source = process_data(data_source, device)
+    combinedVec_s, labels_source,cc_source,loc_source = process_data(data_source, device)
     # combinedVec_s = standardize_batch(combinedVec_s)
 
     features_source = base_network(combinedVec_s)
 
     # Process target data
     data_target = next(iter_target)
-    combinedVec_t, labels_target = process_data(data_target, device)
+    combinedVec_t, labels_target,cc_target,loc_target = process_data(data_target, device)
     # combinedVec_t = standardize_batch(combinedVec_t)
     features_target = base_network(combinedVec_t)
 
@@ -100,8 +93,7 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     # outputs = regressor_layer(features_combined)
 
     output_s = regressor_layer(features_source)
-    p = PerformanceMeasure(labels_target[:, 0].cpu(), output_s.detach().cpu(), labels_target[:, 1].cpu(),
-                           labels_target[:, 20].cpu())
+    p = PerformanceMeasure(labels_target[:, 0].cpu(), output_s.detach().cpu(),loc_target,cc_target)
     popt = p.PercentPOPT().to(device)
     bug_s = labels_source[:, 0].float().view(-1, 1)
 
@@ -240,21 +232,11 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
 
     iter_test = iter(loader["test"])
     for _ in range(len(loader["test"])):
-        data = next(iter_test)
-        inputs = data[0].to(device)  # This is the image data.
-        labels = data[1].to(device)
-        imgName = data[2]
-        astVec = data[3].to(device)  # AST vector.
-        imgVec = data[4].squeeze(1).to(device)  # Image vector, reshaped as needed.
-
-        labels = Variable(labels)
-
-        labels = Variable(labels)
-        labels_subset = labels[:, 1:]
-
-        # Concatenate the AST vector, Image vector, and the subset of labels.
-        combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
-        # combinedVec = standardize_batch(combinedVec)
+        data = next(iter_test).to(device)
+        loc = data[:, 10]  # 第11维度的索引是10
+        cc = data[:, 19]  # 第19维度的索引是18
+        labels = data[:, 20]  # 第20维度的索引是19
+        combinedVec = torch.cat((data[:, :20], data[:, 21:]), dim=1)
 
         # 待定
         outputs = model(combinedVec)
@@ -281,20 +263,11 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
 
     iter_test = iter(loader["test"])
     for _ in range(len(loader["test"])):
-        data = next(iter_test)
-        inputs = data[0].to(device)  # 指的是图片
-        labels = data[1].to(device)
-        imgName = data[2]
-        astVec = data[3].to(device)
-        imgVec = data[4].squeeze(1).to(device)
-        # 各种各样的label输入 第一行是代码bug,第二行是loc 等等等
-
-        labels = Variable(labels)
-        labels_subset = labels[:, 1:]
-
-        # Concatenate the AST vector, Image vector, and the subset of labels.
-        combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
-        # combinedVec = standardize_batch(combinedVec)
+        data = next(iter_test).to(device) # 指的是图片
+        loc = data[:, 10]  # 第11维度的索引是10
+        cc = data[:, 19]  # 第19维度的索引是18
+        labels = data[:, 20]  # 第20维度的索引是19
+        combinedVec = torch.cat((data[:, :20], data[:, 21:]), dim=1)  # 删除第20维度（索引为19），沿着列（dim=1）
 
         # 待定
         outputs = model(combinedVec)
@@ -310,8 +283,7 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
     predict_list = all_output.round().cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
-    loc = all_label_list[:, 1]
-    cc = all_label_list[:, 20]
+
 
     if (all_label_list.shape[1] > 1):
         p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
@@ -403,6 +375,20 @@ def transfer_classification(config):
                                                                                      batch_size=
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
+
+        elif data_config["type"] == "vec":
+            source_data, target_data = eliminate_data_imbalance(data_config["list_path"]["train"],
+                                                                data_config["list_path"]["tt"], 1)
+            # 对于向量数据
+            dsets[data_config["name"]]["train"] = VecDataset(source_data)
+            dset_loaders[data_config["name"]]["train"] = util_data.DataLoader(dsets[data_config["name"]]["train"],
+                                                                    batch_size=data_config["batch_size"]["train"],
+                                                                    shuffle=True, num_workers=4)
+
+            dsets[data_config["name"]]["test"] = VecDataset(source_data)
+            dset_loaders[data_config["name"]]["test"] = util_data.DataLoader(dsets[data_config["name"]]["test"],
+                                                                   batch_size=data_config["batch_size"]["test"],
+                                                                   shuffle=False, num_workers=4)
 
     class_num = 1  # ??
 
@@ -572,6 +558,7 @@ if __name__ == "__main__":
     #         a = img.convert('RGB')
 
     path = '../data/txt_png_path/'
+    vec_path = '../data/promise_csv/'
     # path = '../data/txt/'
 
     # Case1: 使用命令行
@@ -651,11 +638,17 @@ if __name__ == "__main__":
                 {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
             config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
             #
-            config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
+            # config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
+            #                    "batch_size": {"train": 32, "test": 32}},
+            #                   {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
+            #                    "batch_size": {"train": 32, "test": 32}}]
+            #vec 版本
+            config["data"] = [{"name": "source", "type": "vec", "list_path": {"train": vec_path + args.source + ".csv","tt":vec_path + args.target + ".csv"},
                                "batch_size": {"train": 32, "test": 32}},
-                              {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
+                              {"name": "target", "type": "vec", "list_path": {"train": vec_path + args.target + ".csv","tt":vec_path + args.source + ".csv"},
                                "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "regressionTransformer", "use_bottleneck": args.using_bottleneck,
+
+            config["network"] = {"name": "SimpleRegressor", "use_bottleneck": args.using_bottleneck,
                                  "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
