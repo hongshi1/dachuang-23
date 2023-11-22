@@ -793,7 +793,7 @@ class dpnn(nn.Module):
 
 
 class RegressionTransformer(nn.Module):
-    def __init__(self, input_dim=128, d_model=64, nhead=8, num_encoder_layers=3, dim_feedforward=256, dropout=0.1):
+    def __init__(self, input_dim=248, d_model=64, nhead=8, num_encoder_layers=3, dim_feedforward=256, dropout=0.1):
         super(RegressionTransformer, self).__init__()
 
         self.input_fc = nn.Linear(input_dim, d_model)
