@@ -60,6 +60,8 @@ def process_data(data, device):
     cc = data[:, 19]  # 第19维度的索引是18
     labels = data[:, 20]  # 第20维度的索引是19
     combinedVec = torch.cat((data[:, :20], data[:, 21:]), dim=1)
+    # 确保combinedVec的数据类型与模型的期望输入类型一致
+    combinedVec = combinedVec.type(torch.float32)
 
     return combinedVec, labels, loc, cc
 
@@ -93,7 +95,7 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     # outputs = regressor_layer(features_combined)
 
     output_s = regressor_layer(features_source)
-    p = PerformanceMeasure(labels_target[:, 0].cpu(), output_s.detach().cpu(),loc_target,cc_target)
+    p = PerformanceMeasure(labels_target.cpu(), output_s.detach().cpu(),loc_target,cc_target)
     popt = p.PercentPOPT().to(device)
     bug_s = labels_source[:, 0].float().view(-1, 1)
 
@@ -237,6 +239,8 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
         cc = data[:, 19]  # 第19维度的索引是18
         labels = data[:, 20]  # 第20维度的索引是19
         combinedVec = torch.cat((data[:, :20], data[:, 21:]), dim=1)
+        # 确保combinedVec的数据类型与模型的期望输入类型一致
+        combinedVec = combinedVec.type(torch.float32)
 
         # 待定
         outputs = model(combinedVec)
@@ -268,7 +272,8 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
         cc = data[:, 19]  # 第19维度的索引是18
         labels = data[:, 20]  # 第20维度的索引是19
         combinedVec = torch.cat((data[:, :20], data[:, 21:]), dim=1)  # 删除第20维度（索引为19），沿着列（dim=1）
-
+        # 确保combinedVec的数据类型与模型的期望输入类型一致
+        combinedVec = combinedVec.type(torch.float32)
         # 待定
         outputs = model(combinedVec)
 
@@ -285,9 +290,9 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
     popt = -1.0
 
 
-    if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
-        popt = p.PercentPOPT()
+
+    p = PerformanceMeasure(all_label_list, predict_list, loc, cc)
+    popt = p.PercentPOPT()
 
     return popt
 
@@ -540,9 +545,9 @@ def transfer_classification(config):
     loc = all_label_list[:, 1]
     cc = all_label_list[:, 20]
 
-    if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
-        popt = p.PercentPOPT()
+
+    p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
+    popt = p.PercentPOPT()
     print(popt)
     return popt
 
