@@ -2,8 +2,7 @@
 import argparse
 import os
 from encoder import *
-import torch.utils.data as data
-from sklearn.metrics import mean_squared_error as mse
+
 import cluster_AP
 import numpy as np
 import torch
@@ -19,7 +18,7 @@ import pre_process as prep
 # 这三个是自己定义的
 import torch.utils.data as util_data  # To use 'DataLoader()'
 import lr_schedule
-from data_list import ImageList
+from data_list import ImageList, VecDataset
 from torch.autograd import Variable
 from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
@@ -51,6 +50,8 @@ from PIL import Image
 #
 #     features_normalized = (features - min_val) / range_val
 #     return features_normalized
+
+
 
 
 def process_data(data, device):
@@ -437,8 +438,8 @@ def transfer_classification(config):
                           {"params": bottleneck_layer.parameters(), "lr": 0.1},
                           {"params": regressor_layer.parameters(), "lr": 0.1}]
     else:
-        parameter_list = [{"params": base_network.parameters(), "lr": 0.01},
-                          {"params": regressor_layer.parameters(), "lr": 0.01}]
+        parameter_list = [{"params": base_network.parameters(), "lr": 0.001},
+                          {"params": regressor_layer.parameters(), "lr": 0.001}]
 
     ## add additional network for some methodsf
     if loss_config["name"] == "JAN":
@@ -503,6 +504,7 @@ def transfer_classification(config):
             if net_config["use_bottleneck"]:
                 bottleneck_layer.train(True)
             regressor_layer.train(True)  # 将模型设置为训练模式
+            base_network.train(True)
             # optimizer_config = config["optimizer"]
             # optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
             # 调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
@@ -531,7 +533,8 @@ def transfer_classification(config):
 
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
             # total_loss = 1 * transfer_loss + classifier_loss
-            total_loss = regressor_loss + rate*transfer_loss
+            # total_loss = regressor_loss + rate*transfer_loss
+            total_loss = regressor_loss
             print("regressor_loss:", total_loss.item())
             print("transfer_loss:", transfer_loss.item())
             #
@@ -641,7 +644,7 @@ if __name__ == "__main__":
             config = {}
             # 添加键值对
             config["num_iterations"] = 20
-            config["test_interval"] = 1  # ?
+            config["test_interval"] = 2  # ?
             # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
             config["prep"] = [
                 {"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
@@ -652,7 +655,7 @@ if __name__ == "__main__":
                                "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                                "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "dpnn", "use_bottleneck": args.using_bottleneck,
+            config["network"] = {"name": "regressionTransformer", "use_bottleneck": args.using_bottleneck,
                                  "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
@@ -664,9 +667,9 @@ if __name__ == "__main__":
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
                 "type": "ADAM",
-                "optim_params": {"lr": 0.0001, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005,
+                "optim_params": {"lr": 0.001, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005,
                                  "amsgrad": False},
-                "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
+                "lr_type": "inv", "lr_param": {"init_lr": 0.001, "gamma": 0.06, "power": 0.6}
             }
 
             # 对代码的修改和理解  都吧注释写满  方便组员学习

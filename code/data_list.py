@@ -6,6 +6,7 @@ from PIL import Image
 import torch.utils.data as data
 import os
 import os.path
+from torch.utils.data import Dataset, DataLoader
 
 def make_dataset(image_list, labels):
     if labels:
@@ -33,6 +34,19 @@ def convert_to_vec_path(image_paths):
         vec_path = os.path.splitext(vec_path)[0] + '.npy'
         vec_paths.append(vec_path)
     return vec_paths
+class VecDataset(Dataset):
+    def __init__(self, data, transform=None):
+        self.data = data
+        self.transform = transform
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        sample = self.data[idx]
+        if self.transform:
+            sample = self.transform(sample)
+        return sample
 
 def convert_to_ast_vector_path(image_paths):
     ast_vector_paths = []
@@ -41,6 +55,8 @@ def convert_to_ast_vector_path(image_paths):
         ast_path = os.path.splitext(ast_path)[0] + '.npy'
         ast_vector_paths.append(ast_path)
     return ast_vector_paths
+
+
 
 class ImageList(object):
     def __init__(self, image_list, labels=None, transform=None, target_transform=None,
