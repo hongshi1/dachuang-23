@@ -23,7 +23,7 @@ from data_list import ImageList
 from torch.autograd import Variable
 from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
-import math
+import queue
 
 optim_dict = {"ADAM": optim.Adam, "SGD": optim.SGD}
 from sklearn.manifold import TSNE
@@ -463,8 +463,19 @@ def transfer_classification(config):
 
     best_model = ''
     predict_best = ''
+    all_label = ''
+    fixed_queue = queue.Queue(maxsize=5)
+    predict_queue = queue.Queue(maxsize=5)
+    label_queue = queue.Queue(maxsize=5)
     for i in range(config["num_iterations"]):  # 网格法确定最佳参数组合
         if F_best >= 1:
+            if fixed_queue.qsize() == 5:
+                fixed_queue.get_nowait()
+                predict_queue.get_nowait()
+                label_queue.get_nowait()
+            fixed_queue.put(best_model)
+            predict_queue.put(predict_best)
+            label_queue.put(all_label)
             break
         else:
             if i % config["test_interval"] == 0:  # "test_interval"?
@@ -497,6 +508,14 @@ def transfer_classification(config):
                         best_model = nn.Sequential(base_network, regressor_layer)
                         all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
                                                                                test_10crop=False, gpu=use_gpu)
+
+                    if fixed_queue.qsize() == 5:
+                        fixed_queue.get_nowait()
+                        predict_queue.get_nowait()
+                        label_queue.get_nowait()
+                    fixed_queue.put(best_model)
+                    predict_queue.put(predict_best)
+                    label_queue.put(all_label)
 
             loss_test = nn.BCELoss()
             ## train one iter
@@ -542,20 +561,28 @@ def transfer_classification(config):
             optimizer.step()
 
     print(args.source + '->' + args.target)
-    print('训练结果：')
+    print('最佳训练结果：')
     print(F_best)
     popt = 0.0
 
-    all_label_list = all_label.cpu().numpy()
-    predict_list = predict_best.view(-1, 1).round().cpu().numpy().flatten()
-    loc = all_label_list[:, 1]
-    cc = all_label_list[:, 20]
+    all_popt_values = []  # 用于存储每次循环生成的p中的值
+    count = 0
+    while count < label_queue.qsize() and count < predict_queue.qsize():
+        all_label = label_queue.get()
+        predict_best = predict_queue.get()
+        all_label_list = all_label.cpu().numpy()
+        predict_list = predict_best.view(-1, 1).round().cpu().numpy().flatten()
+        loc = all_label_list[:, 1]
+        cc = all_label_list[:, 20]
 
-    if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
-        popt = p.PercentPOPT()
-    print(popt)
-    return popt
+        if (all_label_list.shape[1] > 1):
+            p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
+            popt = p.PercentPOPT()
+            all_popt_values.append(popt)
+    # 计算所有popt值的均值
+    average_popt = sum(all_popt_values) / len(all_popt_values)
+    print(average_popt)
+    return average_popt
 
 
 if __name__ == "__main__":
@@ -652,7 +679,7 @@ if __name__ == "__main__":
                                "batch_size": {"train": 32, "test": 32}},
                               {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
                                "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "dpnn", "use_bottleneck": args.using_bottleneck,
+            config["network"] = {"name": "SimpleRegressor", "use_bottleneck": args.using_bottleneck,
                                  "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
