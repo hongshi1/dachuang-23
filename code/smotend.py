@@ -38,9 +38,12 @@ def SMOTEND(data_set, ide_ratio=1, k=5):
                 temp0 = idx.shape[1]
                 temp = np.random.permutation(temp0)[:1]
                 nn = idx[i, temp]
-
+            if i == nn:
+                id = i + 1
+            else:
+                id = i
             x_nn = mino_sam_x[nn, :]
-            x_i = mino_sam_x[i, :]
+            x_i = mino_sam_x[id, :]
             x_syn = x_i + np.random.rand() * (x_nn - x_i)
 
             d1 = np.linalg.norm(x_syn - x_i)

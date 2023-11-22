@@ -36,8 +36,8 @@ def preprocess(origin_data,target_data):
     target_dataOnly = target_dataOnly.drop(idx).reset_index(drop=True)
 
     # 删除loc为0的实例
-    loc_idx = 9 if ori_dataOnly.shape[1] == 18 else 11
-    ori_dataOnly = ori_dataOnly[ori_dataOnly.iloc[:, loc_idx] != 0]
+    loc_idx = 9 if ori_dataOnly.shape[1] == 18 else 10
+    ori_dataOnly = ori_dataOnly[ori_dataOnly.iloc[:, loc_idx] != 0.00000]
     target_dataOnly = target_dataOnly[target_dataOnly.iloc[:, loc_idx] != 0]
 
     # 打乱数据集
