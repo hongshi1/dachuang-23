@@ -97,7 +97,7 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     output_s = regressor_layer(features_source)
     p = PerformanceMeasure(labels_target.cpu(), output_s.detach().cpu(),loc_target,cc_target)
     popt = p.PercentPOPT().to(device)
-    bug_s = labels_source[:, 0].float().view(-1, 1)
+    bug_s = labels_source.float().view(-1, 1)
 
     # Compute the regressor loss using the source data
     regressor_loss = class_criterion( bug_s,output_s)
