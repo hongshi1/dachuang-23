@@ -58,8 +58,8 @@ from PIL import Image
 def process_data(data, device):
     loc = data[:, 10]  # 第11维度的索引是10
     cc = data[:, 19]  # 第19维度的索引是18
-    labels = data[:, 20]  # 第20维度的索引是19
-    combinedVec = torch.cat((data[:, :20], data[:, 21:]), dim=1)
+    labels = data[:, 248]  # 第20维度的索引是19
+    combinedVec = data[:, :-1]
     # 确保combinedVec的数据类型与模型的期望输入类型一致
     combinedVec = combinedVec.type(torch.float32)
 
@@ -237,8 +237,8 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
         data = next(iter_test).to(device)
         loc = data[:, 10]  # 第11维度的索引是10
         cc = data[:, 19]  # 第19维度的索引是18
-        labels = data[:, 20]  # 第20维度的索引是19
-        combinedVec = torch.cat((data[:, :20], data[:, 21:]), dim=1)
+        labels = data[:, 248]  # 第20维度的索引是19
+        combinedVec = data[:, :-1]
         # 确保combinedVec的数据类型与模型的期望输入类型一致
         combinedVec = combinedVec.type(torch.float32)
 
@@ -267,11 +267,11 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
 
     iter_test = iter(loader["test"])
     for _ in range(len(loader["test"])):
-        data = next(iter_test).to(device) # 指的是图片
+        data = next(iter_test).to(device) # 指的是图片        loc = data[:, 10]  # 第11维度的索引是10
         loc = data[:, 10]  # 第11维度的索引是10
         cc = data[:, 19]  # 第19维度的索引是18
-        labels = data[:, 20]  # 第20维度的索引是19
-        combinedVec = torch.cat((data[:, :20], data[:, 21:]), dim=1)  # 删除第20维度（索引为19），沿着列（dim=1）
+        labels = data[:, 248]  # 第20维度的索引是19
+        combinedVec = data[:, :-1]
         # 确保combinedVec的数据类型与模型的期望输入类型一致
         combinedVec = combinedVec.type(torch.float32)
         # 待定
@@ -500,21 +500,11 @@ def transfer_classification(config):
                         best_model = nn.Sequential(base_network, regressor_layer)
                         all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
                                                                                test_10crop=False, gpu=use_gpu)
-
-                    if fixed_queue.qsize() == 5:
-                        fixed_queue.get_nowait()
-                        predict_queue.get_nowait()
-                        label_queue.get_nowait()
-                    fixed_queue.put(best_model)
-                    predict_queue.put(predict_best)
-                    label_queue.put(all_label)
-
             loss_test = nn.BCELoss()
             ## train one iter
             if net_config["use_bottleneck"]:
                 bottleneck_layer.train(True)
             regressor_layer.train(True)  # 将模型设置为训练模式
-            base_network.train(True)
             # optimizer_config = config["optimizer"]
             # optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
             # 调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
@@ -543,7 +533,6 @@ def transfer_classification(config):
 
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
             # total_loss = 1 * transfer_loss + classifier_loss
-            # total_loss = regressor_loss + rate*transfer_loss
             total_loss = regressor_loss
             print("regressor_loss:", total_loss.item())
             print("transfer_loss:", transfer_loss.item())
@@ -554,16 +543,11 @@ def transfer_classification(config):
             total_loss.backward()
             optimizer.step()
 
-    print(args.source + '->' + args.target)
-    print('训练结果：')
-    print(F_best)
-    popt = 0.0
+        print(args.source + '->' + args.target)
+        print('训练结果：')
+        print(F_best)
+        popt = 0.0
 
-    all_popt_values = []  # 用于存储每次循环生成的p中的值
-    count = 0
-    while count < label_queue.qsize() and count < predict_queue.qsize():
-        all_label = label_queue.get()
-        predict_best = predict_queue.get()
         all_label_list = all_label.cpu().numpy()
         predict_list = predict_best.view(-1, 1).round().cpu().numpy().flatten()
         loc = all_label_list[:, 1]
@@ -572,16 +556,8 @@ def transfer_classification(config):
         if (all_label_list.shape[1] > 1):
             p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
             popt = p.PercentPOPT()
-            all_popt_values.append(popt)
-    # 计算所有popt值的均值
-    average_popt = sum(all_popt_values) / len(all_popt_values)
-    print(average_popt)
-    return average_popt
-
-    p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
-    popt = p.PercentPOPT()
-    print(popt)
-    return popt
+        print(popt)
+        return popt
 
 
 if __name__ == "__main__":
@@ -668,7 +644,7 @@ if __name__ == "__main__":
             config = {}
             # 添加键值对
             config["num_iterations"] = 20
-            config["test_interval"] = 2  # ?
+            config["test_interval"] = 1  # ?
             # test_10crop 是一个布尔类型的参数，用于表示在测试集上是否进行 10-crop 测试。10-crop 测试是指在测试时将一张图片切成 10 个部分并对每个部分进行预测，然后将这 10 个预测结果进行平均或投票得到最终的预测结果。这种方法可以提高模型的准确性，特别是在处理图像数据时。
             config["prep"] = [
                 {"name": "source", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224},
