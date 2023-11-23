@@ -565,10 +565,7 @@ def transfer_classification(config):
     average_prediction = sum(final_predictions) / len(final_predictions)
 
     all_label_list = all_label.cpu().numpy()
-    predict_list = average_prediction.view(-1, 1).round().cpu().numpy().flatten()
-
-    loc = all_label_list[:, 1]
-    cc = all_label_list[:, 20]
+    predict_list = average_prediction.round().cpu().numpy().flatten()
 
 
     p = PerformanceMeasure(all_label_list, predict_list, all_loc, all_cc)
