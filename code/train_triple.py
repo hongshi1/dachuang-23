@@ -76,13 +76,13 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     combinedVec_s, labels_source,cc_source,loc_source = process_data(data_source, device)
     # combinedVec_s = standardize_batch(combinedVec_s)
 
-    features_source = base_network(combinedVec_s)
+    features_source = base_network(combinedVec_s.to(device))
 
     # Process target data
     data_target = next(iter_target)
     combinedVec_t, labels_target,cc_target,loc_target = process_data(data_target, device)
     # combinedVec_t = standardize_batch(combinedVec_t)
-    features_target = base_network(combinedVec_t)
+    features_target = base_network(combinedVec_t.to(device))
 
     # Combine the features
     features_combined = torch.cat((features_source, features_target), dim=0)
@@ -100,7 +100,7 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     bug_s = labels_source.float().view(-1, 1)
 
     # Compute the regressor loss using the source data
-    regressor_loss = class_criterion( bug_s,output_s)
+    regressor_loss = class_criterion( bug_s.to(device),output_s.to(device))
 
     # Compute the transfer loss
     transfer_loss = compute_transfer_loss(features_combined, transfer_criterion, loss_config)
@@ -489,8 +489,8 @@ def transfer_classification(config):
                 print("F")
                 print(F)
                 # 在评估部分的代码中
-                if len(top_models) < 5 or F > min(top_models, key=lambda x: x[0])[0]:
-                    if len(top_models) == 5:
+                if len(top_models) < config["model_num"] or F > min(top_models, key=lambda x: x[0])[0]:
+                    if len(top_models) == config["model_num"]:
                         # 如果列表已满，移除最低分数的模型
                         top_models.remove(min(top_models, key=lambda x: x[0]))
 
@@ -564,7 +564,8 @@ def transfer_classification(config):
     average_prediction = sum(final_predictions) / len(final_predictions)
 
     all_label_list = all_label.cpu().numpy()
-    predict_list = average_prediction.round().cpu().numpy().flatten()
+    # predict_list = average_prediction.round().cpu().numpy().flatten()
+    predict_list = average_prediction.cpu().numpy().flatten()
 
 
     p = PerformanceMeasure(all_label_list, predict_list, all_loc, all_cc)
@@ -682,6 +683,7 @@ if __name__ == "__main__":
             #                        "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
 
             config["clusters"] = clusters
+            config["model_num"] = 3
             config["distances"] = distances
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
