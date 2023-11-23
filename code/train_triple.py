@@ -468,6 +468,7 @@ def transfer_classification(config):
     best_model = ''
     top_models = []  # 用于存储最好的五个模型及其F-measure分数
     predict_best = ''
+    F = 0
     for i in range(config["num_iterations"]):  # 网格法确定最佳参数组合
         if F_best >= 1:
             break
