@@ -264,7 +264,6 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
 def image_classification_test(loader, model, test_10crop=False, gpu=True):
     start_test = True
     device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
-
     model = model.to(device)
 
     iter_test = iter(loader["test"])
@@ -287,11 +286,10 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
             all_output = torch.cat((all_output, outputs.data.float()), 0)
             all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    predict_list = all_output.round().cpu().numpy().flatten()
+    # predict_list = all_output.round().cpu().numpy().flatten()
+    predict_list = all_output.cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
-
-
 
     p = PerformanceMeasure(all_label_list, predict_list, loc, cc)
     popt = p.PercentPOPT()
