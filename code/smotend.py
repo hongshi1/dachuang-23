@@ -38,7 +38,9 @@ def SMOTEND(data_set, ide_ratio=1, k=5):
                 temp0 = idx.shape[1]
                 temp = np.random.permutation(temp0)[:1]
                 nn = idx[i, temp]
-            if i == nn:
+            if i == m-1 and i == nn:
+                id = i - 1
+            elif i == nn:
                 id = i + 1
             else:
                 id = i
