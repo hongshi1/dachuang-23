@@ -2,7 +2,7 @@
 import argparse
 import os
 from encoder import *
-
+import copy
 import cluster_AP
 import numpy as np
 import torch
@@ -95,8 +95,8 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     # outputs = regressor_layer(features_combined)
 
     output_s = regressor_layer(features_source)
-    p = PerformanceMeasure(labels_target.cpu(), output_s.detach().cpu(),loc_target,cc_target)
-    popt = p.PercentPOPT().to(device)
+    # p = PerformanceMeasure(labels_target.cpu(), output_s.detach().cpu(),loc_target,cc_target)
+    # popt = p.PercentPOPT().to(device)
     bug_s = labels_source.float().view(-1, 1)
 
     # Compute the regressor loss using the source data
@@ -242,20 +242,22 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
         # 确保combinedVec的数据类型与模型的期望输入类型一致
         combinedVec = combinedVec.type(torch.float32)
 
-        # 待定
         outputs = model(combinedVec)
 
         if start_test:
             all_output = outputs.data.float()
             all_label = labels.data.float()
+            all_loc = loc.data.float()  # 初始化存储所有loc
+            all_cc = cc.data.float()    # 初始化存储所有cc
             start_test = False
         else:
             all_output = torch.cat((all_output, outputs.data.float()), 0)
             all_label = torch.cat((all_label, labels.data.float()), 0)
+            all_loc = torch.cat((all_loc, loc.data.float()), 0)  # 累积loc
+            all_cc = torch.cat((all_cc, cc.data.float()), 0)    # 累积cc
 
     predict = all_output.flatten()
-    return all_label, predict
-
+    return all_label, predict, all_loc, all_cc
 
 # I'll continue the modifications for the second function here:
 
@@ -406,7 +408,10 @@ def transfer_classification(config):
         regressor_layer = nn.Linear(bottleneck_layer.out_features, 1, bias=True)  # 创建回归层
     else:
         regressor_layer = nn.Linear(base_network.output_num(), 1, bias=True)  # 创建回归层
+
     for param in base_network.parameters():
+        param.requires_grad = True
+    for param in regressor_layer.parameters():
         param.requires_grad = True
 
     ## initialization
@@ -416,6 +421,10 @@ def transfer_classification(config):
         bottleneck_layer = nn.Sequential(bottleneck_layer, nn.ReLU(), nn.Dropout(0.6))
 
     use_gpu = torch.cuda.is_available()
+    regressor_layer.weight.data.normal_(0, 0.01)
+    regressor_layer.bias.data.fill_(0.0)
+
+
     print(use_gpu)
     if use_gpu:  # 如果GPU可用则不使用CPU进行训练，默认使用CPU
         if net_config["use_bottleneck"]:
@@ -429,8 +438,8 @@ def transfer_classification(config):
                           {"params": bottleneck_layer.parameters(), "lr": 0.1},
                           {"params": regressor_layer.parameters(), "lr": 0.1}]
     else:
-        parameter_list = [{"params": base_network.parameters(), "lr": 0.001},
-                          {"params": regressor_layer.parameters(), "lr": 0.001}]
+        parameter_list = [{"params": base_network.parameters(), "lr": 0.1},
+                          {"params": regressor_layer.parameters(), "lr": 0.1}]
 
     ## add additional network for some methodsf
     if loss_config["name"] == "JAN":
@@ -447,27 +456,20 @@ def transfer_classification(config):
     param_lr = []
     for param_group in optimizer.param_groups:
         param_lr.append(param_group["lr"])
+    schedule_param = optimizer_config["lr_param"]
+    lr_scheduler = lr_schedule.schedule_dict[optimizer_config["lr_type"]]
+
 
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
     len_train_target = len(dset_loaders["target"]["train"]) - 1
     F_best = 0  # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
-
+    # optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
     best_model = ''
+    top_models = []  # 用于存储最好的五个模型及其F-measure分数
     predict_best = ''
-    all_label = ''
-    fixed_queue = queue.Queue(maxsize=5)
-    predict_queue = queue.Queue(maxsize=5)
-    label_queue = queue.Queue(maxsize=5)
     for i in range(config["num_iterations"]):  # 网格法确定最佳参数组合
         if F_best >= 1:
-            if fixed_queue.qsize() == 5:
-                fixed_queue.get_nowait()
-                predict_queue.get_nowait()
-                label_queue.get_nowait()
-            fixed_queue.put(best_model)
-            predict_queue.put(predict_best)
-            label_queue.put(all_label)
             break
         else:
             if i % config["test_interval"] == 0:  # "test_interval"?
@@ -487,36 +489,38 @@ def transfer_classification(config):
                 print(args.source + '->' + args.target)
                 print("F")
                 print(F)
-                if F_best < F:
-                    F_best = F
-                    base_network.train(False)
-                    regressor_layer.train(False)
-                    if net_config["use_bottleneck"]:
-                        bottleneck_layer.train(False)
-                        best_model = nn.Sequential(base_network, bottleneck_layer, regressor_layer)
-                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                               test_10crop=False, gpu=use_gpu)
-                    else:
-                        best_model = nn.Sequential(base_network, regressor_layer)
-                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                               test_10crop=False, gpu=use_gpu)
-            loss_test = nn.BCELoss()
+                # 在评估部分的代码中
+                if len(top_models) < 5 or F > min(top_models, key=lambda x: x[0])[0]:
+                    if len(top_models) == 5:
+                        # 如果列表已满，移除最低分数的模型
+                        top_models.remove(min(top_models, key=lambda x: x[0]))
+
+                    # 保存当前模型和它的分数
+                    current_model = copy.deepcopy(
+                        nn.Sequential(base_network, bottleneck_layer, regressor_layer) if net_config[
+                            "use_bottleneck"] else nn.Sequential(base_network, regressor_layer))
+                    top_models.append((F, current_model))
+
+                    if F > F_best:
+                        F_best = F
+                        best_model = current_model  # 更新最佳模型用于损失反向传播
+
             ## train one iter
             if net_config["use_bottleneck"]:
                 bottleneck_layer.train(True)
+            # base_network.train(True)
+            # base_network = base_network.to(device)
+            # # bottleneck_layer = bottleneck_layer.to(device)
+            # regressor_layer = regressor_layer.to(device)
             regressor_layer.train(True)  # 将模型设置为训练模式
-            # optimizer_config = config["optimizer"]
-            # optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
-            # 调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
+            optimizer = lr_scheduler(param_lr, optimizer, i, **schedule_param)
             optimizer.zero_grad()  # 用于将梯度缓存清零
             if i % len_train_source == 0:
                 iter_source = iter(dset_loaders["source"]["train"])  # 更新源域数据集迭代器
             if i % len_train_target == 0:
                 iter_target = iter(dset_loaders["target"]["train"])  # 更新目标域数据集迭代器
 
-            base_network = base_network.to(device)
-            # bottleneck_layer = bottleneck_layer.to(device)
-            regressor_layer = regressor_layer.to(device)
+
 
             regressor_loss, transfer_loss = compute_features_and_loss(
                 iter_source,
@@ -543,21 +547,34 @@ def transfer_classification(config):
             total_loss.backward()
             optimizer.step()
 
-        print(args.source + '->' + args.target)
-        print('训练结果：')
-        print(F_best)
-        popt = 0.0
+    print(args.source + '->' + args.target)
+    print('训练结果：')
+    print(F_best)
+    popt = 0.0
 
-        all_label_list = all_label.cpu().numpy()
-        predict_list = predict_best.view(-1, 1).round().cpu().numpy().flatten()
-        loc = all_label_list[:, 1]
-        cc = all_label_list[:, 20]
+    final_predictions = []
+    all_label = None
+    all_loc = None
+    all_cc = None
+    for _, model in top_models:
+        # 使用每个模型进行预测
+        all_label, predict,all_loc,all_cc = image_classification_predict(dset_loaders["target"], model, test_10crop=False, gpu=use_gpu)
+        final_predictions.append(predict)
 
-        if (all_label_list.shape[1] > 1):
-            p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
-            popt = p.PercentPOPT()
-        print(popt)
-        return popt
+    # 计算平均预测值
+    average_prediction = sum(final_predictions) / len(final_predictions)
+
+    all_label_list = all_label.cpu().numpy()
+    predict_list = average_prediction.view(-1, 1).round().cpu().numpy().flatten()
+
+    loc = all_label_list[:, 1]
+    cc = all_label_list[:, 20]
+
+
+    p = PerformanceMeasure(all_label_list, predict_list, all_loc, all_cc)
+    popt = p.PercentPOPT()
+    print(popt)
+    return popt
 
 
 if __name__ == "__main__":
@@ -657,9 +674,9 @@ if __name__ == "__main__":
             #                    "batch_size": {"train": 32, "test": 32}}]
             #vec 版本
             config["data"] = [{"name": "source", "type": "vec", "list_path": {"train": vec_path + args.source + ".csv","tt":vec_path + args.target + ".csv"},
-                               "batch_size": {"train": 32, "test": 32}},
+                               "batch_size": {"train": 16, "test": 16}},
                               {"name": "target", "type": "vec", "list_path": {"train": vec_path + args.target + ".csv","tt":vec_path + args.source + ".csv"},
-                               "batch_size": {"train": 32, "test": 32}}]
+                               "batch_size": {"train": 16, "test": 16}}]
 
             config["network"] = {"name": "SimpleRegressor", "use_bottleneck": args.using_bottleneck,
                                  "bottleneck_dim": 256}
@@ -673,9 +690,9 @@ if __name__ == "__main__":
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
                 "type": "ADAM",
-                "optim_params": {"lr": 0.001, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005,
+                "optim_params": {"lr": 0.01, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005,
                                  "amsgrad": False},
-                "lr_type": "inv", "lr_param": {"init_lr": 0.001, "gamma": 0.06, "power": 0.6}
+                "lr_type": "inv", "lr_param": {"init_lr": 0.01, "gamma": 0.06, "power": 0.8}
             }
 
             # 对代码的修改和理解  都吧注释写满  方便组员学习
