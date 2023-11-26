@@ -507,7 +507,7 @@ def transfer_classification(config):
             ## train one iter
             if net_config["use_bottleneck"]:
                 bottleneck_layer.train(True)
-            # base_network.train(True)
+            base_network.train(True)
             # base_network = base_network.to(device)
             # # bottleneck_layer = bottleneck_layer.to(device)
             # regressor_layer = regressor_layer.to(device)
@@ -535,9 +535,9 @@ def transfer_classification(config):
             )
 
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
-            # total_loss = 1 * transfer_loss + classifier_loss
+            # total_loss = rate * transfer_loss + regressor_loss
             total_loss = regressor_loss
-            print("regressor_loss:", total_loss.item())
+            print("regressor_loss:", regressor_loss.item())
             print("transfer_loss:", transfer_loss.item())
             #
             end_train = time.perf_counter()
@@ -637,11 +637,14 @@ if __name__ == "__main__":
         test_arr = []
 
         for i in range(len(strings)):
-            for j in range(i + 1, i + 2):
-                m = (i + 1) % len(strings)
-                n = (i + 2) % len(strings)
+            for j in range(i + 1, len(strings)):
                 new_arr.append(strings[i] + "->" + strings[m])
                 new_arr.append(strings[i] + "->" + strings[n])
+
+
+
+
+
 
         for i in range(len(new_arr)):
             setup_seed(round_cir + 1)
