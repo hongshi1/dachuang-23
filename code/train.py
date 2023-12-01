@@ -598,15 +598,6 @@ if __name__ == "__main__":
     strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
                "xerces-1.2"]
     # strings = ["ant-1.3", "velocity-1.4"]
-    new_arr = []
-    test_arr = []
-
-    for i in range(len(strings)):
-        for j in range(i + 1, i + 2):
-            m = (i + 1) % len(strings)
-            n = (i + 2) % len(strings)
-            new_arr.append(strings[i] + "->" + strings[m])
-            new_arr.append(strings[i] + "->" + strings[n])
 
     parser = argparse.ArgumentParser(description='Transfer Learning')
     args = parser.parse_args()
@@ -629,11 +620,9 @@ if __name__ == "__main__":
         test_arr = []
 
         for i in range(len(strings)):
-            for j in range(i + 1, i + 2):
-                m = (i + 1) % len(strings)
-                n = (i + 2) % len(strings)
-                new_arr.append(strings[i] + "->" + strings[m])
-                new_arr.append(strings[i] + "->" + strings[n])
+            for j in range(i + 1, len(strings)):
+                new_arr.append(strings[i] + "->" + strings[j])
+                new_arr.append(strings[j] + "->" + strings[i])
 
         for i in range(len(new_arr)):
             setup_seed(round_cir + 1)

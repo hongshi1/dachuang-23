@@ -642,10 +642,6 @@ if __name__ == "__main__":
                 new_arr.append(strings[i] + "->" + strings[n])
 
 
-
-
-
-
         for i in range(len(new_arr)):
             setup_seed(round_cir + 1)
             args.source = new_arr[i].split("->")[0]
