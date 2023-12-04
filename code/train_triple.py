@@ -632,6 +632,7 @@ if __name__ == "__main__":
     # 谱聚类
     # clusters, distances = cluster_spectral.project_cluster(3)
     clusters, distances = cluster_AP.project_cluster()
+    cumulative_results = {}
     for round_cir in range(20):
         new_arr = []
         test_arr = []
@@ -640,9 +641,6 @@ if __name__ == "__main__":
             for j in range(i + 1, len(strings)):
                 new_arr.append(strings[i] + "->" + strings[m])
                 new_arr.append(strings[i] + "->" + strings[n])
-
-
-
 
 
 
@@ -705,17 +703,21 @@ if __name__ == "__main__":
             # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
             # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
             test_result = transfer_classification(config)
+            scenario = new_arr[i]
+            if scenario not in cumulative_results:
+                cumulative_results[scenario] = []
+            cumulative_results[scenario].append(test_result)
             print(new_arr[i], end=' ')
             print(" popt_final", end=' ')
             print(test_result)
             test_arr.append(test_result)
 
-        workbook = openpyxl.Workbook()
-        # 选择默认的工作表
-        worksheet = workbook.active
+        average_results = {scenario: sum(results) / len(results) for scenario, results in cumulative_results.items()}
 
-        for i in range(len(new_arr)):
-            worksheet.cell(row=i + 1, column=1, value=new_arr[i])
-            worksheet.cell(row=i + 1, column=2, value=test_arr[i])
-        # 保存文件
-        workbook.save('../output/newloss_round/' + str(round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
+        # Save to Excel
+        workbook = openpyxl.Workbook()
+        worksheet = workbook.active
+        for i, (scenario, avg_result) in enumerate(average_results.items()):
+            worksheet.cell(row=i + 1, column=1, value=scenario)
+            worksheet.cell(row=i + 1, column=2, value=avg_result)
+        workbook.save('../output/averaged_results.xlsx')
