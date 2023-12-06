@@ -15,7 +15,7 @@ def replace_with_rank(matrix):
     rank = np.argsort(np.argsort(unique_values))
     rank_dict = dict(zip(unique_values, rank))
 
-    replaced_matrix = np.vectorize(lambda x: {0: 0, 1: 10, 2: 100, 3: 1000}.get(rank_dict[x], x))(matrix)
+    replaced_matrix = np.vectorize(lambda x: {0: 0.1, 1: 0.2, 2: 0.3, 3: 0.4, 4: 0.5}.get(rank_dict[x], x))(matrix)
     return replaced_matrix
 
 def project_cluster():
@@ -89,7 +89,8 @@ def project_cluster():
     # plt.title('t-SNE Visualization with K-Means Clusters')
     # plt.show()
 
-    return project_clusters, distances
+    new_distances = replace_with_rank(distances)
+    return project_clusters, new_distances
 
 
 if __name__=='__main__':
