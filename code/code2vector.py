@@ -7,7 +7,6 @@ from gensim.models import Word2Vec
 
 save_path = '../data/embedding/'
 
-
 def extract_tokens_from_ast(node):
     tokens = []
     if isinstance(node, javalang.ast.Node):

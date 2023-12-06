@@ -1,15 +1,14 @@
 # encoding: utf-8
 import argparse
 import os
-from eliminate_data_imbalance import eliminate_data_imbalance
 from encoder import *
-import torch.utils.data as data
-from sklearn.metrics import mean_squared_error as mse
+import copy
 import cluster_AP
 import numpy as np
 import torch
 import torch.nn as nn
 import openpyxl
+from eliminate_data_imbalance import eliminate_data_imbalance
 import cluster_spectral
 # 定义和训练神经网络的类和函数。它包括各种层、激活函数、损失函数和配置神经网络结构的实用工具。
 import torch.optim as optim
@@ -20,11 +19,11 @@ import pre_process as prep
 # 这三个是自己定义的
 import torch.utils.data as util_data  # To use 'DataLoader()'
 import lr_schedule
-from data_list import ImageList
+from data_list import ImageList, VecDataset
 from torch.autograd import Variable
 from PerformanceMeasure import Origin_PerformanceMeasure as PerformanceMeasure
 # 貌似已经被弃用，主要是为了允许在安详传播的过程中进行自动微分来计算梯度
-import math
+import queue
 
 optim_dict = {"ADAM": optim.Adam, "SGD": optim.SGD}
 from sklearn.manifold import TSNE
@@ -34,41 +33,15 @@ import time
 from PIL import Image
 
 
-# 主训练函数
-
-# def standardize_batch(features):
-#     """
-#     Standardize the features by removing the mean and scaling to unit variance
-#     """
-#     # mean = features.mean(dim=0, keepdim=True)
-#     # std = features.std(dim=0, keepdim=True) + 1e-6  # 防止除以0
-#     # features_standardized = (features - mean) / std
-#     # return features_standardized
-#     min_val = features.min(dim=0, keepdim=True)[0]
-#     max_val = features.max(dim=0, keepdim=True)[0]
-#
-#     # Avoid division by zero by adding a small constant (1e-6)
-#     range_val = max_val - min_val + 1e-6
-#
-#     features_normalized = (features - min_val) / range_val
-#     return features_normalized
-
-
 def process_data(data, device):
-    """
-    Process a single batch of data.
-    """
-    labels = data[1].to(device)
-    imgName = data[2]
-    astVec = data[3].to(device)  # AST vector.
-    imgVec = data[4].squeeze(1).to(device)  # Image vector, reshaped as needed.
+    loc = data[:, 10]  # 第11维度的索引是10
+    cc = data[:, 19]  # 第19维度的索引是18
+    labels = data[:, 248]  # 第20维度的索引是19
+    combinedVec = data[:, :-1]
+    # 确保combinedVec的数据类型与模型的期望输入类型一致
+    combinedVec = combinedVec.type(torch.float32)
 
-    # Get a subset of labels (excluding the first column)
-    labels_subset = labels[:, 1:]
-
-    # Concatenate the AST vector, Image vector, and the subset of labels.
-    combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
-    return combinedVec, labels
+    return combinedVec, labels, loc, cc
 
 
 def compute_features_and_loss(iter_source, iter_target, base_network, regressor_layer, class_criterion,
@@ -78,16 +51,16 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     """
     # Process source data
     data_source = next(iter_source)
-    combinedVec_s, labels_source = process_data(data_source, device)
+    combinedVec_s, labels_source,cc_source,loc_source = process_data(data_source, device)
     # combinedVec_s = standardize_batch(combinedVec_s)
 
-    features_source = base_network(combinedVec_s)
+    features_source = base_network(combinedVec_s.to(device))
 
     # Process target data
     data_target = next(iter_target)
-    combinedVec_t, labels_target = process_data(data_target, device)
+    combinedVec_t, labels_target,cc_target,loc_target = process_data(data_target, device)
     # combinedVec_t = standardize_batch(combinedVec_t)
-    features_target = base_network(combinedVec_t)
+    features_target = base_network(combinedVec_t.to(device))
 
     # Combine the features
     features_combined = torch.cat((features_source, features_target), dim=0)
@@ -100,13 +73,12 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     # outputs = regressor_layer(features_combined)
 
     output_s = regressor_layer(features_source)
-    p = PerformanceMeasure(labels_target[:, 0].cpu(), output_s.detach().cpu(), labels_target[:, 1].cpu(),
-                           labels_target[:, 20].cpu())
-    popt = p.PercentPOPT().to(device)
-    bug_s = labels_source[:, 0].float().view(-1, 1)
+    # p = PerformanceMeasure(labels_target.cpu(), output_s.detach().cpu(),loc_target,cc_target)
+    # popt = p.PercentPOPT().to(device)
+    bug_s = labels_source.float().view(-1, 1)
 
     # Compute the regressor loss using the source data
-    regressor_loss = class_criterion( bug_s,output_s)
+    regressor_loss = class_criterion( bug_s.to(device),output_s.to(device))
 
     # Compute the transfer loss
     transfer_loss = compute_transfer_loss(features_combined, transfer_criterion, loss_config)
@@ -240,62 +212,47 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
 
     iter_test = iter(loader["test"])
     for _ in range(len(loader["test"])):
-        data = next(iter_test)
-        inputs = data[0].to(device)  # This is the image data.
-        labels = data[1].to(device)
-        imgName = data[2]
-        astVec = data[3].to(device)  # AST vector.
-        imgVec = data[4].squeeze(1).to(device)  # Image vector, reshaped as needed.
+        data = next(iter_test).to(device)
+        loc = data[:, 10]  # 第11维度的索引是10
+        cc = data[:, 19]  # 第19维度的索引是18
+        labels = data[:, 248]  # 第20维度的索引是19
+        combinedVec = data[:, :-1]
+        # 确保combinedVec的数据类型与模型的期望输入类型一致
+        combinedVec = combinedVec.type(torch.float32)
 
-        labels = Variable(labels)
-
-        labels = Variable(labels)
-        labels_subset = labels[:, 1:]
-
-        # Concatenate the AST vector, Image vector, and the subset of labels.
-        combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
-        # combinedVec = standardize_batch(combinedVec)
-
-        # 待定
         outputs = model(combinedVec)
 
         if start_test:
             all_output = outputs.data.float()
             all_label = labels.data.float()
+            all_loc = loc.data.float()  # 初始化存储所有loc
+            all_cc = cc.data.float()    # 初始化存储所有cc
             start_test = False
         else:
             all_output = torch.cat((all_output, outputs.data.float()), 0)
             all_label = torch.cat((all_label, labels.data.float()), 0)
+            all_loc = torch.cat((all_loc, loc.data.float()), 0)  # 累积loc
+            all_cc = torch.cat((all_cc, cc.data.float()), 0)    # 累积cc
 
     predict = all_output.flatten()
-    return all_label, predict
-
+    return all_label, predict, all_loc, all_cc
 
 # I'll continue the modifications for the second function here:
 
 def image_classification_test(loader, model, test_10crop=False, gpu=True):
     start_test = True
     device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
-
     model = model.to(device)
 
     iter_test = iter(loader["test"])
     for _ in range(len(loader["test"])):
-        data = next(iter_test)
-        inputs = data[0].to(device)  # 指的是图片
-        labels = data[1].to(device)
-        imgName = data[2]
-        astVec = data[3].to(device)
-        imgVec = data[4].squeeze(1).to(device)
-        # 各种各样的label输入 第一行是代码bug,第二行是loc 等等等
-
-        labels = Variable(labels)
-        labels_subset = labels[:, 1:]
-
-        # Concatenate the AST vector, Image vector, and the subset of labels.
-        combinedVec = torch.cat((astVec, imgVec, labels_subset), dim=1).to(torch.float32)
-        # combinedVec = standardize_batch(combinedVec)
-
+        data = next(iter_test).to(device) # 指的是图片        loc = data[:, 10]  # 第11维度的索引是10
+        loc = data[:, 10]  # 第11维度的索引是10
+        cc = data[:, 19]  # 第19维度的索引是18
+        labels = data[:, 248]  # 第20维度的索引是19
+        combinedVec = data[:, :-1]
+        # 确保combinedVec的数据类型与模型的期望输入类型一致
+        combinedVec = combinedVec.type(torch.float32)
         # 待定
         outputs = model(combinedVec)
 
@@ -307,15 +264,13 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
             all_output = torch.cat((all_output, outputs.data.float()), 0)
             all_label = torch.cat((all_label, labels.data.float()), 0)
 
-    predict_list = all_output.round().cpu().numpy().flatten()
+    # predict_list = all_output.round().cpu().numpy().flatten()
+    predict_list = all_output.cpu().numpy().flatten()
     all_label_list = all_label.cpu().numpy()
     popt = -1.0
-    loc = all_label_list[:, 1]
-    cc = all_label_list[:, 20]
 
-    if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
-        popt = p.PercentPOPT()
+    p = PerformanceMeasure(all_label_list, predict_list, loc, cc)
+    popt = p.PercentPOPT()
 
     return popt
 
@@ -404,6 +359,20 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
+        elif data_config["type"] == "vec":
+            source_data, target_data = eliminate_data_imbalance(data_config["list_path"]["train"],
+                                                                data_config["list_path"]["tt"], 1)
+            # 对于向量数据
+            dsets[data_config["name"]]["train"] = VecDataset(source_data)
+            dset_loaders[data_config["name"]]["train"] = util_data.DataLoader(dsets[data_config["name"]]["train"],
+                                                                    batch_size=data_config["batch_size"]["train"],
+                                                                    shuffle=True, num_workers=4)
+
+            dsets[data_config["name"]]["test"] = VecDataset(source_data)
+            dset_loaders[data_config["name"]]["test"] = util_data.DataLoader(dsets[data_config["name"]]["test"],
+                                                                   batch_size=data_config["batch_size"]["test"],
+                                                                   shuffle=False, num_workers=4)
+
     class_num = 1  # ??
 
     ## set base network
@@ -415,7 +384,10 @@ def transfer_classification(config):
         regressor_layer = nn.Linear(bottleneck_layer.out_features, 1, bias=True)  # 创建回归层
     else:
         regressor_layer = nn.Linear(base_network.output_num(), 1, bias=True)  # 创建回归层
+
     for param in base_network.parameters():
+        param.requires_grad = True
+    for param in regressor_layer.parameters():
         param.requires_grad = True
 
     ## initialization
@@ -425,6 +397,10 @@ def transfer_classification(config):
         bottleneck_layer = nn.Sequential(bottleneck_layer, nn.ReLU(), nn.Dropout(0.6))
 
     use_gpu = torch.cuda.is_available()
+    regressor_layer.weight.data.normal_(0, 0.01)
+    regressor_layer.bias.data.fill_(0.0)
+
+
     print(use_gpu)
     if use_gpu:  # 如果GPU可用则不使用CPU进行训练，默认使用CPU
         if net_config["use_bottleneck"]:
@@ -438,8 +414,8 @@ def transfer_classification(config):
                           {"params": bottleneck_layer.parameters(), "lr": 0.1},
                           {"params": regressor_layer.parameters(), "lr": 0.1}]
     else:
-        parameter_list = [{"params": base_network.parameters(), "lr": 0.01},
-                          {"params": regressor_layer.parameters(), "lr": 0.01}]
+        parameter_list = [{"params": base_network.parameters(), "lr": 0.1},
+                          {"params": regressor_layer.parameters(), "lr": 0.1}]
 
     ## add additional network for some methodsf
     if loss_config["name"] == "JAN":
@@ -456,17 +432,20 @@ def transfer_classification(config):
     param_lr = []
     for param_group in optimizer.param_groups:
         param_lr.append(param_group["lr"])
+    schedule_param = optimizer_config["lr_param"]
+    lr_scheduler = lr_schedule.schedule_dict[optimizer_config["lr_type"]]
+
 
     ## train
     len_train_source = len(dset_loaders["source"]["train"]) - 1
     len_train_target = len(dset_loaders["target"]["train"]) - 1
     F_best = 0  # F-measure的取值范围是[0,1]，值越小表示模型性能越差，所以其最优值初始化为0
-
+    # optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
     best_model = ''
+    top_models = []  # 用于存储最好的五个模型及其F-measure分数
     predict_best = ''
-    jud = True
-    i = 0
-    while i < config["num_iterations"]:  # 网格法确定最佳参数组合
+    F = 0
+    for i in range(config["num_iterations"]):  # 网格法确定最佳参数组合
         if F_best >= 1:
             break
         else:
@@ -487,37 +466,38 @@ def transfer_classification(config):
                 print(args.source + '->' + args.target)
                 print("F")
                 print(F)
-                if F_best < F:
-                    F_best = F
-                    base_network.train(False)
-                    regressor_layer.train(False)
-                    if net_config["use_bottleneck"]:
-                        bottleneck_layer.train(False)
-                        best_model = nn.Sequential(base_network, bottleneck_layer, regressor_layer)
-                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                               test_10crop=False, gpu=use_gpu)
-                    else:
-                        best_model = nn.Sequential(base_network, regressor_layer)
-                        all_label, predict_best = image_classification_predict(dset_loaders["target"], best_model,
-                                                                               test_10crop=False, gpu=use_gpu)
+                # 在评估部分的代码中
+                if len(top_models) < config["model_num"] or F > min(top_models, key=lambda x: x[0])[0]:
+                    if len(top_models) == config["model_num"]:
+                        # 如果列表已满，移除最低分数的模型
+                        top_models.remove(min(top_models, key=lambda x: x[0]))
 
-            loss_test = nn.BCELoss()
+                    # 保存当前模型和它的分数
+                    current_model = copy.deepcopy(
+                        nn.Sequential(base_network, bottleneck_layer, regressor_layer) if net_config[
+                            "use_bottleneck"] else nn.Sequential(base_network, regressor_layer))
+                    top_models.append((F, current_model))
+
+                    if F > F_best:
+                        F_best = F
+                        best_model = current_model  # 更新最佳模型用于损失反向传播
+
             ## train one iter
             if net_config["use_bottleneck"]:
                 bottleneck_layer.train(True)
+            base_network.train(True)
+            # base_network = base_network.to(device)
+            # # bottleneck_layer = bottleneck_layer.to(device)
+            # regressor_layer = regressor_layer.to(device)
             regressor_layer.train(True)  # 将模型设置为训练模式
-            # optimizer_config = config["optimizer"]
-            # optimizer = optim_dict[optimizer_config["type"]](parameter_list, **(optimizer_config["optim_params"]))
-            # 调整优化器的学习率，学习率调度程序有StepLR，MultiStepLR，ExponentialLR等，param_lr是一个包含每个参数组初始学习率的列表，optimizer是优化器，i是当前迭代次数，schedule_param包含调度程序的参数
+            optimizer = lr_scheduler(param_lr, optimizer, i, **schedule_param)
             optimizer.zero_grad()  # 用于将梯度缓存清零
             if i % len_train_source == 0:
                 iter_source = iter(dset_loaders["source"]["train"])  # 更新源域数据集迭代器
             if i % len_train_target == 0:
                 iter_target = iter(dset_loaders["target"]["train"])  # 更新目标域数据集迭代器
 
-            base_network = base_network.to(device)
-            # bottleneck_layer = bottleneck_layer.to(device)
-            regressor_layer = regressor_layer.to(device)
+
 
             regressor_loss, transfer_loss = compute_features_and_loss(
                 iter_source,
@@ -533,14 +513,9 @@ def transfer_classification(config):
             )
 
             rate = config["distances"][config["clusters"][args.source]][config["clusters"][args.target]]
-            # total_loss = 1 * transfer_loss + classifier_loss
-            total_loss = regressor_loss + rate*transfer_loss
-            if(regressor_loss.item() < 2):
-                jud = False
-                i = 0
-            if(jud):
-                i = i - 1
-            print("regressor_loss:", total_loss.item())
+            # total_loss = rate * transfer_loss + regressor_loss
+            total_loss = regressor_loss
+            print("regressor_loss:", regressor_loss.item())
             print("transfer_loss:", transfer_loss.item())
             #
             end_train = time.perf_counter()
@@ -548,21 +523,31 @@ def transfer_classification(config):
             # print('loss: %.4f' % total_loss)
             total_loss.backward()
             optimizer.step()
-            i += 1
 
     print(args.source + '->' + args.target)
     print('训练结果：')
     print(F_best)
     popt = 0.0
 
-    all_label_list = all_label.cpu().numpy()
-    predict_list = predict_best.view(-1, 1).round().cpu().numpy().flatten()
-    loc = all_label_list[:, 1]
-    cc = all_label_list[:, 20]
+    final_predictions = []
+    all_label = None
+    all_loc = None
+    all_cc = None
+    for _, model in top_models:
+        # 使用每个模型进行预测
+        all_label, predict,all_loc,all_cc = image_classification_predict(dset_loaders["target"], model, test_10crop=False, gpu=use_gpu)
+        final_predictions.append(predict)
 
-    if (all_label_list.shape[1] > 1):
-        p = PerformanceMeasure(all_label_list[:, 0], predict_list, loc, cc)
-        popt = p.PercentPOPT()
+    # 计算平均预测值
+    average_prediction = sum(final_predictions) / len(final_predictions)
+
+    all_label_list = all_label.cpu().numpy()
+    # predict_list = average_prediction.round().cpu().numpy().flatten()
+    predict_list = average_prediction.cpu().numpy().flatten()
+
+
+    p = PerformanceMeasure(all_label_list, predict_list, all_loc, all_cc)
+    popt = p.PercentPOPT()
     print(popt)
     return popt
 
@@ -578,6 +563,7 @@ if __name__ == "__main__":
     #         a = img.convert('RGB')
 
     path = '../data/txt_png_path/'
+    vec_path = '../data/promise_csv/'
     # path = '../data/txt/'
 
     # Case1: 使用命令行
@@ -598,6 +584,15 @@ if __name__ == "__main__":
     strings = ["ant-1.3", "camel-1.6", "ivy-2.0", "jedit-4.1", "log4j-1.2", "poi-2.0", "velocity-1.4", "xalan-2.4",
                "xerces-1.2"]
     # strings = ["ant-1.3", "velocity-1.4"]
+    new_arr = []
+    test_arr = []
+
+    for i in range(len(strings)):
+        for j in range(i + 1, i + 2):
+            m = (i + 1) % len(strings)
+            n = (i + 2) % len(strings)
+            new_arr.append(strings[i] + "->" + strings[m])
+            new_arr.append(strings[i] + "->" + strings[n])
 
     parser = argparse.ArgumentParser(description='Transfer Learning')
     args = parser.parse_args()
@@ -615,14 +610,17 @@ if __name__ == "__main__":
     # 谱聚类
     # clusters, distances = cluster_spectral.project_cluster(3)
     clusters, distances = cluster_AP.project_cluster()
+    cumulative_results = {}
     for round_cir in range(20):
         new_arr = []
         test_arr = []
 
         for i in range(len(strings)):
             for j in range(i + 1, len(strings)):
-                new_arr.append(strings[i] + "->" + strings[j])
-                new_arr.append(strings[j] + "->" + strings[i])
+                new_arr.append(strings[i] + "->" + strings[m])
+                new_arr.append(strings[i] + "->" + strings[n])
+
+
 
         for i in range(len(new_arr)):
             setup_seed(round_cir + 1)
@@ -646,11 +644,17 @@ if __name__ == "__main__":
                 {"name": "target", "type": "image", "test_10crop": False, "resize_size": 256, "crop_size": 224}]
             config["loss"] = {"name": args.loss_name, "trade_off": args.tradeoff}
             #
-            config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
-                               "batch_size": {"train": 32, "test": 32}},
-                              {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
-                               "batch_size": {"train": 32, "test": 32}}]
-            config["network"] = {"name": "dpnn", "use_bottleneck": args.using_bottleneck,
+            # config["data"] = [{"name": "source", "type": "image", "list_path": {"train": path + args.source + ".txt"},
+            #                    "batch_size": {"train": 32, "test": 32}},
+            #                   {"name": "target", "type": "image", "list_path": {"train": path + args.target + ".txt"},
+            #                    "batch_size": {"train": 32, "test": 32}}]
+            #vec 版本
+            config["data"] = [{"name": "source", "type": "vec", "list_path": {"train": vec_path + args.source + ".csv","tt":vec_path + args.target + ".csv"},
+                               "batch_size": {"train": 16, "test": 16}},
+                              {"name": "target", "type": "vec", "list_path": {"train": vec_path + args.target + ".csv","tt":vec_path + args.source + ".csv"},
+                               "batch_size": {"train": 16, "test": 16}}]
+
+            config["network"] = {"name": "SimpleRegressor", "use_bottleneck": args.using_bottleneck,
                                  "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,
@@ -658,13 +662,14 @@ if __name__ == "__main__":
             #                        "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.0003, "power": 0.75}}
 
             config["clusters"] = clusters
+            config["model_num"] = 3
             config["distances"] = distances
             # config["rate"] = [5, 10, 100]
             config["optimizer"] = {
                 "type": "ADAM",
-                "optim_params": {"lr": 0.0001, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005,
+                "optim_params": {"lr": 0.01, "betas": (0.9, 0.999), "eps": 1e-08, "weight_decay": 0.0005,
                                  "amsgrad": False},
-                "lr_type": "inv", "lr_param": {"init_lr": 0.0001, "gamma": 0.06, "power": 0.6}
+                "lr_type": "inv", "lr_param": {"init_lr": 0.01, "gamma": 0.06, "power": 0.8}
             }
 
             # 对代码的修改和理解  都吧注释写满  方便组员学习
@@ -676,17 +681,21 @@ if __name__ == "__main__":
             # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
             # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
             test_result = transfer_classification(config)
+            scenario = new_arr[i]
+            if scenario not in cumulative_results:
+                cumulative_results[scenario] = []
+            cumulative_results[scenario].append(test_result)
             print(new_arr[i], end=' ')
             print(" popt_final", end=' ')
             print(test_result)
             test_arr.append(test_result)
 
-        workbook = openpyxl.Workbook()
-        # 选择默认的工作表
-        worksheet = workbook.active
+        average_results = {scenario: sum(results) / len(results) for scenario, results in cumulative_results.items()}
 
-        for i in range(len(new_arr)):
-            worksheet.cell(row=i + 1, column=1, value=new_arr[i])
-            worksheet.cell(row=i + 1, column=2, value=test_arr[i])
-        # 保存文件
-        workbook.save('../output/newloss_round/' + str(round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
+        # Save to Excel
+        workbook = openpyxl.Workbook()
+        worksheet = workbook.active
+        for i, (scenario, avg_result) in enumerate(average_results.items()):
+            worksheet.cell(row=i + 1, column=1, value=scenario)
+            worksheet.cell(row=i + 1, column=2, value=avg_result)
+        workbook.save('../output/averaged_results.xlsx')

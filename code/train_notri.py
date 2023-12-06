@@ -74,6 +74,7 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     # Process source data
     data_source = next(iter_source)
     combinedVec_s, labels_source,cc_source,loc_source = process_data(data_source, device)
+    combinedVec_s = combinedVec_s[:,0:20]
     # combinedVec_s = standardize_batch(combinedVec_s)
 
     features_source = base_network(combinedVec_s.to(device))
@@ -81,6 +82,7 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     # Process target data
     data_target = next(iter_target)
     combinedVec_t, labels_target,cc_target,loc_target = process_data(data_target, device)
+    combinedVec_t = combinedVec_t[:,0:20]
     # combinedVec_t = standardize_batch(combinedVec_t)
     features_target = base_network(combinedVec_t.to(device))
 
@@ -239,6 +241,7 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
         cc = data[:, 19]  # 第19维度的索引是18
         labels = data[:, 248]  # 第20维度的索引是19
         combinedVec = data[:, :-1]
+        combinedVec = combinedVec[:,0:20]
         # 确保combinedVec的数据类型与模型的期望输入类型一致
         combinedVec = combinedVec.type(torch.float32)
 
@@ -273,6 +276,7 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
         cc = data[:, 19]  # 第19维度的索引是18
         labels = data[:, 248]  # 第20维度的索引是19
         combinedVec = data[:, :-1]
+        combinedVec = combinedVec[:,0:20]
         # 确保combinedVec的数据类型与模型的期望输入类型一致
         combinedVec = combinedVec.type(torch.float32)
         # 待定
@@ -609,13 +613,6 @@ if __name__ == "__main__":
     new_arr = []
     test_arr = []
 
-    for i in range(len(strings)):
-        for j in range(i + 1, i + 2):
-            m = (i + 1) % len(strings)
-            n = (i + 2) % len(strings)
-            new_arr.append(strings[i] + "->" + strings[m])
-            new_arr.append(strings[i] + "->" + strings[n])
-
     parser = argparse.ArgumentParser(description='Transfer Learning')
     args = parser.parse_args()
     args.gpu_id = '0'
@@ -639,8 +636,8 @@ if __name__ == "__main__":
 
         for i in range(len(strings)):
             for j in range(i + 1, len(strings)):
-                new_arr.append(strings[i] + "->" + strings[m])
-                new_arr.append(strings[i] + "->" + strings[n])
+                new_arr.append(strings[i] + "->" + strings[j])
+                new_arr.append(strings[j] + "->" + strings[i])
 
 
 
