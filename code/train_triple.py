@@ -468,7 +468,7 @@ def transfer_classification(config):
     predict_best = ''
     F = 0
     for i in range(config["num_iterations"]):  # 网格法确定最佳参数组合
-        if F_best >= 1:
+        if F_best > 1:
             break
         else:
             if i % config["test_interval"] == 0:  # "test_interval"?
@@ -703,21 +703,17 @@ if __name__ == "__main__":
             # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
             # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
             test_result = transfer_classification(config)
-            scenario = new_arr[i]
-            if scenario not in cumulative_results:
-                cumulative_results[scenario] = []
-            cumulative_results[scenario].append(test_result)
             print(new_arr[i], end=' ')
             print(" popt_final", end=' ')
             print(test_result)
             test_arr.append(test_result)
 
-        average_results = {scenario: sum(results) / len(results) for scenario, results in cumulative_results.items()}
-
-        # Save to Excel
         workbook = openpyxl.Workbook()
+        # 选择默认的工作表
         worksheet = workbook.active
-        for i, (scenario, avg_result) in enumerate(average_results.items()):
-            worksheet.cell(row=i + 1, column=1, value=scenario)
-            worksheet.cell(row=i + 1, column=2, value=avg_result)
-        workbook.save('../output/averaged_results.xlsx')
+
+        for i in range(len(new_arr)):
+            worksheet.cell(row=i + 1, column=1, value=new_arr[i])
+            worksheet.cell(row=i + 1, column=2, value=test_arr[i])
+        # 保存文件
+        workbook.save('../output/newloss_round/' + str(round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名

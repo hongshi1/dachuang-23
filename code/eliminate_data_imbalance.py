@@ -5,6 +5,7 @@ from smotend import SMOTEND
 import pandas as pd
 from scipy.io.arff import loadarff
 from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import MinMaxScaler
 
 def preprocess(origin_data,target_data):
     # Replace missing values with mean
@@ -100,9 +101,15 @@ def SHSE(train_data, fea_ratio=3/4, seed=0):
 
     return new_train_x_bal, new_train_y_bal
 
-def eliminate_data_imbalance(origin_data_path, target_data_path, seed):
+def eliminate_data_imbalance(origin_data_path, target_data_path, seed, normalization=False):
     origin_data = pd.read_csv(origin_data_path, header=None).iloc[1:, :].astype(float)
     target_data = pd.read_csv(target_data_path, header=None).iloc[1:, :].astype(float)
+
+    #对数据做归一化
+    if normalization:
+        scaler = MinMaxScaler()
+        origin_data = scaler.fit_transform(origin_data)
+        target_data = scaler.fit_transform(target_data)
 
     # origin_data, target_data = preprocess(origin_data, target_data)
     # origin_data.to_csv(origin_data_path, index=False, header=cols)
