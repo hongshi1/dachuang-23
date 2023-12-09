@@ -4,6 +4,7 @@ import os
 from encoder import *
 import copy
 import cluster_AP
+from torch.utils.data import DataLoader, random_split
 import numpy as np
 import torch
 import torch.nn as nn
@@ -269,8 +270,8 @@ def image_classification_test(loader, model, test_10crop=False, gpu=True):
     device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
     model = model.to(device)
 
-    iter_test = iter(loader["test"])
-    for _ in range(len(loader["test"])):
+    iter_test = iter(loader["val"])
+    for _ in range(len(loader["val"])):
         data = next(iter_test).to(device) # 指的是图片        loc = data[:, 10]  # 第11维度的索引是10
         loc = data[:, 10]  # 第11维度的索引是10
         cc = data[:, 19]  # 第19维度的索引是18
@@ -385,19 +386,50 @@ def transfer_classification(config):
                                                                                      data_config["batch_size"]["test"],
                                                                                      shuffle=False, num_workers=4)
 
+
         elif data_config["type"] == "vec":
-            source_data, target_data = eliminate_data_imbalance(data_config["list_path"]["train"],
-                                                                data_config["list_path"]["tt"], 1)
+
+            source_data, _ = eliminate_data_imbalance(data_config["list_path"]["train"],
+
+                                                      data_config["list_path"]["tt"], 1)
+
+            dataset_size = len(source_data)
+
+            train_size = int(0.8 * dataset_size)
+
+            val_size = dataset_size - train_size
+
+            train_dataset, val_dataset = random_split(source_data, [train_size, val_size])
+
             # 对于向量数据
-            dsets[data_config["name"]]["train"] = VecDataset(source_data)
+
+            dsets[data_config["name"]]["train"] = VecDataset(train_dataset)
+
             dset_loaders[data_config["name"]]["train"] = util_data.DataLoader(dsets[data_config["name"]]["train"],
-                                                                    batch_size=data_config["batch_size"]["train"],
-                                                                    shuffle=True, num_workers=4)
+
+                                                                              batch_size=data_config["batch_size"][
+                                                                                  "train"],
+
+                                                                              shuffle=True, num_workers=4)
+
+            dsets[data_config["name"]]["val"] = VecDataset(val_dataset)
+
+            dset_loaders[data_config["name"]]["val"] = util_data.DataLoader(dsets[data_config["name"]]["val"],
+
+                                                                            batch_size=data_config["batch_size"][
+
+                                                                                "train"],
+
+                                                                            shuffle=True, num_workers=4)
 
             dsets[data_config["name"]]["test"] = VecDataset(source_data)
+
             dset_loaders[data_config["name"]]["test"] = util_data.DataLoader(dsets[data_config["name"]]["test"],
-                                                                   batch_size=data_config["batch_size"]["test"],
-                                                                   shuffle=False, num_workers=4)
+
+                                                                             batch_size=data_config["batch_size"][
+                                                                                 "test"],
+
+                                                                             shuffle=False, num_workers=4)
 
     class_num = 1  # ??
 
@@ -630,7 +662,7 @@ if __name__ == "__main__":
     # clusters, distances = cluster_spectral.project_cluster(3)
     clusters, distances = cluster_AP.project_cluster()
     cumulative_results = {}
-    for round_cir in range(20):
+    for round_cir in range(5):
         new_arr = []
         test_arr = []
 
@@ -700,21 +732,17 @@ if __name__ == "__main__":
             # network表示神经网络的配置，包括使用的网络名称、是否使用bottleneck特征、bottleneck的维度等；
             # optimizer表示优化器的配置，包括使用的优化算法、学习率、动量、权重衰减等参数。
             test_result = transfer_classification(config)
-            scenario = new_arr[i]
-            if scenario not in cumulative_results:
-                cumulative_results[scenario] = []
-            cumulative_results[scenario].append(test_result)
             print(new_arr[i], end=' ')
             print(" popt_final", end=' ')
             print(test_result)
             test_arr.append(test_result)
 
-        average_results = {scenario: sum(results) / len(results) for scenario, results in cumulative_results.items()}
-
-        # Save to Excel
         workbook = openpyxl.Workbook()
+        # 选择默认的工作表
         worksheet = workbook.active
-        for i, (scenario, avg_result) in enumerate(average_results.items()):
-            worksheet.cell(row=i + 1, column=1, value=scenario)
-            worksheet.cell(row=i + 1, column=2, value=avg_result)
-        workbook.save('../output/averaged_results.xlsx')
+
+        for i in range(len(new_arr)):
+            worksheet.cell(row=i + 1, column=1, value=new_arr[i])
+            worksheet.cell(row=i + 1, column=2, value=test_arr[i])
+        # 保存文件
+        workbook.save('../output/newloss_round/' + str(round_cir + 1) + '_adam_round.xlsx')  # 运行失败 需要改一个别的文件名
