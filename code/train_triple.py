@@ -8,6 +8,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import openpyxl
+from torch.utils.data import DataLoader, random_split
 from eliminate_data_imbalance import eliminate_data_imbalance
 import cluster_spectral
 # 定义和训练神经网络的类和函数。它包括各种层、激活函数、损失函数和配置神经网络结构的实用工具。
@@ -74,14 +75,12 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     # Process source data
     data_source = next(iter_source)
     combinedVec_s, labels_source,cc_source,loc_source = process_data(data_source, device)
-    # combinedVec_s = standardize_batch(combinedVec_s)
 
     features_source = base_network(combinedVec_s.to(device))
 
     # Process target data
     data_target = next(iter_target)
     combinedVec_t, labels_target,cc_target,loc_target = process_data(data_target, device)
-    # combinedVec_t = standardize_batch(combinedVec_t)
     features_target = base_network(combinedVec_t.to(device))
 
     # Combine the features
@@ -91,16 +90,11 @@ def compute_features_and_loss(iter_source, iter_target, base_network, regressor_
     if net_config.get("use_bottleneck"):
         features_combined = bottleneck_layer(features_combined)
 
-    # Compute the regressor output
-    # outputs = regressor_layer(features_combined)
-
     output_s = regressor_layer(features_source)
     # p = PerformanceMeasure(labels_target.cpu(), output_s.detach().cpu(),loc_target,cc_target)
     # popt = p.PercentPOPT().to(device)
-    bug_s = labels_source.float().view(-1, 1)
-
-    # Compute the regressor loss using the source data
-    regressor_loss = class_criterion( bug_s.to(device),output_s.to(device))
+    bug_s= labels_source.float().view(-1, 1)
+    regressor_loss = class_criterion(bug_s.to(device),output_s.to(device))
 
     # Compute the transfer loss
     transfer_loss = compute_transfer_loss(features_combined, transfer_criterion, loss_config)
@@ -261,13 +255,13 @@ def image_classification_predict(loader, model, test_10crop=False, gpu=True):
 
 # I'll continue the modifications for the second function here:
 
-def image_classification_test(loader, model, test_10crop=False, gpu=True):
+def image_classification_val(loader, model, test_10crop=False, gpu=True):
     start_test = True
     device = torch.device("cuda:0" if torch.cuda.is_available() and gpu else "cpu")
     model = model.to(device)
 
-    iter_test = iter(loader["test"])
-    for _ in range(len(loader["test"])):
+    iter_test = iter(loader["val"])
+    for _ in range(len(loader["val"])):
         data = next(iter_test).to(device) # 指的是图片        loc = data[:, 10]  # 第11维度的索引是10
         loc = data[:, 10]  # 第11维度的索引是10
         cc = data[:, 19]  # 第19维度的索引是18
@@ -382,18 +376,30 @@ def transfer_classification(config):
                                                                                      shuffle=False, num_workers=4)
 
         elif data_config["type"] == "vec":
-            source_data, target_data = eliminate_data_imbalance(data_config["list_path"]["train"],
+            source_data, _ = eliminate_data_imbalance(data_config["list_path"]["train"],
                                                                 data_config["list_path"]["tt"], 1)
+
+            dataset_size = len(source_data)
+            train_size = int(0.8 * dataset_size)
+            val_size = dataset_size - train_size
+            train_dataset, val_dataset = random_split(source_data, [train_size, val_size])
             # 对于向量数据
-            dsets[data_config["name"]]["train"] = VecDataset(source_data)
+            dsets[data_config["name"]]["train"] = VecDataset(train_dataset)
             dset_loaders[data_config["name"]]["train"] = util_data.DataLoader(dsets[data_config["name"]]["train"],
                                                                     batch_size=data_config["batch_size"]["train"],
                                                                     shuffle=True, num_workers=4)
+
+            dsets[data_config["name"]]["val"] = VecDataset(val_dataset)
+            dset_loaders[data_config["name"]]["val"] = util_data.DataLoader(dsets[data_config["name"]]["val"],
+                                                                              batch_size=data_config["batch_size"][
+                                                                                  "train"],
+                                                                              shuffle=True, num_workers=4)
 
             dsets[data_config["name"]]["test"] = VecDataset(source_data)
             dset_loaders[data_config["name"]]["test"] = util_data.DataLoader(dsets[data_config["name"]]["test"],
                                                                    batch_size=data_config["batch_size"]["test"],
                                                                    shuffle=False, num_workers=4)
+
 
     class_num = 1  # ??
 
@@ -476,11 +482,11 @@ def transfer_classification(config):
                 regressor_layer.train(False)  # False -- ?
                 if net_config["use_bottleneck"]:
                     bottleneck_layer.train(False)
-                    F = image_classification_test(dset_loaders["source"],  # not 'target' when training
+                    F = image_classification_val(dset_loaders["source"],  # not 'target' when training
                                                   nn.Sequential(base_network, bottleneck_layer, regressor_layer),
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
                 else:
-                    F = image_classification_test(dset_loaders["source"],  # not 'target' when training
+                    F = image_classification_val(dset_loaders["source"],  # not 'target' when training
                                                   nn.Sequential(base_network, regressor_layer),
                                                   # nn.Sequential一个用于存放神经网络模块的序列容器，可以用来自定义模型，运行顺序按照输入顺序进行
                                                   test_10crop=prep_dict["source"]["test_10crop"], gpu=use_gpu)
