@@ -6,6 +6,74 @@ import javalang
 from gensim.models import Word2Vec
 
 save_path = '../data/embedding/'
+SELECTED_NODES = (javalang.tree.MethodInvocation, javalang.tree.SuperMethodInvocation,
+                  javalang.tree.SuperConstructorInvocation,
+                  javalang.tree.ClassCreator, javalang.tree.ArrayCreator,
+                  javalang.tree.PackageDeclaration, javalang.tree.InterfaceDeclaration, javalang.tree.ClassDeclaration,
+                  javalang.tree.ConstructorDeclaration, javalang.tree.MethodDeclaration,
+                  javalang.tree.VariableDeclaration,
+                  javalang.tree.FormalParameter, javalang.tree.IfStatement, javalang.tree.ForStatement,
+                  javalang.tree.WhileStatement, javalang.tree.DoStatement, javalang.tree.AssertStatement,
+                  javalang.tree.BreakStatement, javalang.tree.ContinueStatement, javalang.tree.ReturnStatement,
+                  javalang.tree.ThrowStatement, javalang.tree.TryStatement, javalang.tree.SynchronizedStatement,
+                  javalang.tree.SwitchStatement, javalang.tree.BlockStatement, javalang.tree.CatchClauseParameter,
+                  javalang.tree.TryResource, javalang.tree.CatchClause, javalang.tree.SwitchStatementCase,
+                  javalang.tree.ForControl, javalang.tree.EnhancedForControl, javalang.tree.BasicType,
+                  javalang.tree.MemberReference, javalang.tree.ReferenceType, javalang.tree.SuperMemberReference,
+                  javalang.tree.StatementExpression)  # https://github.com/c2nes/javalang/blob/master/javalang/tree.py
+
+NODES_STRING = ['javalang.tree.MethodInvocation', 'javalang.tree.SuperMethodInvocation',
+                'javalang.tree.SuperConstructorInvocation',
+                'javalang.tree.ClassCreator', 'javalang.tree.ArrayCreator',
+                'javalang.tree.PackageDeclaration', 'javalang.tree.InterfaceDeclaration',
+                'javalang.tree.ClassDeclaration',
+                'javalang.tree.ConstructorDeclaration', 'javalang.tree.MethodDeclaration',
+                'javalang.tree.VariableDeclaration',
+                'javalang.tree.FormalParameter', 'javalang.tree.IfStatement', 'javalang.tree.ForStatement',
+                'javalang.tree.WhileStatement', 'javalang.tree.DoStatement', 'javalang.tree.AssertStatement',
+                'javalang.tree.BreakStatement', 'javalang.tree.ContinueStatement', 'javalang.tree.ReturnStatement',
+                'javalang.tree.ThrowStatement', 'javalang.tree.TryStatement', 'javalang.tree.SynchronizedStatement',
+                'javalang.tree.SwitchStatement', 'javalang.tree.BlockStatement', 'javalang.tree.CatchClauseParameter',
+                'javalang.tree.TryResource', 'javalang.tree.CatchClause', 'javalang.tree.SwitchStatementCase',
+                'javalang.tree.ForControl', 'javalang.tree.EnhancedForControl', 'javalang.tree.BasicType',
+                'javalang.tree.MemberReference', 'javalang.tree.ReferenceType', 'javalang.tree.SuperMemberReference',
+                'javalang.tree.StatementExpression']
+
+
+def index_type(node, SELECTED_NODES):
+    i = 0
+    for key in SELECTED_NODES:
+        i += 1
+        if isinstance(node, key):
+            return i  # Forced end of for loop
+    return 0
+
+
+def tokenize(node, SELECTED_NODES):
+    i = 0
+    for key in SELECTED_NODES:  # Traverse each node in SELECTED_NODES
+        if isinstance(node, key):
+            str = NODES_STRING[i]
+            temp = str.split('.')
+            return temp[-1]  # Return the last string and force end loop
+            # return i  # Retrun the index
+        i += 1
+    return 'UKN'
+
+
+def get_tokens(src_code_path):
+    temp = ''
+    if os.path.exists(src_code_path):  # If the source code of i-th module (i.e., a Java file) exists
+        file = open(src_code_path, 'r')
+        txt_java_code = file.read()
+        tree_AST = javalang.parse.parse(txt_java_code)  # Obtain AST of i-th module
+        for path, node in tree_AST:  # Traverse each node in AST
+            mapping_token = tokenize(node, SELECTED_NODES)  # self-defined function 'tokenize'
+            temp = temp + ' ' + mapping_token
+    else:
+        temp = None
+    return temp
+
 
 def extract_tokens_from_ast(node):
     tokens = []
@@ -43,7 +111,7 @@ if __name__ == '__main__':
                             0] + '/src/java' + '/' + java_path_parts + '.java'
 
                         if os.path.exists(java_file_path):
-                            tokens = generate_ast_from_java(java_file_path)
+                            tokens = get_tokens(java_file_path)
                             all_tokens.append(tokens)
 
         # Train the model
@@ -63,7 +131,8 @@ if __name__ == '__main__':
                         0] + '/src/java' + '/' + java_path_parts + '.java'
 
                     if os.path.exists(java_file_path):
-                        tokens = generate_ast_from_java(java_file_path)
+                        # tokens = generate_ast_from_java(java_file_path)
+                        tokens = get_tokens(java_file_path)
                         vectors = np.array([model.wv[token] for token in tokens if token in model.wv])
 
                         # Average the vectors to get a single vector representation
