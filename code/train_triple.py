@@ -615,13 +615,6 @@ if __name__ == "__main__":
     new_arr = []
     test_arr = []
 
-    for i in range(len(strings)):
-        for j in range(i + 1, i + 2):
-            m = (i + 1) % len(strings)
-            n = (i + 2) % len(strings)
-            new_arr.append(strings[i] + "->" + strings[m])
-            new_arr.append(strings[i] + "->" + strings[n])
-
     parser = argparse.ArgumentParser(description='Transfer Learning')
     args = parser.parse_args()
     args.gpu_id = '0'
@@ -639,14 +632,14 @@ if __name__ == "__main__":
     # clusters, distances = cluster_spectral.project_cluster(3)
     clusters, distances = cluster_AP.project_cluster()
     cumulative_results = {}
-    for round_cir in range(20):
+    for round_cir in range(5):
         new_arr = []
         test_arr = []
 
         for i in range(len(strings)):
             for j in range(i + 1, len(strings)):
-                new_arr.append(strings[i] + "->" + strings[m])
-                new_arr.append(strings[i] + "->" + strings[n])
+                new_arr.append(strings[i] + "->" + strings[j])
+                new_arr.append(strings[j] + "->" + strings[i])
 
 
 
