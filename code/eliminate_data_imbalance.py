@@ -108,8 +108,8 @@ def eliminate_data_imbalance(origin_data_path, target_data_path, seed, normaliza
     #对数据做归一化
     if normalization:
         scaler = MinMaxScaler()
-        origin_data = scaler.fit_transform(origin_data)
-        target_data = scaler.fit_transform(target_data)
+        origin_data.iloc[:, :-1] = scaler.fit_transform(origin_data.iloc[:, :-1])
+        target_data.iloc[:, :-1] = scaler.fit_transform(target_data.iloc[:, :-1])
 
     # origin_data, target_data = preprocess(origin_data, target_data)
     # origin_data.to_csv(origin_data_path, index=False, header=cols)
