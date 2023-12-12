@@ -127,12 +127,12 @@ if __name__=='__main__':
     cols = ['wmc', 'dit', 'noc', 'cbo', 'rfc', 'lcom', 'ca', 'ce', 'npm', 'lcom3', 'loc', 'dam', 'moa', 'mfa', 'cam',
                 'ic',
                 'cbm', 'amc', 'max_cc', 'avg_cc']
-    for i in range(100):
+    for i in range(20):
         cols.append('ast_data_'+str(i+1))
     for i in range(128):
         cols.append('imgVec_data_'+str(i+1))
     cols.append('bug')
-    i = 7
+    i = 0
     while i < len(strings):
         origin_path = '../data/promise_csv/'+strings[i]+'.csv'
         target_path = '../data/promise_csv/'+strings[i+1]+'.csv'

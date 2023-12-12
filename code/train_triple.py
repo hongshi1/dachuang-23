@@ -561,13 +561,19 @@ def transfer_classification(config):
     all_label = None
     all_loc = None
     all_cc = None
-    for _, model in top_models:
+    total_F = 0
+    for F, model in top_models:
         # 使用每个模型进行预测
+        total_F += F
         all_label, predict,all_loc,all_cc = image_classification_predict(dset_loaders["target"], model, test_10crop=False, gpu=use_gpu)
-        final_predictions.append(predict)
+        final_predictions.append(F, predict)
 
-    # 计算平均预测值
-    average_prediction = sum(final_predictions) / len(final_predictions)
+    # 计算加权预测结果
+
+    # average_prediction = sum(final_predictions) / len(final_predictions)
+    average_prediction = 0.0
+    for F, predict in final_predictions:
+        average_prediction += predict*(F/total_F)
 
     all_label_list = all_label.cpu().numpy()
     # predict_list = average_prediction.round().cpu().numpy().flatten()
@@ -675,7 +681,7 @@ if __name__ == "__main__":
                               {"name": "target", "type": "vec", "list_path": {"train": vec_path + args.target + ".csv","tt":vec_path + args.source + ".csv"},
                                "batch_size": {"train": 16, "test": 16}}]
 
-            config["network"] = {"name": "SimpleRegressor", "use_bottleneck": args.using_bottleneck,
+            config["network"] = {"name": "regressionTransformer", "use_bottleneck": args.using_bottleneck,
                                  "bottleneck_dim": 256}
             # config["optimizer"] = {"type": "SGD",
             #                        "optim_params": {"lr": 0.005, "momentum": 0.9, "weight_decay": 0.05,

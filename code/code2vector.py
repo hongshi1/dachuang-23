@@ -115,7 +115,7 @@ if __name__ == '__main__':
                             all_tokens.append(tokens)
 
         # Train the model
-        model = Word2Vec(sentences=all_tokens, vector_size=100, window=5, min_count=1, workers=4)
+        model = Word2Vec(sentences=all_tokens, vector_size=20, window=5, min_count=1, workers=4)
         model.save("java_code_word2vec.model")
 
     # Convert tokens to vectors and save

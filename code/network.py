@@ -692,7 +692,7 @@ class My_LSTM(nn.Module):
 
 # 3. New Transformer model (My_Transformer)
 class My_Transformer(nn.Module):
-    def __init__(self, in_features=200):
+    def __init__(self, in_features=248):
         super(My_Transformer, self).__init__()
         self.d_model = in_features  # Store the d_model value
         self.transformer = nn.TransformerEncoder(nn.TransformerEncoderLayer(d_model=self.d_model, nhead=10), num_layers=2)
@@ -722,7 +722,7 @@ class My_Transformer(nn.Module):
 
 
 class SimpleRegressor(nn.Module):
-    def __init__(self, in_features=248, out_features=1):
+    def __init__(self, in_features=168, out_features=1):
         super(SimpleRegressor, self).__init__()
 
         # Feature extractor
@@ -793,7 +793,7 @@ class dpnn(nn.Module):
 
 
 class RegressionTransformer(nn.Module):
-    def __init__(self, input_dim=248, d_model=64, nhead=8, num_encoder_layers=3, dim_feedforward=256, dropout=0.1):
+    def __init__(self, input_dim=168, d_model=64, nhead=8, num_encoder_layers=3, dim_feedforward=256, dropout=0.1):
         super(RegressionTransformer, self).__init__()
 
         self.input_fc = nn.Linear(input_dim, d_model)

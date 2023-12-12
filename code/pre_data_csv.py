@@ -23,7 +23,7 @@ if __name__ == '__main__':
             txt_fileName_path = os.path.join(ori_path, txt_path_file)
             csv_data = pd.read_csv('../data/promise_csv/'+txt_fileName+'.csv', usecols=cols)
             # 在最后一列之前追加两列
-            for i in range(100):
+            for i in range(20):
                 col_name = f'ast_data_{i + 1}'
                 if col_name not in csv_data.columns:
                     csv_data.insert(len(csv_data.columns) - 1, col_name, '')
@@ -45,7 +45,7 @@ if __name__ == '__main__':
                     module_name = module_name.replace('_', '.')
                     for index, row in csv_data.iterrows():
                         if module_name == row['Name']:
-                            for i in range(100):
+                            for i in range(20):
                                 column_index = csv_data.columns.get_loc(f'ast_data_{i + 1}')
                                 csv_data.iloc[index, column_index] = ast_data[i]
                             for i in range(128):
